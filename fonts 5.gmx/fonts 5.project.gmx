@@ -228,25 +228,27 @@
       <script>scripts\script25.gml</script>
       <script>scripts\console_log.gml</script>
       <script>scripts\collision_line_first.gml</script>
+      <script>scripts\range_finder.gml</script>
+      <script>scripts\instance_nth_nearest.gml</script>
     </scripts>
     <scripts name="the note management">
       <script>scripts\c_receptorinput.gml</script>
       <script>scripts\c_bpmbuster.gml</script>
     </scripts>
     <script>scripts\c_input.gml</script>
-    <script>scripts\range_finder.gml</script>
-    <script>scripts\instance_nth_nearest.gml</script>
+    <script>scripts\x_the_explanation.gml</script>
+    <script>scripts\x_sm_parser_create_old.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\f_ronaldo</font>
   </fonts>
   <objects name="objects">
+    <object>objects\MELODYCHASER</object>
+    <object>objects\o_smparser</object>
     <object>objects\object0</object>
     <object>objects\o_note</object>
     <object>objects\o_freeze</object>
     <object>objects\o_roll</object>
-    <object>objects\o_smparser</object>
-    <object>objects\MELODYCHASER</object>
     <object>objects\o_hit</object>
     <object>objects\o_title</object>
     <object>objects\o_start</object>

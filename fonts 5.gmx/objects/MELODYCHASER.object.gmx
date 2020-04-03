@@ -41,8 +41,9 @@ state = c_receptorinput;
 offset = 0; //offset = 1918;
 timecounter = 0;
 songstarting = false;
-audio = m_onemorenight;
-songscript = c_onemorenight;
+audio = m_combattheme;
+songscript = c_combattheme;
+script_execute(songscript);              
 </string>
           </argument>
         </arguments>
