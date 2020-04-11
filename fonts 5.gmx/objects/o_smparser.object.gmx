@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>script_execute(MELODYCHASER.songscript);
+c_noteskins();
 
 position = 0;
 reader = "";

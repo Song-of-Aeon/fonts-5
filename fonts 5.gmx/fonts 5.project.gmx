@@ -183,12 +183,34 @@
   <sprites name="sprites">
     <sprite>sprites\s_kaguya</sprite>
     <sprite>sprites\s_receptor</sprite>
-    <sprite>sprites\s_aka</sprite>
-    <sprite>sprites\s_ao</sprite>
-    <sprite>sprites\s_murasaki</sprite>
+    <sprites name="midi-solo">
+      <sprite>sprites\s_red</sprite>
+      <sprite>sprites\s_blue</sprite>
+      <sprite>sprites\s_purple</sprite>
+    </sprites>
+    <sprites name="midi-dark">
+      <sprite>sprites\s_aka</sprite>
+      <sprite>sprites\s_ao</sprite>
+      <sprite>sprites\s_murasaki</sprite>
+    </sprites>
+    <sprites name="midi-black">
+      <sprite>sprites\s_dark</sprite>
+      <sprite>sprites\s_darker</sprite>
+      <sprite>sprites\s_yetdarker</sprite>
+    </sprites>
     <sprite>sprites\s_fonts5</sprite>
     <sprite>sprites\s_black</sprite>
+    <sprites name="midi-gold">
+      <sprite>sprites\s_rojo</sprite>
+      <sprite>sprites\s_azul</sprite>
+      <sprite>sprites\s_morado</sprite>
+    </sprites>
     <sprite>sprites\s_start</sprite>
+    <sprites name="midi-heavens">
+      <sprite>sprites\s_trueblue</sprite>
+      <sprite>sprites\s_ultramarine</sprite>
+      <sprite>sprites\s_azure</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -236,8 +258,9 @@
       <script>scripts\c_bpmbuster.gml</script>
     </scripts>
     <script>scripts\c_input.gml</script>
-    <script>scripts\x_the_explanation.gml</script>
     <script>scripts\x_sm_parser_create_old.gml</script>
+    <script>scripts\x_the_explanation.gml</script>
+    <script>scripts\c_noteskins.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\f_ronaldo</font>
