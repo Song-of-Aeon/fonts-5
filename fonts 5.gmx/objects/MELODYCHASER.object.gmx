@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>xmod = 6;
+            <string>xmod = 1;
 mmod = 0;
 cmod = 0;
 bar = 200;
@@ -43,7 +43,7 @@ timecounter = 0;
 songstarting = false;
 audio = m_combattheme;
 songscript = c_combattheme;
-script_execute(songscript);              
+script_execute(songscript);
 </string>
           </argument>
         </arguments>

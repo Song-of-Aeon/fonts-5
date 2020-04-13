@@ -3,5 +3,5 @@ if MELODYCHASER.audio = m_onemorenight {
     return 111.8;
 }
 if MELODYCHASER.audio = m_combattheme {
-    return 300;
+    return 40;
 }

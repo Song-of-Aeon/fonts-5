@@ -192,6 +192,7 @@
       <sprite>sprites\s_aka</sprite>
       <sprite>sprites\s_ao</sprite>
       <sprite>sprites\s_murasaki</sprite>
+      <sprite>sprites\s_midori</sprite>
     </sprites>
     <sprites name="midi-black">
       <sprite>sprites\s_dark</sprite>
@@ -211,6 +212,7 @@
       <sprite>sprites\s_ultramarine</sprite>
       <sprite>sprites\s_azure</sprite>
     </sprites>
+    <sprite>sprites\x_comparison</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>

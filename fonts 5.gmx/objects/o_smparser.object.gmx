@@ -44,6 +44,9 @@ notecount = 0;
 entermeasure = 0;
 endmeasure = 0;
 measuredifference = 0;
+notecolour = s_dark;
+lastmeasurelength = 0;
+amount = 0;
 
 while position &lt;= string_length(song) {
     if mode = "metadata" {
@@ -113,6 +116,10 @@ for (i=0; i&lt;array_length_1d(noteset); i++) {
     notemaker[2] = real(string_char_at(noteset[i], 3));
     notemaker[3] = real(string_char_at(noteset[i], 4));
     notemaker[5] = real(string_copy(noteset[i], 5, string_length(noteset[i])-4));
+    if notemaker[5] != lastmeasurelength {
+        amount = 0;
+    }
+    lastmeasurelength = notemaker[5];
     var j;
     for (j=0; j&lt;=3; j++) {
         if notemaker[j] &gt; 4 {
@@ -136,22 +143,103 @@ for (i=0; i&lt;array_length_1d(noteset); i++) {
             
         }
     }
-    with instance_create(64, i*(32/notemaker[5])*xmod+MELODYCHASER.bar, notemaker[0]) {
+    switch notemaker[5] {
+        case 1:
+            notecolour = s_aka;
+            break;
+        case 2:
+            if amount % 2 = 0 {
+                notecolour = s_aka;
+            } else {
+                notecoloue = s_ao;
+            }
+            break;
+        case 3:
+            if amount % 3 = 0 {
+                notecolour = s_aka;
+            } else {
+                notecolour = s_murasaki;
+            }
+            break;
+        case 4:
+            if amount % 4 = 0 {
+                notecolour = s_aka;
+            } else if (amount + 2) % 4 = 0 {
+                notecolour = s_ao;
+            } else {
+                notecolour = s_murasaki;
+            }
+            break;
+        case 6:
+            if amount % 6 = 0 {
+                notecolour = s_aka;
+            } else if (amount + 3) % 6 = 0 {
+                notecolour = s_ao;
+            }
+            break;
+        case 8:
+            if amount % 8 = 0 {
+                notecolour = s_aka;
+            } else if (amount + 4) % 8 = 0 {
+                notecolour = s_ao;
+            } else {
+                notecolour = s_murasaki;
+            }
+            break;
+        
+        case 12:
+            if amount % 12 = 0 {
+                notecolour = s_aka;
+            } else if (amount + 6) % 12 = 0 {
+                notecolour = s_ao;
+            } else {
+                notecolour = s_murasaki;
+            }
+            break;
+        case 16:
+            if amount % 16 = 0 {
+                notecolour = s_aka;
+            } else if (amount + 8) % 16 = 0 {
+                notecolour = s_ao;
+            } else {
+                notecolour = s_murasaki;
+            }
+            break;
+        
+        case 48:
+            if amount % 48 = 0 {
+                notecolour = s_aka;
+            } else if (amount + 24) % 48 = 0 {
+                notecolour = s_ao;
+            } else {
+                notecolour = s_murasaki;
+            }
+            break;
+        
+    }
+    
+    with instance_create(64, ((i*32)-i+(i/(amount/notemaker[5])))*xmod+MELODYCHASER.bar, notemaker[0]) {
         dir = 0;
         vspd = -(other.bpm/c_bpmbuster())*other.xmod;
+        sprite_index = other.notecolour;
     }
-    with instance_create(128, i*(32/notemaker[5])*xmod+MELODYCHASER.bar, notemaker[1]) {
+    with instance_create(128, ((i*32)-i+(i/(amount/notemaker[5])))*xmod+MELODYCHASER.bar, notemaker[1]) {
         dir = 1;
         vspd = -(other.bpm/c_bpmbuster())*other.xmod;
+        sprite_index = other.notecolour;
     }
-    with instance_create(192, i*(32/notemaker[5])*xmod+MELODYCHASER.bar, notemaker[2]) {
+    with instance_create(192, ((i*32)-i+(i/(amount/notemaker[5])))*xmod+MELODYCHASER.bar, notemaker[2]) {
         dir = 2;
         vspd = -(other.bpm/c_bpmbuster())*other.xmod;
+        sprite_index = other.notecolour;
     }
-    with instance_create(256, i*(32/notemaker[5])*xmod+MELODYCHASER.bar, notemaker[3]) {
+    with instance_create(256, ((i*32)-i+(i/(amount/notemaker[5])))*xmod+MELODYCHASER.bar, notemaker[3]) {
         dir = 3;
         vspd = -(other.bpm/c_bpmbuster())*other.xmod;
+        sprite_index = other.notecolour;
     }
+    amount += 1;
+    //i*(32/notemaker[5])*xmod+MELODYCHASER.bar, notemaker[2]) {
 }
 
 var n;

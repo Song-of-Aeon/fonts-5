@@ -1,6 +1,6 @@
 return "#TITLE:Combat Theme;
 #SUBTITLE:;
-#ARTIST:Leonidas, Hatsune Miku, O-Zone, Eino Kettunen, beatMARIO, Kohmi Hirose, Nitori Kawashiro, Siiva;
+#ARTIST:Leonidas, Hatsune Miku, O-Zone, Eino Kettunen, beatMARIO, Kohmi Hirose, Nitori Kawashiro, Siivagunner;
 #TITLETRANSLIT:;
 #SUBTITLETRANSLIT:;
 #ARTISTTRANSLIT:;
