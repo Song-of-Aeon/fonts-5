@@ -26,8 +26,12 @@
           <argument>
             <kind>1</kind>
             <string>count = 0;
+countwo = 0;
 tail = 0;
 image_speed = 0;
+holder = true;
+hspd = 0;
+vspd = 0;
 </string>
           </argument>
         </arguments>
@@ -50,7 +54,48 @@ image_speed = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if count &gt;= 10 {
+            <string>if image_blend = c_purple {
+    switch image_angle {
+        case -90:
+            holder = MELODYCHASER.left;
+            break;
+        case 0:
+            holder = MELODYCHASER.down;
+            break;
+        case 180:
+            holder = MELODYCHASER.up;
+            break;
+        case 90:
+            holder = MELODYCHASER.right;
+            break;
+    }
+} else {
+    switch image_angle {
+        case -90:
+            holder = MELODYCHASER.heldleft;
+            break;
+        case 0:
+            holder = MELODYCHASER.helddown;
+            break;
+        case 180:
+            holder = MELODYCHASER.heldup;
+            break;
+        case 90:
+            holder = MELODYCHASER.heldright;
+            break;
+    }
+}
+if holder = false {
+    countwo++;
+    if countwo &gt;= 20 {
+        hspd = tail.hspd;
+        vspd = tail.vspd;
+    }
+} else {
+    countwo = 0;
+}
+
+if count &gt;= 10 {
     with instance_create(x, y, o_hitfx) {
         image_angle = other.image_angle;
     }
@@ -61,6 +106,11 @@ image_speed = 0;
     instance_destroy();
 }*/
 count += 1;
+
+x += hspd;
+y += vspd;
+
+
 </string>
           </argument>
         </arguments>

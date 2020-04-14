@@ -108,6 +108,35 @@ for (i=0; i&lt;4; i++) {
     bop[i] = clamp(bop[i], 0, 1);
 }
 
+var j;
+for (j=64; j&lt;=256; j+=64) {
+    var note = instance_place(j, bar-128, o_note);
+    if note != noone {
+        if note.object_index = o_freeze || note.object_index = o_roll {
+            with note.tail {
+                unusable = true;
+                head = 0;
+            }
+            instance_destroy(note);
+            
+        } else {
+            instance_destroy(note);
+        }
+        combo = 0;
+    }
+    /*if instance_exists(instance_place(j, bar, o_tail)) {
+        if instance_place(j, bar, o_tail).y &lt;= bar-64 || instance_place(j, bar, o_tail).y &lt;= instance_place(j, bar, o_tail).head.y+32 {
+            with head {
+                instance_destroy();
+            }
+        }
+        instance_destroy();
+        
+    }*/
+}
+
+
+
 </string>
           </argument>
         </arguments>

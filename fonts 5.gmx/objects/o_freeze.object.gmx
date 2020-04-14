@@ -80,10 +80,13 @@ if tail != 0 {
     
 }
 
-if y &lt;= MELODYCHASER.bar-64 {
+/*if y &lt;= MELODYCHASER.bar-64 {
     instance_destroy();
     MELODYCHASER.combo = 0;
-}
+    with tail {
+        instance_destroy();
+    }
+}*/
 
 //freezeend = collision_line_first(x, y, x, 1080, o_roll, false, false).x;
 </string>

@@ -81,10 +81,7 @@ if tail != 0 {
     
 }
 
-if y &lt;= MELODYCHASER.bar-64 {
-    instance_destroy();
-    MELODYCHASER.combo = 0;
-}
+
 </string>
           </argument>
         </arguments>

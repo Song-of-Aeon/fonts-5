@@ -32,6 +32,7 @@ image_speed = 0;
 image_index = 2;
 head = 0;
 colour = c_white;
+unusable = false;
 </string>
           </argument>
         </arguments>
@@ -63,14 +64,17 @@ if head.object_index = o_roll {
     colour = c_purple;
 }
 
-if y &lt;= MELODYCHASER.bar-64 || y &lt;= head.y+32 {
-    with head {
+if unusable = false {
+    if y &lt;= MELODYCHASER.bar-64 || y &lt;= head.y+32 {
+        with head {
+            instance_destroy();
+        }
         instance_destroy();
     }
-    instance_destroy();
-    
-}
 
+} else if y &lt;= 0 {
+    instance_destroy();
+}
 </string>
           </argument>
         </arguments>
@@ -93,13 +97,15 @@ if y &lt;= MELODYCHASER.bar-64 || y &lt;= head.y+32 {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if head != 0 {
-    var i;
+            <string>if head != 0 || unusable = false {
+    //var i;
     //for (i=0; i&lt;distance_to_point(head.x, head.y); i+=64) {
         draw_sprite_ext(s_midori, 1, x, y-distance_to_point(head.x, head.y)/2-32, 1, distance_to_point(head.x, head.y)/64, 0, colour, 1);
     //}
     
     
+} else {
+    draw_sprite_ext(s_midori, 1, x, y-distance_to_point(x, 0)/2-32, 1, distance_to_point(x, 0)/64, 0, colour, 1);
 }
 draw_self();
 </string>
