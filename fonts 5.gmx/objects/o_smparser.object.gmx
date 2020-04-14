@@ -47,6 +47,7 @@ measuredifference = 0;
 notecolour = s_dark;
 lastmeasurelength = 0;
 amount = 0;
+placer = 0;
 
 while position &lt;= string_length(song) {
     if mode = "metadata" {
@@ -218,28 +219,30 @@ for (i=0; i&lt;array_length_1d(noteset); i++) {
         
     }
     
-    with instance_create(64, ((i*32)-i+(i/(amount/notemaker[5])))*xmod+MELODYCHASER.bar, notemaker[0]) {
+    with instance_create(64, placer*32*xmod+MELODYCHASER.bar, notemaker[0]) {
         dir = 0;
         vspd = -(other.bpm/c_bpmbuster())*other.xmod;
         sprite_index = other.notecolour;
     }
-    with instance_create(128, ((i*32)-i+(i/(amount/notemaker[5])))*xmod+MELODYCHASER.bar, notemaker[1]) {
+    with instance_create(128, placer*32*xmod+MELODYCHASER.bar, notemaker[1]) {
         dir = 1;
         vspd = -(other.bpm/c_bpmbuster())*other.xmod;
         sprite_index = other.notecolour;
     }
-    with instance_create(192, ((i*32)-i+(i/(amount/notemaker[5])))*xmod+MELODYCHASER.bar, notemaker[2]) {
+    with instance_create(192, placer*32*xmod+MELODYCHASER.bar, notemaker[2]) {
         dir = 2;
         vspd = -(other.bpm/c_bpmbuster())*other.xmod;
         sprite_index = other.notecolour;
     }
-    with instance_create(256, ((i*32)-i+(i/(amount/notemaker[5])))*xmod+MELODYCHASER.bar, notemaker[3]) {
+    with instance_create(256, placer*32*xmod+MELODYCHASER.bar, notemaker[3]) {
         dir = 3;
         vspd = -(other.bpm/c_bpmbuster())*other.xmod;
         sprite_index = other.notecolour;
     }
+    placer += 1/notemaker[5];
     amount += 1;
-    //i*(32/notemaker[5])*xmod+MELODYCHASER.bar, notemaker[2]) {
+    //i*(32/notemaker[5])*xmod+MELODYCHASER.bar
+    //((i*32)-i+(i/(amount/notemaker[5])))
 }
 
 var n;

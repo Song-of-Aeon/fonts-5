@@ -1,10 +1,10 @@
 if left {
-    if instance_place(50, bar, o_note) != noone {
+    if instance_place(50, bar, o_note) != noone && instance_place(50, bar, o_note).dir = 0 {
         var distance = instance_place(50, bar, o_note).y - bar;
         noterank = floor(abs(distance)/16);
         if noterank < 4 {
             instance_destroy(instance_place(50, bar, o_note));
-            combo++
+            combo++;
         } else {
             combo = 0;
         }
@@ -38,12 +38,12 @@ if left {
 }
 
 if down {
-    if instance_place(100, bar, o_note) != noone {
+    if instance_place(100, bar, o_note) != noone && instance_place(100, bar, o_note).dir = 1 {
         var distance = instance_place(100, bar, o_note).y - bar;
         noterank = floor(abs(distance)/16);
         if noterank < 4 {
             instance_destroy(instance_place(100, bar, o_note));
-            combo++
+            combo++;
         } else {
             combo = 0;
         }
@@ -77,12 +77,12 @@ if down {
 }
 
 if up {
-    if instance_place(150, bar, o_note) != noone {
+    if instance_place(150, bar, o_note) != noone && instance_place(150, bar, o_note).dir = 2 {
         var distance = instance_place(150, bar, o_note).y - bar;
         noterank = floor(abs(distance)/16);
         if noterank < 4 {
             instance_destroy(instance_place(150, bar, o_note));
-            combo++
+            combo++;
         } else {
             combo = 0;
         }
@@ -116,12 +116,13 @@ if up {
 }
 
 if right {
-    if instance_place(200, bar, o_note) != noone {
+    if instance_place(200, bar, o_note) != noone && instance_place(200, bar, o_note).dir = 3 {
+        //if 
         var distance = instance_place(200, bar, o_note).y - bar;
         noterank = floor(abs(distance)/16);
         if noterank < 4 {
             instance_destroy(instance_place(200, bar, o_note));
-            combo++
+            combo++;
         } else {
             combo = 0;
         }
