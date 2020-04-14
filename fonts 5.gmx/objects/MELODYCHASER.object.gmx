@@ -42,8 +42,8 @@ offset = 0;
 //offset = 1918;
 timecounter = 0;
 songstarting = false;
-audio = m_combattheme;
-songscript = c_freezetest;
+audio = m_drivin;
+songscript = c_drivin;
 script_execute(songscript);
 </string>
           </argument>

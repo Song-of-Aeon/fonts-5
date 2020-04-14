@@ -5,3 +5,6 @@ if MELODYCHASER.audio = m_onemorenight {
 if MELODYCHASER.audio = m_combattheme {
     return 111.8;
 }
+if MELODYCHASER.audio = m_drivin {
+    return 111.8
+}

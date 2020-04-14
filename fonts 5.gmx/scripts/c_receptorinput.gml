@@ -1,7 +1,12 @@
 if left {
     if instance_place(64, bar, o_note) != noone && instance_place(64, bar, o_note).dir = 0 {
         var distance = instance_place(64, bar, o_note).y - bar;
-        noterank = floor(abs(distance)/16);
+        if instance_place(64, bar, o_note).object_index = o_mine {
+            noterank = 4;
+            instance_destroy(instance_place(64, bar, o_mine));
+        } else {
+            noterank = floor(abs(distance)/16);
+        }
         if noterank < 4 {
             if instance_place(64, bar, o_note).object_index = o_freeze || instance_place(64, bar, o_note).object_index = o_roll {
                 with instance_create(64, bar, o_stay) {
@@ -12,10 +17,8 @@ if left {
                         head = other.id;
                     }
                 }
-                instance_destroy(instance_place(64, bar, o_note));
-            } else {
-                instance_destroy(instance_place(64, bar, o_note));
             }
+            instance_destroy(instance_place(64, bar, o_note));
             combo++;
         } else {
             combo = 0;
@@ -25,24 +28,30 @@ if left {
                 with instance_create(x, y, o_hit) {
                     image_blend = c_teal;
                 }
-                realscore += 128/notecount;
+                realscore += 100/notecount;
                 break;
             case 1:
                 with instance_create(x, y, o_hit) {
                     image_blend = c_yellow;
                 }
-                realscore += .8*(128/notecount);
+                realscore += .8*(100/notecount);
                 break;
             case 2:
                 with instance_create(x, y, o_hit) {
                     image_blend = c_green;
                 }
-                realscore += .6*(128/notecount);
+                realscore += .6*(100/notecount);
                 break;
             case 3:
                 with instance_create(x, y, o_hit) {
                     image_blend = c_blue;
                 }
+                break;
+            case 4:
+                with instance_create(x, y, o_hit) {
+                    image_blend = c_red;
+                }
+                realscore -= 100/notecount;
                 break;
         }
         with instance_create(64, bar, o_hitfx) {
@@ -56,7 +65,12 @@ if left {
 if down {
     if instance_place(128, bar, o_note) != noone && instance_place(128, bar, o_note).dir = 1 {
         var distance = instance_place(128, bar, o_note).y - bar;
-        noterank = floor(abs(distance)/16);
+        if instance_place(128, bar, o_note).object_index = o_mine {
+            noterank = 4;
+            instance_destroy(instance_place(128, bar, o_mine));
+        } else {
+            noterank = floor(abs(distance)/16);
+        }
         if noterank < 4 {
             if instance_place(128, bar, o_note).object_index = o_freeze || instance_place(128, bar, o_note).object_index = o_roll {
                 with instance_create(128, bar, o_stay) {
@@ -67,10 +81,8 @@ if down {
                         head = other.id;
                     }
                 }
-                instance_destroy(instance_place(128, bar, o_note));
-            } else {
-                instance_destroy(instance_place(128, bar, o_note));
             }
+            instance_destroy(instance_place(128, bar, o_note));
             combo++;
         } else {
             combo = 0;
@@ -80,24 +92,30 @@ if down {
                 with instance_create(x, y, o_hit) {
                     image_blend = c_teal;
                 }
-                realscore += 128/notecount;
+                realscore += 100/notecount;
                 break;
             case 1:
                 with instance_create(x, y, o_hit) {
                     image_blend = c_yellow;
                 }
-                realscore += .8*(128/notecount);
+                realscore += .8*(100/notecount);
                 break;
             case 2:
                 with instance_create(x, y, o_hit) {
                     image_blend = c_green;
                 }
-                realscore += .6*(128/notecount);
+                realscore += .6*(100/notecount);
                 break;
             case 3:
                 with instance_create(x, y, o_hit) {
                     image_blend = c_blue;
                 }
+                break;
+            case 4:
+                with instance_create(x, y, o_hit) {
+                    image_blend = c_red;
+                }
+                realscore -= 100/notecount;
                 break;
         }
         with instance_create(128, bar, o_hitfx) {
@@ -110,7 +128,12 @@ if down {
 if up {
     if instance_place(192, bar, o_note) != noone && instance_place(192, bar, o_note).dir = 2 {
         var distance = instance_place(192, bar, o_note).y - bar;
-        noterank = floor(abs(distance)/16);
+        if instance_place(192, bar, o_note).object_index = o_mine {
+            noterank = 4;
+            instance_destroy(instance_place(192, bar, o_mine));
+        } else {
+            noterank = floor(abs(distance)/16);
+        }
         if noterank < 4 {
             if instance_place(192, bar, o_note).object_index = o_freeze || instance_place(192, bar, o_note).object_index = o_roll {
                 with instance_create(192, bar, o_stay) {
@@ -121,10 +144,8 @@ if up {
                         head = other.id;
                     }
                 }
-                instance_destroy(instance_place(192, bar, o_note));
-            } else {
-                instance_destroy(instance_place(192, bar, o_note));
             }
+            instance_destroy(instance_place(192, bar, o_note));
             combo++;
         } else {
             combo = 0;
@@ -134,24 +155,30 @@ if up {
                 with instance_create(x, y, o_hit) {
                     image_blend = c_teal;
                 }
-                realscore += 128/notecount;
+                realscore += 100/notecount;
                 break;
             case 1:
                 with instance_create(x, y, o_hit) {
                     image_blend = c_yellow;
                 }
-                realscore += .8*(128/notecount);
+                realscore += .8*(100/notecount);
                 break;
             case 2:
                 with instance_create(x, y, o_hit) {
                     image_blend = c_green;
                 }
-                realscore += .6*(128/notecount);
+                realscore += .6*(100/notecount);
                 break;
             case 3:
                 with instance_create(x, y, o_hit) {
                     image_blend = c_blue;
                 }
+                break;
+            case 4:
+                with instance_create(x, y, o_hit) {
+                    image_blend = c_red;
+                }
+                realscore -= 100/notecount;
                 break;
         }
         with instance_create(192, bar, o_hitfx) {
@@ -165,7 +192,12 @@ if right {
     if instance_place(256, bar, o_note) != noone && instance_place(256, bar, o_note).dir = 3 {
         //if 
         var distance = instance_place(256, bar, o_note).y - bar;
-        noterank = floor(abs(distance)/16);
+        if instance_place(256, bar, o_note).object_index = o_mine {
+            noterank = 4;
+            instance_destroy(instance_place(256, bar, o_mine));
+        } else {
+            noterank = floor(abs(distance)/16);
+        }
         if noterank < 4 {
             if instance_place(256, bar, o_note).object_index = o_freeze || instance_place(256, bar, o_note).object_index = o_roll {
                 with instance_create(256, bar, o_stay) {
@@ -176,10 +208,8 @@ if right {
                         head = other.id;
                     }
                 }
-                instance_destroy(instance_place(256, bar, o_note));
-            } else {
-                instance_destroy(instance_place(256, bar, o_note));
             }
+            instance_destroy(instance_place(256, bar, o_note));
             combo++;
         } else {
             combo = 0;
@@ -189,24 +219,30 @@ if right {
                 with instance_create(x, y, o_hit) {
                     image_blend = c_teal;
                 }
-                realscore += 128/notecount;
+                realscore += 100/notecount;
                 break;
             case 1:
                 with instance_create(x, y, o_hit) {
                     image_blend = c_yellow;
                 }
-                realscore += .8*(128/notecount);
+                realscore += .8*(100/notecount);
                 break;
             case 2:
                 with instance_create(x, y, o_hit) {
                     image_blend = c_green;
                 }
-                realscore += .6*(128/notecount);
+                realscore += .6*(100/notecount);
                 break;
             case 3:
                 with instance_create(x, y, o_hit) {
                     image_blend = c_blue;
                 }
+                break;
+            case 4:
+                with instance_create(x, y, o_hit) {
+                    image_blend = c_red;
+                }
+                realscore -= 100/notecount;
                 break;
         }
         with instance_create(256, bar, o_hitfx) {

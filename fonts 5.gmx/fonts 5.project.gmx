@@ -179,7 +179,7 @@
   <sounds name="sound">
     <sound>sound\m_onemorenight</sound>
     <sound>sound\m_combattheme</sound>
-    <sound>sound\m_nothing</sound>
+    <sound>sound\m_drivin</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\s_kaguya</sprite>
@@ -195,6 +195,7 @@
       <sprite>sprites\s_murasaki</sprite>
       <sprite>sprites\s_midori</sprite>
       <sprite>sprites\s_efekuto</sprite>
+      <sprite>sprites\s_bakudan</sprite>
     </sprites>
     <sprites name="midi-black">
       <sprite>sprites\s_dark</sprite>
@@ -250,9 +251,12 @@
     <script>scripts\sm_combattheme.gml</script>
     <script>scripts\sm_jumptest.gml</script>
     <script>scripts\sm_freezetest.gml</script>
+    <script>scripts\sm_minetest.gml</script>
     <script>scripts\c_combattheme.gml</script>
     <script>scripts\c_jumptest.gml</script>
+    <script>scripts\c_drivin.gml</script>
     <script>scripts\c_freezetest.gml</script>
+    <script>scripts\c_minetest.gml</script>
     <scripts name="the common">
       <script>scripts\script0.gml</script>
       <script>scripts\script25.gml</script>
@@ -270,6 +274,7 @@
     <script>scripts\x_sm_parser_create_old.gml</script>
     <script>scripts\x_the_explanation.gml</script>
     <script>scripts\c_noteskins.gml</script>
+    <script>scripts\sm_drivin.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\f_ronaldo</font>
@@ -287,6 +292,7 @@
     <object>objects\o_hitfx</object>
     <object>objects\o_tail</object>
     <object>objects\o_stay</object>
+    <object>objects\o_mine</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rhythm_limbo</room>
