@@ -179,6 +179,7 @@
   <sounds name="sound">
     <sound>sound\m_onemorenight</sound>
     <sound>sound\m_combattheme</sound>
+    <sound>sound\m_nothing</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\s_kaguya</sprite>
@@ -193,6 +194,7 @@
       <sprite>sprites\s_ao</sprite>
       <sprite>sprites\s_murasaki</sprite>
       <sprite>sprites\s_midori</sprite>
+      <sprite>sprites\s_efekuto</sprite>
     </sprites>
     <sprites name="midi-black">
       <sprite>sprites\s_dark</sprite>
@@ -246,7 +248,9 @@
     <script>scripts\sm_onemorenight.gml</script>
     <script>scripts\c_onemorenight.gml</script>
     <script>scripts\sm_combattheme.gml</script>
+    <script>scripts\sm_jumptest.gml</script>
     <script>scripts\c_combattheme.gml</script>
+    <script>scripts\c_jumptest.gml</script>
     <scripts name="the common">
       <script>scripts\script0.gml</script>
       <script>scripts\script25.gml</script>
@@ -277,6 +281,7 @@
     <object>objects\o_hit</object>
     <object>objects\o_title</object>
     <object>objects\o_start</object>
+    <object>objects\o_hitfx</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rhythm_limbo</room>

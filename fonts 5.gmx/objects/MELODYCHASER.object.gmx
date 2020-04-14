@@ -38,11 +38,12 @@ realscore = 0;
 highscore = 0;
 draw_set_font(f_ronaldo);
 state = c_receptorinput;
-offset = 0; //offset = 1918;
+offset = 0;
+//offset = 1918;
 timecounter = 0;
 songstarting = false;
 audio = m_combattheme;
-songscript = c_combattheme;
+songscript = c_jumptest;
 script_execute(songscript);
 </string>
           </argument>
