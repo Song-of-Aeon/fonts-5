@@ -48,6 +48,10 @@ notecolour = s_dark;
 lastmeasurelength = 0;
 amount = 0;
 placer = 0;
+freezel = 0;
+freezed = 0;
+freezeu = 0;
+freezer = 0;
 
 while position &lt;= string_length(song) {
     if mode = "metadata" {
@@ -137,10 +141,10 @@ for (i=0; i&lt;array_length_1d(noteset); i++) {
                 notemaker[j] = o_freeze;
                 break;
             case 3:
-                notemaker[j] = o_roll;
+                notemaker[j] = o_tail;
                 break;
             case 4:
-                notemaker[j] = o_freeze;
+                notemaker[j] = o_roll;
             
         }
     }
@@ -223,21 +227,49 @@ for (i=0; i&lt;array_length_1d(noteset); i++) {
         dir = 0;
         vspd = -(other.bpm/c_bpmbuster())*other.xmod;
         sprite_index = other.notecolour;
+        if object_index = o_freeze || object_index = o_roll {
+            other.freezel = id;
+        } else if object_index = o_tail {
+            with other.freezel {
+                tail = other.id;
+            }
+        }
     }
     with instance_create(128, placer*32*xmod+MELODYCHASER.bar, notemaker[1]) {
         dir = 1;
         vspd = -(other.bpm/c_bpmbuster())*other.xmod;
         sprite_index = other.notecolour;
+        if object_index = o_freeze || object_index = o_roll {
+            other.freezed = id;
+        } else if object_index = o_tail {
+            with other.freezed {
+                tail = other.id;
+            }
+        }
     }
     with instance_create(192, placer*32*xmod+MELODYCHASER.bar, notemaker[2]) {
         dir = 2;
         vspd = -(other.bpm/c_bpmbuster())*other.xmod;
         sprite_index = other.notecolour;
+        if object_index = o_freeze || object_index = o_roll {
+            other.freezeu = id;
+        } else if object_index = o_tail {
+            with other.freezeu {
+                tail = other.id;
+            }
+        }
     }
     with instance_create(256, placer*32*xmod+MELODYCHASER.bar, notemaker[3]) {
         dir = 3;
         vspd = -(other.bpm/c_bpmbuster())*other.xmod;
         sprite_index = other.notecolour;
+        if object_index = o_freeze || object_index = o_roll {
+            other.freezer = id;
+        } else if object_index = o_tail {
+            with other.freezer {
+                tail = other.id;
+            }
+        }
     }
     placer += 1/notemaker[5];
     amount += 1;

@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>-1</depth>
   <persistent>0</persistent>
-  <parentName>o_note</parentName>
+  <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,13 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hspd = 0;
-vspd = 0;
-dir = 0;
-image_speed = 0;
-//instance_destroy();
+            <string>count = 0;
 tail = 0;
-image_blend = c_purple;
+image_speed = 0;
 </string>
           </argument>
         </arguments>
@@ -54,37 +50,17 @@ image_blend = c_purple;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>sprite_index = s_midori;
-
-
-x += hspd;
-y += vspd;
-
-switch dir {
-    case 0:
-        image_angle = -90;
-        break;
-    case 1:
-        image_angle = 0;
-        break;
-    case 2:
-        image_angle = 180;
-        break;
-    case 3:
-        image_angle = 90;
-        break;
-}
-if tail != 0 {
-    with tail {
-        head = other.id;
+            <string>if count &gt;= 10 {
+    with instance_create(x, y, o_hitfx) {
+        image_angle = other.image_angle;
     }
-    
+    count = 0;
 }
 
-if y &lt;= MELODYCHASER.bar-64 {
+/*if place_meeting(x, y, o_tail) {
     instance_destroy();
-    MELODYCHASER.combo = 0;
-}
+}*/
+count += 1;
 </string>
           </argument>
         </arguments>
@@ -108,7 +84,7 @@ if y &lt;= MELODYCHASER.bar-64 {
           <argument>
             <kind>1</kind>
             <string>draw_self();
-draw_set_colour(c_purple);
+draw_set_colour(c_green);
 //draw_line_width(x, y, (collision_line_first(x, y, x, 1080, o_roll, false, false)).x, y, 6);
 //draw_line_width(x, y, (instance_nearest(x, y, o_roll)).x, y, 6);
 //draw_line_width(x, y, freezeend, y, 6);
@@ -117,7 +93,6 @@ draw_set_colour(c_purple);
     draw_line(x+1, y, tail.x+1, tail.y);
 }*/
 draw_set_colour(c_black);
-
 
 </string>
           </argument>

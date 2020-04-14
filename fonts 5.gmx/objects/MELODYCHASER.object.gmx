@@ -43,7 +43,7 @@ offset = 0;
 timecounter = 0;
 songstarting = false;
 audio = m_combattheme;
-songscript = c_jumptest;
+songscript = c_freezetest;
 script_execute(songscript);
 </string>
           </argument>

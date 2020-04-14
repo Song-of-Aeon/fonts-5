@@ -249,8 +249,10 @@
     <script>scripts\c_onemorenight.gml</script>
     <script>scripts\sm_combattheme.gml</script>
     <script>scripts\sm_jumptest.gml</script>
+    <script>scripts\sm_freezetest.gml</script>
     <script>scripts\c_combattheme.gml</script>
     <script>scripts\c_jumptest.gml</script>
+    <script>scripts\c_freezetest.gml</script>
     <scripts name="the common">
       <script>scripts\script0.gml</script>
       <script>scripts\script25.gml</script>
@@ -261,6 +263,7 @@
     </scripts>
     <scripts name="the note management">
       <script>scripts\c_receptorinput.gml</script>
+      <script>scripts\c_beforeweird.gml</script>
       <script>scripts\c_bpmbuster.gml</script>
     </scripts>
     <script>scripts\c_input.gml</script>
@@ -282,6 +285,8 @@
     <object>objects\o_title</object>
     <object>objects\o_start</object>
     <object>objects\o_hitfx</object>
+    <object>objects\o_tail</object>
+    <object>objects\o_stay</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rhythm_limbo</room>

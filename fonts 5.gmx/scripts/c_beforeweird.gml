@@ -7,7 +7,6 @@ if left {
                 with instance_create(64, bar, o_stay) {
                     tail = instance_place(64, MELODYCHASER.bar, o_note).tail;
                     image_blend = instance_place(64, MELODYCHASER.bar, o_note).image_blend;
-                    image_angle = instance_place(64, MELODYCHASER.bar, o_note).image_angle;
                     with tail {
                         head = other.id;
                     }
@@ -58,19 +57,7 @@ if down {
         var distance = instance_place(128, bar, o_note).y - bar;
         noterank = floor(abs(distance)/16);
         if noterank < 4 {
-            if instance_place(128, bar, o_note).object_index = o_freeze || instance_place(128, bar, o_note).object_index = o_roll {
-                with instance_create(128, bar, o_stay) {
-                    tail = instance_place(128, MELODYCHASER.bar, o_note).tail;
-                    image_blend = instance_place(128, MELODYCHASER.bar, o_note).image_blend;
-                    image_angle = instance_place(128, MELODYCHASER.bar, o_note).image_angle;
-                    with tail {
-                        head = other.id;
-                    }
-                }
-                instance_destroy(instance_place(128, bar, o_note));
-            } else {
-                instance_destroy(instance_place(128, bar, o_note));
-            }
+            instance_destroy(instance_place(128, bar, o_note));
             combo++;
         } else {
             combo = 0;
@@ -108,23 +95,11 @@ if down {
 }
 
 if up {
-    if instance_place(192, bar, o_note) != noone && instance_place(192, bar, o_note).dir = 2 {
-        var distance = instance_place(192, bar, o_note).y - bar;
+    if instance_place(164, bar, o_note) != noone && instance_place(164, bar, o_note).dir = 2 {
+        var distance = instance_place(164, bar, o_note).y - bar;
         noterank = floor(abs(distance)/16);
         if noterank < 4 {
-            if instance_place(192, bar, o_note).object_index = o_freeze || instance_place(192, bar, o_note).object_index = o_roll {
-                with instance_create(192, bar, o_stay) {
-                    tail = instance_place(192, MELODYCHASER.bar, o_note).tail;
-                    image_blend = instance_place(192, MELODYCHASER.bar, o_note).image_blend;
-                    image_angle = instance_place(192, MELODYCHASER.bar, o_note).image_angle;
-                    with tail {
-                        head = other.id;
-                    }
-                }
-                instance_destroy(instance_place(192, bar, o_note));
-            } else {
-                instance_destroy(instance_place(192, bar, o_note));
-            }
+            instance_destroy(instance_place(164, bar, o_note));
             combo++;
         } else {
             combo = 0;
@@ -167,19 +142,7 @@ if right {
         var distance = instance_place(256, bar, o_note).y - bar;
         noterank = floor(abs(distance)/16);
         if noterank < 4 {
-            if instance_place(256, bar, o_note).object_index = o_freeze || instance_place(256, bar, o_note).object_index = o_roll {
-                with instance_create(256, bar, o_stay) {
-                    tail = instance_place(256, MELODYCHASER.bar, o_note).tail;
-                    image_blend = instance_place(256, MELODYCHASER.bar, o_note).image_blend;
-                    image_angle = instance_place(256, MELODYCHASER.bar, o_note).image_angle;
-                    with tail {
-                        head = other.id;
-                    }
-                }
-                instance_destroy(instance_place(256, bar, o_note));
-            } else {
-                instance_destroy(instance_place(256, bar, o_note));
-            }
+            instance_destroy(instance_place(256, bar, o_note));
             combo++;
         } else {
             combo = 0;

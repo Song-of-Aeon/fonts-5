@@ -28,8 +28,9 @@
             <string>hspd = 0;
 vspd = 0;
 dir = 0;
-image_speed = .15;
+image_speed = 0;
 freezeend = 0;
+tail = 0;
 </string>
           </argument>
         </arguments>
@@ -72,6 +73,12 @@ switch dir {
         image_angle = 90;
         break;
 }
+if tail != 0 {
+    with tail {
+        head = other.id;
+    }
+    
+}
 
 if y &lt;= MELODYCHASER.bar-64 {
     instance_destroy();
@@ -101,12 +108,18 @@ if y &lt;= MELODYCHASER.bar-64 {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_colour(c_green);
+            <string>draw_self();
+draw_set_colour(c_green);
 //draw_line_width(x, y, (collision_line_first(x, y, x, 1080, o_roll, false, false)).x, y, 6);
 //draw_line_width(x, y, (instance_nearest(x, y, o_roll)).x, y, 6);
 //draw_line_width(x, y, freezeend, y, 6);
+/*if tail != 0 {
+    draw_line(x, y, tail.x, tail.y);
+    draw_line(x+1, y, tail.x+1, tail.y);
+}*/
 draw_set_colour(c_black);
-draw_self();
+
+
 </string>
           </argument>
         </arguments>

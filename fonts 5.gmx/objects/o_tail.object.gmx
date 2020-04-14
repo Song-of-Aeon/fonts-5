@@ -3,9 +3,9 @@
   <spriteName>s_midori</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-1</depth>
+  <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>o_note</parentName>
+  <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -29,9 +29,9 @@
 vspd = 0;
 dir = 0;
 image_speed = 0;
-//instance_destroy();
-tail = 0;
-image_blend = c_purple;
+image_index = 2;
+head = 0;
+colour = c_white;
 </string>
           </argument>
         </arguments>
@@ -55,36 +55,22 @@ image_blend = c_purple;
           <argument>
             <kind>1</kind>
             <string>sprite_index = s_midori;
-
-
 x += hspd;
 y += vspd;
 
-switch dir {
-    case 0:
-        image_angle = -90;
-        break;
-    case 1:
-        image_angle = 0;
-        break;
-    case 2:
-        image_angle = 180;
-        break;
-    case 3:
-        image_angle = 90;
-        break;
+if head.object_index = o_roll {
+    image_blend = c_purple;
+    colour = c_purple;
 }
-if tail != 0 {
-    with tail {
-        head = other.id;
+
+if y &lt;= MELODYCHASER.bar-64 || y &lt;= head.y+32 {
+    with head {
+        instance_destroy();
     }
+    instance_destroy();
     
 }
 
-if y &lt;= MELODYCHASER.bar-64 {
-    instance_destroy();
-    MELODYCHASER.combo = 0;
-}
 </string>
           </argument>
         </arguments>
@@ -107,18 +93,15 @@ if y &lt;= MELODYCHASER.bar-64 {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_self();
-draw_set_colour(c_purple);
-//draw_line_width(x, y, (collision_line_first(x, y, x, 1080, o_roll, false, false)).x, y, 6);
-//draw_line_width(x, y, (instance_nearest(x, y, o_roll)).x, y, 6);
-//draw_line_width(x, y, freezeend, y, 6);
-/*if tail != 0 {
-    draw_line(x, y, tail.x, tail.y);
-    draw_line(x+1, y, tail.x+1, tail.y);
-}*/
-draw_set_colour(c_black);
-
-
+            <string>if head != 0 {
+    var i;
+    //for (i=0; i&lt;distance_to_point(head.x, head.y); i+=64) {
+        draw_sprite_ext(s_midori, 1, x, y-distance_to_point(head.x, head.y)/2-32, 1, distance_to_point(head.x, head.y)/64, 0, colour, 1);
+    //}
+    
+    
+}
+draw_self();
 </string>
           </argument>
         </arguments>
