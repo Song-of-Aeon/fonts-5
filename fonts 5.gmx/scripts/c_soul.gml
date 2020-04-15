@@ -32,6 +32,20 @@ if vput != 0 {
 
 y += vspd;
 x += hspd;
+
+if x < MELODYCHASER.laneleft-32 {
+    x -= hspd;
+}
+if x > MELODYCHASER.laneright+32 {
+    x -= hspd;
+}
+
+if y < MELODYCHASER.bar-32 {
+    y -= vspd;
+}
+if y > view_wview[0] {
+    y -= vspd;
+}
     
 if (right) {
     dir = 0;

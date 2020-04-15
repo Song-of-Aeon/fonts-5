@@ -49,12 +49,12 @@ global.freeze = s_green;
 global.effect = s_effect;
 global.mine = s_mine;
 global.receptor = s_receptor;
-laneleft = 128;
-lanedown = 256;
-laneup = 384;
-laneright = 512;
+laneleft = 64;
+lanedown = 128;
+laneup = 192;
+laneright = 256;
 audio = m_drivin; //doesnt matter, songscript contains audio
-songscript = c_drivin;
+songscript = c_danmakutest;
 script_execute(songscript);
 
 danmaku = 0;
