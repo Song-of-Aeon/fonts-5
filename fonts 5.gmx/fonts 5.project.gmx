@@ -282,6 +282,7 @@
       <script>scripts\c_beforeweird.gml</script>
       <script>scripts\c_bpmbuster.gml</script>
       <script>scripts\c_noteskins.gml</script>
+      <script>scripts\f_hitdetection.gml</script>
     </scripts>
     <script>scripts\c_input.gml</script>
     <script>scripts\x_sm_parser_create_old.gml</script>

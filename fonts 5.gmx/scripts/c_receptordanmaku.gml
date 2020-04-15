@@ -1,7 +1,7 @@
 ///c_receptordanmaku
 switch danmaku {
 case 1:
-if instance_place(64, bar, o_note) != noone {
+if instance_place(laneleft, bar, o_note) != noone {
     instance_destroy(instance_place(64, bar, o_note));
     with instance_create(64, bar, o_knife) {
         direction = point_direction(x, y, o_soul.x, o_soul.y);
@@ -10,7 +10,7 @@ if instance_place(64, bar, o_note) != noone {
     }
 }
 
-if instance_place(128, bar, o_note) != noone {
+if instance_place(lanedown, bar, o_note) != noone {
     instance_destroy(instance_place(128, bar, o_note));
     var i;
     for (i=0; i<=3; i++) {
@@ -19,7 +19,7 @@ if instance_place(128, bar, o_note) != noone {
         newbullet.speed = 6+i/3;
     }
 }
-if instance_place(192, bar, o_note) != noone {
+if instance_place(laneup, bar, o_note) != noone {
     instance_destroy(instance_place(192, bar, o_note));
     var j;
     for (j=0; j<=3; j++) {
@@ -30,7 +30,7 @@ if instance_place(192, bar, o_note) != noone {
     }
 }
 
-if instance_place(256, bar, o_note) != noone {
+if instance_place(laneright, bar, o_note) != noone {
     instance_destroy(instance_place(256, bar, o_note));
     with instance_create(256, bar, o_knife) {
         direction = point_direction(x, y, o_soul.x, o_soul.y);
