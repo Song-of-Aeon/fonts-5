@@ -127,7 +127,7 @@ for (i=0; i&lt;array_length_1d(noteset); i++) {
     lastmeasurelength = notemaker[5];
     var j;
     for (j=0; j&lt;=3; j++) {
-        if notemaker[j] &gt; 5 {
+        if notemaker[j] &gt; 6 {
             notemaker[j] = 1;
         }
         switch notemaker[j] {
@@ -149,7 +149,8 @@ for (i=0; i&lt;array_length_1d(noteset); i++) {
             case 5:
                 notemaker[j] = o_mine;
                 break;
-                
+            case 6:
+                notemaker[j] = o_switch;
             
         }
     }
@@ -291,6 +292,7 @@ MELODYCHASER.notecount = instance_number(o_note);
 /*MELODYCHASER.notecount += instance_number(o_freeze);
 MELODYCHASER.notecount += instance_number(o_roll);*/
 MELODYCHASER.notecount -= instance_number(o_mine);
+MELODYCHASER.notecount -= instance_number(o_switch);
 </string>
           </argument>
         </arguments>

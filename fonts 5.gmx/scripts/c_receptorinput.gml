@@ -251,3 +251,10 @@ if right {
     }
     bop[3] = .8;
 }
+
+if instance_place(64, bar, o_switch) != noone {
+    danmaku++;
+    instance_create(160, 0, o_soul);
+    state = c_receptordanmaku;
+}
+

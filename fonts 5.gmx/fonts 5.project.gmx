@@ -180,6 +180,7 @@
     <sound>sound\m_onemorenight</sound>
     <sound>sound\m_combattheme</sound>
     <sound>sound\m_drivin</sound>
+    <sound>sound\m_everythingwillfreeze</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\s_kaguya</sprite>
@@ -216,11 +217,16 @@
       <sprite>sprites\s_azure</sprite>
     </sprites>
     <sprite>sprites\x_comparison</sprite>
+    <sprite>sprites\s_soul</sprite>
+    <sprite>sprites\s_knife</sprite>
+    <sprite>sprites\s_bullet</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
   </backgrounds>
-  <paths name="paths"/>
+  <paths name="paths">
+    <path>paths\p_soul</path>
+  </paths>
   <scripts name="scripts">
     <scripts name="the not mine">
       <script>scripts\libsm__getBackground.gml</script>
@@ -248,15 +254,12 @@
     </scripts>
     <script>scripts\sm_onemorenight.gml</script>
     <script>scripts\c_onemorenight.gml</script>
-    <script>scripts\sm_combattheme.gml</script>
-    <script>scripts\sm_jumptest.gml</script>
-    <script>scripts\sm_freezetest.gml</script>
-    <script>scripts\sm_minetest.gml</script>
-    <script>scripts\c_combattheme.gml</script>
-    <script>scripts\c_jumptest.gml</script>
+    <script>scripts\sm_drivin.gml</script>
     <script>scripts\c_drivin.gml</script>
-    <script>scripts\c_freezetest.gml</script>
-    <script>scripts\c_minetest.gml</script>
+    <script>scripts\sm_combattheme.gml</script>
+    <script>scripts\c_combattheme.gml</script>
+    <script>scripts\sm_everythingwillfreeze.gml</script>
+    <script>scripts\c_everythingwillfreeze.gml</script>
     <scripts name="the common">
       <script>scripts\script0.gml</script>
       <script>scripts\script25.gml</script>
@@ -267,14 +270,26 @@
     </scripts>
     <scripts name="the note management">
       <script>scripts\c_receptorinput.gml</script>
+      <script>scripts\c_receptordanmaku.gml</script>
       <script>scripts\c_beforeweird.gml</script>
       <script>scripts\c_bpmbuster.gml</script>
+      <script>scripts\c_noteskins.gml</script>
     </scripts>
     <script>scripts\c_input.gml</script>
     <script>scripts\x_sm_parser_create_old.gml</script>
     <script>scripts\x_the_explanation.gml</script>
-    <script>scripts\c_noteskins.gml</script>
-    <script>scripts\sm_drivin.gml</script>
+    <scripts name="the test maps">
+      <script>scripts\sm_jumptest.gml</script>
+      <script>scripts\sm_freezetest.gml</script>
+      <script>scripts\sm_minetest.gml</script>
+      <script>scripts\sm_danmakutest.gml</script>
+      <script>scripts\c_jumptest.gml</script>
+      <script>scripts\c_freezetest.gml</script>
+      <script>scripts\c_minetest.gml</script>
+      <script>scripts\c_danmakutest.gml</script>
+    </scripts>
+    <script>scripts\c_redinput.gml</script>
+    <script>scripts\c_soul.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\f_ronaldo</font>
@@ -284,6 +299,7 @@
     <object>objects\o_smparser</object>
     <object>objects\object0</object>
     <object>objects\o_note</object>
+    <object>objects\o_switch</object>
     <object>objects\o_freeze</object>
     <object>objects\o_roll</object>
     <object>objects\o_hit</object>
@@ -293,6 +309,10 @@
     <object>objects\o_tail</object>
     <object>objects\o_stay</object>
     <object>objects\o_mine</object>
+    <object>objects\o_soul</object>
+    <object>objects\o_projectile</object>
+    <object>objects\o_knife</object>
+    <object>objects\o_bullet</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rhythm_limbo</room>
