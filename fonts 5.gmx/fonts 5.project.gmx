@@ -184,11 +184,14 @@
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\s_kaguya</sprite>
-    <sprite>sprites\s_receptor</sprite>
     <sprites name="midi-solo">
       <sprite>sprites\s_red</sprite>
       <sprite>sprites\s_blue</sprite>
       <sprite>sprites\s_purple</sprite>
+      <sprite>sprites\s_green</sprite>
+      <sprite>sprites\s_effect</sprite>
+      <sprite>sprites\s_mine</sprite>
+      <sprite>sprites\s_receptor</sprite>
     </sprites>
     <sprites name="midi-dark">
       <sprite>sprites\s_aka</sprite>
@@ -197,11 +200,16 @@
       <sprite>sprites\s_midori</sprite>
       <sprite>sprites\s_efekuto</sprite>
       <sprite>sprites\s_bakudan</sprite>
+      <sprite>sprites\s_reseputaa</sprite>
     </sprites>
     <sprites name="midi-black">
       <sprite>sprites\s_dark</sprite>
       <sprite>sprites\s_darker</sprite>
       <sprite>sprites\s_yetdarker</sprite>
+      <sprite>sprites\s_umbra</sprite>
+      <sprite>sprites\s_blacklight</sprite>
+      <sprite>sprites\s_negative</sprite>
+      <sprite>sprites\s_shadow</sprite>
     </sprites>
     <sprite>sprites\s_fonts5</sprite>
     <sprite>sprites\s_black</sprite>

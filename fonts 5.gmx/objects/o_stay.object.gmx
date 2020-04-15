@@ -32,6 +32,7 @@ image_speed = 0;
 holder = true;
 hspd = 0;
 vspd = 0;
+sprite_index = global.freeze;
 </string>
           </argument>
         </arguments>

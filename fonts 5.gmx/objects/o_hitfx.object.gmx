@@ -29,6 +29,7 @@
 if image_alpha &lt;= 0 {
     instance_destroy();
 }
+sprite_index = global.effect;
 </string>
           </argument>
         </arguments>

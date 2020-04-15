@@ -53,7 +53,7 @@ tail = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>sprite_index = s_midori;
+            <string>sprite_index = global.freeze;
 
 
 x += hspd;

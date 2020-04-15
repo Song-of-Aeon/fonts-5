@@ -55,7 +55,7 @@ unusable = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>sprite_index = s_midori;
+            <string>sprite_index = global.freeze;
 x += hspd;
 y += vspd;
 
@@ -100,12 +100,12 @@ if unusable = false {
             <string>if head != 0 || unusable = false {
     //var i;
     //for (i=0; i&lt;distance_to_point(head.x, head.y); i+=64) {
-        draw_sprite_ext(s_midori, 1, x, y-distance_to_point(head.x, head.y)/2-32, 1, distance_to_point(head.x, head.y)/64, 0, colour, 1);
+        draw_sprite_ext(global.freeze, 1, x, y-distance_to_point(head.x, head.y)/2-32, 1, distance_to_point(head.x, head.y)/64, 0, colour, 1);
     //}
     
     
 } else {
-    draw_sprite_ext(s_midori, 1, x, y-distance_to_point(x, 0)/2-32, 1, distance_to_point(x, 0)/64, 0, colour, 1);
+    draw_sprite_ext(global.freeze, 1, x, y-distance_to_point(x, 0)/2-32, 1, distance_to_point(x, 0)/64, 0, colour, 1);
 }
 draw_self();
 </string>
