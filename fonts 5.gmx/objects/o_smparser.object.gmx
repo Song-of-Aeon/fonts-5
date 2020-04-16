@@ -52,6 +52,7 @@ freezel = 0;
 freezed = 0;
 freezeu = 0;
 freezer = 0;
+lanes = MELODYCHASER.lanes;
 
 while position &lt;= string_length(song) {
     if mode = "metadata" {
@@ -88,8 +89,8 @@ while position &lt;= string_length(song) {
             endmeasure = arraypos;
             var m;
             for (m=entermeasure; m&lt;endmeasure; m++) {
-                var measuredifference = string_copy(noteset[arraypos-1], 5, string_length(noteset[arraypos-1])-4);
-                noteset[m] = string_copy(noteset[m], 0, 4) + measuredifference;
+                var measuredifference = string_copy(noteset[arraypos-1], lanes+1, string_length(noteset[arraypos-1])-lanes);
+                noteset[m] = string_copy(noteset[m], 0, lanes) + measuredifference;
             }
             measure += 1;
             measurelength = 0;
@@ -97,10 +98,10 @@ while position &lt;= string_length(song) {
             entermeasure = arraypos;
         }
         if string_digits(string_char_at(song, position)) = string_char_at(song, position) {
-            measurelength += .25;
-            noteset[arraypos] = string_copy(song, position, 4) + string(ceil(measurelength));
+            measurelength += lanes/(lanes*4);
+            noteset[arraypos] = string_copy(song, position, lanes) + string(ceil(measurelength));
             
-            position += 4;
+            position += lanes;
             arraypos++;
             
         }
@@ -120,13 +121,19 @@ for (i=0; i&lt;array_length_1d(noteset); i++) {
     notemaker[1] = real(string_char_at(noteset[i], 2));
     notemaker[2] = real(string_char_at(noteset[i], 3));
     notemaker[3] = real(string_char_at(noteset[i], 4));
-    notemaker[5] = real(string_copy(noteset[i], 5, string_length(noteset[i])-4));
-    if notemaker[5] != lastmeasurelength {
+    if lanes = 8 {
+        notemaker[4] = real(string_char_at(noteset[i], 5));
+        notemaker[5] = real(string_char_at(noteset[i], 6));
+        notemaker[6] = real(string_char_at(noteset[i], 7));
+        notemaker[7] = real(string_char_at(noteset[i], 8));
+    }
+    notemaker[9] = real(string_copy(noteset[i], lanes+1, string_length(noteset[i])-lanes));
+    if notemaker[9] != lastmeasurelength {
         amount = 0;
     }
-    lastmeasurelength = notemaker[5];
+    lastmeasurelength = notemaker[9];
     var j;
-    for (j=0; j&lt;=3; j++) {
+    for (j=0; j&lt;=lanes-1; j++) {
         if notemaker[j] &gt; 6 {
             notemaker[j] = 1;
         }
@@ -154,7 +161,7 @@ for (i=0; i&lt;array_length_1d(noteset); i++) {
             
         }
     }
-    switch notemaker[5] {
+    switch notemaker[9] {
         case 1:
             notecolour = global.red;
             break;
@@ -277,10 +284,61 @@ for (i=0; i&lt;array_length_1d(noteset); i++) {
             }
         }
     }
-    placer += 1/notemaker[5];
+    //four extra
+    if lanes = 8 {
+        with instance_create(MELODYCHASER.laneleft+MELODYCHASER.lanespacing*6, placer*32*xmod+MELODYCHASER.bar, notemaker[4]) {
+            dir = 0;
+            vspd = -(other.bpm/c_bpmbuster())*other.xmod;
+            sprite_index = other.notecolour;
+            if object_index = o_freeze || object_index = o_roll {
+                other.freezel = id;
+            } else if object_index = o_tail {
+                with other.freezel {
+                    tail = other.id;
+                }
+            }
+        }
+        with instance_create(MELODYCHASER.lanedown+MELODYCHASER.lanespacing*6, placer*32*xmod+MELODYCHASER.bar, notemaker[5]) {
+            dir = 1;
+            vspd = -(other.bpm/c_bpmbuster())*other.xmod;
+            sprite_index = other.notecolour;
+            if object_index = o_freeze || object_index = o_roll {
+                other.freezed = id;
+            } else if object_index = o_tail {
+                with other.freezed {
+                    tail = other.id;
+                }
+            }
+        }
+        with instance_create(MELODYCHASER.laneup+MELODYCHASER.lanespacing*6, placer*32*xmod+MELODYCHASER.bar, notemaker[6]) {
+            dir = 2;
+            vspd = -(other.bpm/c_bpmbuster())*other.xmod;
+            sprite_index = other.notecolour;
+            if object_index = o_freeze || object_index = o_roll {
+                other.freezeu = id;
+            } else if object_index = o_tail {
+                with other.freezeu {
+                    tail = other.id;
+                }
+            }
+        }
+        with instance_create(MELODYCHASER.laneright+MELODYCHASER.lanespacing*6, placer*32*xmod+MELODYCHASER.bar, notemaker[7]) {
+            dir = 3;
+            vspd = -(other.bpm/c_bpmbuster())*other.xmod;
+            sprite_index = other.notecolour;
+            if object_index = o_freeze || object_index = o_roll {
+                other.freezer = id;
+            } else if object_index = o_tail {
+                with other.freezer {
+                    tail = other.id;
+                }
+            }
+        }
+    }
+    placer += 1/notemaker[9];
     amount += 1;
-    //i*(32/notemaker[5])*xmod+MELODYCHASER.bar
-    //((i*32)-i+(i/(amount/notemaker[5])))
+    //i*(32/notemaker[9])*xmod+MELODYCHASER.bar
+    //((i*32)-i+(i/(amount/notemaker[9])))
 }
 
 var n;

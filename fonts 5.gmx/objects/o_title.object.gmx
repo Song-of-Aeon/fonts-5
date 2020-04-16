@@ -38,8 +38,16 @@ shootdir = 0;
 going = false;
 swapper = 0;
 enteralpha = 1;
+draw_set_font(f_ronaldo);
 
-//titleparticles = part_system_create();
+title = array("Evanecence,", "it", "is", "personified!",
+"As", "that", "inferno", "fluxuates,", "so", "does", "the", "penultimate", "of", "the", "heptads,", "the", "one", "commanding", "the", "iconoclastic", "apparitions!",
+"At", "world", "end,", "rock", "and", "heaven,", "soul", "and", "sea,", "fade,", "yet", "it", "does", "not", "matter.",
+"For", "that", "melody", "had", "long", "since", "saved", "all.",
+"It", "has", "already", "reached", "[AMORTALITY]");
+//theres 49 of em
+
+countwo = 0;
 
 </string>
           </argument>
@@ -79,6 +87,13 @@ glowalpha += glospd;
 fadealpha -= fadespd;
 
 count += 1;
+
+if fadealpha &lt;= 0 &amp;&amp; countwo &lt;= 490 {
+    countwo++;
+}
+if countwo % 10 = 0 {
+    //play a sound effect
+}
 
 if count &gt;= 10 {
     if shootdir % 40 = 0 {
@@ -148,9 +163,20 @@ depth = -2;
 draw_sprite_ext(s_start, 0, 960, 900, 1, 1, 0, c_white, enteralpha);
 draw_sprite_ext(s_black, 0, x, y, 1, 1, 0, c_white, fadealpha);
 depth = 0;
-
-
-
+/*
+var i;
+for (i=0;i&lt;49;i++) {
+    if i &lt;= 12 {
+        draw_text_ext_transformed(100, i*60+100, title[i], 0, 1000, 1, 1, 0);
+    } else if i &lt;= 24 {
+        draw_text_ext_transformed(600, (i-12)*60+100, title[i], 0, 1000, 1, 1, 0);
+    } else if i &lt;= 36 {
+        draw_text_ext_transformed(1100, (i-24)*60+100, title[i], 0, 1000, 1, 1, 0);
+    } else {
+        draw_text_ext_transformed(1600, (i-36)*60+100, title[i], 0, 1000, 1, 1, 0);
+    }
+}
+*/
 </string>
           </argument>
         </arguments>

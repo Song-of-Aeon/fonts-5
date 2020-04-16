@@ -181,6 +181,7 @@
     <sound>sound\m_combattheme</sound>
     <sound>sound\m_drivin</sound>
     <sound>sound\m_everythingwillfreeze</sound>
+    <sound>sound\m_lancerraps</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\s_kaguya</sprite>
@@ -266,6 +267,8 @@
     <script>scripts\c_drivin.gml</script>
     <script>scripts\sm_combattheme.gml</script>
     <script>scripts\c_combattheme.gml</script>
+    <script>scripts\sm_lancerraps.gml</script>
+    <script>scripts\c_lancerraps.gml</script>
     <script>scripts\sm_everythingwillfreeze.gml</script>
     <script>scripts\c_everythingwillfreeze.gml</script>
     <scripts name="the common">
@@ -275,9 +278,11 @@
       <script>scripts\collision_line_first.gml</script>
       <script>scripts\range_finder.gml</script>
       <script>scripts\instance_nth_nearest.gml</script>
+      <script>scripts\array.gml</script>
     </scripts>
     <scripts name="the note management">
       <script>scripts\c_receptorinput.gml</script>
+      <script>scripts\c_receptorinputwo.gml</script>
       <script>scripts\c_receptordanmaku.gml</script>
       <script>scripts\c_beforeweird.gml</script>
       <script>scripts\c_bpmbuster.gml</script>
