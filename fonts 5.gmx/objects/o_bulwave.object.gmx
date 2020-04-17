@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>o_projectile</parentName>
+  <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="3" enumb="0">
@@ -26,6 +26,20 @@
           <argument>
             <kind>1</kind>
             <string>image_angle = direction-90;
+
+speed = speed/1.05;
+
+if speed &lt;= .5 {
+    image_yscale -= .1;
+    if image_yscale &lt;= 0 {
+        with instance_create(x, y, o_knife) {
+            direction = -90;
+            speed = 6;
+        }
+        instance_destroy();
+    }
+}
+
 </string>
           </argument>
         </arguments>

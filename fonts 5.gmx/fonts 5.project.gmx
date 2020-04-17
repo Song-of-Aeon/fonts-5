@@ -327,6 +327,7 @@
     <object>objects\o_projectile</object>
     <object>objects\o_knife</object>
     <object>objects\o_bullet</object>
+    <object>objects\o_bulwave</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rhythm_limbo</room>
