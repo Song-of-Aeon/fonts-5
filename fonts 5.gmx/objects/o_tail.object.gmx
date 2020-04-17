@@ -69,6 +69,7 @@ if unusable = false {
         with head {
             instance_destroy();
         }
+        MELODYCHASER.realscore += .2*(100/MELODYCHASER.notecount);
         instance_destroy();
     }
 

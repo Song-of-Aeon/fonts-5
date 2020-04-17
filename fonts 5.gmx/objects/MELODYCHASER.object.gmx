@@ -28,7 +28,7 @@
             <string>xmod = 6;
 mmod = 0;
 cmod = 0;
-bar = 200;
+bar = 64;
 bop[0] = 1;
 bop[1] = 1;
 bop[2] = 1;
@@ -59,8 +59,9 @@ laneup = 192;
 laneright = 256;
 lanespacing = 64;
 lanes = 4;
+hp = 12;
 audio = m_drivin; //doesnt matter, songscript contains audio
-songscript = c_everythingwillfreeze;
+songscript = c_danmakutest;
 script_execute(songscript);
 
 danmaku = 1;
@@ -149,6 +150,7 @@ for (j=laneleft; j&lt;=laneup; j+=lanespacing) {
             instance_destroy(note);
         }
         combo = 0;
+        hp -= 1;
     }
     /*if instance_exists(instance_place(j, bar, o_tail)) {
         if instance_place(j, bar, o_tail).y &lt;= bar-64 || instance_place(j, bar, o_tail).y &lt;= instance_place(j, bar, o_tail).head.y+32 {
@@ -235,8 +237,13 @@ if lanes = 8 {
     draw_sprite_ext(global.receptor, 0, laneright+lanespacing*6, bar, bop[7], bop[7], 90, c_white, 1);
 }
 
-draw_text(laneright+250, 500, string(realscore));
-draw_text(laneright+250, 700, string(combo));
+draw_text(laneright+250, bar+100, string(realscore));
+draw_text(laneright+250, bar+300, string(combo));
+
+var l;
+for (l=0; l&lt;floor(hp); l++) {
+    draw_sprite(s_kaguya, 0, laneleft+l*32, bar-96);
+}
 
 //draw_text(900, 700, string(timeat));
 </string>

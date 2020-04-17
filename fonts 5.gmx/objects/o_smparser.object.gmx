@@ -351,6 +351,7 @@ MELODYCHASER.notecount = instance_number(o_note);
 MELODYCHASER.notecount += instance_number(o_roll);*/
 MELODYCHASER.notecount -= instance_number(o_mine);
 MELODYCHASER.notecount -= instance_number(o_switch);
+MELODYCHASER.notecount += instance_number(o_tail)/5;
 </string>
           </argument>
         </arguments>

@@ -30,18 +30,21 @@ if instance_place(argument0, bar, o_note) != noone && instance_place(argument0, 
                 image_blend = c_teal;
             }
             realscore += 100/notecount;
+            hp += .1;
             break;
         case 1:
             with instance_create(x, y, o_hit) {
                 image_blend = c_yellow;
             }
             realscore += .8*(100/notecount);
+            hp += .08;
             break;
         case 2:
             with instance_create(x, y, o_hit) {
                 image_blend = c_green;
             }
             realscore += .6*(100/notecount);
+            hp += .06;
             break;
         case 3:
             with instance_create(x, y, o_hit) {
@@ -53,6 +56,7 @@ if instance_place(argument0, bar, o_note) != noone && instance_place(argument0, 
                 image_blend = c_red;
             }
             realscore -= 100/notecount;
+            hp -= 1;
             break;
     }
     var fx = instance_create(argument0, bar, o_hitfx);
