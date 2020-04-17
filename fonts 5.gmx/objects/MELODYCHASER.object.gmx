@@ -60,9 +60,12 @@ laneright = 256;
 lanespacing = 64;
 lanes = 4;
 audio = m_drivin; //doesnt matter, songscript contains audio
-songscript = c_lancerraps;
+songscript = c_everythingwillfreeze;
 script_execute(songscript);
 
+danmaku = 1;
+upwave = 0;
+downwave = 0;
 danmaku = 0;
 windowBouncex = 1;
 windowBouncey = 1;
