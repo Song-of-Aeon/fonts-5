@@ -64,6 +64,9 @@ songscript = c_lancerraps;
 script_execute(songscript);
 
 danmaku = 0;
+windowBouncex = 1;
+windowBouncey = 1;
+windowBounceSpeed = 0;
 </string>
           </argument>
         </arguments>
@@ -169,6 +172,27 @@ if lanes = 8 {
             break;
     }
 }
+var windowx = window_get_x();
+var windowy = window_get_y();
+if(keyboard_check(vk_subtract)){
+    windowBounceSpeed--;
+}
+if(keyboard_check(vk_add)){
+    windowBounceSpeed++;
+}
+if(display_get_width() &lt;= windowx+window_get_width()){
+    windowBouncex = -1;
+}
+if(windowx &lt;= 0){
+    windowBouncex = 1;
+}
+if(display_get_height() &lt;= windowy+window_get_height()){
+    windowBouncey = -1;
+}
+if(windowy &lt;= 0){
+    windowBouncey = 1;
+}
+window_set_position(windowx+(windowBounceSpeed*windowBouncex),windowy+(windowBounceSpeed*windowBouncey));
 
 
 
