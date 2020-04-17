@@ -305,6 +305,9 @@
     <script>scripts\c_redinput.gml</script>
     <script>scripts\c_soul.gml</script>
   </scripts>
+  <shaders name="shaders">
+    <shader type="GLSLES">shaders\z_ChromaticAbberation.shader</shader>
+  </shaders>
   <fonts name="fonts">
     <font>fonts\f_ronaldo</font>
   </fonts>
@@ -328,6 +331,9 @@
     <object>objects\o_knife</object>
     <object>objects\o_bullet</object>
     <object>objects\o_bulwave</object>
+    <objects name="shaders">
+      <object>objects\o_ChromaticAbberation</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rhythm_limbo</room>

@@ -197,6 +197,9 @@ if(windowy &lt;= 0){
 }
 window_set_position(windowx+(windowBounceSpeed*windowBouncex),windowy+(windowBounceSpeed*windowBouncey));
 
+if(keyboard_check(vk_f1)){
+    instance_create(0,0,o_ChromaticAbberation);
+}
 
 
 </string>
