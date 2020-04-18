@@ -15,3 +15,6 @@ helddown = keyboard_check(vk_down) + keyboard_check(ord('S'));
 heldup = keyboard_check(vk_up) + keyboard_check(ord('L'));
 heldright = keyboard_check(vk_right) + keyboard_check(186);
 
+select = keyboard_check(ord('Z')) + keyboard_check(vk_enter);
+back = keyboard_check(ord('X')) + keyboard_check(vk_escape);
+

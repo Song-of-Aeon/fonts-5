@@ -26,10 +26,32 @@
           <argument>
             <kind>1</kind>
             <string>menuposition = 0;
-selectorposx = 640;
-selectorposy = 0;
+selectorposx = 652;
+selectorposy = 120;
 hspd = 0;
-vspd = 0;
+menuxscale = 1;
+menuyscale = 1;
+
+global.scoring[0] = "00.00";
+global.scoring[1] = "94.14G";
+global.scoring[2] = "88.50";
+global.scoring[3] = "84.76";
+global.scoring[4] = "98.02P";
+global.scoring[5] = "XX.XXM";
+global.currentstage = 6;
+scoreshow = array_create(6);
+scoreshowcolour = array_create(6);
+
+global.songscript = c_jumptest;
+global.storymode = false;
+
+global.red = s_red;
+global.blue = s_blue;
+global.purple = s_purple;
+global.freeze = s_green;
+global.effect = s_effect;
+global.mine = s_mine;
+global.receptor = s_receptor;
 </string>
           </argument>
         </arguments>
@@ -54,16 +76,88 @@ vspd = 0;
             <kind>1</kind>
             <string>c_input();
 if up &amp;&amp; menuposition &gt; 0 {
+    if menuposition = 1 {
+        selectorposy++;
+    }
     menuposition--;
 }
-if down &amp;&amp; menuposition &lt; 6 {
+if down &amp;&amp; menuposition &lt; 5 {
+    if menuposition = 0 {
+        selectorposy--;
+    }
     menuposition++;
 }
 
-if selectorposy &lt; menuposition*96+192 {
-    selectorposy += 2;
-} else if selectorposy &gt; menuposition*96+192 {
-    selectorposy -= 2;
+if menuposition &gt;= 1 {
+    if selectorposy &lt; menuposition*87+128 {
+        selectorposy += 3;
+    } else if selectorposy &gt; menuposition*87+128 {
+        selectorposy -= 3;
+    }
+    if menuxscale &gt; 1 {
+        menuxscale -= .05;
+    }
+    if menuyscale &gt; 1 {
+        menuyscale -= .15;
+    }
+} else {
+    if selectorposy &lt; menuposition*87+129 {
+        selectorposy += 3;
+    } else if selectorposy &gt; menuposition*87+129 {
+        selectorposy -= 3;
+    }
+    if menuxscale &lt; 2 {
+        menuxscale += .05;
+    }
+    if menuyscale &lt; 1.2 {
+        menuyscale += .15;
+    }
+}
+
+var i;
+for (i=0; i&lt;6; i++) {
+    switch string_copy(global.scoring[i], 6, 1) {
+        case "M":
+            scoreshowcolour[i] = c_teal;
+            break;
+        case "P":
+            scoreshowcolour[i] = c_yellow;
+            break;
+        case "G":
+            scoreshowcolour[i] = c_green;
+            break;
+        case "":
+            scoreshowcolour[i] = c_white;
+            break;
+    }
+    scoreshow[i] = string_copy(global.scoring[i], 1, 5);
+    
+}
+
+if select {
+    switch menuposition {
+        case 0:
+            global.songscript = c_combattheme;
+            global.storymode = true;
+            break;
+        case 1:
+            global.songscript = c_combattheme;
+            break;
+        case 2:
+            global.songscript = c_lancerraps;
+            break;
+        case 3:
+            global.songscript = c_everythingwillfreeze;
+            break;
+        case 4:
+            global.songscript = c_onemorenight;
+            break;
+        case 5:
+            global.songscript = c_drivin;
+            break;
+    }
+    global.currentstage = menuposition;
+    instance_create(0, 0, o_fao);
 }
 
 </string>
@@ -89,7 +183,51 @@ if selectorposy &lt; menuposition*96+192 {
           <argument>
             <kind>1</kind>
             <string>draw_self();
-draw_sprite(s_cursor, 0, selectorposx, selectorposy);
+draw_sprite_ext(s_cursor, 0, selectorposx, selectorposy, menuxscale, menuyscale, 0, c_white, 1);
+draw_set_colour(c_white);
+draw_text(100, 100, string(menuposition));
+
+switch menuposition {
+    case 0:
+        draw_text(652, menuposition*87+162, "");
+        break;
+    case 1:
+        draw_text(652, menuposition*87+162, "Combat Theme");
+        break;
+    case 2:
+        draw_text(652, menuposition*87+162, "Lancer Raps");
+        break;
+    case 3:
+        draw_text(652, menuposition*87+162, "Everything Will Freeze");
+        break;
+    case 4:
+        draw_text(652, menuposition*87+162, "Spider Dance");
+        break;
+    case 5:
+        draw_text(652, menuposition*87+162, "Eon Break");
+        break;
+}
+
+//draw_text()
+draw_set_font(f_scoreronaldo)
+draw_sprite_ext(s_scorecloud, 0, 1000, 160, 1.5, 1.2, 0, c_white, 1);
+draw_sprite_ext(s_scorecloud, 0, 800, 87+160, 1, 1, 0, scoreshowcolour[1], 1);
+draw_sprite_ext(s_scorecloud, 0, 800, 174+160, 1, 1, 0, scoreshowcolour[2], 1);
+draw_sprite_ext(s_scorecloud, 0, 800, 261+160, 1, 1, 0, scoreshowcolour[3], 1);
+draw_sprite_ext(s_scorecloud, 0, 800, 348+160, 1, 1, 0, scoreshowcolour[4], 1);
+draw_sprite_ext(s_scorecloud, 0, 800, 435+160, 1, 1, 0, scoreshowcolour[5], 1);
+
+draw_text(840, 87+145, scoreshow[1]);
+draw_text(840, 174+145, scoreshow[2]);
+draw_text(840, 261+145, scoreshow[3]);
+draw_text(840, 348+145, scoreshow[4]);
+draw_text(840, 435+145, scoreshow[5]);
+
+draw_sprite_ext(global.receptor, 0, 221+64-24, 250, 1, 1, -90, c_white, 1);
+draw_sprite_ext(global.receptor, 0, 221+128-24, 250, 1, 1, 0, c_white, 1);
+draw_sprite_ext(global.receptor, 0, 221+192-24, 250, 1, 1, 180, c_white, 1);
+draw_sprite_ext(global.receptor, 0, 221+256-24, 250, 1, 1, 90, c_white, 1);
+
 </string>
           </argument>
         </arguments>

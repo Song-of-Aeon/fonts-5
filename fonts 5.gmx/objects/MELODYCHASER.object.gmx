@@ -46,13 +46,6 @@ offset = 0;
 //offset = 1918;
 timecounter = 0;
 songstarting = false;
-global.red = s_red;
-global.blue = s_blue;
-global.purple = s_purple;
-global.freeze = s_green;
-global.effect = s_effect;
-global.mine = s_mine;
-global.receptor = s_receptor;
 laneleft = 64;
 lanedown = 128;
 laneup = 192;
@@ -64,8 +57,8 @@ lanespeed = 0;
 hp = 12;
 //measurescoring = array_create(48);
 audio = m_drivin; //doesnt matter, songscript contains audio
-songscript = c_everythingwillfreeze;
-script_execute(songscript);
+
+script_execute(global.songscript);
 
 danmaku = 0;
 upwave = 0;
@@ -74,6 +67,8 @@ danmaku = 0;
 windowBouncex = 1;
 windowBouncey = 1;
 windowBounceSpeed = 0;
+
+
 </string>
           </argument>
         </arguments>
@@ -220,6 +215,10 @@ if(keyboard_check(vk_f1)){
     instance_create(0,0,o_ChromaticAbberation);
 }
 
+if hp &gt; 12 {
+    hp = 12;
+}
+
 
 </string>
           </argument>
@@ -261,7 +260,7 @@ draw_text(laneright+250, bar+300, string(combo));
 
 var l;
 for (l=0; l&lt;floor(hp); l++) {
-    draw_sprite(s_kaguya, 0, laneleft+l*32, bar-96);
+    draw_sprite(s_heart, 0, laneright+80, bar+l*16);
 }
 /*var m;
 for (m=0;)

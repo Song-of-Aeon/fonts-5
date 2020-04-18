@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>script_execute(MELODYCHASER.songscript);
+            <string>script_execute(global.songscript);
 c_noteskins();
 
 position = 0;
@@ -400,6 +400,14 @@ for (i=0; i&lt;array_length_1d(noteset); i++) {
         }
     }
 }*/
+
+if instance_number(o_note) + instance_number(o_tail) &lt;= 0 {
+    with instance_create(0, 0, o_fao) {
+        leaving = stagemenu;
+    }
+    global.scoring[global.currentstage] = MELODYCHASER.realscore;
+}
+
 </string>
           </argument>
         </arguments>
