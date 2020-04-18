@@ -98,7 +98,7 @@ if keyboard_check_pressed(ord('R')) {
     instance_destroy(o_note);
     instance_create(0, 0, o_smparser);
 }
-if keyboard_check_pressed(vk_enter) &amp;&amp; !instance_exists(o_smparser) {
+if select &amp;&amp; !instance_exists(o_smparser) {
     songstarting = true;
     instance_create(0, 0, o_smparser);
 }/* else if instance_exists(o_smparser) {
@@ -219,6 +219,12 @@ if hp &gt; 12 {
     hp = 12;
 }
 
+if back {
+    with instance_create(0, 0, o_fao) {
+        leaving = stagemenu;
+    }
+    global.scoring[global.currentstage] = MELODYCHASER.realscore;
+}
 
 </string>
           </argument>

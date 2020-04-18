@@ -236,6 +236,7 @@
     <sprite>sprites\s_scorecloud</sprite>
     <sprite>sprites\s_heart</sprite>
     <sprite>sprites\s_bigdark</sprite>
+    <sprite>sprites\s_world</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -345,11 +346,13 @@
     </objects>
     <object>objects\o_menu</object>
     <object>objects\o_fao</object>
+    <object>objects\o_cutscene</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\stagemenu</room>
     <room>rooms\fontstitle</room>
     <room>rooms\rhythm_limbo</room>
+    <room>rooms\cutscene</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
