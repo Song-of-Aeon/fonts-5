@@ -126,7 +126,7 @@ if keyboard_check_pressed(vk_enter) &amp;&amp; going = false {
         enteralpha = 1;
     }
     if swapper &gt;= 120 {
-        room_goto(rhythm_limbo);
+        room_goto(stagemenu);
         console_log("uh oh");
         instance_destroy();
     }

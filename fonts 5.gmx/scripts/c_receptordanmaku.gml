@@ -1,6 +1,6 @@
 ///c_receptordanmaku
 switch danmaku {
-    case 1:
+    case 2:
         if instance_place(laneleft, bar-64, o_note) != noone {
             instance_destroy(instance_place(64, bar, o_note));
             with instance_create(64, bar, o_knife) {
@@ -39,7 +39,7 @@ switch danmaku {
             }
         }
         break;
-    case 2:
+    case 1:
         if instance_place(laneleft, bar-64, o_note) != noone {
             instance_destroy(instance_place(laneleft, bar, o_note));
             var i;
@@ -89,3 +89,9 @@ switch danmaku {
         
         break;
 }
+
+if instance_place(laneleft, bar, o_switchback) != noone {
+    instance_destroy(o_soul);
+    state = c_receptorinput;
+}
+

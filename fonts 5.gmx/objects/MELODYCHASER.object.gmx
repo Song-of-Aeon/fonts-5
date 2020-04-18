@@ -59,12 +59,15 @@ laneup = 192;
 laneright = 256;
 lanespacing = 64;
 lanes = 4;
+laneselected = lanedown+(lanespacing/2);
+lanespeed = 0;
 hp = 12;
+//measurescoring = array_create(48);
 audio = m_drivin; //doesnt matter, songscript contains audio
-songscript = c_danmakutest;
+songscript = c_everythingwillfreeze;
 script_execute(songscript);
 
-danmaku = 1;
+danmaku = 0;
 upwave = 0;
 downwave = 0;
 danmaku = 0;
@@ -168,15 +171,29 @@ if lanes = 8 {
         case c_receptorinput:
             if keyboard_check_pressed(vk_space) {
                 state = c_receptorinputwo;
+                lanespeed = 32;
+            }
+            if laneselected &gt; 159 {
+                laneselected += lanespeed;
+                lanespeed = lanespeed/1.09;
             }
             break;
         case c_receptorinputwo:
             if keyboard_check_pressed(vk_space) {
                 state = c_receptorinput;
+                lanespeed = -32;
+            }
+            if laneselected &lt; 543 {
+                laneselected += lanespeed;
+                lanespeed = lanespeed/1.09;
             }
             break;
     }
 }
+
+
+
+
 var windowx = window_get_x();
 var windowy = window_get_y();
 if(keyboard_check(vk_subtract)){
@@ -226,15 +243,17 @@ if(keyboard_check(vk_f1)){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(global.receptor, 0, laneleft, bar, bop[0], bop[0], -90, c_white, 1);
+            <string>draw_sprite(s_laneselected, 0, laneselected, 0);
+
+draw_sprite_ext(global.receptor, 0, laneleft, bar, bop[0], bop[0], -90, c_white, 1);
 draw_sprite_ext(global.receptor, 0, lanedown, bar, bop[1], bop[1], 0, c_white, 1);
 draw_sprite_ext(global.receptor, 0, laneup, bar, bop[2], bop[2], 180, c_white, 1);
 draw_sprite_ext(global.receptor, 0, laneright, bar, bop[3], bop[3], 90, c_white, 1);
 if lanes = 8 {
-    draw_sprite_ext(global.receptor, 0, laneleft+lanespacing*6, bar, bop[4], bop[4], -90, c_white, 1);
-    draw_sprite_ext(global.receptor, 0, lanedown+lanespacing*6, bar, bop[5], bop[5], 0, c_white, 1);
-    draw_sprite_ext(global.receptor, 0, laneup+lanespacing*6, bar, bop[6], bop[6], 180, c_white, 1);
-    draw_sprite_ext(global.receptor, 0, laneright+lanespacing*6, bar, bop[7], bop[7], 90, c_white, 1);
+    draw_sprite_ext(global.receptor, 0, laneleft+lanespacing*3, bar, bop[4], bop[4], -90, c_white, 1);
+    draw_sprite_ext(global.receptor, 0, lanedown+lanespacing*3, bar, bop[5], bop[5], 0, c_white, 1);
+    draw_sprite_ext(global.receptor, 0, laneup+lanespacing*3, bar, bop[6], bop[6], 180, c_white, 1);
+    draw_sprite_ext(global.receptor, 0, laneright+lanespacing*3, bar, bop[7], bop[7], 90, c_white, 1);
 }
 
 draw_text(laneright+250, bar+100, string(realscore));
@@ -244,7 +263,10 @@ var l;
 for (l=0; l&lt;floor(hp); l++) {
     draw_sprite(s_kaguya, 0, laneleft+l*32, bar-96);
 }
-
+/*var m;
+for (m=0;)
+draw_sprite
+*/
 //draw_text(900, 700, string(timeat));
 </string>
           </argument>

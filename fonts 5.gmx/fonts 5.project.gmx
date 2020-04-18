@@ -229,6 +229,10 @@
     <sprite>sprites\s_soul</sprite>
     <sprite>sprites\s_knife</sprite>
     <sprite>sprites\s_bullet</sprite>
+    <sprite>sprites\s_laneselected</sprite>
+    <sprite>sprites\s_stagetext</sprite>
+    <sprite>sprites\s_menu</sprite>
+    <sprite>sprites\s_cursor</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -317,6 +321,7 @@
     <object>objects\object0</object>
     <object>objects\o_note</object>
     <object>objects\o_switch</object>
+    <object>objects\o_switchback</object>
     <object>objects\o_freeze</object>
     <object>objects\o_roll</object>
     <object>objects\o_hit</object>
@@ -334,10 +339,12 @@
     <objects name="shaders">
       <object>objects\o_ChromaticAbberation</object>
     </objects>
+    <object>objects\o_menu</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rhythm_limbo</room>
     <room>rooms\fontstitle</room>
+    <room>rooms\stagemenu</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
