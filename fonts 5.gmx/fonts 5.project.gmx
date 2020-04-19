@@ -182,6 +182,9 @@
     <sound>sound\m_drivin</sound>
     <sound>sound\m_everythingwillfreeze</sound>
     <sound>sound\m_lancerraps</sound>
+    <sound>sound\se_bang</sound>
+    <sound>sound\se_bam</sound>
+    <sound>sound\se_shatter</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\s_kaguya</sprite>
@@ -237,6 +240,10 @@
     <sprite>sprites\s_heart</sprite>
     <sprite>sprites\s_bigdark</sprite>
     <sprite>sprites\s_world</sprite>
+    <sprite>sprites\AMORTALITY</sprite>
+    <sprite>sprites\s_ephemerality</sprite>
+    <sprite>sprites\s_world2</sprite>
+    <sprite>sprites\s_world1</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -347,12 +354,14 @@
     <object>objects\o_menu</object>
     <object>objects\o_fao</object>
     <object>objects\o_cutscene</object>
+    <object>objects\o_text</object>
+    <object>objects\o_worldbreak</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\stagemenu</room>
+    <room>rooms\cutscene</room>
     <room>rooms\fontstitle</room>
     <room>rooms\rhythm_limbo</room>
-    <room>rooms\cutscene</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

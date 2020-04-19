@@ -32,7 +32,7 @@ hspd = 0;
 menuxscale = 1;
 menuyscale = 1;
 
-global.scoring[0] = "00.00";
+global.scoring[0] = 0;
 global.scoring[1] = "00.00";
 global.scoring[2] = "00.00";
 global.scoring[3] = "00.00";
@@ -40,10 +40,11 @@ global.scoring[4] = "00.00";
 global.scoring[5] = "00.00";
 global.currentstage = 6;
 scoreshow = array_create(6);
-scoreshowcolour = array_create(6);
+scoreshowcolour = array(c_white, c_white, c_white, c_white, c_white, c_white);
 
 global.songscript = c_jumptest;
 global.storymode = false;
+global.cutscenecount = 0;
 
 global.red = s_red;
 global.blue = s_blue;
@@ -129,6 +130,7 @@ if file_exists("profile.ini") {
     
     var i;
     for (i=0; i&lt;6; i++) {
+        scoreshowcolour[i] = c_white;
         switch string_copy(global.scoring[i], 6, 1) {
             case "M":
                 scoreshowcolour[i] = c_teal;
@@ -170,9 +172,21 @@ if file_exists("profile.ini") {
                 break;
         }
         global.currentstage = menuposition;
-        instance_create(0, 0, o_fao);
+        if menuposition != 0 {
+            instance_create(0, 0, o_fao);
+        } else {
+            with instance_create(0, 0, o_fao) {
+                leaving = cutscene;
+            }
+        }
     }
 }
+
+/*if left {
+    switch global.red {
+    }
+}*/
+
 </string>
           </argument>
         </arguments>

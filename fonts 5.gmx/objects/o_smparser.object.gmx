@@ -407,13 +407,14 @@ if global.storymode = false {
         }
         global.scoring[global.currentstage] = MELODYCHASER.realscore;
     }
-} else {
-    if instance_number(o_note) + instance_number(o_tail) &lt;= 0 || audio_is_playing(MELODYCHASER.audio) = false {
+} else if global.storymode = true {
+    if instance_number(o_note) + instance_number(o_tail) &lt;= 0 || audio_is_playing(MELODYCHASER.audio) = false || keyboard_check_pressed(ord('V')) {
+        audio_stop_sound(MELODYCHASER.audio);
         with instance_create(0, 0, o_fao) {
             leaving = cutscene;
             depth = -3;
         }
-        global.scoring[0] += MELODYCHASER.realscore/5;
+        //global.scoring[0] += MELODYCHASER.realscore/5;
         global.cutscenecount++;
     }
 }

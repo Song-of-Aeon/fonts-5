@@ -224,6 +224,7 @@ if back {
         leaving = stagemenu;
     }
     global.scoring[global.currentstage] = MELODYCHASER.realscore;
+    audio_stop_sound(audio);
 }
 
 </string>
