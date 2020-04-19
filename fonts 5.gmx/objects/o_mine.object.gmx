@@ -54,7 +54,9 @@ dir = 0;
 x += hspd;
 y += vspd;
 
-image_angle += 3;
+if MELODYCHASER.audio != m_everythingwillfreeze {
+    image_angle += MELODYCHASER.bpm/40;
+}
 
 </string>
           </argument>

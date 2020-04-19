@@ -1,6 +1,6 @@
 ///c_receptordanmaku
 switch danmaku {
-    case 2:
+    case 1:
         if instance_place(laneleft, bar-64, o_note) != noone {
             instance_destroy(instance_place(64, bar, o_note));
             with instance_create(64, bar, o_knife) {
@@ -39,7 +39,7 @@ switch danmaku {
             }
         }
         break;
-    case 1:
+    case 2:
         if instance_place(laneleft, bar-64, o_note) != noone {
             instance_destroy(instance_place(laneleft, bar, o_note));
             var i;
@@ -53,11 +53,11 @@ switch danmaku {
     
         if instance_place(laneup, bar-64, o_note) != noone {
             instance_destroy(instance_place(laneup, bar, o_note));
-            upwave = 3;
+            upwave = irandom(1) + 1;
         }
         if instance_place(lanedown, bar-64, o_note) != noone {
             instance_destroy(instance_place(lanedown, bar, o_note));
-            downwave = -3;
+            downwave = irandom(1) + 1;
         }
         if upwave > 0 {
             with instance_create(laneup, bar, o_bulwave) {

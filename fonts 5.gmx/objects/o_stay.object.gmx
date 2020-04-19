@@ -88,7 +88,7 @@ sprite_index = global.freeze;
 }
 if holder = false {
     countwo++;
-    if countwo &gt;= 60 {
+    if countwo &gt;= 45 {
         hspd = tail.hspd;
         vspd = tail.vspd;
     }
@@ -96,7 +96,7 @@ if holder = false {
     countwo = 0;
 }
 
-if count &gt;= 10 {
+if count &gt;= 10 &amp;&amp; vspd = 0 {
     with instance_create(x, y, o_hitfx) {
         image_angle = other.image_angle;
     }

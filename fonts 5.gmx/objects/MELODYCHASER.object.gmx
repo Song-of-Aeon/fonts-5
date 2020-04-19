@@ -252,6 +252,7 @@ if back {
             <string>depth = 5;
 draw_sprite(songbg, 0, 0, 0);
 draw_sprite(s_laneselected, 0, laneselected, 0);
+draw_set_font(f_scoreronaldo);
 
 draw_sprite_ext(global.receptor, 0, laneleft, bar, bop[0], bop[0], -90, c_white, 1);
 draw_sprite_ext(global.receptor, 0, lanedown, bar, bop[1], bop[1], 0, c_white, 1);
@@ -264,8 +265,13 @@ if lanes = 8 {
     draw_sprite_ext(global.receptor, 0, laneright+lanespacing*3, bar, bop[7], bop[7], 90, c_white, 1);
 }
 
+if !instance_exists(o_smparser) {
+    draw_sprite(s_prep, 0, 0, 0);
+}
+
 draw_text(laneright+250, bar+100, string(realscore));
-draw_text(laneright+250, bar+300, string(combo));
+//draw_text(laneright+250, bar+300, string(combo));
+draw_text(lanedown+lanespacing/2, bar+300, string(combo));
 
 var l;
 for (l=0; l&lt;floor(hp); l++) {

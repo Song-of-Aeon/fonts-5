@@ -68,7 +68,7 @@ while position &lt;= string_length(song) {
                     position++;
                 }
                 reader = "";
-                console_log(title);
+                //console_log(title);
                 break;
             case "NOTES:":
                 mode = "nearnotes";
@@ -113,7 +113,7 @@ while position &lt;= string_length(song) {
 }
 
 position = 0;
-console_log(array_length_1d(noteset));
+//console_log(array_length_1d(noteset));
 
 var i;
 for (i=0; i&lt;array_length_1d(noteset); i++) {
@@ -345,10 +345,10 @@ for (i=0; i&lt;array_length_1d(noteset); i++) {
     //((i*32)-i+(i/(amount/notemaker[9])))
 }
 
-var n;
+/*var n;
 for (n=0;n&lt;array_length_1d(noteset);n++) {
     console_log(noteset[n]);
-}
+}*/
 
 MELODYCHASER.notecount = instance_number(o_note);
 /*MELODYCHASER.notecount += instance_number(o_freeze);
@@ -378,7 +378,8 @@ MELODYCHASER.notecount += instance_number(o_tail)/5;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/*var i;
+            <string>c_input();
+/*var i;
 for (i=0; i&lt;array_length_1d(noteset); i++) {
     var timeof = (real(string_copy(noteset[i], 8, string_length(noteset[i])-7)));
     if MELODYCHASER.timeat = timeof {
@@ -401,7 +402,7 @@ for (i=0; i&lt;array_length_1d(noteset); i++) {
     }
 }*/
 if global.storymode = false {
-    if instance_number(o_note) + instance_number(o_tail) &lt;= 0 {
+    if audio_is_playing(MELODYCHASER.audio) = false &amp;&amp; back {
         with instance_create(0, 0, o_fao) {
             leaving = stagemenu;
         }
@@ -410,7 +411,7 @@ if global.storymode = false {
         }
     }
 } else if global.storymode = true {
-    if instance_number(o_note) + instance_number(o_tail) &lt;= 0 || audio_is_playing(MELODYCHASER.audio) = false || keyboard_check_pressed(ord('V')) {
+    if audio_is_playing(MELODYCHASER.audio) = false &amp;&amp; back {
         audio_stop_sound(MELODYCHASER.audio);
         with instance_create(0, 0, o_fao) {
             leaving = cutscene;
