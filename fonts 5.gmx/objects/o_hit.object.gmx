@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>x = random(1610) + 310;
-y = random(840) + 240;
+            <string>x = random(1260);
+y = random(720);
 image_alpha = 1;
 </string>
           </argument>

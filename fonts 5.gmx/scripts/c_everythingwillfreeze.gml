@@ -10,6 +10,7 @@ global.freeze = s_umbra;
 global.effect = s_blacklight;
 global.mine = s_negative;
 global.receptor = s_shadow;
+
 lanes = 4;
 //bg = bk_;
 //music = m_;

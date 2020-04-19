@@ -57,7 +57,7 @@ lanespeed = 0;
 hp = 12;
 //measurescoring = array_create(48);
 audio = m_drivin; //doesnt matter, songscript contains audio
-
+songbg = s_kaguya;
 script_execute(global.songscript);
 
 danmaku = 0;
@@ -135,7 +135,7 @@ for (i=0; i&lt;8; i++) {
 var j;
 lanespacing = laneup - laneleft;
 for (j=laneleft; j&lt;=laneup; j+=lanespacing) {
-    var note = instance_place(j, bar-128, o_note);
+    var note = instance_place(j, bar-bpm*xmod/20-128, o_note);
     if note != noone {
         if note.object_index = o_freeze || note.object_index = o_roll {
             with note.tail {
@@ -249,7 +249,9 @@ if back {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite(s_laneselected, 0, laneselected, 0);
+            <string>depth = 5;
+draw_sprite(songbg, 0, 0, 0);
+draw_sprite(s_laneselected, 0, laneselected, 0);
 
 draw_sprite_ext(global.receptor, 0, laneleft, bar, bop[0], bop[0], -90, c_white, 1);
 draw_sprite_ext(global.receptor, 0, lanedown, bar, bop[1], bop[1], 0, c_white, 1);

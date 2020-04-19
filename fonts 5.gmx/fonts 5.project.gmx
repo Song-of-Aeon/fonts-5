@@ -244,6 +244,11 @@
     <sprite>sprites\s_ephemerality</sprite>
     <sprite>sprites\s_world2</sprite>
     <sprite>sprites\s_world1</sprite>
+    <sprite>sprites\bk_combattheme</sprite>
+    <sprite>sprites\bk_lancerraps</sprite>
+    <sprite>sprites\bk_everythingwillfreeze</sprite>
+    <sprite>sprites\bk_spiderdance</sprite>
+    <sprite>sprites\bk_eonbreak</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>

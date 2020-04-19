@@ -10,5 +10,6 @@ global.freeze = s_green;
 global.effect = s_effect;
 global.mine = s_mine;
 global.receptor = s_receptor;
+songbg = bk_combattheme;
 //bg = bk_;
 //music = m_;

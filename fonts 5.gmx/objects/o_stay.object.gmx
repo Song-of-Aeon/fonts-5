@@ -88,7 +88,7 @@ sprite_index = global.freeze;
 }
 if holder = false {
     countwo++;
-    if countwo &gt;= 20 {
+    if countwo &gt;= 60 {
         hspd = tail.hspd;
         vspd = tail.vspd;
     }

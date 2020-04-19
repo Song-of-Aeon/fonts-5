@@ -401,11 +401,13 @@ for (i=0; i&lt;array_length_1d(noteset); i++) {
     }
 }*/
 if global.storymode = false {
-    if instance_number(o_note) + instance_number(o_tail) &lt;= 0 || audio_is_playing(MELODYCHASER.audio) = false {
+    if instance_number(o_note) + instance_number(o_tail) &lt;= 0 {
         with instance_create(0, 0, o_fao) {
             leaving = stagemenu;
         }
-        global.scoring[global.currentstage] = MELODYCHASER.realscore;
+        if real(MELODYCHASER.realscore) &gt; real(global.scoring[global.currentstage]) {
+            global.scoring[global.currentstage] = MELODYCHASER.realscore;
+        }
     }
 } else if global.storymode = true {
     if instance_number(o_note) + instance_number(o_tail) &lt;= 0 || audio_is_playing(MELODYCHASER.audio) = false || keyboard_check_pressed(ord('V')) {

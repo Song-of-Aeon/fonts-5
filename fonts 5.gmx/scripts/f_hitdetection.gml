@@ -1,25 +1,28 @@
 ///f_hitdetection(lane x, note direction, fx angle);
+var nonsense = argument1;
+//if instance_place(argument0, bar, o_note) != noone && instance_place(argument0, bar, o_note).dir = argument1 {
+if collision_line_first(argument0, bar-bpm*xmod/20, argument0, bar+bpm*xmod/20, o_note, false, true) != noone {
+    thenote = collision_line_first(argument0, bar-bpm*xmod/20, argument0, bar+bpm*xmod/20, o_note, false, true);
+    var distance = abs(thenote.y - bar);
 
-if instance_place(argument0, bar, o_note) != noone && instance_place(argument0, bar, o_note).dir = argument1 {
-    var distance = instance_place(argument0, bar, o_note).y - bar;
-    if instance_place(argument0, bar, o_note).object_index = o_mine {
+    if thenote.object_index = o_mine {
         noterank = 4;
         instance_destroy(instance_place(argument0, bar, o_mine));
     } else {
-        noterank = floor(abs(distance)/16);
+        noterank = floor(abs(distance)/bpm*xmod/100);
     }
     if noterank < 4 {
-        if instance_place(argument0, bar, o_note).object_index = o_freeze || instance_place(argument0, bar, o_note).object_index = o_roll {
+        if thenote.object_index = o_freeze || thenote.object_index = o_roll {
             with instance_create(argument0, bar, o_stay) {
-                tail = instance_place(argument0, MELODYCHASER.bar, o_note).tail;
-                image_blend = instance_place(argument0, MELODYCHASER.bar, o_note).image_blend;
-                image_angle = instance_place(argument0, MELODYCHASER.bar, o_note).image_angle;
+                tail = other.thenote.tail;
+                image_blend = other.thenote.image_blend;
+                image_angle = other.thenote.image_angle;
                 with tail {
                     head = other.id;
                 }
             }
         }
-        instance_destroy(instance_place(argument0, bar, o_note));
+        instance_destroy(thenote);
         combo++;
     } else {
         combo = 0;
