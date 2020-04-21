@@ -9,7 +9,8 @@ if collision_line_first(argument0, bar-bpm*xmod/20, argument0, bar+bpm*xmod/20, 
         noterank = 4;
         instance_destroy(instance_place(argument0, bar, o_mine));
     } else {
-        noterank = floor(abs(distance)/bpm*xmod/100);
+        noterank = floor(abs(distance)/((bpm*xmod)/50));
+        ranktext = noterank;
     }
     if noterank < 4 {
         if thenote.object_index = o_freeze || thenote.object_index = o_roll {

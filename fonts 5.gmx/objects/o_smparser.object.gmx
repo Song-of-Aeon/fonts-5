@@ -402,7 +402,7 @@ for (i=0; i&lt;array_length_1d(noteset); i++) {
     }
 }*/
 if global.storymode = false {
-    if audio_is_playing(MELODYCHASER.audio) = false &amp;&amp; back {
+    if audio_is_playing(MELODYCHASER.audio) = false &amp;&amp; back  &amp;&amp; !instance_exists(o_fao) {
         with instance_create(0, 0, o_fao) {
             leaving = stagemenu;
         }
@@ -411,7 +411,7 @@ if global.storymode = false {
         }
     }
 } else if global.storymode = true {
-    if audio_is_playing(MELODYCHASER.audio) = false &amp;&amp; back {
+    if audio_is_playing(MELODYCHASER.audio) = false &amp;&amp; back  &amp;&amp; !instance_exists(o_fao) {
         audio_stop_sound(MELODYCHASER.audio);
         with instance_create(0, 0, o_fao) {
             leaving = cutscene;

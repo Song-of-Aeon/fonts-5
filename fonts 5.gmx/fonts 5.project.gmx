@@ -233,12 +233,14 @@
     <sprite>sprites\s_knife</sprite>
     <sprite>sprites\s_bullet</sprite>
     <sprite>sprites\s_laneselected</sprite>
+    <sprite>sprites\s_blueselected</sprite>
     <sprite>sprites\s_stagetext</sprite>
     <sprite>sprites\s_menu</sprite>
     <sprite>sprites\s_cursor</sprite>
     <sprite>sprites\s_scorecloud</sprite>
     <sprite>sprites\s_heart</sprite>
     <sprite>sprites\s_bigdark</sprite>
+    <sprite>sprites\s_flash</sprite>
     <sprite>sprites\s_world</sprite>
     <sprite>sprites\AMORTALITY</sprite>
     <sprite>sprites\s_ephemerality</sprite>
@@ -293,6 +295,7 @@
     <script>scripts\c_lancerraps.gml</script>
     <script>scripts\sm_everythingwillfreeze.gml</script>
     <script>scripts\c_everythingwillfreeze.gml</script>
+    <script>scripts\c_eonbreak.gml</script>
     <scripts name="the common">
       <script>scripts\script0.gml</script>
       <script>scripts\script25.gml</script>
@@ -366,11 +369,13 @@
     <object>objects\o_worldbreak</object>
     <object>objects\o_fai</object>
     <object>objects\o_zero</object>
+    <object>objects\o_world</object>
+    <object>objects\o_flash</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\fontstitle</room>
     <room>rooms\stagemenu</room>
     <room>rooms\cutscene</room>
-    <room>rooms\fontstitle</room>
     <room>rooms\rhythm_limbo</room>
   </rooms>
   <help>

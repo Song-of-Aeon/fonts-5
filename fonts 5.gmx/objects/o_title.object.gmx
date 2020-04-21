@@ -49,6 +49,7 @@ title = array("Evanecence,", "it", "is", "personified!",
 
 countwo = 0;
 
+//window_set_fullscreen(true);
 </string>
           </argument>
         </arguments>

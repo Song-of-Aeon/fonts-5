@@ -43,6 +43,7 @@ highscore = 0;
 draw_set_font(f_ronaldo);
 state = c_receptorinput;
 offset = 0;
+ranktext = 11037;
 //offset = 1918;
 timecounter = 0;
 songstarting = false;
@@ -69,6 +70,9 @@ windowBouncey = 1;
 windowBounceSpeed = 0;
 
 count = 0;
+if global.songscript = c_eonbreak {
+    window_set_fullscreen(false);
+}
 </string>
           </argument>
         </arguments>
@@ -123,12 +127,12 @@ if songstarting {
 }
 
 
-if keyboard_check_pressed(vk_subtract) {
+/*if keyboard_check_pressed(vk_subtract) {
     xmod -= .05;
 }
 if keyboard_check_pressed(vk_add) {
     xmod += .05;
-}
+}*/
 
 script_execute(state);
 
@@ -222,11 +226,19 @@ if hp &gt; 12 {
     hp = 12;
 }
 
-if back {
-    with instance_create(0, 0, o_fao) {
-        leaving = stagemenu;
+if back &amp;&amp; !instance_exists(o_fao) {
+    if global.storymode = true {
+        with instance_create(0, 0, o_fao) {
+            leaving = cutscene;
+            depth = -3;
+        }
+        global.cutscenecount++;
+    } else {
+        with instance_create(0, 0, o_fao) {
+            leaving = stagemenu;
+        }
     }
-    global.scoring[global.currentstage] = MELODYCHASER.realscore;
+    //global.scoring[global.currentstage] = MELODYCHASER.realscore;
     audio_stop_sound(audio);
 }
 
@@ -254,7 +266,7 @@ if back {
             <kind>1</kind>
             <string>depth = 5;
 draw_sprite(songbg, 0, 0, 0);
-draw_sprite(s_laneselected, 0, laneselected, 0);
+draw_sprite(s_blueselected, 0, laneselected, 0);
 draw_set_font(f_scoreronaldo);
 
 draw_sprite_ext(global.receptor, 0, laneleft, bar, bop[0], bop[0], -90, c_white, 1);
@@ -281,6 +293,7 @@ draw_set_colour(c_white);
 draw_set_font(f_combo);
 depth = -3;
 draw_text(lanedown+lanespacing/4, bar+300, string(combo));
+draw_text(lanedown+lanespacing/4, bar+200, string(ranktext));
 depth = 5;
 draw_set_font(f_scoreronaldo);
 draw_set_colour(c_black);

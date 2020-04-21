@@ -30,7 +30,10 @@ returny = y;
 count = 0;
 image_alpha = 0;
 image_speed = 0;
-sidealpha = -.5;
+sidealpha = -1;
+if global.cutscenecount &gt;= 1 {
+    count = -100;
+}
 </string>
           </argument>
         </arguments>
@@ -54,31 +57,51 @@ sidealpha = -.5;
           <argument>
             <kind>1</kind>
             <string>
-
-if count &lt;= 90 {
+if global.cutscenecount = 0 {
+    if count &lt;= 90 {
+        x = returnx;
+        y = returny;
+        x = x + random(count/10) - count/20;
+        y = y + random(count/10) - count/20;
+    } else if count = 91 {
+        x = returnx;
+        y = returny;
+        if sprite_index = s_world2 {
+            hspd = 8;
+        } else {
+            hspd = -8;
+            audio_play_sound(se_shatter, 0, false);
+        }
+    } else {
+        x += hspd;
+        hspd = hspd/1.1;
+        if hspd &lt;= .02 &amp;&amp; count &gt; 180 &amp;&amp; sprite_index = s_world1 {
+            instance_create(0, 0, o_fao);
+            o_cutscene.active = false;
+        }
+    }
+    count++;
+} else if sprite_index = s_world1 &amp;&amp; global.cutscenecount = 2 {
+    if count &lt; 0 {
+        count++;
+    }
     x = returnx;
     y = returny;
     x = x + random(count/10) - count/20;
     y = y + random(count/10) - count/20;
-} else if count = 91 {
+    sidealpha += .05;
+} else if sprite_index = s_world2 &amp;&amp; global.cutscenecount = 1 {
+    if count &lt; 0 {
+        count++;
+    }
     x = returnx;
     y = returny;
-    if sprite_index = s_world2 {
-        hspd = 8;
-    } else {
-        hspd = -8;
-        audio_play_sound(se_shatter, 0, false);
-    }
-} else {
-    x += hspd;
-    hspd = hspd/1.1;
-    if hspd &lt;= .02 &amp;&amp; count &gt; 180 &amp;&amp; sprite_index = s_world1 {
-        instance_create(0, 0, o_fao);
-        o_cutscene.active = false;
-    }
+    x = x + random(count/10) - count/20;
+    y = y + random(count/10) - count/20;
+    sidealpha += .05;
+} else if sprite_index = s_world2 {
+    sidealpha = 1;
 }
-count++;
-sidealpha += .05;
 image_alpha += .1;
 </string>
           </argument>
