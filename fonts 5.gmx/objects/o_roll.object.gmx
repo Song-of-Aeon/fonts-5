@@ -32,6 +32,7 @@ image_speed = 0;
 //instance_destroy();
 tail = 0;
 image_blend = c_purple;
+count = 0;
 </string>
           </argument>
         </arguments>
@@ -56,9 +57,11 @@ image_blend = c_purple;
             <kind>1</kind>
             <string>sprite_index = global.freeze;
 
-
-x += hspd;
-y += vspd;
+count++;
+if count &gt;= 240 {
+    x += hspd;
+    y += vspd;
+}
 
 switch dir {
     case 0:

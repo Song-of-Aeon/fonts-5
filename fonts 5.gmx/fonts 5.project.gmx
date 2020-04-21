@@ -250,6 +250,7 @@
     <sprite>sprites\bk_spiderdance</sprite>
     <sprite>sprites\bk_eonbreak</sprite>
     <sprite>sprites\s_prep</sprite>
+    <sprite>sprites\s_zero</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -332,6 +333,7 @@
   <fonts name="fonts">
     <font>fonts\f_ronaldo</font>
     <font>fonts\f_scoreronaldo</font>
+    <font>fonts\f_combo</font>
   </fonts>
   <objects name="objects">
     <object>objects\MELODYCHASER</object>
@@ -363,6 +365,7 @@
     <object>objects\o_text</object>
     <object>objects\o_worldbreak</object>
     <object>objects\o_fai</object>
+    <object>objects\o_zero</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\stagemenu</room>

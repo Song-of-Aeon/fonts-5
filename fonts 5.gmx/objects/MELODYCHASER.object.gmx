@@ -68,7 +68,7 @@ windowBouncex = 1;
 windowBouncey = 1;
 windowBounceSpeed = 0;
 
-
+count = 0;
 </string>
           </argument>
         </arguments>
@@ -109,9 +109,15 @@ if select &amp;&amp; !instance_exists(o_smparser) {
 if songstarting {
     timecounter += delta_time;
     if timecounter/1000 &gt;= offset {
-        audio_play_sound(audio, 0, false);
-        
-        songstarting = false;
+        count++;
+        if count = 10 {
+            instance_create(800, 500, o_zero);
+        }
+        if count &gt;= 240 {
+            audio_play_sound(audio, 0, false);
+            
+            songstarting = false;
+        }
     }
     
 }
@@ -185,9 +191,6 @@ if lanes = 8 {
             break;
     }
 }
-
-
-
 
 var windowx = window_get_x();
 var windowy = window_get_y();
@@ -265,13 +268,23 @@ if lanes = 8 {
     draw_sprite_ext(global.receptor, 0, laneright+lanespacing*3, bar, bop[7], bop[7], 90, c_white, 1);
 }
 
-if !instance_exists(o_smparser) {
-    draw_sprite(s_prep, 0, 0, 0);
+if count &lt; 240 {
+    draw_sprite(s_prep, floor(count/60), 0, 0);
 }
+
+
 
 draw_text(laneright+250, bar+100, string(realscore));
 //draw_text(laneright+250, bar+300, string(combo));
-draw_text(lanedown+lanespacing/2, bar+300, string(combo));
+draw_set_halign(fa_center);
+draw_set_colour(c_white);
+draw_set_font(f_combo);
+depth = -3;
+draw_text(lanedown+lanespacing/4, bar+300, string(combo));
+depth = 5;
+draw_set_font(f_scoreronaldo);
+draw_set_colour(c_black);
+draw_set_halign(fa_left);
 
 var l;
 for (l=0; l&lt;floor(hp); l++) {

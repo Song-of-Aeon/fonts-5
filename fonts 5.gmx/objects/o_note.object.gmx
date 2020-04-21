@@ -30,6 +30,7 @@ vspd = 0;
 dir = 0;
 image_speed = MELODYCHASER.bpm/1118;
 tail = noone;
+count = 0;
 </string>
           </argument>
         </arguments>
@@ -52,8 +53,12 @@ tail = noone;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>x += hspd;
-y += vspd;
+            <string>count++;
+
+if count &gt;= 240 {
+    x += hspd;
+    y += vspd;
+}
 
 switch dir {
     case 0:
