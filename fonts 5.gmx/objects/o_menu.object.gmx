@@ -65,6 +65,8 @@ if file_exists("profile.ini") {
     global.scoring[5] = ini_read_string("scores", "stage 5", "00.00");
     ini_close();
 }
+
+audio_play_sound(m_night, 0, false);
 </string>
           </argument>
         </arguments>
@@ -165,13 +167,15 @@ if file_exists("profile.ini") {
                 global.songscript = c_everythingwillfreeze;
                 break;
             case 4:
-                global.songscript = c_onemorenight;
-                break;
-            case 5:
                 global.songscript = c_drivin;
                 break;
+            case 5:
+                global.songscript = c_eonbreak;
+                break;
         }
+        audio_play_sound(se_select, 0, false);
         global.currentstage = menuposition;
+        audio_stop_sound(m_night);
         if menuposition != 0 {
             instance_create(0, 0, o_fao);
         } else {

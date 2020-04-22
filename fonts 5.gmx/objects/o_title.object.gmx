@@ -48,6 +48,7 @@ title = array("Evanecence,", "it", "is", "personified!",
 //theres 49 of em
 
 countwo = 0;
+audio_play_sound(m_title, 0, false);
 
 //window_set_fullscreen(true);
 </string>
@@ -72,7 +73,8 @@ countwo = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if fontsmoving &lt;= y-50 {
+            <string>c_input();
+if fontsmoving &lt;= y-50 {
     fontsmoving += fontspd;
 } else {
     fontsmoving -= fontspd;
@@ -114,7 +116,8 @@ if count &gt;= 10 {
     count = 0;
 }
 
-if keyboard_check_pressed(vk_enter) &amp;&amp; going = false {
+if select &amp;&amp; going = false {
+    audio_play_sound(se_select, 0, false);
     fadealpha = 0;
     fadespd = -.01;
     going = true;
@@ -130,6 +133,7 @@ if keyboard_check_pressed(vk_enter) &amp;&amp; going = false {
         //game_load("profile.dat");
         room_goto(stagemenu);
         console_log("uh oh");
+        audio_stop_sound(m_title);
         instance_destroy();
     }
 }

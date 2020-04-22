@@ -185,6 +185,9 @@
     <sound>sound\se_bang</sound>
     <sound>sound\se_bam</sound>
     <sound>sound\se_shatter</sound>
+    <sound>sound\m_night</sound>
+    <sound>sound\m_title</sound>
+    <sound>sound\se_select</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\s_kaguya</sprite>
@@ -227,8 +230,11 @@
       <sprite>sprites\s_trueblue</sprite>
       <sprite>sprites\s_ultramarine</sprite>
       <sprite>sprites\s_azure</sprite>
+      <sprite>sprites\s_defrag</sprite>
+      <sprite>sprites\s_ripple</sprite>
+      <sprite>sprites\s_frag</sprite>
+      <sprite>sprites\s_acceptor</sprite>
     </sprites>
-    <sprite>sprites\x_comparison</sprite>
     <sprite>sprites\s_soul</sprite>
     <sprite>sprites\s_knife</sprite>
     <sprite>sprites\s_bullet</sprite>
@@ -253,6 +259,7 @@
     <sprite>sprites\bk_eonbreak</sprite>
     <sprite>sprites\s_prep</sprite>
     <sprite>sprites\s_zero</sprite>
+    <sprite>sprites\s_judgement</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>

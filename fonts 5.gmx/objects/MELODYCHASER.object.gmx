@@ -37,12 +37,14 @@ bop[4] = 1;
 bop[5] = 1;
 bop[6] = 1;
 bop[7] = 1;
+bop[8] = 1;
 combo = 0;
 realscore = 0;
 highscore = 0;
 draw_set_font(f_ronaldo);
 state = c_receptorinput;
 offset = 0;
+noterank = 5;
 ranktext = 11037;
 //offset = 1918;
 timecounter = 0;
@@ -141,6 +143,8 @@ for (i=0; i&lt;8; i++) {
     bop[i] += .05;
     bop[i] = clamp(bop[i], 0, 1);
 }
+bop[8] -= .05;
+bop[8] = clamp(bop[i], 1, 2);
 
 var j;
 lanespacing = laneup - laneleft;
@@ -158,6 +162,8 @@ for (j=laneleft; j&lt;=laneup; j+=lanespacing) {
             instance_destroy(note);
         }
         combo = 0;
+        bop[8] = 1.3;
+        noterank = 4;
         hp -= 1;
     }
     /*if instance_exists(instance_place(j, bar, o_tail)) {
@@ -293,7 +299,8 @@ draw_set_colour(c_white);
 draw_set_font(f_combo);
 depth = -3;
 draw_text(lanedown+lanespacing/4, bar+300, string(combo));
-draw_text(lanedown+lanespacing/4, bar+200, string(ranktext));
+//draw_text(lanedown+lanespacing/4, bar+200, string(ranktext));
+draw_sprite_ext(s_judgement, noterank+3, lanedown+lanespacing/4, bar+250, bop[8], bop[8], noterank, c_white, 1);
 depth = 5;
 draw_set_font(f_scoreronaldo);
 draw_set_colour(c_black);

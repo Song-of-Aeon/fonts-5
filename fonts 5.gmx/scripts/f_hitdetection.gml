@@ -9,26 +9,45 @@ if collision_line_first(argument0, bar-bpm*xmod/20, argument0, bar+bpm*xmod/20, 
         noterank = 4;
         instance_destroy(instance_place(argument0, bar, o_mine));
     } else {
-        noterank = floor(abs(distance)/((bpm*xmod)/50));
+        noterank = floor(distance/((bpm*xmod)/50));
         ranktext = noterank;
     }
-    if noterank < 4 {
-        if thenote.object_index = o_freeze || thenote.object_index = o_roll {
-            with instance_create(argument0, bar, o_stay) {
-                tail = other.thenote.tail;
-                image_blend = other.thenote.image_blend;
-                image_angle = other.thenote.image_angle;
-                with tail {
-                    head = other.id;
-                }
+    if thenote.object_index = o_freeze || thenote.object_index = o_roll {
+        with instance_create(argument0, bar, o_stay) {
+            tail = other.thenote.tail;
+            image_blend = other.thenote.image_blend;
+            image_angle = other.thenote.image_angle;
+            with tail {
+                head = other.id;
             }
         }
+    }
+    if noterank < 3 {
         instance_destroy(thenote);
         combo++;
     } else {
         combo = 0;
     }
     switch noterank {
+        case -1:
+            with instance_create(x, y, o_hit) {
+                image_blend = c_yellow;
+            }
+            realscore += .8*(100/notecount);
+            hp += .08;
+            break;
+        case -2:
+            with instance_create(x, y, o_hit) {
+                image_blend = c_green;
+            }
+            realscore += .6*(100/notecount);
+            hp += .06;
+            break;
+        case -3:
+            with instance_create(x, y, o_hit) {
+                image_blend = c_blue;
+            }
+            break;
         case 0:
             with instance_create(x, y, o_hit) {
                 image_blend = c_teal;
@@ -63,6 +82,7 @@ if collision_line_first(argument0, bar-bpm*xmod/20, argument0, bar+bpm*xmod/20, 
             hp -= 1;
             break;
     }
+    bop[8] = 1.3;
     var fx = instance_create(argument0, bar, o_hitfx);
     fx.image_angle = argument2;
 }
