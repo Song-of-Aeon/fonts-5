@@ -28,6 +28,7 @@
             <string>x = random(1260);
 y = random(720);
 image_alpha = 1;
+instance_destroy(); //kaguya................
 </string>
           </argument>
         </arguments>

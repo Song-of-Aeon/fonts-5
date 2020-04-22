@@ -28,7 +28,7 @@
             <string>hspd = 0;
 vspd = 0;
 dir = 0;
-image_speed = .15;
+count = 0;
 </string>
           </argument>
         </arguments>
@@ -52,11 +52,15 @@ image_speed = .15;
           <argument>
             <kind>1</kind>
             <string>sprite_index = s_kaguya;
-x += hspd;
-y += vspd;
+count++;
+
+if count &gt;= 240 {
+    x += hspd;
+    y += vspd;
+}
 
 
-if y &lt;= bar {
+if y &lt;= MELODYCHASER.bar {
     MELODYCHASER.inputgimmick = false;
     instance_destroy();
 }

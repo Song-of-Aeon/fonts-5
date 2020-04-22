@@ -128,7 +128,7 @@ if songstarting {
         if count = 10 {
             instance_create(800, 500, o_zero);
         }
-        if count &gt;= 230 {
+        if (count &gt;= 230 &amp;&amp; global.songscript = c_eonbreak) || (count &gt;= 235 &amp;&amp; global.songscript != c_eonbreak) {
             audio_play_sound(audio, 0, false);
             
             songstarting = false;
@@ -210,27 +210,9 @@ if lanes = 8 {
     }
 }
 
-var windowx = window_get_x();
-var windowy = window_get_y();
-if(keyboard_check(vk_subtract)){
-    windowBounceSpeed--;
-}
-if(keyboard_check(vk_add)){
-    windowBounceSpeed++;
-}
-if(display_get_width() &lt;= windowx+window_get_width()){
-    windowBouncex = -1;
-}
-if(windowx &lt;= 0){
-    windowBouncex = 1;
-}
-if(display_get_height() &lt;= windowy+window_get_height()){
-    windowBouncey = -1;
-}
-if(windowy &lt;= 0){
-    windowBouncey = 1;
-}
-window_set_position(windowx+(windowBounceSpeed*windowBouncex),windowy+(windowBounceSpeed*windowBouncey));
+
+
+
 
 if(keyboard_check(vk_f1)){
     instance_create(0,0,o_ChromaticAbberation);
@@ -240,7 +222,7 @@ if hp &gt; 12 {
     hp = 12;
 }
 
-if (back &amp;&amp; !instance_exists(o_fao)) || hp &lt;= 0 {
+if (back &amp;&amp; !instance_exists(o_fao)) || (hp &lt;= 0 &amp;&amp; global.songscript != c_eonbreak) {
     if global.storymode = true &amp;&amp; hp &gt; 0 {
         with instance_create(0, 0, o_fao) {
             leaving = cutscene;
@@ -265,6 +247,9 @@ if global.songscript = c_eonbreak {
         } else if arrayx[arraypos] = "S" { //state
             gimmickstate = arrayy[arraypos];
             //absolute, velocity, reverse, or save
+        } else if arrayx[arraypos] = "B" {
+            windowBounceSpeed += arrayy[arraypos];
+            gimmickstate = 0;
         } else {
             switch gimmickstate {
                 case 0:
@@ -273,6 +258,10 @@ if global.songscript = c_eonbreak {
                     wvspd = 0;
                     break;
                 case 1:
+                    whspd = arrayx[arraypos];
+                    wvspd = arrayy[arraypos];
+                    break;
+                case 2:
                     whspd = arrayx[arraypos];
                     wvspd = arrayy[arraypos];
                     break;
@@ -288,10 +277,38 @@ if global.songscript = c_eonbreak {
     if gimmickstate = 2 {
         windowx = windowxsaved;
         windowy = windowysaved;
+        
+    }
+    
+    if(keyboard_check(vk_subtract)){
+    windowBounceSpeed--;
+    }
+    if(keyboard_check(vk_add)){
+        windowBounceSpeed++;
+    }
+    if(display_get_width() &lt;= windowx+window_get_width()){
+        windowBouncex = -1;
+    }
+    if(windowx &lt;= 0){
+        windowBouncex = 1;
+    }
+    if(display_get_height() &lt;= windowy+window_get_height()){
+        windowBouncey = -1;
+    }
+    if(windowy &lt;= 0){
+        windowBouncey = 1;
     }
     windowx += whspd;
     windowy += wvspd;
-    window_set_position(windowx, windowy);
+    whspd = whspd/1.025;
+    wvspd = wvspd/1.025;
+    var breadx = window_get_x();
+    var bready = window_get_x();
+    if windowBounceSpeed = 0 {
+        window_set_position(windowx, windowy);
+    } else {
+        window_set_position(breadx+(windowBounceSpeed*windowBouncex),bready+(windowBounceSpeed*windowBouncey));
+    }
     inputgimmick = true;
 }
 
@@ -333,7 +350,7 @@ if lanes = 8 {
     draw_sprite_ext(global.receptor, 0, laneright+lanespacing*3, bar, bop[7], bop[7], 90, c_white, 1);
 }
 
-if count &lt; 240 {
+if count &lt; 230 {
     draw_sprite(s_prep, floor(count/60), 0, 0);
 }
 

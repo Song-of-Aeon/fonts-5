@@ -64,6 +64,7 @@ if drawdark &gt;= 1.2 {
         o_cutscene.active = false;
         global.storymode = false;
         global.cutscenecount = 0;
+        audio_play_sound(m_night, 0, false);
     } if leaving = cutscene {
         o_cutscene.active = true;
     } if leaving = rhythm_limbo {
