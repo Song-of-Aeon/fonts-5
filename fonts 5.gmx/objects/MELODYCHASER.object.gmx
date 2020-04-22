@@ -79,6 +79,8 @@ wvspd = 0;
 inputgimmick = true;
 arraypos = 0;
 gimmickstate = 0;
+breadx = window_get_x();
+bready = window_get_y();
 
 count = 0;
 if global.songscript = c_eonbreak {
@@ -279,6 +281,10 @@ if global.songscript = c_eonbreak {
         windowy = windowysaved;
         
     }
+    windowx += whspd;
+    windowy += wvspd;
+    whspd = whspd/1.025;
+    wvspd = wvspd/1.025;
     
     if(keyboard_check(vk_subtract)){
     windowBounceSpeed--;
@@ -286,26 +292,23 @@ if global.songscript = c_eonbreak {
     if(keyboard_check(vk_add)){
         windowBounceSpeed++;
     }
-    if(display_get_width() &lt;= windowx+window_get_width()){
+    if(display_get_width() &lt;= breadx+window_get_width()){
         windowBouncex = -1;
     }
-    if(windowx &lt;= 0){
+    if(breadx &lt;= 0){
         windowBouncex = 1;
     }
-    if(display_get_height() &lt;= windowy+window_get_height()){
+    if(display_get_height() &lt;= bready+window_get_height()){
         windowBouncey = -1;
     }
-    if(windowy &lt;= 0){
+    if(bready &lt;= 0){
         windowBouncey = 1;
     }
-    windowx += whspd;
-    windowy += wvspd;
-    whspd = whspd/1.025;
-    wvspd = wvspd/1.025;
-    var breadx = window_get_x();
-    var bready = window_get_x();
+    breadx = window_get_x();
+    bready = window_get_y();
+    
     if windowBounceSpeed = 0 {
-        window_set_position(windowx, windowy);
+        window_set_position(breadx, bready);
     } else {
         window_set_position(breadx+(windowBounceSpeed*windowBouncex),bready+(windowBounceSpeed*windowBouncey));
     }
