@@ -11,8 +11,7 @@ if collision_line_first(argument0, bar-bpm*xmod/20, argument0, bar+bpm*xmod/20, 
     } else {
         noterank = floor(distance/((bpm*xmod)/50));
         ranktext = noterank;
-    }
-    if thenote.object_index = o_freeze || thenote.object_index = o_roll {
+        if thenote.object_index = o_freeze || thenote.object_index = o_roll {
         with instance_create(argument0, bar, o_stay) {
             tail = other.thenote.tail;
             image_blend = other.thenote.image_blend;
@@ -22,6 +21,8 @@ if collision_line_first(argument0, bar-bpm*xmod/20, argument0, bar+bpm*xmod/20, 
             }
         }
     }
+    }
+    
     if noterank < 3 {
         instance_destroy(thenote);
         combo++;

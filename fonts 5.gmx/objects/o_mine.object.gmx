@@ -28,6 +28,7 @@
             <string>hspd = 0;
 vspd = 0;
 dir = 0;
+count = 0;
 </string>
           </argument>
         </arguments>
@@ -50,9 +51,14 @@ dir = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>sprite_index = global.mine;
-x += hspd;
-y += vspd;
+            <string>count++;
+
+if count &gt;= 240 {
+    x += hspd;
+    y += vspd;
+}
+
+sprite_index = global.mine;
 
 if MELODYCHASER.audio != m_everythingwillfreeze {
     image_angle += MELODYCHASER.bpm/40;

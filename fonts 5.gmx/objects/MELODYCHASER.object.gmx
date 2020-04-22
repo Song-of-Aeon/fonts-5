@@ -70,6 +70,15 @@ danmaku = 0;
 windowBouncex = 1;
 windowBouncey = 1;
 windowBounceSpeed = 0;
+windowx = window_get_x();
+windowy = window_get_y();
+windowxsaved = window_get_x();
+windowysaved = window_get_y();
+whspd = 0;
+wvspd = 0;
+inputgimmick = true;
+arraypos = 0;
+gimmickstate = 0;
 
 count = 0;
 if global.songscript = c_eonbreak {
@@ -119,7 +128,7 @@ if songstarting {
         if count = 10 {
             instance_create(800, 500, o_zero);
         }
-        if count &gt;= 240 {
+        if count &gt;= 230 {
             audio_play_sound(audio, 0, false);
             
             songstarting = false;
@@ -148,23 +157,22 @@ bop[8] = clamp(bop[i], 1, 2);
 
 var j;
 lanespacing = laneup - laneleft;
-for (j=laneleft; j&lt;=laneup; j+=lanespacing) {
+for (j=laneleft; j&lt;=laneup; j+=lanespacing/2) {
     var note = instance_place(j, bar-bpm*xmod/20-128, o_note);
     if note != noone {
         if note.object_index = o_freeze || note.object_index = o_roll {
             with note.tail {
                 unusable = true;
                 head = 0;
-            }
-            instance_destroy(note);
-            
-        } else {
-            instance_destroy(note);
+            }   
+        } else if note.object_index != o_mine {
+            combo = 0;
+            bop[8] = 1.3;
+            noterank = 4;
+            hp -= 1;
         }
-        combo = 0;
-        bop[8] = 1.3;
-        noterank = 4;
-        hp -= 1;
+        instance_destroy(note);
+        
     }
     /*if instance_exists(instance_place(j, bar, o_tail)) {
         if instance_place(j, bar, o_tail).y &lt;= bar-64 || instance_place(j, bar, o_tail).y &lt;= instance_place(j, bar, o_tail).head.y+32 {
@@ -232,8 +240,8 @@ if hp &gt; 12 {
     hp = 12;
 }
 
-if back &amp;&amp; !instance_exists(o_fao) {
-    if global.storymode = true {
+if (back &amp;&amp; !instance_exists(o_fao)) || hp &lt;= 0 {
+    if global.storymode = true &amp;&amp; hp &gt; 0 {
         with instance_create(0, 0, o_fao) {
             leaving = cutscene;
             depth = -3;
@@ -246,6 +254,45 @@ if back &amp;&amp; !instance_exists(o_fao) {
     }
     //global.scoring[global.currentstage] = MELODYCHASER.realscore;
     audio_stop_sound(audio);
+}
+
+if global.songscript = c_eonbreak {
+    if inputgimmick = false {
+        if arrayx[arraypos] = "C" {
+            with instance_create(0, 0, o_ChromaticAbberation) {
+                intensity = other.arrayy[other.arraypos];
+            }
+        } else if arrayx[arraypos] = "S" { //state
+            gimmickstate = arrayy[arraypos];
+            //absolute, velocity, reverse, or save
+        } else {
+            switch gimmickstate {
+                case 0:
+                    window_set_position(arrayx[arraypos], windowy);
+                    whspd = 0;
+                    wvspd = 0;
+                    break;
+                case 1:
+                    whspd = arrayx[arraypos];
+                    wvspd = arrayy[arraypos];
+                    break;
+                case 3:
+                    windowx = window_get_x();
+                    windowy = window_get_y();
+                    break;
+            }
+        }
+        inputgimmick = true;
+        arraypos++;
+    }
+    if gimmickstate = 2 {
+        windowx = windowxsaved;
+        windowy = windowysaved;
+    }
+    windowx += whspd;
+    windowy += wvspd;
+    window_set_position(windowx, windowy);
+    inputgimmick = true;
 }
 
 </string>
@@ -292,7 +339,7 @@ if count &lt; 240 {
 
 
 
-draw_text(laneright+250, bar+100, string(realscore));
+//draw_text(laneright+250, bar+100, string(realscore));
 //draw_text(laneright+250, bar+300, string(combo));
 draw_set_halign(fa_center);
 draw_set_colour(c_white);

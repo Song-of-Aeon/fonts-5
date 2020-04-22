@@ -157,7 +157,7 @@ active = false;
                 }
             }
             if count &gt; 180 {
-                global.songscript = c_everythingwillfreeze;
+                global.songscript = c_eonbreak;
                 instance_create(0, 0, o_fao);
                 o_cutscene.active = false;
             }
@@ -173,7 +173,6 @@ active = false;
                 }
             }
             if count &gt; 180 {
-                global.songscript = c_everythingwillfreeze;
                 with instance_create(0, 0, o_fao) {
                     leaving = stagemenu;
                 }

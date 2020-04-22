@@ -151,7 +151,7 @@ audio_play_sound(m_night, 0, false);
         
     }
     
-    if select {
+    if select &amp;&amp; !instance_exists(o_fao) {
         switch menuposition {
             case 0:
                 global.songscript = c_combattheme;

@@ -188,6 +188,7 @@
     <sound>sound\m_night</sound>
     <sound>sound\m_title</sound>
     <sound>sound\se_select</sound>
+    <sound>sound\m_eonbreak</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\s_kaguya</sprite>
@@ -302,6 +303,7 @@
     <script>scripts\c_lancerraps.gml</script>
     <script>scripts\sm_everythingwillfreeze.gml</script>
     <script>scripts\c_everythingwillfreeze.gml</script>
+    <script>scripts\sm_eonbreak.gml</script>
     <script>scripts\c_eonbreak.gml</script>
     <scripts name="the common">
       <script>scripts\script0.gml</script>
@@ -351,6 +353,7 @@
     <object>objects\object0</object>
     <object>objects\o_note</object>
     <object>objects\o_switch</object>
+    <object>objects\o_gimmickactivator</object>
     <object>objects\o_switchback</object>
     <object>objects\o_freeze</object>
     <object>objects\o_roll</object>

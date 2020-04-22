@@ -56,7 +56,11 @@ count = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>sprite_index = global.freeze;
+            <string>if !instance_exists(head) {
+    instance_destroy();
+}
+
+sprite_index = global.freeze;
 count++;
 if count &gt;= 240 {
     x += hspd;

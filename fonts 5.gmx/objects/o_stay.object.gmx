@@ -55,7 +55,11 @@ sprite_index = global.freeze;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if image_blend = c_purple {
+            <string>if !instance_exists(tail) {
+    instance_destroy();
+}
+
+if image_blend = c_purple {
     switch image_angle {
         case -90:
             holder = MELODYCHASER.left;
@@ -88,7 +92,7 @@ sprite_index = global.freeze;
 }
 if holder = false {
     countwo++;
-    if countwo &gt;= 45 {
+    if countwo &gt;= 35 {
         hspd = tail.hspd;
         vspd = tail.vspd;
     }

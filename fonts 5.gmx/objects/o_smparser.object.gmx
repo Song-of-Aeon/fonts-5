@@ -134,7 +134,7 @@ for (i=0; i&lt;array_length_1d(noteset); i++) {
     lastmeasurelength = notemaker[9];
     var j;
     for (j=0; j&lt;=lanes-1; j++) {
-        if notemaker[j] &gt; 7 {
+        if notemaker[j] &gt; 8 {
             notemaker[j] = 1;
         }
         switch notemaker[j] {
@@ -162,135 +162,89 @@ for (i=0; i&lt;array_length_1d(noteset); i++) {
             case 7:
                 notemaker[j] = o_switchback;
                 break;
+            case 8:
+                notemaker[j] = o_gimmickactivator;
+                break;
             
         }
     }
-    switch notemaker[9] {
-        case 1:
-            notecolour = global.red;
-            break;
-        case 2:
-            if amount % 2 = 0 {
+    if notemaker[j] != object0 {
+        switch notemaker[9] {
+            case 1:
                 notecolour = global.red;
-            } else {
-                notecolour = global.blue;
-            }
-            break;
-        case 3:
-            if amount % 3 = 0 {
-                notecolour = global.red;
-            } else {
-                notecolour = global.purple;
-            }
-            break;
-        case 4:
-            if amount % 4 = 0 {
-                notecolour = global.red;
-            } else if (amount + 2) % 4 = 0 {
-                notecolour = global.blue;
-            } else {
-                notecolour = global.purple;
-            }
-            break;
-        case 6:
-            if amount % 6 = 0 {
-                notecolour = global.red;
-            } else if (amount + 3) % 6 = 0 {
-                notecolour = global.blue;
-            }
-            break;
-        case 8:
-            if amount % 8 = 0 {
-                notecolour = global.red;
-            } else if (amount + 4) % 8 = 0 {
-                notecolour = global.blue;
-            } else {
-                notecolour = global.purple;
-            }
-            break;
+                break;
+            case 2:
+                if amount % 2 = 0 {
+                    notecolour = global.red;
+                } else {
+                    notecolour = global.blue;
+                }
+                break;
+            case 3:
+                if amount % 3 = 0 {
+                    notecolour = global.red;
+                } else {
+                    notecolour = global.purple;
+                }
+                break;
+            case 4:
+                if amount % 4 = 0 {
+                    notecolour = global.red;
+                } else if (amount + 2) % 4 = 0 {
+                    notecolour = global.blue;
+                } else {
+                    notecolour = global.purple;
+                }
+                break;
+            case 6:
+                if amount % 6 = 0 {
+                    notecolour = global.red;
+                } else if (amount + 3) % 6 = 0 {
+                    notecolour = global.blue;
+                }
+                break;
+            case 8:
+                if amount % 8 = 0 {
+                    notecolour = global.red;
+                } else if (amount + 4) % 8 = 0 {
+                    notecolour = global.blue;
+                } else {
+                    notecolour = global.purple;
+                }
+                break;
+            
+            case 12:
+                if amount % 12 = 0 {
+                    notecolour = global.red;
+                } else if (amount + 6) % 12 = 0 {
+                    notecolour = global.blue;
+                } else {
+                    notecolour = global.purple;
+                }
+                break;
+            case 16:
+                if amount % 16 = 0 {
+                    notecolour = global.red;
+                } else if (amount + 8) % 16 = 0 {
+                    notecolour = global.blue;
+                } else {
+                    notecolour = global.purple;
+                }
+                break;
+            
+            case 48:
+                if amount % 48 = 0 {
+                    notecolour = global.red;
+                } else if (amount + 24) % 48 = 0 {
+                    notecolour = global.blue;
+                } else {
+                    notecolour = global.purple;
+                }
+                break;
+            
+        }
         
-        case 12:
-            if amount % 12 = 0 {
-                notecolour = global.red;
-            } else if (amount + 6) % 12 = 0 {
-                notecolour = global.blue;
-            } else {
-                notecolour = global.purple;
-            }
-            break;
-        case 16:
-            if amount % 16 = 0 {
-                notecolour = global.red;
-            } else if (amount + 8) % 16 = 0 {
-                notecolour = global.blue;
-            } else {
-                notecolour = global.purple;
-            }
-            break;
-        
-        case 48:
-            if amount % 48 = 0 {
-                notecolour = global.red;
-            } else if (amount + 24) % 48 = 0 {
-                notecolour = global.blue;
-            } else {
-                notecolour = global.purple;
-            }
-            break;
-        
-    }
-    
-    with instance_create(MELODYCHASER.laneleft, placer*32*xmod+MELODYCHASER.bar, notemaker[0]) {
-        dir = 0;
-        vspd = -(other.bpm/c_bpmbuster())*other.xmod;
-        sprite_index = other.notecolour;
-        if object_index = o_freeze || object_index = o_roll {
-            other.freezel = id;
-        } else if object_index = o_tail {
-            with other.freezel {
-                tail = other.id;
-            }
-        }
-    }
-    with instance_create(MELODYCHASER.lanedown, placer*32*xmod+MELODYCHASER.bar, notemaker[1]) {
-        dir = 1;
-        vspd = -(other.bpm/c_bpmbuster())*other.xmod;
-        sprite_index = other.notecolour;
-        if object_index = o_freeze || object_index = o_roll {
-            other.freezed = id;
-        } else if object_index = o_tail {
-            with other.freezed {
-                tail = other.id;
-            }
-        }
-    }
-    with instance_create(MELODYCHASER.laneup, placer*32*xmod+MELODYCHASER.bar, notemaker[2]) {
-        dir = 2;
-        vspd = -(other.bpm/c_bpmbuster())*other.xmod;
-        sprite_index = other.notecolour;
-        if object_index = o_freeze || object_index = o_roll {
-            other.freezeu = id;
-        } else if object_index = o_tail {
-            with other.freezeu {
-                tail = other.id;
-            }
-        }
-    }
-    with instance_create(MELODYCHASER.laneright, placer*32*xmod+MELODYCHASER.bar, notemaker[3]) {
-        dir = 3;
-        vspd = -(other.bpm/c_bpmbuster())*other.xmod;
-        sprite_index = other.notecolour;
-        if object_index = o_freeze || object_index = o_roll {
-            other.freezer = id;
-        } else if object_index = o_tail {
-            with other.freezer {
-                tail = other.id;
-            }
-        }
-    }
-    //four extra
-    if lanes = 8 {
-        with instance_create(MELODYCHASER.laneleft+MELODYCHASER.lanespacing*3, placer*32*xmod+MELODYCHASER.bar, notemaker[4]) {
+        with instance_create(MELODYCHASER.laneleft, placer*32*xmod+MELODYCHASER.bar, notemaker[0]) {
             dir = 0;
             vspd = -(other.bpm/c_bpmbuster())*other.xmod;
             sprite_index = other.notecolour;
@@ -302,7 +256,7 @@ for (i=0; i&lt;array_length_1d(noteset); i++) {
                 }
             }
         }
-        with instance_create(MELODYCHASER.lanedown+MELODYCHASER.lanespacing*3, placer*32*xmod+MELODYCHASER.bar, notemaker[5]) {
+        with instance_create(MELODYCHASER.lanedown, placer*32*xmod+MELODYCHASER.bar, notemaker[1]) {
             dir = 1;
             vspd = -(other.bpm/c_bpmbuster())*other.xmod;
             sprite_index = other.notecolour;
@@ -314,7 +268,7 @@ for (i=0; i&lt;array_length_1d(noteset); i++) {
                 }
             }
         }
-        with instance_create(MELODYCHASER.laneup+MELODYCHASER.lanespacing*3, placer*32*xmod+MELODYCHASER.bar, notemaker[6]) {
+        with instance_create(MELODYCHASER.laneup, placer*32*xmod+MELODYCHASER.bar, notemaker[2]) {
             dir = 2;
             vspd = -(other.bpm/c_bpmbuster())*other.xmod;
             sprite_index = other.notecolour;
@@ -326,7 +280,7 @@ for (i=0; i&lt;array_length_1d(noteset); i++) {
                 }
             }
         }
-        with instance_create(MELODYCHASER.laneright+MELODYCHASER.lanespacing*3, placer*32*xmod+MELODYCHASER.bar, notemaker[7]) {
+        with instance_create(MELODYCHASER.laneright, placer*32*xmod+MELODYCHASER.bar, notemaker[3]) {
             dir = 3;
             vspd = -(other.bpm/c_bpmbuster())*other.xmod;
             sprite_index = other.notecolour;
@@ -335,6 +289,57 @@ for (i=0; i&lt;array_length_1d(noteset); i++) {
             } else if object_index = o_tail {
                 with other.freezer {
                     tail = other.id;
+                }
+            }
+        }
+        //four extra
+        if lanes = 8 {
+            with instance_create(MELODYCHASER.laneleft+MELODYCHASER.lanespacing*3, placer*32*xmod+MELODYCHASER.bar, notemaker[4]) {
+                dir = 0;
+                vspd = -(other.bpm/c_bpmbuster())*other.xmod;
+                sprite_index = other.notecolour;
+                if object_index = o_freeze || object_index = o_roll {
+                    other.freezel = id;
+                } else if object_index = o_tail {
+                    with other.freezel {
+                        tail = other.id;
+                    }
+                }
+            }
+            with instance_create(MELODYCHASER.lanedown+MELODYCHASER.lanespacing*3, placer*32*xmod+MELODYCHASER.bar, notemaker[5]) {
+                dir = 1;
+                vspd = -(other.bpm/c_bpmbuster())*other.xmod;
+                sprite_index = other.notecolour;
+                if object_index = o_freeze || object_index = o_roll {
+                    other.freezed = id;
+                } else if object_index = o_tail {
+                    with other.freezed {
+                        tail = other.id;
+                    }
+                }
+            }
+            with instance_create(MELODYCHASER.laneup+MELODYCHASER.lanespacing*3, placer*32*xmod+MELODYCHASER.bar, notemaker[6]) {
+                dir = 2;
+                vspd = -(other.bpm/c_bpmbuster())*other.xmod;
+                sprite_index = other.notecolour;
+                if object_index = o_freeze || object_index = o_roll {
+                    other.freezeu = id;
+                } else if object_index = o_tail {
+                    with other.freezeu {
+                        tail = other.id;
+                    }
+                }
+            }
+            with instance_create(MELODYCHASER.laneright+MELODYCHASER.lanespacing*3, placer*32*xmod+MELODYCHASER.bar, notemaker[7]) {
+                dir = 3;
+                vspd = -(other.bpm/c_bpmbuster())*other.xmod;
+                sprite_index = other.notecolour;
+                if object_index = o_freeze || object_index = o_roll {
+                    other.freezer = id;
+                } else if object_index = o_tail {
+                    with other.freezer {
+                        tail = other.id;
+                    }
                 }
             }
         }
