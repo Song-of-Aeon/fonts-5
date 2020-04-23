@@ -350,10 +350,10 @@ for (i=0; i&lt;array_length_1d(noteset); i++) {
     //((i*32)-i+(i/(amount/notemaker[9])))
 }
 
-/*var n;
+var n;
 for (n=0;n&lt;array_length_1d(noteset);n++) {
     console_log(noteset[n]);
-}*/
+}
 
 MELODYCHASER.notecount = instance_number(o_note);
 /*MELODYCHASER.notecount += instance_number(o_freeze);
@@ -424,6 +424,41 @@ if global.storymode = false {
         }
         //global.scoring[0] += MELODYCHASER.realscore/5;
         global.cutscenecount++;
+    }
+}
+
+if keyboard_check_pressed(ord('R')) {
+    with o_note {
+         y -= 32*xmod;
+    }
+    with o_tail {
+         y -= 32*xmod;
+    }
+    with o_switch {
+         y -= 32*xmod;
+    }
+    with o_switchback {
+         y -= 32*xmod;
+    }
+    with o_gimmickactivator {
+         y -= 32*xmod;
+    }
+}
+if keyboard_check_pressed(ord('T')) {
+    with o_note {
+         y += 32*xmod;
+    }
+    with o_tail {
+         y += 32*xmod;
+    }
+    with o_switch {
+         y += 32*xmod;
+    }
+    with o_switchback {
+         y += 32*xmod;
+    }
+    with o_gimmickactivator {
+         y += 32*xmod;
     }
 }
 </string>

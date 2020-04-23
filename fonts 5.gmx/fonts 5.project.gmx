@@ -261,6 +261,7 @@
     <sprite>sprites\s_prep</sprite>
     <sprite>sprites\s_zero</sprite>
     <sprite>sprites\s_judgement</sprite>
+    <sprite>sprites\s_doctor</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -381,6 +382,7 @@
     <object>objects\o_zero</object>
     <object>objects\o_world</object>
     <object>objects\o_flash</object>
+    <object>objects\o_doctor</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\fontstitle</room>
