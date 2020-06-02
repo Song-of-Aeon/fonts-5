@@ -29,6 +29,8 @@
 mmod = 0;
 cmod = 0;
 bar = 64;
+mini = 1;
+minibig = (mini-1)*64;
 bop[0] = 1;
 bop[1] = 1;
 bop[2] = 1;
@@ -49,10 +51,10 @@ ranktext = 11037;
 //offset = 1918;
 timecounter = 0;
 songstarting = false;
-laneleft = 64;
-lanedown = 128;
-laneup = 192;
-laneright = 256;
+laneleft = 64+minibig;
+lanedown = 128+minibig*2;
+laneup = 192+minibig*3;
+laneright = 256+minibig*4;
 lanespacing = 64;
 lanes = 4;
 laneselected = lanedown+(lanespacing/2);
@@ -130,7 +132,7 @@ if songstarting {
         if count = 10 {
             instance_create(800, 500, o_zero);
         }
-        if (count &gt;= 220 &amp;&amp; global.songscript = c_eonbreak) || (count &gt;= 230 &amp;&amp; global.songscript != c_eonbreak) {
+        if (count &gt;= 235 &amp;&amp; global.songscript = c_eonbreak) || (count &gt;= 230 &amp;&amp; global.songscript != c_eonbreak){
         //count &gt;= 230 {
             audio_play_sound(audio, 0, false);
             
