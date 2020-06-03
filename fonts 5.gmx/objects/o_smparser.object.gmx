@@ -248,6 +248,8 @@ for (i=0; i&lt;array_length_1d(noteset); i++) {
             dir = 0;
             vspd = -(other.bpm/c_bpmbuster())*other.xmod;
             sprite_index = other.notecolour;
+            image_xscale = MELODYCHASER.mini;
+            image_yscale = MELODYCHASER.mini;
             if object_index = o_freeze || object_index = o_roll {
                 other.freezel = id;
             } else if object_index = o_tail {
@@ -260,6 +262,8 @@ for (i=0; i&lt;array_length_1d(noteset); i++) {
             dir = 1;
             vspd = -(other.bpm/c_bpmbuster())*other.xmod;
             sprite_index = other.notecolour;
+            image_xscale = MELODYCHASER.mini;
+            image_yscale = MELODYCHASER.mini;
             if object_index = o_freeze || object_index = o_roll {
                 other.freezed = id;
             } else if object_index = o_tail {
@@ -272,6 +276,8 @@ for (i=0; i&lt;array_length_1d(noteset); i++) {
             dir = 2;
             vspd = -(other.bpm/c_bpmbuster())*other.xmod;
             sprite_index = other.notecolour;
+            image_xscale = MELODYCHASER.mini;
+            image_yscale = MELODYCHASER.mini;
             if object_index = o_freeze || object_index = o_roll {
                 other.freezeu = id;
             } else if object_index = o_tail {
@@ -284,6 +290,8 @@ for (i=0; i&lt;array_length_1d(noteset); i++) {
             dir = 3;
             vspd = -(other.bpm/c_bpmbuster())*other.xmod;
             sprite_index = other.notecolour;
+            image_xscale = MELODYCHASER.mini;
+            image_yscale = MELODYCHASER.mini;
             if object_index = o_freeze || object_index = o_roll {
                 other.freezer = id;
             } else if object_index = o_tail {
@@ -298,6 +306,8 @@ for (i=0; i&lt;array_length_1d(noteset); i++) {
                 dir = 0;
                 vspd = -(other.bpm/c_bpmbuster())*other.xmod;
                 sprite_index = other.notecolour;
+                image_xscale = MELODYCHASER.mini;
+                image_yscale = MELODYCHASER.mini;
                 if object_index = o_freeze || object_index = o_roll {
                     other.freezel = id;
                 } else if object_index = o_tail {
@@ -310,6 +320,8 @@ for (i=0; i&lt;array_length_1d(noteset); i++) {
                 dir = 1;
                 vspd = -(other.bpm/c_bpmbuster())*other.xmod;
                 sprite_index = other.notecolour;
+                image_xscale = MELODYCHASER.mini;
+                image_yscale = MELODYCHASER.mini;
                 if object_index = o_freeze || object_index = o_roll {
                     other.freezed = id;
                 } else if object_index = o_tail {
@@ -322,6 +334,8 @@ for (i=0; i&lt;array_length_1d(noteset); i++) {
                 dir = 2;
                 vspd = -(other.bpm/c_bpmbuster())*other.xmod;
                 sprite_index = other.notecolour;
+                image_xscale = MELODYCHASER.mini;
+                image_yscale = MELODYCHASER.mini;
                 if object_index = o_freeze || object_index = o_roll {
                     other.freezeu = id;
                 } else if object_index = o_tail {
@@ -334,6 +348,8 @@ for (i=0; i&lt;array_length_1d(noteset); i++) {
                 dir = 3;
                 vspd = -(other.bpm/c_bpmbuster())*other.xmod;
                 sprite_index = other.notecolour;
+                image_xscale = MELODYCHASER.mini;
+                image_yscale = MELODYCHASER.mini;
                 if object_index = o_freeze || object_index = o_roll {
                     other.freezer = id;
                 } else if object_index = o_tail {
@@ -350,10 +366,10 @@ for (i=0; i&lt;array_length_1d(noteset); i++) {
     //((i*32)-i+(i/(amount/notemaker[9])))
 }
 
-var n;
+/*var n;
 for (n=0;n&lt;array_length_1d(noteset);n++) {
     console_log(noteset[n]);
-}
+}*/
 
 MELODYCHASER.notecount = instance_number(o_note);
 /*MELODYCHASER.notecount += instance_number(o_freeze);

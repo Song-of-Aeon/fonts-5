@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>menuposition = 0;
+selectoronsong = true;
 selectorposx = 652;
 selectorposy = 120;
 hspd = 0;
@@ -91,98 +92,107 @@ audio_play_sound(m_night, 0, false);
             <kind>1</kind>
             <string>if room = stagemenu {
     c_input();
-    if up &amp;&amp; menuposition &gt; 0 {
-        if menuposition = 1 {
-            selectorposy++;
-        }
-        menuposition--;
-    }
-    if down &amp;&amp; menuposition &lt; 5 {
-        if menuposition = 0 {
-            selectorposy--;
-        }
-        menuposition++;
-    }
     
-    if menuposition &gt;= 1 {
-        if selectorposy &lt; menuposition*87+128 {
-            selectorposy += 3;
-        } else if selectorposy &gt; menuposition*87+128 {
-            selectorposy -= 3;
+    if selectoronsong {
+        if up &amp;&amp; menuposition &gt; 0 {
+            if menuposition = 1 {
+                selectorposy++;
+            }
+            menuposition--;
         }
-        if menuxscale &gt; 1 {
-            menuxscale -= .05;
+        if down &amp;&amp; menuposition &lt; 5 {
+            if menuposition = 0 {
+                selectorposy--;
+            }
+            menuposition++;
         }
-        if menuyscale &gt; 1 {
-            menuyscale -= .15;
-        }
-    } else {
-        if selectorposy &lt; menuposition*87+129 {
-            selectorposy += 3;
-        } else if selectorposy &gt; menuposition*87+129 {
-            selectorposy -= 3;
-        }
-        if menuxscale &lt; 2 {
-            menuxscale += .05;
-        }
-        if menuyscale &lt; 1.2 {
-            menuyscale += .15;
-        }
-    }
-    
-    var i;
-    for (i=0; i&lt;6; i++) {
-        scoreshowcolour[i] = c_white;
-        switch string_copy(global.scoring[i], 6, 1) {
-            case "M":
-                scoreshowcolour[i] = c_teal;
-                break;
-            case "P":
-                scoreshowcolour[i] = c_yellow;
-                break;
-            case "G":
-                scoreshowcolour[i] = c_green;
-                break;
-            case "":
-                scoreshowcolour[i] = c_white;
-                break;
-        }
-        scoreshow[i] = string_copy(global.scoring[i], 1, 5);
         
-    }
-    
-    if select &amp;&amp; !instance_exists(o_fao) {
-        switch menuposition {
-            case 0:
-                global.songscript = c_combattheme;
-                global.storymode = true;
-                break;
-            case 1:
-                global.songscript = c_combattheme;
-                break;
-            case 2:
-                global.songscript = c_lancerraps;
-                break;
-            case 3:
-                global.songscript = c_everythingwillfreeze;
-                break;
-            case 4:
-                global.songscript = c_drivin;
-                break;
-            case 5:
-                global.songscript = c_eonbreak;
-                break;
-        }
-        audio_play_sound(se_select, 0, false);
-        global.currentstage = menuposition;
-        audio_stop_sound(m_night);
-        if menuposition != 0 {
-            instance_create(0, 0, o_fao);
+        if menuposition &gt;= 1 {
+            if selectorposy &lt; menuposition*87+128 {
+                selectorposy += 3;
+            } else if selectorposy &gt; menuposition*87+128 {
+                selectorposy -= 3;
+            }
+            if menuxscale &gt; 1 {
+                menuxscale -= .05;
+            }
+            if menuyscale &gt; 1 {
+                menuyscale -= .15;
+            }
         } else {
-            with instance_create(0, 0, o_fao) {
-                leaving = cutscene;
+            if selectorposy &lt; menuposition*87+129 {
+                selectorposy += 3;
+            } else if selectorposy &gt; menuposition*87+129 {
+                selectorposy -= 3;
+            }
+            if menuxscale &lt; 2 {
+                menuxscale += .05;
+            }
+            if menuyscale &lt; 1.2 {
+                menuyscale += .15;
             }
         }
+        
+        var i;
+        for (i=0; i&lt;6; i++) {
+            scoreshowcolour[i] = c_white;
+            switch string_copy(global.scoring[i], 6, 1) {
+                case "M":
+                    scoreshowcolour[i] = c_teal;
+                    break;
+                case "P":
+                    scoreshowcolour[i] = c_yellow;
+                    break;
+                case "G":
+                    scoreshowcolour[i] = c_green;
+                    break;
+                case "":
+                    scoreshowcolour[i] = c_white;
+                    break;
+            }
+            scoreshow[i] = string_copy(global.scoring[i], 1, 5);
+            
+        }
+        
+        if select &amp;&amp; !instance_exists(o_fao) {
+            switch menuposition {
+                case 0:
+                    global.songscript = c_combattheme;
+                    global.storymode = true;
+                    break;
+                case 1:
+                    global.songscript = c_combattheme;
+                    break;
+                case 2:
+                    global.songscript = c_lancerraps;
+                    break;
+                case 3:
+                    global.songscript = c_everythingwillfreeze;
+                    break;
+                case 4:
+                    global.songscript = c_drivin;
+                    break;
+                case 5:
+                    global.songscript = c_eonbreak;
+                    break;
+            }
+            audio_play_sound(se_select, 0, false);
+            global.currentstage = menuposition;
+            audio_stop_sound(m_night);
+            if menuposition != 0 {
+                instance_create(0, 0, o_fao);
+            } else {
+                with instance_create(0, 0, o_fao) {
+                    leaving = cutscene;
+                }
+            }
+        }
+    } else {
+        
+    }
+    if left || right {
+        selectoronsong = !selectoronsong;
+        
     }
 }
 

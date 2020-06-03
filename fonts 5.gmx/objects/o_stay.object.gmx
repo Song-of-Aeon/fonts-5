@@ -29,6 +29,8 @@
 countwo = 0;
 tail = 0;
 image_speed = 0;
+image_xscale = MELODYCHASER.mini;
+image_yscale = MELODYCHASER.mini;
 holder = true;
 hspd = 0;
 vspd = 0;

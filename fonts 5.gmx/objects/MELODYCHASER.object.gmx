@@ -25,11 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>xmod = 8;
+            <string>xmod = 14;
 mmod = 0;
 cmod = 0;
 bar = 64;
-mini = 1;
+mini = 1.4;
 minibig = (mini-1)*64;
 bop[0] = 1;
 bop[1] = 1;
@@ -229,7 +229,7 @@ if hp &gt; 12 {
     hp = 12;
 }
 
-if (back &amp;&amp; !instance_exists(o_fao)) || (hp &lt;= 0 &amp;&amp; global.songscript != c_eonbreak) {
+if (back &amp;&amp; !instance_exists(o_fao)) /*|| (hp &lt;= 0 &amp;&amp; global.songscript != c_eonbreak)*/ {
     if global.storymode = true &amp;&amp; hp &gt; 0 {
         with instance_create(0, 0, o_fao) {
             leaving = cutscene;
@@ -347,18 +347,18 @@ if global.songscript = c_eonbreak {
             <kind>1</kind>
             <string>depth = 5;
 draw_sprite(songbg, 0, 0, 0);
-draw_sprite(s_blueselected, 0, laneselected, 0);
+draw_sprite_ext(s_blueselected, 0, laneselected, 0, mini, 1, 0, c_white, 1);
 draw_set_font(f_scoreronaldo);
 
-draw_sprite_ext(global.receptor, 0, laneleft, bar, bop[0], bop[0], -90, c_white, 1);
-draw_sprite_ext(global.receptor, 0, lanedown, bar, bop[1], bop[1], 0, c_white, 1);
-draw_sprite_ext(global.receptor, 0, laneup, bar, bop[2], bop[2], 180, c_white, 1);
-draw_sprite_ext(global.receptor, 0, laneright, bar, bop[3], bop[3], 90, c_white, 1);
+draw_sprite_ext(global.receptor, 0, laneleft, bar, mini*bop[0], mini*bop[0], -90, c_white, 1);
+draw_sprite_ext(global.receptor, 0, lanedown, bar, mini*bop[1], mini*bop[1], 0, c_white, 1);
+draw_sprite_ext(global.receptor, 0, laneup, bar, mini*bop[2], mini*bop[2], 180, c_white, 1);
+draw_sprite_ext(global.receptor, 0, laneright, bar, mini*bop[3], mini*bop[3], 90, c_white, 1);
 if lanes = 8 {
-    draw_sprite_ext(global.receptor, 0, laneleft+lanespacing*3, bar, bop[4], bop[4], -90, c_white, 1);
-    draw_sprite_ext(global.receptor, 0, lanedown+lanespacing*3, bar, bop[5], bop[5], 0, c_white, 1);
-    draw_sprite_ext(global.receptor, 0, laneup+lanespacing*3, bar, bop[6], bop[6], 180, c_white, 1);
-    draw_sprite_ext(global.receptor, 0, laneright+lanespacing*3, bar, bop[7], bop[7], 90, c_white, 1);
+    draw_sprite_ext(global.receptor, 0, laneleft+lanespacing*3, bar, mini*bop[4], mini*bop[4], -90, c_white, 1);
+    draw_sprite_ext(global.receptor, 0, lanedown+lanespacing*3, bar, mini*bop[5], mini*bop[5], 0, c_white, 1);
+    draw_sprite_ext(global.receptor, 0, laneup+lanespacing*3, bar, mini*bop[6], mini*bop[6], 180, c_white, 1);
+    draw_sprite_ext(global.receptor, 0, laneright+lanespacing*3, bar, mini*bop[7], mini*bop[7], 90, c_white, 1);
 }
 
 if count &lt; 230 {
@@ -383,7 +383,7 @@ draw_set_halign(fa_left);
 
 var l;
 for (l=0; l&lt;floor(hp); l++) {
-    draw_sprite(s_heart, 0, laneright+80, bar+l*16);
+    draw_sprite(s_heart, 0, laneright+80*mini, bar+l*16);
 }
 /*var m;
 for (m=0;)

@@ -30,6 +30,8 @@ vspd = 0;
 dir = 0;
 image_speed = 0;
 image_index = 2;
+image_xscale = MELODYCHASER.mini;
+image_yscale = MELODYCHASER.mini;
 head = 0;
 colour = c_white;
 unusable = false;
@@ -108,12 +110,12 @@ if unusable = false {
             <string>if head != 0 || unusable = false {
     //var i;
     //for (i=0; i&lt;distance_to_point(head.x, head.y); i+=64) {
-        draw_sprite_ext(global.freeze, 1, x, y-distance_to_point(head.x, head.y)/2-32, 1, distance_to_point(head.x, head.y)/64, 0, colour, 1);
+        draw_sprite_ext(global.freeze, 1, x, y-distance_to_point(head.x, head.y)/2-32, MELODYCHASER.mini, distance_to_point(head.x, head.y)/64, 0, colour, 1);
     //}
     
     
 } else {
-    draw_sprite_ext(global.freeze, 1, x, y-distance_to_point(x, 0)/2-32, 1, distance_to_point(x, 0)/64, 0, colour, 1);
+    draw_sprite_ext(global.freeze, 1, x, y-distance_to_point(x, 0)/2-32, MELODYCHASER.mini, distance_to_point(x, 0)/64, 0, colour, 1);
 }
 draw_self();
 </string>
