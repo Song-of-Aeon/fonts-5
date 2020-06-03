@@ -263,6 +263,7 @@
     <sprite>sprites\s_zero</sprite>
     <sprite>sprites\s_judgement</sprite>
     <sprite>sprites\s_null</sprite>
+    <sprite>sprites\s_menucover</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -384,7 +385,8 @@
     <object>objects\o_zero</object>
     <object>objects\o_world</object>
     <object>objects\o_flash</object>
-    <object>objects\object32</object>
+    <object>objects\o_pseudonote</object>
+    <object>objects\o_pseudohitfx</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\fontstitle</room>

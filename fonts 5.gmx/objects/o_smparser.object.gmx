@@ -56,7 +56,7 @@ lanes = MELODYCHASER.lanes;
 savelanespacing = MELODYCHASER.lanespacing;
 if global.gimmickactive = false {
     savelanespacing = 0;
-    MELODYCHASER.lanes = 4;
+    
 }
 
 while position &lt;= string_length(song) {

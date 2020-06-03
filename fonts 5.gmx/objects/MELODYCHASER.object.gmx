@@ -325,6 +325,9 @@ if global.songscript = c_eonbreak {
     }
     inputgimmick = true;
 }
+if global.gimmickactive = false {
+    MELODYCHASER.lanes = 4;
+}
 
 </string>
           </argument>

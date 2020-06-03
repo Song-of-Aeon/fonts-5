@@ -346,6 +346,7 @@ audio_play_sound(m_night, 0, false);
         draw_text(1120, 510, "Inactive");
     }
     draw_set_halign(fa_left);
+    draw_sprite(s_menucover, 0, 207, 591);
 }
 
 </string>
