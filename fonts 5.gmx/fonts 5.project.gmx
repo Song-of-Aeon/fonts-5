@@ -246,6 +246,7 @@
     <sprite>sprites\s_cursor</sprite>
     <sprite>sprites\s_scorecloud</sprite>
     <sprite>sprites\s_heart</sprite>
+    <sprite>sprites\s_burn</sprite>
     <sprite>sprites\s_bigdark</sprite>
     <sprite>sprites\s_flash</sprite>
     <sprite>sprites\s_world</sprite>
@@ -261,7 +262,6 @@
     <sprite>sprites\s_prep</sprite>
     <sprite>sprites\s_zero</sprite>
     <sprite>sprites\s_judgement</sprite>
-    <sprite>sprites\s_doctor</sprite>
     <sprite>sprites\s_null</sprite>
   </sprites>
   <backgrounds name="background">
@@ -340,6 +340,7 @@
     </scripts>
     <script>scripts\c_redinput.gml</script>
     <script>scripts\c_soul.gml</script>
+    <script>scripts\c_noteoverride.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\z_ChromaticAbberation.shader</shader>
@@ -383,7 +384,7 @@
     <object>objects\o_zero</object>
     <object>objects\o_world</object>
     <object>objects\o_flash</object>
-    <object>objects\o_doctor</object>
+    <object>objects\object32</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\fontstitle</room>

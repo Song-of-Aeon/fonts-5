@@ -32,6 +32,7 @@ selectorposy = 120;
 hspd = 0;
 menuxscale = 1;
 menuyscale = 1;
+lockon = 0;
 
 global.scoring[0] = 0;
 global.scoring[1] = "00.00";
@@ -54,6 +55,8 @@ global.freeze = s_green;
 global.effect = s_effect;
 global.mine = s_mine;
 global.receptor = s_receptor;
+global.noteoverride = 0;
+global.gimmickactive = true;
 
 if file_exists("profile.ini") {
     //game_load("profile.dat");
@@ -188,11 +191,51 @@ audio_play_sound(m_night, 0, false);
             }
         }
     } else {
-        
+        if lockon = 0 {
+            if select {
+                lockon = menuposition+1;
+            }
+            if up &amp;&amp; menuposition &gt; 0 {
+                menuposition--;
+                selectorposx = 1037;
+                selectorposy = 298;
+            }
+            if down &amp;&amp; menuposition &lt; 1 {
+                menuposition++;
+                selectorposx = 1037;
+                selectorposy = 470;
+            }
+        } else if lockon = 1 {
+            if left &amp;&amp; global.noteoverride &gt; 0
+                global.noteoverride--;
+            if right &amp;&amp; global.noteoverride &lt; 5
+                global.noteoverride++;
+            if back || select
+                lockon = 0;
+        } else if lockon = 2 {
+            global.gimmickactive = !global.gimmickactive;
+            lockon = 0;
+        }
+        if menuxscale &gt; 1.2 {
+            menuxscale -= .05;
+        }
+        if menuyscale &gt; 1 {
+            menuyscale -= .05;
+        }
+        if menuxscale &lt; 1.2 {
+            menuxscale += .05;
+        }
     }
-    if left || right {
+    if (left || right) &amp;&amp; lockon = 0 {
         selectoronsong = !selectoronsong;
-        
+        menuposition = 0;
+        if !selectoronsong {
+            selectorposx = 1037;
+            selectorposy = 298;
+        } else {
+            selectorposx = 652;
+            selectorposy = 120;
+        }
     }
 }
 
@@ -228,30 +271,31 @@ audio_play_sound(m_night, 0, false);
     draw_sprite_ext(s_cursor, 0, selectorposx, selectorposy, menuxscale, menuyscale, 0, c_white, 1);
     draw_set_colour(c_white);
     //draw_text(100, 100, string(menuposition));
-    
-    switch menuposition {
-        case 0:
-            draw_text(652, menuposition*87+162, "");
-            break;
-        case 1:
-            draw_text(652, menuposition*87+162, "Combat Theme");
-            break;
-        case 2:
-            draw_text(652, menuposition*87+162, "Lancer Raps");
-            break;
-        case 3:
-            draw_text(652, menuposition*87+162, "Everything Will Freeze");
-            break;
-        case 4:
-            draw_text(652, menuposition*87+162, "Spider Dance");
-            break;
-        case 5:
-            draw_text(652, menuposition*87+162, "Eon Break");
-            break;
+    if selectoronsong {
+        switch menuposition {
+            case 0:
+                draw_text(652, menuposition*87+162, "");
+                break;
+            case 1:
+                draw_text(652, menuposition*87+162, "Combat Theme");
+                break;
+            case 2:
+                draw_text(652, menuposition*87+162, "Lancer Raps");
+                break;
+            case 3:
+                draw_text(652, menuposition*87+162, "Everything Will Freeze");
+                break;
+            case 4:
+                draw_text(652, menuposition*87+162, "Spider Dance");
+                break;
+            case 5:
+                draw_text(652, menuposition*87+162, "Eon Break");
+                break;
+        }
     }
     
     //draw_text()
-    draw_set_font(f_scoreronaldo)
+    draw_set_font(f_scoreronaldo);
     draw_sprite_ext(s_scorecloud, 0, 1000, 160, 1.5, 1.2, 0, c_white, 1);
     draw_sprite_ext(s_scorecloud, 0, 800, 87+160, 1, 1, 0, scoreshowcolour[1], 1);
     draw_sprite_ext(s_scorecloud, 0, 800, 174+160, 1, 1, 0, scoreshowcolour[2], 1);
@@ -269,7 +313,41 @@ audio_play_sound(m_night, 0, false);
     draw_sprite_ext(global.receptor, 0, 221+128-24, 250, 1, 1, 0, c_white, 1);
     draw_sprite_ext(global.receptor, 0, 221+192-24, 250, 1, 1, 180, c_white, 1);
     draw_sprite_ext(global.receptor, 0, 221+256-24, 250, 1, 1, 90, c_white, 1);
+    var noteskinshow = s_kaguya;
+    switch global.noteoverride {
+        case 0:
+            noteskinshow = s_null;
+            break;
+        case 1:
+            noteskinshow = s_red;
+            break;
+        case 2:
+            noteskinshow = s_aka;
+            break;
+        case 3:
+            noteskinshow = s_dark;
+            break;
+        case 4:
+            noteskinshow = s_azul;
+            break;
+        case 5:
+            noteskinshow = s_trueblue;
+            break;
+    }
+    draw_set_halign(fa_center);
+    if global.noteoverride != 0 {
+        draw_sprite(noteskinshow, 0, 1120, 370);
+    } else 
+        draw_text(1120, 370, "Default"); //hate how this is possible, still
+    draw_set_halign(fa_center);
+    if global.gimmickactive = true {
+        draw_text(1120, 510, "Active");
+    } else {
+        draw_text(1120, 510, "Inactive");
+    }
+    draw_set_halign(fa_left);
 }
+
 </string>
           </argument>
         </arguments>

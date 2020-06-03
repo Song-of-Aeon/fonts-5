@@ -29,6 +29,7 @@
 vspd = 0;
 dir = 0;
 count = 0;
+if global.gimmickactive = false {instance_destroy()}; //what awful ways there are to do if statements
 </string>
           </argument>
         </arguments>

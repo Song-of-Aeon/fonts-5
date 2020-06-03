@@ -53,6 +53,11 @@ freezed = 0;
 freezeu = 0;
 freezer = 0;
 lanes = MELODYCHASER.lanes;
+savelanespacing = MELODYCHASER.lanespacing;
+if global.gimmickactive = false {
+    savelanespacing = 0;
+    MELODYCHASER.lanes = 4;
+}
 
 while position &lt;= string_length(song) {
     if mode = "metadata" {
@@ -302,7 +307,7 @@ for (i=0; i&lt;array_length_1d(noteset); i++) {
         }
         //four extra
         if lanes = 8 {
-            with instance_create(MELODYCHASER.laneleft+MELODYCHASER.lanespacing*3, placer*32*xmod+MELODYCHASER.bar, notemaker[4]) {
+            with instance_create(MELODYCHASER.laneleft+savelanespacing*3, placer*32*xmod+MELODYCHASER.bar, notemaker[4]) {
                 dir = 0;
                 vspd = -(other.bpm/c_bpmbuster())*other.xmod;
                 sprite_index = other.notecolour;
@@ -316,7 +321,7 @@ for (i=0; i&lt;array_length_1d(noteset); i++) {
                     }
                 }
             }
-            with instance_create(MELODYCHASER.lanedown+MELODYCHASER.lanespacing*3, placer*32*xmod+MELODYCHASER.bar, notemaker[5]) {
+            with instance_create(MELODYCHASER.lanedown+savelanespacing*3, placer*32*xmod+MELODYCHASER.bar, notemaker[5]) {
                 dir = 1;
                 vspd = -(other.bpm/c_bpmbuster())*other.xmod;
                 sprite_index = other.notecolour;
@@ -330,7 +335,7 @@ for (i=0; i&lt;array_length_1d(noteset); i++) {
                     }
                 }
             }
-            with instance_create(MELODYCHASER.laneup+MELODYCHASER.lanespacing*3, placer*32*xmod+MELODYCHASER.bar, notemaker[6]) {
+            with instance_create(MELODYCHASER.laneup+savelanespacing*3, placer*32*xmod+MELODYCHASER.bar, notemaker[6]) {
                 dir = 2;
                 vspd = -(other.bpm/c_bpmbuster())*other.xmod;
                 sprite_index = other.notecolour;
@@ -344,7 +349,7 @@ for (i=0; i&lt;array_length_1d(noteset); i++) {
                     }
                 }
             }
-            with instance_create(MELODYCHASER.laneright+MELODYCHASER.lanespacing*3, placer*32*xmod+MELODYCHASER.bar, notemaker[7]) {
+            with instance_create(MELODYCHASER.laneright+savelanespacing*3, placer*32*xmod+MELODYCHASER.bar, notemaker[7]) {
                 dir = 3;
                 vspd = -(other.bpm/c_bpmbuster())*other.xmod;
                 sprite_index = other.notecolour;

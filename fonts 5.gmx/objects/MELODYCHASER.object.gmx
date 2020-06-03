@@ -88,6 +88,9 @@ count = 0;
 if global.songscript = c_eonbreak {
     window_set_fullscreen(false);
 }
+if global.noteoverride != 0 {
+    c_noteoverride();
+}
 </string>
           </argument>
         </arguments>

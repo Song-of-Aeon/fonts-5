@@ -23,6 +23,6 @@ heldup = keyboard_check(vk_up) + keyboard_check(ord('L'));
 heldright = keyboard_check(vk_right) + keyboard_check(186);
 */
 
-select = keyboard_check(ord('Z')) + keyboard_check(vk_enter);
-back = keyboard_check(ord('X')) + keyboard_check(vk_escape);
+select = keyboard_check_pressed(ord('Z')) + keyboard_check_pressed(vk_enter);
+back = keyboard_check_pressed(ord('X')) + keyboard_check_pressed(vk_escape);
 
