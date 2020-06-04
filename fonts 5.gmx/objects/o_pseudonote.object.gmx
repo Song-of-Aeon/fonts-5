@@ -56,7 +56,7 @@ x += 5;
                 sprite_index = s_null;
                 sprite_index2 = s_null;
             }
-            vspd = -(180/c_bpmbuster())*8;
+            vspd = -(180/c_bpmbuster())
             image_speed = .2;
             break;
         case 1:
@@ -64,7 +64,7 @@ x += 5;
                 sprite_index = s_red;
                 sprite_index2 = s_blue;
             }
-            vspd = -(180/c_bpmbuster())*8;
+            vspd = -(180/c_bpmbuster());
             image_speed = 180/1125;
             break;
         case 2:
@@ -72,7 +72,7 @@ x += 5;
                 sprite_index = s_aka;
                 sprite_index2 = s_ao;
             }
-            vspd = -(170/c_bpmbuster())*8;
+            vspd = -(170/c_bpmbuster());
             image_speed = 170/1125;
             break;
         case 3:
@@ -80,7 +80,7 @@ x += 5;
                 sprite_index = s_dark;
                 sprite_index2 = s_darker;
             }
-            vspd = -(240/c_bpmbuster())*8;
+            vspd = -(240/c_bpmbuster());
             image_speed = 240/1125;
             break;
         case 4:
@@ -88,7 +88,7 @@ x += 5;
                 sprite_index = s_rojo;
                 sprite_index2 = s_azul;
             }
-            vspd = -(155.005/c_bpmbuster())*8;
+            vspd = -(155.005/c_bpmbuster());
             image_speed = 155.005/1125;
             break;
         case 5:
@@ -96,7 +96,7 @@ x += 5;
                 sprite_index = s_trueblue;
                 sprite_index2 = s_ultramarine;
             }
-            vspd = -(180/c_bpmbuster())*8;
+            vspd = -(180/c_bpmbuster());
             image_speed = 180/1125;
             break;
         
@@ -133,10 +133,10 @@ if y &lt;= 252 {
     with instance_create(x, y, o_pseudohitfx) {
         image_angle = other.image_angle;
     }
-    y = 720;
+    y += 468;
 }
 
-y += vspd/1.5;
+y += (vspd*global.xmod)/1.5;
 </string>
           </argument>
         </arguments>

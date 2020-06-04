@@ -57,6 +57,7 @@ global.mine = s_mine;
 global.receptor = s_receptor;
 global.noteoverride = 0;
 global.gimmickactive = true;
+global.xmod = 14;
 
 if file_exists("profile.ini") {
     //game_load("profile.dat");
@@ -197,13 +198,13 @@ audio_play_sound(m_night, 0, false);
             }
             if up &amp;&amp; menuposition &gt; 0 {
                 menuposition--;
-                selectorposx = 1037;
-                selectorposy = 298;
+                /*selectorposx = 1037;
+                selectorposy = 298;*/
             }
-            if down &amp;&amp; menuposition &lt; 1 {
+            if down &amp;&amp; menuposition &lt; 2 {
                 menuposition++;
-                selectorposx = 1037;
-                selectorposy = 470;
+                /*selectorposx = 1037;
+                selectorposy = 470;*/
             }
         } else if lockon = 1 {
             if left &amp;&amp; global.noteoverride &gt; 0
@@ -215,15 +216,47 @@ audio_play_sound(m_night, 0, false);
         } else if lockon = 2 {
             global.gimmickactive = !global.gimmickactive;
             lockon = 0;
+        } else if lockon = 3 {
+            if left &amp;&amp; global.xmod &gt; 0
+                global.xmod -= .5;
+            if right &amp;&amp; global.xmod &lt; 20
+                global.xmod += .5;
+            if back || select
+                lockon = 0;
         }
-        if menuxscale &gt; 1.2 {
-            menuxscale -= .05;
+        if selectorposy &lt; menuposition*174+215 {
+            selectorposy += 6;
+        } else if selectorposy &gt; menuposition*174+215 {
+            selectorposy -= 6;
+        }
+        switch menuposition {
+            case 0:
+                if menuxscale &gt; 1.2 {
+                    menuxscale -= .05;
+                }
+                if menuxscale &lt; 1.2 {
+                    menuxscale += .05;
+                }
+                break;
+            case 1:
+                if menuxscale &gt; 1.15 {
+                    menuxscale -= .05;
+                }
+                if menuxscale &lt; 1.15 {
+                    menuxscale += .05;
+                }
+                break;
+            case 2:
+                if menuxscale &gt; 0.75 {
+                    menuxscale -= .05;
+                }
+                if menuxscale &lt; 0.75 {
+                    menuxscale += .05;
+                }
+                break;
         }
         if menuyscale &gt; 1 {
             menuyscale -= .05;
-        }
-        if menuxscale &lt; 1.2 {
-            menuxscale += .05;
         }
     }
     if (left || right) &amp;&amp; lockon = 0 {
@@ -231,7 +264,7 @@ audio_play_sound(m_night, 0, false);
         menuposition = 0;
         if !selectoronsong {
             selectorposx = 1037;
-            selectorposy = 298;
+            selectorposy = 215;
         } else {
             selectorposx = 652;
             selectorposy = 120;
@@ -336,15 +369,16 @@ audio_play_sound(m_night, 0, false);
     }
     draw_set_halign(fa_center);
     if global.noteoverride != 0 {
-        draw_sprite(noteskinshow, 0, 1120, 370);
+        draw_sprite(noteskinshow, 0, 1120, 270);
     } else 
-        draw_text(1120, 370, "Default"); //hate how this is possible, still
+        draw_text(1120, 270, "Default"); //hate how this is possible, still
     draw_set_halign(fa_center);
     if global.gimmickactive = true {
-        draw_text(1120, 510, "Active");
+        draw_text(1120, 440, "Active");
     } else {
-        draw_text(1120, 510, "Inactive");
+        draw_text(1120, 440, "Inactive");
     }
+    draw_text(1120, 610, string(global.xmod));
     draw_set_halign(fa_left);
     draw_sprite(s_menucover, 0, 207, 591);
 }

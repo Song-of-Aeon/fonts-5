@@ -1,15 +1,15 @@
 ///f_hitdetection(lane x, note direction, fx angle);
 var nonsense = argument1;
 //if instance_place(argument0, bar, o_note) != noone && instance_place(argument0, bar, o_note).dir = argument1 {
-if collision_line_first(argument0, bar-bpm*xmod/20, argument0, bar+bpm*xmod/20, o_note, false, true) != noone {
-    thenote = collision_line_first(argument0, bar-bpm*xmod/20, argument0, bar+bpm*xmod/20, o_note, false, true);
+if collision_line_first(argument0, bar-bpm*global.xmod/20, argument0, bar+bpm*global.xmod/20, o_note, false, true) != noone {
+    thenote = collision_line_first(argument0, bar-bpm*global.xmod/20, argument0, bar+bpm*global.xmod/20, o_note, false, true);
     var distance = abs(thenote.y - bar);
 
     if thenote.object_index = o_mine {
         noterank = 4;
         instance_destroy(instance_place(argument0, bar, o_mine));
     } else {
-        noterank = floor(distance/((bpm*xmod)/50));
+        noterank = floor(distance/((bpm*global.xmod)/50));
         ranktext = noterank;
         if thenote.object_index = o_freeze || thenote.object_index = o_roll {
         with instance_create(argument0, bar, o_stay) {

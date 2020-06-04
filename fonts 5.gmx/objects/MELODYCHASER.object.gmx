@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>xmod = 14;
+            <string>
 mmod = 0;
 cmod = 0;
 bar = 64;
@@ -168,7 +168,7 @@ bop[8] = clamp(bop[i], 1, 2);
 var j;
 lanespacing = laneup - laneleft;
 for (j=laneleft; j&lt;=laneup; j+=lanespacing/2) {
-    var note = instance_place(j, bar-bpm*xmod/20-128, o_note);
+    var note = instance_place(j, bar-bpm*global.xmod/20-128, o_note);
     if note != noone {
         if note.object_index = o_freeze || note.object_index = o_roll {
             with note.tail {
