@@ -35,6 +35,8 @@ if collision_line_first(argument0, bar-bpm*global.xmod/20, argument0, bar+bpm*gl
                 image_blend = c_yellow;
             }
             realscore += .8*(100/notecount);
+            if comborank > 2
+                comborank = 2;
             hp += .08;
             break;
         case -2:
@@ -42,12 +44,15 @@ if collision_line_first(argument0, bar-bpm*global.xmod/20, argument0, bar+bpm*gl
                 image_blend = c_green;
             }
             realscore += .6*(100/notecount);
+            if comborank > 1
+                comborank = 1;
             hp += .06;
             break;
         case -3:
             with instance_create(x, y, o_hit) {
                 image_blend = c_blue;
             }
+            comborank = 0;
             break;
         case 0:
             with instance_create(x, y, o_hit) {
@@ -61,6 +66,8 @@ if collision_line_first(argument0, bar-bpm*global.xmod/20, argument0, bar+bpm*gl
                 image_blend = c_yellow;
             }
             realscore += .8*(100/notecount);
+            if comborank > 2
+                comborank = 2;
             hp += .08;
             break;
         case 2:
@@ -68,18 +75,22 @@ if collision_line_first(argument0, bar-bpm*global.xmod/20, argument0, bar+bpm*gl
                 image_blend = c_green;
             }
             realscore += .6*(100/notecount);
+            if comborank > 1
+                comborank = 1;
             hp += .06;
             break;
         case 3:
             with instance_create(x, y, o_hit) {
                 image_blend = c_blue;
             }
+            comborank = 0;
             break;
         case 4:
             with instance_create(x, y, o_hit) {
                 image_blend = c_red;
             }
             realscore -= 100/notecount;
+            comborank = 0;
             hp -= 1;
             break;
     }

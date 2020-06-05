@@ -83,6 +83,7 @@ arraypos = 0;
 gimmickstate = 0;
 breadx = window_get_x();
 bready = window_get_y();
+comborank = 3;
 
 count = 0;
 if global.songscript = c_eonbreak {
@@ -115,11 +116,11 @@ if global.noteoverride != 0 {
             <kind>1</kind>
             <string>c_input();
 
-if keyboard_check_pressed(ord('R')) {
+/*if keyboard_check_pressed(ord('R')) {
     instance_destroy(o_smparser);
     instance_destroy(o_note);
     instance_create(0, 0, o_smparser);
-}
+}*/
 if select &amp;&amp; !instance_exists(o_smparser) {
     songstarting = true;
     instance_create(0, 0, o_smparser);
@@ -130,7 +131,7 @@ if select &amp;&amp; !instance_exists(o_smparser) {
 }*/
 if songstarting {
     timecounter += delta_time;
-    //if timecounter/1000 &gt;= offset {
+    if timecounter/1000 &gt;= offset {
         count++;
         if count = 10 {
             instance_create(800, 500, o_zero);
@@ -141,7 +142,7 @@ if songstarting {
             
             songstarting = false;
         }
-    //}
+    }
     
 }
 
@@ -224,9 +225,9 @@ if lanes = 8 {
 
 
 
-if(keyboard_check(vk_f1)){
+/*if(keyboard_check(vk_f1)){
     instance_create(0,0,o_ChromaticAbberation);
-}
+}*/
 
 if hp &gt; 12 {
     hp = 12;
@@ -238,13 +239,47 @@ if (back &amp;&amp; !instance_exists(o_fao)) /*|| (hp &lt;= 0 &amp;&amp; global.
             leaving = cutscene;
             depth = -3;
         }
+        global.scoring[6] += MELODYCHASER.realscore;
+        if global.scoring[global.currentstage] &lt; MELODYCHASER.realscore {
+            global.scoring[global.currentstage] = MELODYCHASER.realscore;
+            switch comborank {
+                case 1:
+                    global.scoring[global.currentstage] = string(global.scoring[global.currentstage] + "G");
+                    break;
+                case 2:
+                    global.scoring[global.currentstage] = string(global.scoring[global.currentstage] + "P");
+                    break;
+                case 3:
+                    global.scoring[global.currentstage] = string(global.scoring[global.currentstage] + "M");
+                    break;
+                
+            }
+        }
         global.cutscenecount++;
     } else {
         with instance_create(0, 0, o_fao) {
             leaving = stagemenu;
         }
+        if real(global.scoring[global.currentstage]) &lt; MELODYCHASER.realscore {
+            global.scoring[global.currentstage] = string(MELODYCHASER.realscore);
+            if string_length(global.scoring[global.currentstage] &lt; 4) {
+                global.scoring[global.currentstage] = "0" + global.scoring[global.currentstage];
+            }
+            switch comborank {
+                case 1:
+                    global.scoring[global.currentstage] = string(global.scoring[global.currentstage] + "G");
+                    break;
+                case 2:
+                    global.scoring[global.currentstage] = string(global.scoring[global.currentstage] + "P");
+                    break;
+                case 3:
+                    global.scoring[global.currentstage] = string(global.scoring[global.currentstage] + "M");
+                    break;
+                
+            }
+        }
     }
-    //global.scoring[global.currentstage] = MELODYCHASER.realscore;
+    
     audio_stop_sound(audio);
 }
 
@@ -380,6 +415,7 @@ draw_set_colour(c_white);
 draw_set_font(f_combo);
 depth = -3;
 draw_text(lanedown+lanespacing/4, bar+300, string(combo));
+draw_text(lanedown+lanespacing/4, bar+400, string(comborank));
 //draw_text(lanedown+lanespacing/4, bar+200, string(ranktext));
 draw_sprite_ext(s_judgement, noterank+3, lanedown+lanespacing/4, bar+250, bop[8], bop[8], noterank, c_white, 1);
 depth = 5;

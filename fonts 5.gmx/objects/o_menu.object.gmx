@@ -57,7 +57,7 @@ global.mine = s_mine;
 global.receptor = s_receptor;
 global.noteoverride = 0;
 global.gimmickactive = true;
-global.xmod = 14;
+global.xmod = 8;
 
 if file_exists("profile.ini") {
     //game_load("profile.dat");
@@ -174,7 +174,7 @@ audio_play_sound(m_night, 0, false);
                     global.songscript = c_everythingwillfreeze;
                     break;
                 case 4:
-                    global.songscript = c_drivin;
+                    global.songscript = c_onemorenight;
                     break;
                 case 5:
                     global.songscript = c_eonbreak;

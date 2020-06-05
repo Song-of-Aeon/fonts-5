@@ -448,7 +448,7 @@ if global.storymode = false {
     }
 }
 
-if keyboard_check_pressed(ord('R')) {
+/*if keyboard_check_pressed(ord('R')) {
     with o_note {
          y -= 32*xmod;
     }
@@ -481,7 +481,7 @@ if keyboard_check_pressed(ord('T')) {
     with o_gimmickactivator {
          y += 32*xmod;
     }
-}
+}*/
 </string>
           </argument>
         </arguments>

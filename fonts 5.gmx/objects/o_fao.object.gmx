@@ -54,6 +54,9 @@ drawdark = 0;
 if drawdark &gt;= 1.2 {
     room_goto(leaving);
     if leaving = stagemenu {
+        if global.storymode = true &amp;&amp; global.scoring[0] &lt; global.scoring[6] {
+            global.scoring[0] = global.scoring[6];
+        }
         //game_save("profile.dat");
         ini_open("profile.ini");
         var i;
