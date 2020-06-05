@@ -51,10 +51,17 @@ ranktext = 11037;
 //offset = 1918;
 timecounter = 0;
 songstarting = false;
+if global.songscript = c_lancerraps {
 laneleft = 64+minibig;
 lanedown = 128+minibig*2;
 laneup = 192+minibig*3;
 laneright = 256+minibig*4;
+} else {
+laneleft = 534-minibig*1.5;
+lanedown = 598-minibig*.5;
+laneup = 662+minibig*.5;
+laneright = 726+minibig*1.5;
+}
 lanespacing = 64;
 lanes = 4;
 laneselected = lanedown+(lanespacing/2);
@@ -121,9 +128,45 @@ if global.noteoverride != 0 {
     instance_destroy(o_note);
     instance_create(0, 0, o_smparser);
 }*/
-if select &amp;&amp; !instance_exists(o_smparser) {
-    songstarting = true;
-    instance_create(0, 0, o_smparser);
+if !instance_exists(o_smparser) {
+    if select {
+        songstarting = true;
+        instance_create(0, 0, o_smparser);
+    }
+    if up &amp;&amp; mini &lt; 3 {
+        mini += .1;
+        minibig = (mini-1)*64;
+        if global.songscript = c_lancerraps {
+            laneleft = 64+minibig;
+            lanedown = 128+minibig*2;
+            laneup = 192+minibig*3;
+            laneright = 256+minibig*4;
+        } else {
+            laneleft = 534-minibig*1.5;
+            lanedown = 598-minibig*.5;
+            laneup = 662+minibig*.5;
+            laneright = 726+minibig*1.5;
+        }
+
+    }
+    if down &amp;&amp; mini &gt; .5 {
+        mini -= .1;
+        minibig = (mini-1)*64;
+        if global.songscript = c_lancerraps {
+            laneleft = 64+minibig;
+            lanedown = 128+minibig*2;
+            laneup = 192+minibig*3;
+            laneright = 256+minibig*4;
+        } else {
+            laneleft = 534-minibig*1.5;
+            lanedown = 598-minibig*.5;
+            laneup = 662+minibig*.5;
+            laneright = 726+minibig*1.5;
+        }
+
+    }
+    
+
 }/* else if instance_exists(o_smparser) {
     timeat += delta_time/1000000;
 } else {
@@ -250,7 +293,7 @@ if (back &amp;&amp; !instance_exists(o_fao)) /*|| (hp &lt;= 0 &amp;&amp; global.
                     global.scoring[global.currentstage] = string(global.scoring[global.currentstage] + "P");
                     break;
                 case 3:
-                    global.scoring[global.currentstage] = string(global.scoring[global.currentstage] + "M");
+                    global.scoring[global.currentstage] = "100.0M";
                     break;
                 
             }
@@ -273,7 +316,7 @@ if (back &amp;&amp; !instance_exists(o_fao)) /*|| (hp &lt;= 0 &amp;&amp; global.
                     global.scoring[global.currentstage] = string(global.scoring[global.currentstage] + "P");
                     break;
                 case 3:
-                    global.scoring[global.currentstage] = string(global.scoring[global.currentstage] + "M");
+                    global.scoring[global.currentstage] = "100.0M";
                     break;
                 
             }
@@ -388,7 +431,7 @@ if global.gimmickactive = false {
             <kind>1</kind>
             <string>depth = 5;
 draw_sprite(songbg, 0, 0, 0);
-draw_sprite_ext(s_blueselected, 0, laneselected, 0, mini, 1, 0, c_white, 1);
+draw_sprite_ext(s_blueselected, 0, laneselected+12.8, 0, mini, 1, 0, c_white, 1);
 draw_set_font(f_scoreronaldo);
 
 draw_sprite_ext(global.receptor, 0, laneleft, bar, mini*bop[0], mini*bop[0], -90, c_white, 1);
@@ -402,9 +445,6 @@ if lanes = 8 {
     draw_sprite_ext(global.receptor, 0, laneright+lanespacing*3, bar, mini*bop[7], mini*bop[7], 90, c_white, 1);
 }
 
-if count &lt; 230 {
-    draw_sprite(s_prep, floor(count/60), 0, 0);
-}
 
 
 
@@ -415,7 +455,7 @@ draw_set_colour(c_white);
 draw_set_font(f_combo);
 depth = -3;
 draw_text(lanedown+lanespacing/4, bar+300, string(combo));
-draw_text(lanedown+lanespacing/4, bar+400, string(comborank));
+//draw_text(lanedown+lanespacing/4, bar+400, string(comborank));
 //draw_text(lanedown+lanespacing/4, bar+200, string(ranktext));
 draw_sprite_ext(s_judgement, noterank+3, lanedown+lanespacing/4, bar+250, bop[8], bop[8], noterank, c_white, 1);
 depth = 5;
@@ -432,6 +472,11 @@ for (m=0;)
 draw_sprite
 */
 //draw_text(900, 700, string(timeat));
+
+if count &lt; 230 {
+    draw_sprite(s_prep, floor(count/60), 665, 360);
+}
+
 </string>
           </argument>
         </arguments>

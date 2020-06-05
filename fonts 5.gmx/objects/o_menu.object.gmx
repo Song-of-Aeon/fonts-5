@@ -217,7 +217,7 @@ audio_play_sound(m_night, 0, false);
             global.gimmickactive = !global.gimmickactive;
             lockon = 0;
         } else if lockon = 3 {
-            if left &amp;&amp; global.xmod &gt; 0
+            if left &amp;&amp; global.xmod &gt; .5
                 global.xmod -= .5;
             if right &amp;&amp; global.xmod &lt; 20
                 global.xmod += .5;
@@ -301,7 +301,11 @@ audio_play_sound(m_night, 0, false);
             <kind>1</kind>
             <string>if room = stagemenu {
     draw_self();
-    draw_sprite_ext(s_cursor, 0, selectorposx, selectorposy, menuxscale, menuyscale, 0, c_white, 1);
+    if !lockon {
+        draw_sprite_ext(s_cursor, 0, selectorposx, selectorposy, menuxscale, menuyscale, 0, c_white, 1);
+    } else {
+        draw_sprite_ext(s_cursor, 0, selectorposx, selectorposy, menuxscale, menuyscale, 0, c_blue, 1);
+    }
     draw_set_colour(c_white);
     //draw_text(100, 100, string(menuposition));
     if selectoronsong {
@@ -369,7 +373,7 @@ audio_play_sound(m_night, 0, false);
     }
     draw_set_halign(fa_center);
     if global.noteoverride != 0 {
-        draw_sprite(noteskinshow, 0, 1120, 270);
+        draw_sprite(noteskinshow, 0, 1120, 286);
     } else 
         draw_text(1120, 270, "Default"); //hate how this is possible, still
     draw_set_halign(fa_center);
