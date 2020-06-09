@@ -282,9 +282,17 @@ if (back &amp;&amp; !instance_exists(o_fao)) /*|| (hp &lt;= 0 &amp;&amp; global.
             leaving = cutscene;
             depth = -3;
         }
-        global.scoring[6] += MELODYCHASER.realscore;
-        if global.scoring[global.currentstage] &lt; MELODYCHASER.realscore {
-            global.scoring[global.currentstage] = MELODYCHASER.realscore;
+        var scoring6 = real(global.scoring[6]);
+        scoring6 += MELODYCHASER.realscore/5;
+        if real(global.scoring[global.currentstage]) &lt; MELODYCHASER.realscore {
+            global.scoring[global.currentstage] = string(MELODYCHASER.realscore);
+            if string_length(global.scoring[global.currentstage] &lt; 4) {
+                if string_char_at(global.scoring[global.currentstage], 2) = "." {
+                    global.scoring[global.currentstage] = "0" + global.scoring[global.currentstage];
+                } else {
+                    global.scoring[global.currentstage] = global.scoring[global.currentstage] + "0";
+                }
+            }
             switch comborank {
                 case 1:
                     global.scoring[global.currentstage] = string(global.scoring[global.currentstage] + "G");
@@ -306,7 +314,11 @@ if (back &amp;&amp; !instance_exists(o_fao)) /*|| (hp &lt;= 0 &amp;&amp; global.
         if real(global.scoring[global.currentstage]) &lt; MELODYCHASER.realscore {
             global.scoring[global.currentstage] = string(MELODYCHASER.realscore);
             if string_length(global.scoring[global.currentstage] &lt; 4) {
-                global.scoring[global.currentstage] = "0" + global.scoring[global.currentstage];
+                if string_char_at(global.scoring[global.currentstage], 2) = "." {
+                    global.scoring[global.currentstage] = "0" + global.scoring[global.currentstage];
+                } else {
+                    global.scoring[global.currentstage] = global.scoring[global.currentstage] + "0";
+                }
             }
             switch comborank {
                 case 1:

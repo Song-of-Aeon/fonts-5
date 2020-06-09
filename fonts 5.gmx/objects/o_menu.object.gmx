@@ -40,6 +40,7 @@ global.scoring[2] = "00.00";
 global.scoring[3] = "00.00";
 global.scoring[4] = "00.00";
 global.scoring[5] = "00.00";
+global.scoring[6] = "00.00";
 global.currentstage = 6;
 scoreshow = array_create(6);
 scoreshowcolour = array(c_white, c_white, c_white, c_white, c_white, c_white);
@@ -301,13 +302,9 @@ audio_play_sound(m_night, 0, false);
             <kind>1</kind>
             <string>if room = stagemenu {
     draw_self();
-    if !lockon {
-        draw_sprite_ext(s_cursor, 0, selectorposx, selectorposy, menuxscale, menuyscale, 0, c_white, 1);
-    } else {
-        draw_sprite_ext(s_cursor, 0, selectorposx, selectorposy, menuxscale, menuyscale, 0, c_blue, 1);
-    }
     draw_set_colour(c_white);
     //draw_text(100, 100, string(menuposition));
+    draw_set_halign(fa_left);
     if selectoronsong {
         switch menuposition {
             case 0:
@@ -331,20 +328,21 @@ audio_play_sound(m_night, 0, false);
         }
     }
     
-    //draw_text()
+    draw_set_halign(fa_center);
     draw_set_font(f_scoreronaldo);
-    draw_sprite_ext(s_scorecloud, 0, 1000, 160, 1.5, 1.2, 0, c_white, 1);
+    draw_sprite_ext(s_scorecloud, 0, 1000, 160, 1.5, 1.2, 0, scoreshowcolour[0], 1);
     draw_sprite_ext(s_scorecloud, 0, 800, 87+160, 1, 1, 0, scoreshowcolour[1], 1);
     draw_sprite_ext(s_scorecloud, 0, 800, 174+160, 1, 1, 0, scoreshowcolour[2], 1);
     draw_sprite_ext(s_scorecloud, 0, 800, 261+160, 1, 1, 0, scoreshowcolour[3], 1);
     draw_sprite_ext(s_scorecloud, 0, 800, 348+160, 1, 1, 0, scoreshowcolour[4], 1);
     draw_sprite_ext(s_scorecloud, 0, 800, 435+160, 1, 1, 0, scoreshowcolour[5], 1);
     
-    draw_text(840, 87+145, scoreshow[1]);
-    draw_text(840, 174+145, scoreshow[2]);
-    draw_text(840, 261+145, scoreshow[3]);
-    draw_text(840, 348+145, scoreshow[4]);
-    draw_text(840, 435+145, scoreshow[5]);
+    draw_text(1088, 140, scoreshow[0]);
+    draw_text(858, 87+145, scoreshow[1]);
+    draw_text(858, 174+145, scoreshow[2]);
+    draw_text(858, 261+145, scoreshow[3]);
+    draw_text(858, 348+145, scoreshow[4]);
+    draw_text(858, 435+145, scoreshow[5]);
     
     draw_sprite_ext(global.receptor, 0, 221+64-24, 250, 1, 1, -90, c_white, 1);
     draw_sprite_ext(global.receptor, 0, 221+128-24, 250, 1, 1, 0, c_white, 1);
@@ -354,24 +352,29 @@ audio_play_sound(m_night, 0, false);
     switch global.noteoverride {
         case 0:
             noteskinshow = s_null;
+            global.receptor = s_receptor;
             break;
         case 1:
             noteskinshow = s_red;
+            global.receptor = s_receptor;
             break;
         case 2:
             noteskinshow = s_aka;
+            global.receptor = s_reseputaa;
             break;
         case 3:
             noteskinshow = s_dark;
+            global.receptor = s_shadow;
             break;
         case 4:
             noteskinshow = s_azul;
+            global.receptor = s_receptor;
             break;
         case 5:
             noteskinshow = s_trueblue;
+            global.receptor = s_acceptor;
             break;
     }
-    draw_set_halign(fa_center);
     if global.noteoverride != 0 {
         draw_sprite(noteskinshow, 0, 1120, 286);
     } else 
@@ -383,8 +386,12 @@ audio_play_sound(m_night, 0, false);
         draw_text(1120, 440, "Inactive");
     }
     draw_text(1120, 610, string(global.xmod));
-    draw_set_halign(fa_left);
     draw_sprite(s_menucover, 0, 207, 591);
+    if !lockon {
+        draw_sprite_ext(s_cursor, 0, selectorposx, selectorposy, menuxscale, menuyscale, 0, c_white, 1);
+    } else {
+        draw_sprite_ext(s_cursor, 0, selectorposx, selectorposy, menuxscale, menuyscale, 0, c_blue, 1);
+    }
 }
 
 </string>
