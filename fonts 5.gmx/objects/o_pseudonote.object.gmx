@@ -53,8 +53,8 @@ x += 5;
     switch o_menu.menuposition {
         case 0:
             if global.noteoverride = 0 {
-                sprite_index = s_null;
-                sprite_index2 = s_null;
+                sprite_index = s_nullnote;
+                sprite_index2 = s_nullnote;
             }
             vspd = -(180/c_bpmbuster())
             image_speed = .2;

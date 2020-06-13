@@ -28,7 +28,10 @@
             <string>menuposition = 0;
 selectoronsong = true;
 selectorposx = 652;
-selectorposy = 120;
+selectorposy = 127;
+selectorvspd = 0;
+selectorsavevspd = 0;
+selectorsavey = selectorposy;
 hspd = 0;
 menuxscale = 1;
 menuyscale = 1;
@@ -99,25 +102,39 @@ audio_play_sound(m_night, 0, false);
     c_input();
     
     if selectoronsong {
+        if selectorposy = selectorsavey &amp;&amp; menuposition = 0 {
+            selectorposy = 127;
+            selectorsavey = 127;
+        }
         if up &amp;&amp; menuposition &gt; 0 {
+            
+            selectorvspd = -87;
+            selectorsavevspd = -87;
+            selectorsavey -= 87;
+            menuposition--;
             if menuposition = 1 {
                 selectorposy++;
+                selectorsavey++;
             }
-            menuposition--;
         }
         if down &amp;&amp; menuposition &lt; 5 {
+            
+            selectorvspd = 87;
+            selectorsavevspd = 87;
+            selectorsavey += 87;
+            menuposition++;
             if menuposition = 0 {
                 selectorposy--;
+                selectorsavey--;
             }
-            menuposition++;
         }
         
-        if menuposition &gt;= 1 {
-            if selectorposy &lt; menuposition*87+128 {
+    if menuposition &gt;= 1 {
+           /* if selectorposy &lt; menuposition*87+128 {
                 selectorposy += 3;
             } else if selectorposy &gt; menuposition*87+128 {
                 selectorposy -= 3;
-            }
+            }*/
             if menuxscale &gt; 1 {
                 menuxscale -= .05;
             }
@@ -125,11 +142,11 @@ audio_play_sound(m_night, 0, false);
                 menuyscale -= .15;
             }
         } else {
-            if selectorposy &lt; menuposition*87+129 {
+            /*if selectorposy &lt; menuposition*87+129 {
                 selectorposy += 3;
             } else if selectorposy &gt; menuposition*87+129 {
                 selectorposy -= 3;
-            }
+            }*/
             if menuxscale &lt; 2 {
                 menuxscale += .05;
             }
@@ -158,6 +175,9 @@ audio_play_sound(m_night, 0, false);
             scoreshow[i] = string_copy(global.scoring[i], 1, 5);
             
         }
+        
+        
+        
         
         if select &amp;&amp; !instance_exists(o_fao) {
             switch menuposition {
@@ -199,13 +219,15 @@ audio_play_sound(m_night, 0, false);
             }
             if up &amp;&amp; menuposition &gt; 0 {
                 menuposition--;
-                /*selectorposx = 1037;
-                selectorposy = 298;*/
+                selectorvspd = -174;
+                selectorsavevspd = -174;
+                selectorsavey -= 174;
             }
             if down &amp;&amp; menuposition &lt; 2 {
                 menuposition++;
-                /*selectorposx = 1037;
-                selectorposy = 470;*/
+                selectorvspd = 174;
+                selectorsavevspd = 174;
+                selectorsavey += 174;
             }
         } else if lockon = 1 {
             if left &amp;&amp; global.noteoverride &gt; 0
@@ -262,15 +284,27 @@ audio_play_sound(m_night, 0, false);
     }
     if (left || right) &amp;&amp; lockon = 0 {
         selectoronsong = !selectoronsong;
-        menuposition = 0;
         if !selectoronsong {
+            menuposition = floor(menuposition/2.5);
             selectorposx = 1037;
-            selectorposy = 215;
+            selectorposy = 215+menuposition*174;
+            selectorsavey = 215+menuposition*174;
+            selectorvspd = 0;
+            menuxscale = 1;
+            menuyscale = 1;
         } else {
+            menuposition = ceil(menuposition*2.5);
             selectorposx = 652;
-            selectorposy = 120;
+            selectorposy = 127+menuposition*87+ceil(menuposition/10);
+            selectorsavey = 127+menuposition*87+ceil(menuposition/10);
+            selectorvspd = 0;
+            menuxscale = 1;
+            menuyscale = 1;
         }
     }
+    selectorposy = selectorsavey;
+    selectorvspd = selectorvspd/2;
+    selectorposy -= selectorvspd;
 }
 
 /*if left {

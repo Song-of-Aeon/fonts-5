@@ -212,7 +212,8 @@ bop[8] = clamp(bop[i], 1, 2);
 var j;
 lanespacing = laneup - laneleft;
 for (j=laneleft; j&lt;=laneup; j+=lanespacing/2) {
-    var note = instance_place(j, bar-bpm*global.xmod/20-128, o_note);
+    //var note = instance_place(j, bar-bpm*global.xmod/20-128, o_note); CUCK MODE NOTE CHECKING LOL
+    var note = collision_line(j, bar-bpm*global.xmod/20-128, j, bar+bpm*global.xmod/20-128, o_note, false, false);
     if note != noone {
         if note.object_index = o_freeze || note.object_index = o_roll {
             with note.tail {
@@ -276,7 +277,7 @@ if hp &gt; 12 {
     hp = 12;
 }
 
-if (back &amp;&amp; !instance_exists(o_fao)) /*|| (hp &lt;= 0 &amp;&amp; global.songscript != c_eonbreak)*/ {
+if (back &amp;&amp; !instance_exists(o_fao)) || (hp &lt;= 0 &amp;&amp; global.songscript != c_eonbreak) {
     if global.storymode = true &amp;&amp; hp &gt; 0 {
         with instance_create(0, 0, o_fao) {
             leaving = cutscene;

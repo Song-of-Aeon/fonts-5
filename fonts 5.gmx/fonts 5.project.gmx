@@ -264,6 +264,7 @@
     <sprite>sprites\s_judgement</sprite>
     <sprite>sprites\s_null</sprite>
     <sprite>sprites\s_menucover</sprite>
+    <sprite>sprites\s_nullnote</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
