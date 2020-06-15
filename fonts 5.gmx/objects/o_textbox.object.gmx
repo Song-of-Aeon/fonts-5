@@ -30,7 +30,7 @@ chooser = 0;
 starting = 0;
 savedpoint = 0;
 choiceno = 0;
-global.hidden = true;
+//global.hidden = true;
 msgsprite = array_create(99);
 msgspriteno = array_create(99);
 choiceat[0] = "";
@@ -38,6 +38,7 @@ durability = 99;
 durabilityset = 99;
 txturn = 0;
 txtalpha = .1;
+fading = false;
 switch global.songscript {
     case c_combattheme:
         txt_stage1();
@@ -95,21 +96,27 @@ switch global.songscript {
         txturn = 70;
         txtalpha = .1;
     } else { 
-        instance_destroy();
-        global.hidden = false;
-        
+        //instance_destroy();
+        //global.hidden = false;
+        fading = true;
     }
 }
 if txturn != 0 {
     txturn = txturn/1.1;
-    if txturn &gt; 1 {
+    if txturn &lt; 1 {
         txturn = 0;
     }
 }
-if txtalpha &lt; 1 {
+if txtalpha &lt; 1 &amp;&amp; !fading {
     txtalpha += .05;
 }
-
+if fading {
+    durability = 0;
+    txtalpha -= .02;
+    if txtalpha &lt;= 0 {
+        instance_destroy();
+    }
+}
 </string>
           </argument>
         </arguments>
@@ -133,6 +140,7 @@ if txtalpha &lt; 1 {
           <argument>
             <kind>1</kind>
             <string>//draw_self();
+draw_sprite_ext(s_textbg, 0, x, y+16, (string_length(message_draw)/2)/12, 1, 0, c_white, txtalpha/2)
 draw_set_halign(fa_center);
 var whatever = draw_get_colour();
 draw_set_colour(c_white);

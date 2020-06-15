@@ -265,6 +265,7 @@
     <sprite>sprites\s_null</sprite>
     <sprite>sprites\s_menucover</sprite>
     <sprite>sprites\s_nullnote</sprite>
+    <sprite>sprites\s_textbg</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -360,6 +361,7 @@
   <fonts name="fonts">
     <font>fonts\f_ronaldo</font>
     <font>fonts\f_scoreronaldo</font>
+    <font>fonts\f_textronaldo</font>
     <font>fonts\f_combo</font>
   </fonts>
   <objects name="objects">

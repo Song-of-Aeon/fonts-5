@@ -1413,7 +1413,7 @@ return "#TITLE:EON BREAK;
 1011
 0100
 ,  // measure 70
-0100
+0010
 0100
 1010
 0001

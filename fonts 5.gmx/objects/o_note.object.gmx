@@ -60,7 +60,7 @@ tookdir = false;
     if y &lt; view_hview/5*3 {
         fading = true;
     }
-    alarm[0] = 5;
+    alarm[0] = 3;
 }
 </string>
           </argument>
