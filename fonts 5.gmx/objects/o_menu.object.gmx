@@ -51,6 +51,7 @@ scoreshowcolour = array(c_white, c_white, c_white, c_white, c_white, c_white);
 global.songscript = c_jumptest;
 global.storymode = false;
 global.cutscenecount = 0;
+global.megastream = false;
 
 global.red = s_red;
 global.blue = s_blue;
@@ -62,6 +63,7 @@ global.receptor = s_receptor;
 global.noteoverride = 0;
 global.gimmickactive = true;
 global.xmod = 8;
+global.hidden = false;
 
 if file_exists("profile.ini") {
     //game_load("profile.dat");
@@ -100,6 +102,7 @@ audio_play_sound(m_night, 0, false);
             <kind>1</kind>
             <string>if room = stagemenu {
     c_input();
+    global.megastream = false;
     
     if selectoronsong {
         if selectorposy = selectorsavey &amp;&amp; menuposition = 0 {
@@ -305,6 +308,10 @@ audio_play_sound(m_night, 0, false);
     selectorposy = selectorsavey;
     selectorvspd = selectorvspd/2;
     selectorposy -= selectorvspd;
+}
+
+if keyboard_check_pressed(ord('H')) {
+    global.hidden = true;
 }
 
 /*if left {
