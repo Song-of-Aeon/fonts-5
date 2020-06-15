@@ -198,7 +198,7 @@ audio_play_sound(m_night, 0, false);
                     global.songscript = c_everythingwillfreeze;
                     break;
                 case 4:
-                    global.songscript = c_onemorenight;
+                    global.songscript = c_drivin;
                     break;
                 case 5:
                     global.songscript = c_eonbreak;

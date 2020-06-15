@@ -252,6 +252,7 @@ for (i=0; i&lt;array_length_1d(noteset); i++) {
         with instance_create(MELODYCHASER.laneleft, placer*32*xmod+MELODYCHASER.bar, notemaker[0]) {
             dir = 0;
             vspd = -(other.bpm/c_bpmbuster())*other.xmod;
+            y -= vspd*60;
             sprite_index = other.notecolour;
             image_xscale = MELODYCHASER.mini;
             image_yscale = MELODYCHASER.mini;
@@ -266,6 +267,7 @@ for (i=0; i&lt;array_length_1d(noteset); i++) {
         with instance_create(MELODYCHASER.lanedown, placer*32*xmod+MELODYCHASER.bar, notemaker[1]) {
             dir = 1;
             vspd = -(other.bpm/c_bpmbuster())*other.xmod;
+            y -= vspd*60;
             sprite_index = other.notecolour;
             image_xscale = MELODYCHASER.mini;
             image_yscale = MELODYCHASER.mini;
@@ -280,6 +282,7 @@ for (i=0; i&lt;array_length_1d(noteset); i++) {
         with instance_create(MELODYCHASER.laneup, placer*32*xmod+MELODYCHASER.bar, notemaker[2]) {
             dir = 2;
             vspd = -(other.bpm/c_bpmbuster())*other.xmod;
+            y -= vspd*60;
             sprite_index = other.notecolour;
             image_xscale = MELODYCHASER.mini;
             image_yscale = MELODYCHASER.mini;
@@ -294,6 +297,7 @@ for (i=0; i&lt;array_length_1d(noteset); i++) {
         with instance_create(MELODYCHASER.laneright, placer*32*xmod+MELODYCHASER.bar, notemaker[3]) {
             dir = 3;
             vspd = -(other.bpm/c_bpmbuster())*other.xmod;
+            y -= vspd*60;
             sprite_index = other.notecolour;
             image_xscale = MELODYCHASER.mini;
             image_yscale = MELODYCHASER.mini;
@@ -310,6 +314,7 @@ for (i=0; i&lt;array_length_1d(noteset); i++) {
             with instance_create(MELODYCHASER.laneleft+savelanespacing*3, placer*32*xmod+MELODYCHASER.bar, notemaker[4]) {
                 dir = 0;
                 vspd = -(other.bpm/c_bpmbuster())*other.xmod;
+                y -= vspd*60;
                 sprite_index = other.notecolour;
                 image_xscale = MELODYCHASER.mini;
                 image_yscale = MELODYCHASER.mini;
@@ -324,6 +329,8 @@ for (i=0; i&lt;array_length_1d(noteset); i++) {
             with instance_create(MELODYCHASER.lanedown+savelanespacing*3, placer*32*xmod+MELODYCHASER.bar, notemaker[5]) {
                 dir = 1;
                 vspd = -(other.bpm/c_bpmbuster())*other.xmod;
+                y -= vspd*60;
+                y -= vspd*60;
                 sprite_index = other.notecolour;
                 image_xscale = MELODYCHASER.mini;
                 image_yscale = MELODYCHASER.mini;
@@ -338,6 +345,7 @@ for (i=0; i&lt;array_length_1d(noteset); i++) {
             with instance_create(MELODYCHASER.laneup+savelanespacing*3, placer*32*xmod+MELODYCHASER.bar, notemaker[6]) {
                 dir = 2;
                 vspd = -(other.bpm/c_bpmbuster())*other.xmod;
+                y -= vspd*60;
                 sprite_index = other.notecolour;
                 image_xscale = MELODYCHASER.mini;
                 image_yscale = MELODYCHASER.mini;
@@ -352,6 +360,7 @@ for (i=0; i&lt;array_length_1d(noteset); i++) {
             with instance_create(MELODYCHASER.laneright+savelanespacing*3, placer*32*xmod+MELODYCHASER.bar, notemaker[7]) {
                 dir = 3;
                 vspd = -(other.bpm/c_bpmbuster())*other.xmod;
+                y -= vspd*60;
                 sprite_index = other.notecolour;
                 image_xscale = MELODYCHASER.mini;
                 image_yscale = MELODYCHASER.mini;

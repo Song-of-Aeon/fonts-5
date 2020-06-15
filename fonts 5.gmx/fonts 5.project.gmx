@@ -346,11 +346,11 @@
     <scripts name="dialogue">
       <script>scripts\txt_.gml</script>
       <script>scripts\txt_stream.gml</script>
-      <script>scripts\txt_stage5.gml</script>
-      <script>scripts\txt_stage4.gml</script>
-      <script>scripts\txt_stage3.gml</script>
-      <script>scripts\txt_stage2.gml</script>
       <script>scripts\txt_stage1.gml</script>
+      <script>scripts\txt_stage2.gml</script>
+      <script>scripts\txt_stage3.gml</script>
+      <script>scripts\txt_stage4.gml</script>
+      <script>scripts\txt_stage5.gml</script>
       <script>scripts\c_txtcommon.gml</script>
     </scripts>
   </scripts>

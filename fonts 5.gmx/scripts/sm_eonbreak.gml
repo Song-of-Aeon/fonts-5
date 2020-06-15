@@ -221,7 +221,7 @@ return "#TITLE:EON BREAK;
 0003
 0000
 3181
-0000
+00*0
 0000
 0000
 0000
@@ -2601,7 +2601,7 @@ return "#TITLE:EON BREAK;
 ,  // measure 120
 0000
 0000
-0000
+0800
 0500
 ,  // measure 121
 0500

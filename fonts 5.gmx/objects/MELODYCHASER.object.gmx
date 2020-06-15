@@ -179,8 +179,9 @@ if songstarting {
         if count = 10 {
             instance_create(800, 500, o_zero);
         }
-        if (count &gt;= 235 &amp;&amp; global.songscript = c_eonbreak) || (count &gt;= 230 &amp;&amp; global.songscript != c_eonbreak){
-        //count &gt;= 230 {
+        if (count &gt;= 295 &amp;&amp; global.songscript = c_eonbreak) || (count &gt;= 290 &amp;&amp; global.songscript != c_eonbreak){
+        
+        //if (count &gt;= 235 &amp;&amp; global.songscript = c_eonbreak) || (count &gt;= 230 &amp;&amp; global.songscript != c_eonbreak){
             audio_play_sound(audio, 0, false);
             
             songstarting = false;
@@ -225,6 +226,9 @@ for (j=laneleft; j&lt;=laneup; j+=lanespacing/2) {
             bop[8] = 1.3;
             noterank = 4;
             hp -= 1;
+        }
+        if instance_exists(o_textbox) {
+            o_textbox.durability--;
         }
         instance_destroy(note);
         
@@ -339,7 +343,7 @@ if (back &amp;&amp; !instance_exists(o_fao)) || (hp &lt;= 0 &amp;&amp; global.so
     audio_stop_sound(audio);
 }
 
-if global.songscript = c_eonbreak {
+//if global.songscript = c_eonbreak {
     if inputgimmick = false {
         if arrayx[arraypos] = "C" {
             with instance_create(0, 0, o_ChromaticAbberation) {
@@ -352,7 +356,9 @@ if global.songscript = c_eonbreak {
             windowBounceSpeed += arrayy[arraypos];
             gimmickstate = 0;
         } else if arrayx[arraypos] = "D" {
-            instance_create(640, 360, o_doctor)
+            instance_create(640, 360, o_doctor);
+        } else if arrayx[arraypos] = "T" {
+            instance_create(630, bar+100, o_textbox);
         
         } else {
             switch gimmickstate {
@@ -415,7 +421,7 @@ if global.songscript = c_eonbreak {
         window_set_position(breadx+(windowBounceSpeed*windowBouncex),bready+(windowBounceSpeed*windowBouncey));
     }
     inputgimmick = true;
-}
+//}
 if global.gimmickactive = false {
     MELODYCHASER.lanes = 4;
 }

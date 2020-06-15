@@ -33,6 +33,7 @@ tail = noone;
 count = 0;
 alarm[0] = 5-irandom(4);
 fading = false;
+tookdir = false;
 </string>
           </argument>
         </arguments>
@@ -114,6 +115,16 @@ if fading {
     }
 } else if image_alpha &lt; 1 {
     image_alpha += .1;
+}
+
+if y &lt;= MELODYCHASER.bar {
+    if instance_exists(o_textbox) &amp;&amp; !tookdir {
+        o_textbox.durability--;
+        tookdir = true;
+    } else if tookdir &amp;&amp; y &lt;= -32 {
+        instance_destroy();
+    }
+    
 }
 </string>
           </argument>

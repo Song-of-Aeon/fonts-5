@@ -13,5 +13,7 @@ if global.noteoverride = 0 {
     global.receptor = s_receptor;
 }
 lanes = 4;
+arrayx[0] = "T";
+arrayy[0] = 0;
 //bg = bk_;
 //music = m_;

@@ -12,6 +12,8 @@ choice[0] = "";
 choiceat[1] = 99;
 choiceoutcome[0] = "";
 
+durability = 30;
+durabilityset = 30;
 
 c_txtcommon();
 /*parameters to add for choices:
