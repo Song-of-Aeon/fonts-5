@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>if asdawdasdawd; {} //this code works
 mmod = 0;
 cmod = 0;
 bar = 64;
