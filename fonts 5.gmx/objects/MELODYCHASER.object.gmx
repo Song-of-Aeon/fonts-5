@@ -212,9 +212,9 @@ bop[8] = clamp(bop[i], 1, 2);
 
 var j;
 lanespacing = laneup - laneleft;
-for (j=laneleft; j&lt;=laneup; j+=lanespacing/2) {
+//for (j=laneleft; j&lt;=laneup; j+=lanespacing/2) {
     //var note = instance_place(j, bar-bpm*global.xmod/20-128, o_note); CUCK MODE NOTE CHECKING LOL
-    var note = collision_line(j, bar-bpm*global.xmod/20-128, j, bar+bpm*global.xmod/20-128, o_note, false, false);
+    var note = collision_line(laneleft, bar-bpm*global.xmod/20-128, laneright, bar+bpm*global.xmod/20-128, o_note, false, false);
     if note != noone {
         if note.object_index = o_freeze || note.object_index = o_roll {
             with note.tail {
@@ -241,8 +241,8 @@ for (j=laneleft; j&lt;=laneup; j+=lanespacing/2) {
         }
         instance_destroy();
         
-    }*/
-}
+    }
+}*/
 
 if lanes = 8 {
     switch state {
