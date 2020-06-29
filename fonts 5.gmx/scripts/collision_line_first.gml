@@ -32,7 +32,7 @@
                 dx -= sx;
                 dy -= sy;
                 inst = i;
-            }else{
+            } else {
                 dx += sx;
                 dy += sy;
             }

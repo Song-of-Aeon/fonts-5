@@ -2,6 +2,7 @@
 <assets>
   <Configs name="configs">
     <Config>Configs\Default</Config>
+    <Config>Configs\lol</Config>
   </Configs>
   <datafiles number="10" name="datafiles">
     <datafile>
@@ -16,6 +17,9 @@
       <store>0</store>
       <ConfigOptions>
         <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+        <Config name="lol">
           <CopyToMask>9223372036854775807</CopyToMask>
         </Config>
       </ConfigOptions>
@@ -35,6 +39,9 @@
         <Config name="Default">
           <CopyToMask>9223372036854775807</CopyToMask>
         </Config>
+        <Config name="lol">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
       </ConfigOptions>
       <filename>More One Night.avi</filename>
     </datafile>
@@ -50,6 +57,9 @@
       <store>0</store>
       <ConfigOptions>
         <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+        <Config name="lol">
           <CopyToMask>9223372036854775807</CopyToMask>
         </Config>
       </ConfigOptions>
@@ -69,6 +79,9 @@
         <Config name="Default">
           <CopyToMask>9223372036854775807</CopyToMask>
         </Config>
+        <Config name="lol">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
       </ConfigOptions>
       <filename>More One Night.mp3</filename>
     </datafile>
@@ -84,6 +97,9 @@
       <store>0</store>
       <ConfigOptions>
         <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+        <Config name="lol">
           <CopyToMask>9223372036854775807</CopyToMask>
         </Config>
       </ConfigOptions>
@@ -103,6 +119,9 @@
         <Config name="Default">
           <CopyToMask>9223372036854775807</CopyToMask>
         </Config>
+        <Config name="lol">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
       </ConfigOptions>
       <filename>More One Night.sm</filename>
     </datafile>
@@ -118,6 +137,9 @@
       <store>0</store>
       <ConfigOptions>
         <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+        <Config name="lol">
           <CopyToMask>9223372036854775807</CopyToMask>
         </Config>
       </ConfigOptions>
@@ -137,6 +159,9 @@
         <Config name="Default">
           <CopyToMask>9223372036854775807</CopyToMask>
         </Config>
+        <Config name="lol">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
       </ConfigOptions>
       <filename>More One Night-bg2.png</filename>
     </datafile>
@@ -154,6 +179,9 @@
         <Config name="Default">
           <CopyToMask>9223372036854775807</CopyToMask>
         </Config>
+        <Config name="lol">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
       </ConfigOptions>
       <filename>More One Night-bn.png</filename>
     </datafile>
@@ -169,6 +197,9 @@
       <store>0</store>
       <ConfigOptions>
         <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+        <Config name="lol">
           <CopyToMask>9223372036854775807</CopyToMask>
         </Config>
       </ConfigOptions>
@@ -354,6 +385,7 @@
       <script>scripts\txt_stage5.gml</script>
       <script>scripts\c_txtcommon.gml</script>
     </scripts>
+    <script>scripts\draw_circle_width.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\z_ChromaticAbberation.shader</shader>
