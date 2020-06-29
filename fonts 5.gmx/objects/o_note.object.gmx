@@ -185,15 +185,11 @@ if y &lt;= MELODYCHASER.bar {
     if instance_exists(stringto) {
         draw_set_colour(c_teal);
         draw_line_width(x, y, stringto.x, stringto.y, 3);
-<<<<<<< HEAD
     } else {
         
     }
     //draw_set_colour(c_teal);
     //draw_circle_width(x, y, 16, 5, 10);
-=======
-    }
->>>>>>> master
 }
 
 </string>
