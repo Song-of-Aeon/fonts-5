@@ -34,6 +34,36 @@ count = 0;
 alarm[0] = 5-irandom(4);
 fading = false;
 tookdir = false;
+stringto = noone;
+alarm[1] = 1;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/*if collision_line(MELODYCHASER.laneleft, y+32*global.xmod, MELODYCHASER.laneright, y+32*global.xmod, o_note, false, true) != noone {
+    stringto = collision_line(MELODYCHASER.laneleft, y+32*global.xmod, MELODYCHASER.laneright, y+32*global.xmod, o_note, false, true);
+}*/
+if collision_line(MELODYCHASER.laneleft, y+8*global.xmod, MELODYCHASER.laneright, y+8*global.xmod, o_note, false, true) != noone {
+    stringto = collision_line(MELODYCHASER.laneleft, y+8*global.xmod, MELODYCHASER.laneright, y+8*global.xmod, o_note, false, true);
+}
 </string>
           </argument>
         </arguments>
@@ -126,6 +156,38 @@ if y &lt;= MELODYCHASER.bar {
     }
     
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if y &lt; 720 + sprite_height/2 {
+    //draw_set_colour(c_maroon);
+    //draw_circle_width(x, y, (y)/3, 7, 20);
+    draw_self();
+    if instance_exists(stringto) {
+        draw_set_colour(c_teal);
+        draw_line_width(x, y, stringto.x, stringto.y, 3);
+    }
+}
+
 </string>
           </argument>
         </arguments>

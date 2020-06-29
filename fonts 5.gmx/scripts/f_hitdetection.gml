@@ -1,8 +1,23 @@
 ///f_hitdetection(lane x, note direction, fx angle);
 var nonsense = argument1;
 //if instance_place(argument0, bar, o_note) != noone && instance_place(argument0, bar, o_note).dir = argument1 {
-if collision_line_first(argument0, bar-bpm*global.xmod/20, argument0, bar+bpm*global.xmod/20, o_note, false, true) != noone {
-    thenote = collision_line_first(argument0, bar-bpm*global.xmod/20, argument0, bar+bpm*global.xmod/20, o_note, false, true);
+var thenoteup = collision_line_first(argument0, bar, argument0, bar-bpm*global.xmod/20, o_note, false, true);
+var thenotedown = collision_line_first(argument0, bar, argument0, bar+bpm*global.xmod/20, o_note, false, true);
+if thenoteup != noone && thenotedown != noone {
+    if abs(thenoteup.x-bar) < abs(thenotedown.x-bar) {
+        thenote = thenoteup;
+    } else {
+        thenote = thenotedown;
+    }
+} else if thenoteup != noone {
+    thenote = thenoteup;
+} else if thenotedown != noone {
+    thenote = thenotedown;
+} else {
+    thenote = noone;
+}
+if thenote != noone {
+    
     var distance = abs(thenote.y - bar);
 
     if thenote.object_index = o_mine {
@@ -12,19 +27,18 @@ if collision_line_first(argument0, bar-bpm*global.xmod/20, argument0, bar+bpm*gl
         noterank = floor(distance/((bpm*global.xmod)/50));
         ranktext = noterank;
         if thenote.object_index = o_freeze || thenote.object_index = o_roll {
-        with instance_create(argument0, bar, o_stay) {
-            tail = other.thenote.tail;
-            image_blend = other.thenote.image_blend;
-            image_angle = other.thenote.image_angle;
-            with tail {
-                head = other.id;
+            with instance_create(argument0, bar, o_stay) {
+                tail = other.thenote.tail;
+                image_blend = other.thenote.image_blend;
+                image_angle = other.thenote.image_angle;
+                with tail {
+                    head = other.id;
+                }
             }
         }
     }
-    }
-    
+    instance_destroy(thenote);
     if noterank < 3 {
-        instance_destroy(thenote);
         combo++;
     } else {
         combo = 0;
@@ -37,7 +51,7 @@ if collision_line_first(argument0, bar-bpm*global.xmod/20, argument0, bar+bpm*gl
             realscore += .8*(100/notecount);
             if comborank > 2
                 comborank = 2;
-            hp += .08;
+            hp += .16;
             break;
         case -2:
             with instance_create(x, y, o_hit) {
@@ -46,7 +60,7 @@ if collision_line_first(argument0, bar-bpm*global.xmod/20, argument0, bar+bpm*gl
             realscore += .6*(100/notecount);
             if comborank > 1
                 comborank = 1;
-            hp += .06;
+            hp += .12;
             break;
         case -3:
             with instance_create(x, y, o_hit) {
@@ -59,7 +73,7 @@ if collision_line_first(argument0, bar-bpm*global.xmod/20, argument0, bar+bpm*gl
                 image_blend = c_teal;
             }
             realscore += 100/notecount;
-            hp += .1;
+            hp += .2;
             break;
         case 1:
             with instance_create(x, y, o_hit) {

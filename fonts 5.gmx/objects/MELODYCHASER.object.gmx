@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if asdawdasdawd; {} //this code works
+            <string>//if asdawdasdawd; {} //this code works
 mmod = 0;
 cmod = 0;
 bar = 64;
@@ -357,9 +357,10 @@ if (back &amp;&amp; !instance_exists(o_fao)) || (hp &lt;= 0 &amp;&amp; global.so
             gimmickstate = 0;
         } else if arrayx[arraypos] = "D" {
             instance_create(640, 360, o_doctor);
-        } else if arrayx[arraypos] = "T" {
-            instance_create(630, bar+100, o_textbox);
-        
+        } else if arrayx[arraypos] = "T"  {
+            if global.storymode = true {
+                instance_create(630, bar+100, o_textbox);
+            }
         } else {
             switch gimmickstate {
                 case 0:
