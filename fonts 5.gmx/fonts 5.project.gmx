@@ -220,6 +220,7 @@
     <sound>sound\m_title</sound>
     <sound>sound\se_select</sound>
     <sound>sound\m_eonbreak</sound>
+    <sound>sound\m_reset_set</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\s_kaguya</sprite>
@@ -297,6 +298,8 @@
     <sprite>sprites\s_menucover</sprite>
     <sprite>sprites\s_nullnote</sprite>
     <sprite>sprites\s_textbg</sprite>
+    <sprite>sprites\s_vignette</sprite>
+    <sprite>sprites\bk_reset_set</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -341,6 +344,8 @@
     <script>scripts\c_everythingwillfreeze.gml</script>
     <script>scripts\sm_eonbreak.gml</script>
     <script>scripts\c_eonbreak.gml</script>
+    <script>scripts\sm_reset_set.gml</script>
+    <script>scripts\c_reset_set.gml</script>
     <scripts name="the common">
       <script>scripts\script0.gml</script>
       <script>scripts\script25.gml</script>
@@ -433,6 +438,8 @@
     <object>objects\o_pseudonote</object>
     <object>objects\o_pseudohitfx</object>
     <object>objects\o_textbox</object>
+    <object>objects\o_vignette</object>
+    <object>objects\o_noteburst</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\fontstitle</room>

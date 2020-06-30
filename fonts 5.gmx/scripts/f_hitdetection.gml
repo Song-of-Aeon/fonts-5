@@ -38,75 +38,95 @@ if thenote != noone {
         }
     }
     instance_destroy(thenote);
-    if noterank < 3 {
-        combo++;
+    if !allideal {
+        if noterank < 3 {
+            combo++;
+        } else {
+            combo = 0;
+        }
+        switch noterank {
+            case -1:
+                with instance_create(x, y, o_hit) {
+                    image_blend = c_yellow;
+                }
+                realscore += .8*(100/notecount);
+                if comborank > 2
+                    comborank = 2;
+                hp += .16;
+                break;
+            case -2:
+                with instance_create(x, y, o_hit) {
+                    image_blend = c_green;
+                }
+                realscore += .6*(100/notecount);
+                if comborank > 1
+                    comborank = 1;
+                hp += .12;
+                break;
+            case -3:
+                with instance_create(x, y, o_hit) {
+                    image_blend = c_blue;
+                }
+                comborank = 0;
+                break;
+            case 0:
+                with instance_create(x, y, o_hit) {
+                    image_blend = c_teal;
+                }
+                realscore += 100/notecount;
+                hp += .2;
+                break;
+            case 1:
+                with instance_create(x, y, o_hit) {
+                    image_blend = c_yellow;
+                }
+                realscore += .8*(100/notecount);
+                if comborank > 2
+                    comborank = 2;
+                hp += .16;
+                break;
+            case 2:
+                with instance_create(x, y, o_hit) {
+                    image_blend = c_green;
+                }
+                realscore += .6*(100/notecount);
+                if comborank > 1
+                    comborank = 1;
+                hp += .12;
+                break;
+            case 3:
+                with instance_create(x, y, o_hit) {
+                    image_blend = c_blue;
+                }
+                comborank = 0;
+                break;
+            case 4:
+                with instance_create(x, y, o_hit) {
+                    image_blend = c_red;
+                }
+                realscore -= 100/notecount;
+                comborank = 0;
+                hp -= 1;
+                break;
+        }
     } else {
-        combo = 0;
+        noterank = 6;
+        combo++;
+        realscore += 100/notecount;
+        hp += 1;
+        with instance_create(x, y, o_hit) {
+            image_blend = c_fuchsia;
+        }
     }
-    switch noterank {
-        case -1:
-            with instance_create(x, y, o_hit) {
-                image_blend = c_yellow;
+    if noteburst {
+        repeat(10) {
+            with instance_create(argument0, bar, o_noteburst) {
+                speed = random(28) + 8;
+                direction = random(180) + 180;
+                image_alpha -= random(.4);
+                turner = irandom(30) - 15;
             }
-            realscore += .8*(100/notecount);
-            if comborank > 2
-                comborank = 2;
-            hp += .16;
-            break;
-        case -2:
-            with instance_create(x, y, o_hit) {
-                image_blend = c_green;
-            }
-            realscore += .6*(100/notecount);
-            if comborank > 1
-                comborank = 1;
-            hp += .12;
-            break;
-        case -3:
-            with instance_create(x, y, o_hit) {
-                image_blend = c_blue;
-            }
-            comborank = 0;
-            break;
-        case 0:
-            with instance_create(x, y, o_hit) {
-                image_blend = c_teal;
-            }
-            realscore += 100/notecount;
-            hp += .2;
-            break;
-        case 1:
-            with instance_create(x, y, o_hit) {
-                image_blend = c_yellow;
-            }
-            realscore += .8*(100/notecount);
-            if comborank > 2
-                comborank = 2;
-            hp += .08;
-            break;
-        case 2:
-            with instance_create(x, y, o_hit) {
-                image_blend = c_green;
-            }
-            realscore += .6*(100/notecount);
-            if comborank > 1
-                comborank = 1;
-            hp += .06;
-            break;
-        case 3:
-            with instance_create(x, y, o_hit) {
-                image_blend = c_blue;
-            }
-            comborank = 0;
-            break;
-        case 4:
-            with instance_create(x, y, o_hit) {
-                image_blend = c_red;
-            }
-            realscore -= 100/notecount;
-            comborank = 0;
-            hp -= 1;
-            break;
+        }
     }
     bop[8] = 1.3;
     var fx = instance_create(argument0, bar, o_hitfx);

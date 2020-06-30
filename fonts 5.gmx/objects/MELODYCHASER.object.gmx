@@ -91,6 +91,10 @@ gimmickstate = 0;
 breadx = window_get_x();
 bready = window_get_y();
 comborank = 3;
+allideal = false;
+noteturn = false;
+noteburst = false;
+osumode = false;
 
 count = 0;
 if global.songscript = c_eonbreak {
@@ -343,7 +347,7 @@ if (back &amp;&amp; !instance_exists(o_fao)) || (hp &lt;= 0 &amp;&amp; global.so
     audio_stop_sound(audio);
 }
 
-//if global.songscript = c_eonbreak {
+if global.songscript = c_eonbreak {
     if inputgimmick = false {
         if arrayx[arraypos] = "C" {
             with instance_create(0, 0, o_ChromaticAbberation) {
@@ -422,7 +426,69 @@ if (back &amp;&amp; !instance_exists(o_fao)) || (hp &lt;= 0 &amp;&amp; global.so
         window_set_position(breadx+(windowBounceSpeed*windowBouncex),bready+(windowBounceSpeed*windowBouncey));
     }
     inputgimmick = true;
-//}
+} else if global.songscript = c_reset_set {
+    if inputgimmick = false {
+        if arrayx[arraypos] = "T"  {
+            if global.storymode = true {
+                instance_create(630, bar+100, o_textbox);
+            }
+        }
+        switch arrayx[arraypos] {
+            case "darken": //vignette
+                o_vignette.image_alpha += .25;
+                break;
+            case "not darken":
+                o_vignette.fading = true;
+                break;
+            case "SET": //chokepoint
+                console_log("knock knock its knuckles");
+                break;
+            case "RESET":
+                
+                break;
+            case "IDEAL": //ideal judgement
+                depth = -5;
+                allideal = true;
+                break;
+            case "NOT IDEAL":
+                depth = 0;
+                allideal = false;
+                break;
+            case "CHANGE": //notes spin
+                noteturn = true;
+                break;
+            case "NOT CHANGE":
+                noteturn = false;
+                break;
+            case "ACKNOWLEDGED": //note burst
+                noteburst = true;
+                break;
+            case "NOT ACKNOWLEDGED":
+                noteburst = false;
+                break;
+            case "LIKED": //approach circles
+                osumode = true;
+                break;
+            case "NOT LIKED":
+                osumode = false;
+                break;
+        }
+        inputgimmick = true;
+        arraypos++;
+    }
+    if !instance_exists(o_vignette) {
+        instance_create(0, 0, o_vignette);
+    }
+}
+
+if inputgimmick = false {
+    if arrayx[arraypos] = "T"  {
+        if global.storymode = true {
+            instance_create(630, bar+100, o_textbox);
+        }
+    }
+}
+
 if global.gimmickactive = false {
     MELODYCHASER.lanes = 4;
 }

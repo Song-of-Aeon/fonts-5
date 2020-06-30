@@ -198,7 +198,7 @@ audio_play_sound(m_night, 0, false);
                     global.songscript = c_everythingwillfreeze;
                     break;
                 case 4:
-                    global.songscript = c_drivin;
+                    global.songscript = c_reset_set;
                     break;
                 case 5:
                     global.songscript = c_eonbreak;
@@ -361,7 +361,7 @@ if keyboard_check_pressed(ord('H')) {
                 draw_text(652, menuposition*87+162, "Everything Will Freeze");
                 break;
             case 4:
-                draw_text(652, menuposition*87+162, "Spider Dance");
+                draw_text(652, menuposition*87+162, "Reset Set");
                 break;
             case 5:
                 draw_text(652, menuposition*87+162, "Eon Break");
