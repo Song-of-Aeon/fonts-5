@@ -85,11 +85,11 @@ x += 5;
             break;
         case 4:
             if global.noteoverride = 0 {
-                sprite_index = s_rojo;
-                sprite_index2 = s_azul;
+                sprite_index = s_sun;
+                sprite_index2 = s_sea;
             }
-            vspd = -(155.005/c_bpmbuster());
-            image_speed = 155.005/1125;
+            vspd = -(196/c_bpmbuster()); //155.005 for drivin
+            image_speed = 196/1125;
             break;
         case 5:
             if global.noteoverride = 0 {
@@ -116,14 +116,17 @@ switch global.noteoverride {
         sprite_index2 = s_darker;
         break;
     case 4:
-        sprite_index = s_rojo;
-        sprite_index2 = s_azul;
+        sprite_index = s_sun;
+        sprite_index2 = s_sea;
         break;
     case 5:
         sprite_index = s_trueblue;
         sprite_index2 = s_ultramarine;
         break;
     
+}
+if sprite_index = s_sun {
+    image_speed = 0;
 }
 if image_angle = 0 || image_angle = 90 {
     sprite_index = sprite_index2;

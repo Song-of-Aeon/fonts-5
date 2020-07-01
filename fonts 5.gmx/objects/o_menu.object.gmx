@@ -408,8 +408,8 @@ if keyboard_check_pressed(ord('H')) {
             global.receptor = s_shadow;
             break;
         case 4:
-            noteskinshow = s_azul;
-            global.receptor = s_receptor;
+            noteskinshow = s_sun;
+            global.receptor = s_reseputaa;
             break;
         case 5:
             noteskinshow = s_trueblue;

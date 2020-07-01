@@ -253,6 +253,11 @@
     </sprites>
     <sprite>sprites\s_fonts5</sprite>
     <sprite>sprites\s_black</sprite>
+    <sprites name="midi-neon">
+      <sprite>sprites\s_sun</sprite>
+      <sprite>sprites\s_sea</sprite>
+      <sprite>sprites\s_stars</sprite>
+    </sprites>
     <sprites name="midi-gold">
       <sprite>sprites\s_rojo</sprite>
       <sprite>sprites\s_azul</sprite>
@@ -345,6 +350,7 @@
     <script>scripts\sm_eonbreak.gml</script>
     <script>scripts\c_eonbreak.gml</script>
     <script>scripts\sm_reset_set.gml</script>
+    <script>scripts\sm_reset_roulette.gml</script>
     <script>scripts\c_reset_set.gml</script>
     <scripts name="the common">
       <script>scripts\script0.gml</script>
