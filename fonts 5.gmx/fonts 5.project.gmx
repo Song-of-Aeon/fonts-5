@@ -399,8 +399,10 @@
     </scripts>
     <script>scripts\draw_circle_width.gml</script>
     <script>scripts\st_reset_set.gml</script>
+    <script>scripts\st_run.gml</script>
     <script>scripts\st_reset_set_jp.gml</script>
     <script>scripts\range.gml</script>
+    <script>scripts\c_null.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\z_ChromaticAbberation.shader</shader>
@@ -448,6 +450,7 @@
     <object>objects\o_pseudonote</object>
     <object>objects\o_pseudohitfx</object>
     <object>objects\o_textbox</object>
+    <object>objects\o_engsub</object>
     <object>objects\o_vignette</object>
     <object>objects\o_noteburst</object>
   </objects>

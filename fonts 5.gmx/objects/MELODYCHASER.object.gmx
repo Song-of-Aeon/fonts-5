@@ -187,8 +187,8 @@ if songstarting {
         
         //if (count &gt;= 235 &amp;&amp; global.songscript = c_eonbreak) || (count &gt;= 230 &amp;&amp; global.songscript != c_eonbreak){
             audio_play_sound(audio, 0, false);
-            
             songstarting = false;
+            instance_create(630, bar+100, o_engsub);
         }
     }
     
@@ -518,6 +518,7 @@ if inputgimmick = false {
 if global.gimmickactive = false {
     MELODYCHASER.lanes = 4;
 }
+
 
 </string>
           </argument>
