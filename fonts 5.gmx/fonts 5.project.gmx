@@ -257,6 +257,7 @@
       <sprite>sprites\s_sun</sprite>
       <sprite>sprites\s_sea</sprite>
       <sprite>sprites\s_stars</sprite>
+      <sprite>sprites\s_flare</sprite>
     </sprites>
     <sprites name="midi-gold">
       <sprite>sprites\s_rojo</sprite>
@@ -397,6 +398,9 @@
       <script>scripts\c_txtcommon.gml</script>
     </scripts>
     <script>scripts\draw_circle_width.gml</script>
+    <script>scripts\st_reset_set.gml</script>
+    <script>scripts\st_reset_set_jp.gml</script>
+    <script>scripts\range.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\z_ChromaticAbberation.shader</shader>

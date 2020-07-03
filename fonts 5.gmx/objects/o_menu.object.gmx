@@ -76,7 +76,8 @@ if file_exists("profile.ini") {
     global.scoring[5] = ini_read_string("scores", "stage 5", "00.00");
     ini_close();
 }
-
+global.kaguya = false;
+global.notecover = s_kaguya;
 audio_play_sound(m_night, 0, false);
 </string>
           </argument>

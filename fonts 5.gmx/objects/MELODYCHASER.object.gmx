@@ -285,7 +285,7 @@ if hp &gt; 12 {
     hp = 12;
 }
 
-if (back &amp;&amp; !instance_exists(o_fao)) || (hp &lt;= 0 &amp;&amp; global.songscript != c_eonbreak) {
+if (back &amp;&amp; !instance_exists(o_fao)) || (hp &lt;= 0 &amp;&amp; global.songscript != c_eonbreak &amp;&amp; global.songscript != c_reset_set) {
     if global.storymode = true &amp;&amp; hp &gt; 0 {
         with instance_create(0, 0, o_fao) {
             leaving = cutscene;
@@ -435,7 +435,7 @@ if global.songscript = c_eonbreak {
         }
         switch arrayx[arraypos] {
             case "darken": //vignette
-                o_vignette.image_alpha += .25;
+                o_vignette.image_alpha += .17;
                 break;
             case "not darken":
                 o_vignette.fading = true;
@@ -472,7 +472,33 @@ if global.songscript = c_eonbreak {
             case "NOT LIKED":
                 osumode = false;
                 break;
+            case "GOOD": //
+                global.hidden = true;
+                break;
+            case "NOT GOOD":
+                global.hidden = false;
+                break;
+            case "PRAISED": //
+                global.kaguya = true;
+                break;
+            case "NOT PRAISED":
+                global.kaguya = false;
+                break;
+            case "AI": //
+                global.notecover = s_heart;
+                break;
+            case "AI JANAI":
+                global.notecover = s_kaguya;
+                break;
+            /*case "": //
+                 = true;
+                break;
+            case "NOT ":
+                 = false;
+                break;
+            */
         }
+        console_log(arraypos);
         inputgimmick = true;
         arraypos++;
     }

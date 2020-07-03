@@ -96,8 +96,9 @@ if collision_line(MELODYCHASER.laneleft, y+8*global.xmod, MELODYCHASER.laneright
     if y &lt; view_hview/5*3 {
         fading = true;
     }
-    alarm[0] = 3;
+    
 }
+alarm[0] = 3; //let him inside
 </string>
           </argument>
         </arguments>
@@ -194,7 +195,11 @@ if y &lt;= MELODYCHASER.bar {
         draw_set_colour(c_maroon);
         draw_circle_width(x, y, (y)/3, 7, 20);
     }
-    draw_self();
+    if global.notecover = s_kaguya {
+        draw_self();
+    } else {
+        draw_sprite_ext(global.notecover, 0, x, y, image_xscale, image_yscale, 180, image_blend, image_alpha);
+    }
     if instance_exists(stringto) {
         draw_set_colour(c_teal);
         draw_line_width(x, y, stringto.x, stringto.y, 3);
