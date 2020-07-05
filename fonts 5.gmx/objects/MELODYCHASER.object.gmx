@@ -95,6 +95,8 @@ allideal = false;
 noteturn = false;
 noteburst = false;
 osumode = false;
+chokepoint = 2000;
+notechange = false;
 
 count = 0;
 if global.songscript = c_eonbreak {
@@ -445,10 +447,13 @@ if global.songscript = c_eonbreak {
                 o_vignette.fading = true;
                 break;
             case "SET": //chokepoint
-                console_log("knock knock its knuckles");
+                chokepoint = 650;
+                break;
+            case "SE":
+                chokepoint -= 30;
                 break;
             case "RESET":
-                
+                chokepoint = 2000;
                 break;
             case "IDEAL": //ideal judgement
                 depth = -5;
@@ -493,6 +498,14 @@ if global.songscript = c_eonbreak {
                 break;
             case "AI JANAI":
                 global.notecover = s_kaguya;
+                break;
+            case "KAWARU":
+                noteturn = true;
+                notechange = true;
+                break;
+            case "KAWARANAI":
+                noteturn = false;
+                notechange = false;
                 break;
             /*case "": //
                  = true;
@@ -584,6 +597,7 @@ var l;
 for (l=0; l&lt;floor(hp); l++) {
     draw_sprite(s_heart, 0, laneright+80*mini, bar+l*16);
 }
+draw_line_width(0, chokepoint, window_get_width(), chokepoint, 5);
 /*var m;
 for (m=0;)
 draw_sprite

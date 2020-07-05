@@ -16,12 +16,17 @@ songbg = bk_reset_set;
 lanes = 4;
 arrayx = array("darken", "darken", "darken", "darken", "not darken",
 "SET", "IDEAL", "NOT IDEAL", "CHANGE", "NOT CHANGE", "ACKNOWLEDGED", "NOT ACKNOWLEDGED", "LIKED", "NOT LIKED",
+"SE", "SE", "SE", "SE", "SE", "SE", "SE", "SE", "SE", "SE", "SET", 
+"SE", "SE", "SE", "SE", "SE", "SE", "SE", "SE", "SE", "SE", "SET", "RESET",
 "darken", "darken", "darken", "darken", "darken", "not darken",
-"GOOD", "NOT GOOD", "CHANGE", "NOT CHANGE", "PRAISED", "NOT PRAISED", "AI", "AI JANAI",
-"");
-arrayy = array(0, 0, 0, 0, 0,
+"SET", "GOOD", "NOT GOOD", "CHANGE", "NOT CHANGE", "PRAISED", "NOT PRAISED", "AI", "AI JANAI", "RESET",
+"SET", "IDEAL", "NOT IDEAL", "CHANGE", "KAWARU", "NOT CHANGE", "KAWARANAI", "ACKNOWLEDGED", "KAWARU", "NOT ACKNOWLEDGED", "KAWARANAI", "LIKED", "KAWARU", "NOT LIKED", "KAWARANAI",
+"SE", "SE", "SE", "SE", "SE", "SE", "SE", "SE", "SE", "SE", "SET",
+"SE", "SE", "SE", "SE", "SE", "SE", "SE", "SE", "SE", "SE", "SET", "RESET",);
+/*arrayy = array(0, 0, 0, 0, 0,
 0, 0, 0, 0, 0, 0, 0, 0, 0,
+
 0, 0, 0, 0, 0, 0,
-0, 0, 0, 0, 0, 0, 0, 0);
+0, 0, 0, 0, 0, 0, 0, 0);*/
 //bg = bk_;
 //music = m_;

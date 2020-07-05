@@ -78,6 +78,7 @@ if file_exists("profile.ini") {
 }
 global.kaguya = false;
 global.notecover = s_kaguya;
+global.streamstring = false;
 audio_play_sound(m_night, 0, false);
 </string>
           </argument>

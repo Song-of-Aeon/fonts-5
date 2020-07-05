@@ -42,6 +42,8 @@ tookdir = false;
 stringto = noone;
 alarm[1] = 1;
 bitch = 0;
+savedx = x;
+savedy = y;
 </string>
           </argument>
         </arguments>
@@ -67,9 +69,25 @@ bitch = 0;
             <string>/*if collision_line(MELODYCHASER.laneleft, y+32*global.xmod, MELODYCHASER.laneright, y+32*global.xmod, o_note, false, true) != noone {
     stringto = collision_line(MELODYCHASER.laneleft, y+32*global.xmod, MELODYCHASER.laneright, y+32*global.xmod, o_note, false, true);
 }*/
-if collision_line(MELODYCHASER.laneleft, y+8*global.xmod, MELODYCHASER.laneright, y+8*global.xmod, o_note, false, true) != noone {
+if collision_line(MELODYCHASER.laneleft, y+8*global.xmod, MELODYCHASER.laneright, y+8*global.xmod, o_note, false, true) != noone &amp;&amp; global.streamstring = true {
     stringto = collision_line(MELODYCHASER.laneleft, y+8*global.xmod, MELODYCHASER.laneright, y+8*global.xmod, o_note, false, true);
 }
+switch dir {
+        case 0:
+            image_angle = -90;
+            break;
+        case 1:
+            image_angle = 0;
+            break;
+        case 2:
+            image_angle = 180;
+            break;
+        case 3:
+            image_angle = 90;
+            break;
+    }
+savedx = x;
+savedy = y;
 </string>
           </argument>
         </arguments>
@@ -124,23 +142,30 @@ alarm[0] = 3; //let him inside
             <string>count++;
 
 if count &gt;= 240 {
+    hspd = hspd/1.1;
+    if abs(hspd) &lt;= .2 {
+        hspd = 0;
+    }
+    x = savedx;
     x += hspd;
     y += vspd;
 }
 
-switch dir {
-    case 0:
-        image_angle = -90;
-        break;
-    case 1:
-        image_angle = 0;
-        break;
-    case 2:
-        image_angle = 180;
-        break;
-    case 3:
-        image_angle = 90;
-        break;
+if MELODYCHASER.notechange = false &amp;&amp; global.songscript = c_reset_set {
+    switch dir {
+        case 0:
+            image_angle = -90;
+            break;
+        case 1:
+            image_angle = 0;
+            break;
+        case 2:
+            image_angle = 180;
+            break;
+        case 3:
+            image_angle = 90;
+            break;
+    }
 }
 
 if fading {
@@ -166,6 +191,10 @@ if y &lt;= MELODYCHASER.bar {
     if MELODYCHASER.noteturn = true {
         image_angle += 20;
         //bitch++;
+    }
+    if y &gt; MELODYCHASER.chokepoint {
+        x = MELODYCHASER.lanedown+MELODYCHASER.lanespacing/4;
+        hspd = x-savedx;
     }
 }
 </string>
