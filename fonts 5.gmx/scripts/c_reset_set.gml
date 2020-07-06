@@ -7,10 +7,10 @@ if global.noteoverride = 0 {
     global.red = s_sun;
     global.blue = s_sea;
     global.purple = s_stars;
-    global.freeze = s_defrag;
+    global.freeze = s_asteroid;
     global.effect = s_ripple;
     global.mine = s_flare;
-    global.receptor = s_reseputaa;
+    global.receptor = s_galaxy;
 }
 songbg = bk_reset_set;
 lanes = 4;

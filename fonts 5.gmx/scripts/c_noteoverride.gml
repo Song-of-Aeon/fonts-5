@@ -32,10 +32,10 @@ switch global.noteoverride {
         global.red = s_sun;
         global.blue = s_sea;
         global.purple = s_stars;
-        global.freeze = s_green;
-        global.effect = s_effect;
+        global.freeze = s_asteroid;
+        global.effect = s_ripple;
         global.mine = s_flare;
-        global.receptor = s_receptor;
+        global.receptor = s_galaxy;
         break;
     case 5:
         global.red = s_trueblue;

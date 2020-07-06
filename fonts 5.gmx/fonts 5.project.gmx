@@ -219,6 +219,9 @@
         <Config name="Default">
           <CopyToMask>9223372036854775807</CopyToMask>
         </Config>
+        <Config name="lol">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
       </ConfigOptions>
       <filename>Rondalo_.ttf</filename>
     </datafile>
@@ -238,6 +241,7 @@
     <sound>sound\se_select</sound>
     <sound>sound\m_eonbreak</sound>
     <sound>sound\m_reset_set</sound>
+    <sound>sound\m_nocturne</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\s_kaguya</sprite>
@@ -274,12 +278,16 @@
       <sprite>sprites\s_sun</sprite>
       <sprite>sprites\s_sea</sprite>
       <sprite>sprites\s_stars</sprite>
+      <sprite>sprites\s_asteroid</sprite>
       <sprite>sprites\s_flare</sprite>
+      <sprite>sprites\s_galaxy</sprite>
     </sprites>
     <sprites name="midi-gold">
       <sprite>sprites\s_rojo</sprite>
       <sprite>sprites\s_azul</sprite>
       <sprite>sprites\s_morado</sprite>
+      <sprite>sprites\s_gem</sprite>
+      <sprite>sprites\s_crystal</sprite>
     </sprites>
     <sprite>sprites\s_start</sprite>
     <sprites name="midi-heavens">
@@ -331,6 +339,7 @@
     <path>paths\p_soul</path>
   </paths>
   <scripts name="scripts">
+    <script>scripts\c_null.gml</script>
     <scripts name="the not mine">
       <script>scripts\libsm__getBackground.gml</script>
       <script>scripts\libsm__getBanner.gml</script>
@@ -355,22 +364,17 @@
       <script>scripts\libsm_getNoteData.gml</script>
       <script>scripts\libsm_getnotes.gml</script>
     </scripts>
-    <script>scripts\sm_onemorenight.gml</script>
-    <script>scripts\c_onemorenight.gml</script>
-    <script>scripts\sm_drivin.gml</script>
-    <script>scripts\c_drivin.gml</script>
     <script>scripts\sm_combattheme.gml</script>
     <script>scripts\c_combattheme.gml</script>
     <script>scripts\sm_lancerraps.gml</script>
     <script>scripts\c_lancerraps.gml</script>
     <script>scripts\sm_everythingwillfreeze.gml</script>
     <script>scripts\c_everythingwillfreeze.gml</script>
+    <script>scripts\c_nocturne.gml</script>
+    <script>scripts\sm_reset_set.gml</script>
+    <script>scripts\c_reset_set.gml</script>
     <script>scripts\sm_eonbreak.gml</script>
     <script>scripts\c_eonbreak.gml</script>
-    <script>scripts\sm_reset_set.gml</script>
-    <script>scripts\sm_reset_regret.gml</script>
-    <script>scripts\sm_reset_roulette.gml</script>
-    <script>scripts\c_reset_set.gml</script>
     <scripts name="the common">
       <script>scripts\script0.gml</script>
       <script>scripts\script25.gml</script>
@@ -378,7 +382,9 @@
       <script>scripts\collision_line_first.gml</script>
       <script>scripts\range_finder.gml</script>
       <script>scripts\instance_nth_nearest.gml</script>
+      <script>scripts\draw_circle_width.gml</script>
       <script>scripts\array.gml</script>
+      <script>scripts\range.gml</script>
     </scripts>
     <scripts name="the note management">
       <script>scripts\c_receptorinput.gml</script>
@@ -390,8 +396,6 @@
       <script>scripts\f_hitdetection.gml</script>
     </scripts>
     <script>scripts\c_input.gml</script>
-    <script>scripts\x_sm_parser_create_old.gml</script>
-    <script>scripts\x_the_explanation.gml</script>
     <scripts name="the test maps">
       <script>scripts\sm_jumptest.gml</script>
       <script>scripts\sm_freezetest.gml</script>
@@ -405,7 +409,7 @@
     <script>scripts\c_redinput.gml</script>
     <script>scripts\c_soul.gml</script>
     <script>scripts\c_noteoverride.gml</script>
-    <scripts name="dialogue">
+    <scripts name="the dialogue">
       <script>scripts\txt_.gml</script>
       <script>scripts\txt_stream.gml</script>
       <script>scripts\txt_stage1.gml</script>
@@ -415,15 +419,25 @@
       <script>scripts\txt_stage5.gml</script>
       <script>scripts\c_txtcommon.gml</script>
     </scripts>
-    <script>scripts\draw_circle_width.gml</script>
-    <script>scripts\range.gml</script>
-    <script>scripts\c_null.gml</script>
-    <scripts name="subtitles">
+    <scripts name="the subtitles">
       <script>scripts\st_reset_set.gml</script>
       <script>scripts\st_reset_set_jp.gml</script>
       <script>scripts\st_run2.gml</script>
       <script>scripts\st_run.gml</script>
     </scripts>
+    <script>scripts\c_reset_set_gimmicks.gml</script>
+    <script>scripts\c_eonbreak_gimmicks.gml</script>
+    <scripts name="the obsolete">
+      <script>scripts\sm_onemorenight.gml</script>
+      <script>scripts\c_onemorenight.gml</script>
+      <script>scripts\sm_drivin.gml</script>
+      <script>scripts\c_drivin.gml</script>
+      <script>scripts\sm_reset_regret.gml</script>
+      <script>scripts\sm_reset_roulette.gml</script>
+      <script>scripts\x_the_explanation.gml</script>
+      <script>scripts\x_sm_parser_create_old.gml</script>
+    </scripts>
+    <script>scripts\sm_nocturne.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\z_ChromaticAbberation.shader</shader>

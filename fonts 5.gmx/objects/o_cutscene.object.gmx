@@ -142,13 +142,18 @@ active = false;
                 }
             }
             if count &gt; 180 {
-                global.songscript = c_drivin;
+                global.songscript = c_nocturne;
                 instance_create(0, 0, o_fao);
                 o_cutscene.active = false;
             }
             count++;
             break;
         case 4:
+            global.songscript = c_reset_set;
+            instance_create(0, 0, o_fao);
+            o_cutscene.active = false;
+            break;
+        case 5:
             if count = 10 {
                 with instance_create(630, 360, o_world) {
                     image_xscale = 4;
@@ -163,7 +168,7 @@ active = false;
             }
             count++;
             break;
-        case 5:
+        case 6:
             if count = 10 {
                 with instance_create(630, 500, o_world) {
                     image_xscale = 4;
