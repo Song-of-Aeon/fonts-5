@@ -162,10 +162,10 @@ for (i=0; i&lt;array_length_1d(noteset); i++) {
                 notemaker[j] = o_mine;
                 break;
             case 6:
-                notemaker[j] = o_switch;
+                notemaker[j] = o_gimmickactivator; //used to be o_switch
                 break;
             case 7:
-                notemaker[j] = o_switchback;
+                notemaker[j] = o_gimmickactivator; //used to be o_switchback
                 break;
             case 8:
                 notemaker[j] = o_gimmickactivator;

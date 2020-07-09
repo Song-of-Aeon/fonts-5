@@ -2,8 +2,8 @@
 switch danmaku {
     case 1:
         if instance_place(laneleft, bar-64, o_note) != noone {
-            instance_destroy(instance_place(64, bar, o_note));
-            with instance_create(64, bar, o_knife) {
+            instance_destroy(instance_place(laneleft, bar, o_note));
+            with instance_create(laneleft, bar, o_knife) {
                 direction = point_direction(x, y, o_soul.x, o_soul.y);
                 speed = 10;
                 image_angle = direction - 90;
@@ -15,7 +15,7 @@ switch danmaku {
             var i;
             for (i=0; i<=3; i++) {
                 var newbullet = instance_create(lanedown, bar, o_bullet);
-                newbullet.direction = point_direction(newbullet.x, newbullet.y, o_soul.x+(((i-1.5)*60)%90), o_soul.y);
+                newbullet.direction = point_direction(newbullet.x, newbullet.y, o_soul.x+(((i-1.5)*80)%90), o_soul.y);
                 newbullet.speed = 6+i/3;
             }
         }
@@ -24,7 +24,7 @@ switch danmaku {
             var j;
             for (j=0; j<=3; j++) {
                 var newbullet = instance_create(laneup, bar, o_bullet);
-                newbullet.direction = point_direction(newbullet.x, newbullet.y, o_soul.x+(((j-1.5)*60)%90), o_soul.y);
+                newbullet.direction = point_direction(newbullet.x, newbullet.y, o_soul.x+(((j-1.5)*80)%90), o_soul.y);
                 newbullet.speed = 6+j/3;
             
             }
@@ -32,7 +32,7 @@ switch danmaku {
         
         if instance_place(laneright, bar-64, o_note) != noone {
             instance_destroy(instance_place(laneright, bar, o_note));
-            with instance_create(256, bar, o_knife) {
+            with instance_create(laneright, bar, o_knife) {
                 direction = point_direction(x, y, o_soul.x, o_soul.y);
                 speed = 10;
                 image_angle = direction - 90;
@@ -90,8 +90,5 @@ switch danmaku {
         break;
 }
 
-if instance_place(laneleft, bar, o_switchback) != noone {
-    instance_destroy(o_soul);
-    state = c_receptorinput;
-}
+
 

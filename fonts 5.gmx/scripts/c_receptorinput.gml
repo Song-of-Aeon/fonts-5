@@ -20,9 +20,5 @@ if right {
 }
 
 
-if instance_place(laneleft, bar, o_switch) != noone {
-    danmaku++;
-    instance_create(160, 0, o_soul);
-    state = c_receptordanmaku;
-}
+
 

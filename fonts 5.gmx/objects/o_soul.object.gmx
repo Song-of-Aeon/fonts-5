@@ -37,6 +37,9 @@ count = 0;
 acc = 9;
 bam = false;
 countwo = 0;
+fading = false;
+image_xscale = 3;
+image_yscale = 3;
 
 
 //tempsurface = surface_create(max(view_wview[0],1),max(view_hview[0],1));
@@ -47,38 +50,6 @@ alarm[5] = 5;
 //instance_create(x,y,o_graze);
 script_execute(state);
 </string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>119</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_path</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>8</kind>
-            <path>p_soul</path>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>6</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
           </argument>
         </arguments>
       </action>
@@ -153,7 +124,14 @@ image_alpha = 1;
           <argument>
             <kind>1</kind>
             <string>c_redinput();
-script_execute(state);
+if !fading {
+    script_execute(state);
+} else {
+    image_alpha -= .1;
+    if image_alpha &lt;= 0 {
+        instance_destroy();
+    }
+}
 
 if y &gt;= 700 {
     path_end();
@@ -177,6 +155,13 @@ if inv {
         alarm[1] = 1;
         countwo = 0;
     }
+}
+if image_xscale &gt; 1 {
+    image_xscale = image_xscale/1.01;
+    image_yscale = image_yscale/1.01;
+} else {
+    image_xscale = 1;
+    image_yscale = 1;
 }
 </string>
           </argument>

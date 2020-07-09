@@ -220,7 +220,7 @@ var j;
 lanespacing = laneup - laneleft;
 //for (j=laneleft; j&lt;=laneup; j+=lanespacing/2) {
     //var note = instance_place(j, bar-bpm*global.xmod/20-128, o_note); CUCK MODE NOTE CHECKING LOL
-    var note = collision_line(laneleft, bar-bpm*global.xmod/20-128, laneright, bar+bpm*global.xmod/20-128, o_note, false, false);
+    var note = collision_line(laneleft, bar-bpm*global.xmod/20-128, laneright, bar-bpm*global.xmod/20-128, o_note, false, false);
     if note != noone {
         if note.object_index = o_freeze || note.object_index = o_roll {
             with note.tail {
@@ -291,7 +291,7 @@ if hp &gt; 12 {
     hp = 12;
 }
 
-if (back &amp;&amp; !instance_exists(o_fao)) || (hp &lt;= 0 &amp;&amp; global.songscript != c_eonbreak &amp;&amp; global.songscript != c_reset_set) {
+if (back &amp;&amp; !instance_exists(o_fao)) || (hp &lt;= 0 &amp;&amp; global.songscript != c_everythingwillfreeze) {
     if global.storymode = true &amp;&amp; hp &gt; 0 { //&amp;&amp; !audio_is_playing(song)
         with instance_create(0, 0, o_fao) {
             leaving = cutscene;
@@ -353,28 +353,36 @@ if (back &amp;&amp; !instance_exists(o_fao)) || (hp &lt;= 0 &amp;&amp; global.so
     audio_stop_sound(audio);
 }
 
-if global.songscript = c_eonbreak {
-    c_eonbreak_gimmicks();
-} else if global.songscript = c_reset_set {
-    c_reset_set_gimmicks();
-} else {
-    if inputgimmick = false {
-        if arrayx[arraypos] = "T"  {
-            if global.storymode = true {
-                instance_create(630, bar+100, o_textbox);
+switch global.songscript {
+    case c_everythingwillfreeze:
+        c_everythingwillfreeze_gimmicks();
+        break;
+    case c_reset_set:
+        c_reset_set_gimmicks();
+        break;
+    case c_eonbreak:
+        c_eonbreak_gimmicks();
+        break;
+    
+    default:
+        if inputgimmick = false {
+            if arrayx[arraypos] = "T"  {
+                if global.storymode = true {
+                    instance_create(630, bar+100, o_textbox);
+                }
             }
+            inputgimmick = true;
         }
-        inputgimmick = true;
-    }
+        break;
 }
 
-if inputgimmick = false {
+/*if inputgimmick = false {
     if arrayx[arraypos] = "T"  {
         if global.storymode = true {
             instance_create(630, bar+100, o_textbox);
         }
     }
-}
+}*/
 
 if global.gimmickactive = false {
     MELODYCHASER.lanes = 4;
@@ -450,6 +458,9 @@ draw_sprite
 
 if count &lt; 230 {
     draw_sprite(s_prep, floor(count/60), 665, 360);
+}
+if state = c_receptordanmaku {
+    draw_sprite_ext(s_bigdark, 0, 0, 0, 1, 1, 0, c_white, .5);
 }
 
 </string>

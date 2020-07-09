@@ -4,8 +4,7 @@
 message[0] = "Hey!";
 message[1] = "Are you still on beat?";
 message[2] = "I messed up and cut the flow in half! Sorry!";
-message[3] = "Pay attention to both sides!
-[SPACE to switch]";
+message[3] = "Pay attention to both sides!";
 
 choice[0] = "";
 choiceat[1] = 99;

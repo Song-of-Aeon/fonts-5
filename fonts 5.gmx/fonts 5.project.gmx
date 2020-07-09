@@ -331,6 +331,7 @@
     <sprite>sprites\s_textbg</sprite>
     <sprite>sprites\s_vignette</sprite>
     <sprite>sprites\bk_reset_set</sprite>
+    <sprite>sprites\s_help</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -426,6 +427,7 @@
       <script>scripts\st_run.gml</script>
     </scripts>
     <script>scripts\c_reset_set_gimmicks.gml</script>
+    <script>scripts\c_everythingwillfreeze_gimmicks.gml</script>
     <script>scripts\c_eonbreak_gimmicks.gml</script>
     <scripts name="the obsolete">
       <script>scripts\sm_onemorenight.gml</script>
@@ -489,6 +491,7 @@
     <object>objects\o_subbox</object>
     <object>objects\o_vignette</object>
     <object>objects\o_noteburst</object>
+    <object>objects\o_help</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\fontstitle</room>

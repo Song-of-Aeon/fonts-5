@@ -29,7 +29,6 @@ if vput != 0 {
     vspd = lerp(vspd, 0, frict);
     vspd = 0;
 }
-
 y += vspd;
 x += hspd;
 
@@ -43,7 +42,7 @@ if x > MELODYCHASER.laneright+32 {
 if y < MELODYCHASER.bar-32 {
     y -= vspd;
 }
-if y > view_wview[0] {
+if y > room_height {
     y -= vspd;
 }
     

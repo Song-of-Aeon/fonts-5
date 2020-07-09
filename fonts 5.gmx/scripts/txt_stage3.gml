@@ -4,8 +4,7 @@
 message[0] = "Yo!";
 message[1] = "You're doing great!";
 message[2] = "The flux is cutting deeper, and the rhythm is changing.";
-message[3] = "Careful not to get hurt!
-[Arrows/WASD/IJKL to move]";
+message[3] = "Careful not to get hurt!";
 
 choice[0] = "";
 choiceat[1] = 99;
