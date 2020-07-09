@@ -49,7 +49,7 @@ switch global.songscript {
     case c_everythingwillfreeze:
         txt_stage3();
         break;
-    case c_drivin:
+    case c_nocturne:
         txt_stage4();
         break;
     case c_eonbreak:

@@ -292,7 +292,7 @@ if hp &gt; 12 {
 }
 
 if (back &amp;&amp; !instance_exists(o_fao)) || (hp &lt;= 0 &amp;&amp; global.songscript != c_eonbreak &amp;&amp; global.songscript != c_reset_set) {
-    if global.storymode = true &amp;&amp; hp &gt; 0 {
+    if global.storymode = true &amp;&amp; hp &gt; 0 { //&amp;&amp; !audio_is_playing(song)
         with instance_create(0, 0, o_fao) {
             leaving = cutscene;
             depth = -3;
@@ -354,173 +354,17 @@ if (back &amp;&amp; !instance_exists(o_fao)) || (hp &lt;= 0 &amp;&amp; global.so
 }
 
 if global.songscript = c_eonbreak {
-    if inputgimmick = false {
-        if arrayx[arraypos] = "C" {
-            with instance_create(0, 0, o_ChromaticAbberation) {
-                intensity = other.arrayy[other.arraypos];
-            }
-        } else if arrayx[arraypos] = "S" { //state
-            gimmickstate = arrayy[arraypos];
-            //absolute, velocity, reverse, or save
-        } else if arrayx[arraypos] = "B" {
-            windowBounceSpeed += arrayy[arraypos];
-            gimmickstate = 0;
-        } else if arrayx[arraypos] = "D" {
-            instance_create(640, 360, o_doctor);
-        } else if arrayx[arraypos] = "T"  {
-            if global.storymode = true {
-                instance_create(630, bar+100, o_textbox);
-            }
-        } else {
-            switch gimmickstate {
-                case 0:
-                    window_set_position(arrayx[arraypos], windowy);
-                    whspd = 0;
-                    wvspd = 0;
-                    break;
-                case 1:
-                    whspd = arrayx[arraypos];
-                    wvspd = arrayy[arraypos];
-                    break;
-                case 2:
-                    whspd = arrayx[arraypos];
-                    wvspd = arrayy[arraypos];
-                    break;
-                case 3:
-                    windowx = window_get_x();
-                    windowy = window_get_y();
-                    break;
-            }
-        }
-        inputgimmick = true;
-        arraypos++;
-    }
-    if gimmickstate = 2 {
-        windowx = windowxsaved;
-        windowy = windowysaved;
-        
-    }
-    windowx += whspd;
-    windowy += wvspd;
-    whspd = whspd/1.025;
-    wvspd = wvspd/1.025;
-    
-    if(keyboard_check(vk_subtract)){
-    windowBounceSpeed--;
-    }
-    if(keyboard_check(vk_add)){
-        windowBounceSpeed++;
-    }
-    if(display_get_width() &lt;= breadx+window_get_width()){
-        windowBouncex = -1;
-    }
-    if(breadx &lt;= 0){
-        windowBouncex = 1;
-    }
-    if(display_get_height() &lt;= bready+window_get_height()){
-        windowBouncey = -1;
-    }
-    if(bready &lt;= 0){
-        windowBouncey = 1;
-    }
-    breadx = window_get_x();
-    bready = window_get_y();
-    
-    if windowBounceSpeed = 0 {
-        window_set_position(windowx, windowy);
-    } else {
-        window_set_position(breadx+(windowBounceSpeed*windowBouncex),bready+(windowBounceSpeed*windowBouncey));
-    }
-    inputgimmick = true;
+    c_eonbreak_gimmicks();
 } else if global.songscript = c_reset_set {
+    c_reset_set_gimmicks();
+} else {
     if inputgimmick = false {
         if arrayx[arraypos] = "T"  {
             if global.storymode = true {
                 instance_create(630, bar+100, o_textbox);
             }
         }
-        switch arrayx[arraypos] {
-            case "darken": //vignette
-                o_vignette.image_alpha += .17;
-                break;
-            case "not darken":
-                o_vignette.fading = true;
-                break;
-            case "SET": //chokepoint
-                chokepoint = 650;
-                break;
-            case "SE":
-                chokepoint -= 30;
-                break;
-            case "RESET":
-                chokepoint = 2000;
-                break;
-            case "IDEAL": //ideal judgement
-                depth = -5;
-                allideal = true;
-                break;
-            case "NOT IDEAL":
-                depth = 0;
-                allideal = false;
-                break;
-            case "CHANGE": //notes spin
-                noteturn = true;
-                break;
-            case "NOT CHANGE":
-                noteturn = false;
-                break;
-            case "ACKNOWLEDGED": //note burst
-                noteburst = true;
-                break;
-            case "NOT ACKNOWLEDGED":
-                noteburst = false;
-                break;
-            case "LIKED": //approach circles
-                osumode = true;
-                break;
-            case "NOT LIKED":
-                osumode = false;
-                break;
-            case "GOOD": //
-                global.hidden = true;
-                break;
-            case "NOT GOOD":
-                global.hidden = false;
-                break;
-            case "PRAISED": //
-                global.kaguya = true;
-                break;
-            case "NOT PRAISED":
-                global.kaguya = false;
-                break;
-            case "AI": //
-                global.notecover = s_heart;
-                break;
-            case "AI JANAI":
-                global.notecover = s_kaguya;
-                break;
-            case "KAWARU":
-                noteturn = true;
-                notechange = true;
-                break;
-            case "KAWARANAI":
-                noteturn = false;
-                notechange = false;
-                break;
-            /*case "": //
-                 = true;
-                break;
-            case "NOT ":
-                 = false;
-                break;
-            */
-        }
-        console_log(arraypos);
         inputgimmick = true;
-        arraypos++;
-    }
-    if !instance_exists(o_vignette) {
-        instance_create(0, 0, o_vignette);
     }
 }
 
