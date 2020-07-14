@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>x = random(1260);
+            <string>x = random(1280);
 y = random(720);
 image_alpha = 1;
 if !global.kaguya {

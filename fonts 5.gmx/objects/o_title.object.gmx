@@ -132,7 +132,7 @@ if select &amp;&amp; going = false {
     if swapper &gt;= 120 {
         //game_load("profile.dat");
         room_goto(stagemenu);
-        console_log("uh oh");
+        //console_log("uh oh");
         audio_stop_sound(m_title);
         instance_destroy();
     }

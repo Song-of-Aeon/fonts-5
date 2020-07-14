@@ -145,10 +145,14 @@ draw_set_halign(fa_center);
 var whatever = draw_get_colour();
 draw_set_colour(c_white);
 draw_set_font(f_textronaldo);
-draw_text_ext_transformed_colour(x+durability, y+durability, message_draw, 20, 1260, 1, 1, txturn, c_teal, c_teal, c_teal, c_teal, txtalpha);
-draw_text_ext_transformed_colour(x, y, message_draw, 20, 1260, 1, 1, txturn, c_white, c_white, c_white, c_white, txtalpha);
+draw_text_ext_transformed_colour(x+durability, y+durability, message_draw, 20, 1280, 1, 1, txturn, c_teal, c_teal, c_teal, c_teal, txtalpha);
+draw_text_ext_transformed_colour(x, y, message_draw, 20, 1280, 1, 1, txturn, c_white, c_white, c_white, c_white, txtalpha);
 draw_set_colour(whatever);
-
+var applesauce = whatever;
+draw_set_colour(applesauce);
+//draw_text_colour(caramelsause); mcguirescript
+var draw_text_creamsauce = 17;
+var applesauce = (draw_text_creamsauce);
 </string>
           </argument>
         </arguments>

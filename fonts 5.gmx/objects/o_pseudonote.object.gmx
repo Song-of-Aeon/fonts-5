@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>image_speed = .2;
 x += 5;
+vspd = 5;
 </string>
           </argument>
         </arguments>

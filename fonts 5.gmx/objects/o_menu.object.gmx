@@ -80,6 +80,7 @@ global.kaguya = false;
 global.notecover = s_kaguya;
 global.streamstring = false;
 audio_play_sound(m_night, 0, false);
+global.difficulty = 1;
 </string>
           </argument>
         </arguments>
@@ -122,7 +123,7 @@ audio_play_sound(m_night, 0, false);
                 selectorsavey++;
             }
         }
-        if down &amp;&amp; menuposition &lt; 5 {
+        if down &amp;&amp; menuposition &lt; 6 {
             
             selectorvspd = 87;
             selectorsavevspd = 87;
@@ -204,6 +205,9 @@ audio_play_sound(m_night, 0, false);
                     break;
                 case 5:
                     global.songscript = c_eonbreak;
+                    break;
+                case 6:
+                    global.songscript = c_eveniftheworlddeceivesyou;
                     break;
             }
             audio_play_sound(se_select, 0, false);
@@ -367,6 +371,9 @@ if keyboard_check_pressed(ord('H')) {
                 break;
             case 5:
                 draw_text(652, menuposition*87+162, "Eon Break");
+                break;
+            case 6:
+                draw_text(652, menuposition*87+162, "super test");
                 break;
         }
     }

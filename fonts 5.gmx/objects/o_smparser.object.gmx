@@ -384,7 +384,7 @@ for (i=0; i&lt;array_length_1d(noteset); i++) {
 for (n=0;n&lt;array_length_1d(noteset);n++) {
     console_log(noteset[n]);
 }*/
-
+//console_log(instance_number(o_note));
 MELODYCHASER.notecount = instance_number(o_note);
 /*MELODYCHASER.notecount += instance_number(o_freeze);
 MELODYCHASER.notecount += instance_number(o_roll);*/

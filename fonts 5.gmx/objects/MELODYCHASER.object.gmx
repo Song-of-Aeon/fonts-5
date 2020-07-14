@@ -57,10 +57,10 @@ lanedown = 128+minibig*2;
 laneup = 192+minibig*3;
 laneright = 256+minibig*4;
 } else {
-laneleft = 534-minibig*1.5;
-lanedown = 598-minibig*.5;
-laneup = 662+minibig*.5;
-laneright = 726+minibig*1.5;
+laneleft = 544-minibig*1.5;
+lanedown = 608-minibig*.5;
+laneup = 672+minibig*.5;
+laneright = 736+minibig*1.5;
 }
 lanespacing = 64;
 lanes = 4;
@@ -436,10 +436,10 @@ draw_set_halign(fa_center);
 draw_set_colour(c_white);
 draw_set_font(f_combo);
 depth = -3;
-draw_text(lanedown+lanespacing/4, bar+300, string(combo));
+draw_text(lanedown+lanespacing/4, bar+200, string(combo));
 //draw_text(lanedown+lanespacing/4, bar+400, string(comborank));
 //draw_text(lanedown+lanespacing/4, bar+200, string(ranktext));
-draw_sprite_ext(s_judgement, noterank+3, lanedown+lanespacing/4, bar+250, bop[8], bop[8], noterank, c_white, 1);
+draw_sprite_ext(s_judgement, noterank+3, lanedown+lanespacing/4, bar+150, bop[8], bop[8], noterank, c_white, 1);
 depth = 5;
 draw_set_font(f_scoreronaldo);
 draw_set_colour(c_black);
@@ -457,10 +457,10 @@ draw_sprite
 //draw_text(900, 700, string(timeat));
 
 if count &lt; 230 {
-    draw_sprite(s_prep, floor(count/60), 665, 360);
+    draw_sprite(s_prep, floor(count/60), 675, 360);
 }
 if state = c_receptordanmaku {
-    draw_sprite_ext(s_bigdark, 0, 0, 0, 1, 1, 0, c_white, .5);
+    draw_sprite_ext(s_bigdark, 0, 0, 0, 1, 1, 0, c_white, .7);
 }
 
 </string>

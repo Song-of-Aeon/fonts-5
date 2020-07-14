@@ -242,6 +242,7 @@
     <sound>sound\m_eonbreak</sound>
     <sound>sound\m_reset_set</sound>
     <sound>sound\m_nocturne</sound>
+    <sound>sound\m_eveniftheworlddeceivesyou</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\s_kaguya</sprite>
@@ -332,6 +333,7 @@
     <sprite>sprites\s_vignette</sprite>
     <sprite>sprites\bk_reset_set</sprite>
     <sprite>sprites\s_help</sprite>
+    <sprite>sprites\bk_helblinde</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -440,6 +442,8 @@
       <script>scripts\x_sm_parser_create_old.gml</script>
     </scripts>
     <script>scripts\sm_nocturne.gml</script>
+    <script>scripts\c_eveniftheworlddeceivesyou.gml</script>
+    <script>scripts\sm_eveniftheworlddeceivesyou.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\z_ChromaticAbberation.shader</shader>
