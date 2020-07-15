@@ -30,7 +30,6 @@ dance-double:
 :
 Hard:
 14:
-1.320015,  // measure 11.406102,  // measure 11.024446,  // measure 10.421831,  // measure 11.827933,  // measure 1460.000000,  // measure 1402.000000,  // measure 151.000000,  // measure 121.000000,  // measure 112.000000,  // measure 113.000000,  // measure 11.320015,  // measure 11.406102,  // measure 11.024446,  // measure 10.421831,  // measure 11.827933,  // measure 1460.000000,  // measure 1402.000000,  // measure 151.000000,  // measure 121.000000,  // measure 112.000000,  // measure 113.000000:
   //measure 0
 00000000
 00000000

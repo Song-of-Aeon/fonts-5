@@ -337,6 +337,7 @@
     <sprite>sprites\s_blendtest</sprite>
     <sprite>sprites\s_difficultyblend</sprite>
     <sprite>sprites\s_difficultycursor</sprite>
+    <sprite>sprites\s_sakuya</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -503,6 +504,7 @@
     <object>objects\o_noteburst</object>
     <object>objects\o_help</object>
     <object>objects\o_blender</object>
+    <object>objects\o_sakuya</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\fontstitle</room>

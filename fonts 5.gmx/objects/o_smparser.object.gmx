@@ -329,7 +329,7 @@ for (i=0; i&lt;array_length_1d(noteset); i++) {
             with instance_create(MELODYCHASER.lanedown+savelanespacing*3, placer*32*xmod+MELODYCHASER.bar, notemaker[5]) {
                 dir = 1;
                 vspd = -(other.bpm/c_bpmbuster())*other.xmod;
-                y -= vspd*60;
+                //y -= vspd*60;
                 y -= vspd*60;
                 sprite_index = other.notecolour;
                 image_xscale = MELODYCHASER.mini;
