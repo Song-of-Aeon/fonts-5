@@ -129,13 +129,20 @@ switch global.noteoverride {
 if sprite_index = s_sun {
     image_speed = 0;
 }
+
+if global.difficulty = 0 {
+    sprite_index2 = s_null;
+}
+
 if image_angle = 0 || image_angle = 90 {
     sprite_index = sprite_index2;
 }
 
 if y &lt;= 252 {
-    with instance_create(x, y, o_pseudohitfx) {
-        image_angle = other.image_angle;
+    if sprite_index != s_null {
+        with instance_create(x, y, o_pseudohitfx) {
+            image_angle = other.image_angle;
+        }
     }
     y += 468;
 }

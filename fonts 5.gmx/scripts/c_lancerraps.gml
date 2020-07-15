@@ -2,7 +2,7 @@
 if global.difficulty = 1 {
     song = sm_lancerraps();
 } else {
-    //song = sm_lancerrapseasy();
+    song = sm_lancerrapseasy();
 }
 bpm = 170;
 title = "Lancer Raps";

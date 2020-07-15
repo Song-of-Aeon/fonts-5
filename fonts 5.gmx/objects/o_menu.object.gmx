@@ -29,6 +29,9 @@
 selectoronsong = true;
 selectorposx = 652;
 selectorposy = 127;
+difcursy = 49; //125
+difcursavedy = 49;
+difcurvspd = 0;
 selectorvspd = 0;
 selectorsavevspd = 0;
 selectorsavey = selectorposy;
@@ -330,11 +333,19 @@ audio_play_sound(m_night, 0, false);
             global.scoring[5] = ini_read_string("scores"+string(global.difficulty), "stage 5", "00.00");
             ini_close();
         }
+        difcursavedy = 49+abs(global.difficulty-1)*76;
+        difcurvspd = difcursavedy-difcursy;
+        
+        
     }
+    
+    difcursy = difcursavedy;
+    difcurvspd = difcurvspd/2;
+    difcursy -= difcurvspd;
 }
 
 if keyboard_check_pressed(ord('H')) {
-    global.hidden = true;
+    global.hidden = !global.hidden;
 }
 
 /*if left {
@@ -459,6 +470,7 @@ if keyboard_check_pressed(ord('H')) {
     } else {
         draw_sprite_ext(s_cursor, 0, selectorposx, selectorposy, menuxscale, menuyscale, 0, c_blue, 1);
     }
+    draw_sprite(s_difficultycursor, 0, 0, difcursy);
 }
 
 </string>

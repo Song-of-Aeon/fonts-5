@@ -334,6 +334,9 @@
     <sprite>sprites\bk_reset_set</sprite>
     <sprite>sprites\s_help</sprite>
     <sprite>sprites\bk_helblinde</sprite>
+    <sprite>sprites\s_blendtest</sprite>
+    <sprite>sprites\s_difficultyblend</sprite>
+    <sprite>sprites\s_difficultycursor</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -373,6 +376,7 @@
     <script>scripts\c_lancerraps.gml</script>
     <script>scripts\sm_everythingwillfreeze.gml</script>
     <script>scripts\c_everythingwillfreeze.gml</script>
+    <script>scripts\sm_nocturne.gml</script>
     <script>scripts\c_nocturne.gml</script>
     <script>scripts\sm_reset_set.gml</script>
     <script>scripts\c_reset_set.gml</script>
@@ -441,9 +445,11 @@
       <script>scripts\x_the_explanation.gml</script>
       <script>scripts\x_sm_parser_create_old.gml</script>
     </scripts>
-    <script>scripts\sm_nocturne.gml</script>
     <script>scripts\c_eveniftheworlddeceivesyou.gml</script>
     <script>scripts\sm_eveniftheworlddeceivesyou.gml</script>
+    <scripts name="the easy">
+      <script>scripts\sm_lancerrapseasy.gml</script>
+    </scripts>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\z_ChromaticAbberation.shader</shader>
@@ -496,6 +502,7 @@
     <object>objects\o_vignette</object>
     <object>objects\o_noteburst</object>
     <object>objects\o_help</object>
+    <object>objects\o_blender</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\fontstitle</room>
