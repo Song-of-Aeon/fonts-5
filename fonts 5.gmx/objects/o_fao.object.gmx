@@ -61,7 +61,7 @@ if drawdark &gt;= 1.2 {
         ini_open("profile.ini");
         var i;
         for (i=0; i&lt;6; i++) {
-            ini_write_string("scores", "stage " + string(i), global.scoring[i]);
+            ini_write_string("scores"+string(global.difficulty), "stage " + string(i), global.scoring[i]);
         }
         ini_close();
         o_cutscene.active = false;

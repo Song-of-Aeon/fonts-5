@@ -65,22 +65,24 @@ global.gimmickactive = true;
 global.xmod = 8;
 global.hidden = false;
 
+global.difficulty = 1;
+
 if file_exists("profile.ini") {
     //game_load("profile.dat");
     ini_open("profile.ini");
-    global.scoring[0] = ini_read_string("scores", "stage 0", "00.00");
-    global.scoring[1] = ini_read_string("scores", "stage 1", "00.00");
-    global.scoring[2] = ini_read_string("scores", "stage 2", "00.00");
-    global.scoring[3] = ini_read_string("scores", "stage 3", "00.00");
-    global.scoring[4] = ini_read_string("scores", "stage 4", "00.00");
-    global.scoring[5] = ini_read_string("scores", "stage 5", "00.00");
+    global.scoring[0] = ini_read_string("scores"+string(global.difficulty), "stage 0", "00.00");
+    global.scoring[1] = ini_read_string("scores"+string(global.difficulty), "stage 1", "00.00");
+    global.scoring[2] = ini_read_string("scores"+string(global.difficulty), "stage 2", "00.00");
+    global.scoring[3] = ini_read_string("scores"+string(global.difficulty), "stage 3", "00.00");
+    global.scoring[4] = ini_read_string("scores"+string(global.difficulty), "stage 4", "00.00");
+    global.scoring[5] = ini_read_string("scores"+string(global.difficulty), "stage 5", "00.00");
     ini_close();
 }
 global.kaguya = false;
 global.notecover = s_kaguya;
 global.streamstring = false;
 audio_play_sound(m_night, 0, false);
-global.difficulty = 1;
+
 </string>
           </argument>
         </arguments>
@@ -314,6 +316,21 @@ global.difficulty = 1;
     selectorposy = selectorsavey;
     selectorvspd = selectorvspd/2;
     selectorposy -= selectorvspd;
+    
+    if swap {
+        global.difficulty = abs(global.difficulty-1);
+        if file_exists("profile.ini") {
+            //game_load("profile.dat");
+            ini_open("profile.ini");
+            global.scoring[0] = ini_read_string("scores"+string(global.difficulty), "stage 0", "00.00");
+            global.scoring[1] = ini_read_string("scores"+string(global.difficulty), "stage 1", "00.00");
+            global.scoring[2] = ini_read_string("scores"+string(global.difficulty), "stage 2", "00.00");
+            global.scoring[3] = ini_read_string("scores"+string(global.difficulty), "stage 3", "00.00");
+            global.scoring[4] = ini_read_string("scores"+string(global.difficulty), "stage 4", "00.00");
+            global.scoring[5] = ini_read_string("scores"+string(global.difficulty), "stage 5", "00.00");
+            ini_close();
+        }
+    }
 }
 
 if keyboard_check_pressed(ord('H')) {

@@ -257,7 +257,7 @@ lanespacing = laneup - laneleft;
 if lanes = 8 {
     switch state {
         case c_receptorinput:
-            if keyboard_check_pressed(vk_space) {
+            if swap {
                 state = c_receptorinputwo;
                 lanespeed = 32;
             }
@@ -267,7 +267,7 @@ if lanes = 8 {
             }
             break;
         case c_receptorinputwo:
-            if keyboard_check_pressed(vk_space) {
+            if swap {
                 state = c_receptorinput;
                 lanespeed = -32;
             }

@@ -1,5 +1,9 @@
 ///c_onemorenight
-song = sm_lancerraps();
+if global.difficulty = 1 {
+    song = sm_lancerraps();
+} else {
+    //song = sm_lancerrapseasy();
+}
 bpm = 170;
 title = "Lancer Raps";
 audio = m_lancerraps;

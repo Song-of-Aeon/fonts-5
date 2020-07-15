@@ -10,6 +10,7 @@ heldleft = keyboard_check(vk_left) + keyboard_check(ord('A')) + keyboard_check(o
 helddown = keyboard_check(vk_down) + keyboard_check(ord('S')) + keyboard_check(188);
 heldup = keyboard_check(vk_up) + keyboard_check(ord('K')) + keyboard_check(ord('W'));
 heldright = keyboard_check(vk_right) + keyboard_check(ord('L')) + keyboard_check(ord('D')) + keyboard_check(190);
+swap = keyboard_check_pressed(vk_space) + keyboard_check_pressed(ord('E'));
 
 /*
 left = keyboard_check_pressed(vk_left) + keyboard_check_pressed(ord('A'));
