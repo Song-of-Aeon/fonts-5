@@ -427,6 +427,8 @@ if lanes = 8 {
     draw_sprite_ext(global.receptor, 0, laneright+lanespacing*3, bar, mini*bop[7], mini*bop[7], 90, c_white, 1);
 }
 
+draw_text(100, 100, string(delta_time));
+
 
 
 

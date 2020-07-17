@@ -85,8 +85,8 @@ tookdur = false;
             <string>count++;
 
 if count &gt;= 240 {
-    x += hspd;
-    y += vspd;
+    x += hspd*delta_time/16675;
+    y += vspd*delta_time/16675;
 }
 
 sprite_index = global.mine;

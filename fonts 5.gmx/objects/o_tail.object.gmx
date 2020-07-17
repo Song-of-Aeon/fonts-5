@@ -66,8 +66,8 @@ sprite_index = global.freeze;
 image_alpha = head.image_alpha;
 count++;
 if count &gt;= 240 {
-    x += hspd;
-    y += vspd;
+    x += hspd*delta_time/16675;
+    y += vspd*delta_time/16675;
 }
 if head.object_index = o_roll {
     image_blend = c_purple;

@@ -147,8 +147,8 @@ if count &gt;= 240 {
         hspd = 0;
     }
     x = savedx;
-    x += hspd;
-    y += vspd;
+    x += hspd*delta_time/16675;
+    y += vspd*delta_time/16675;
 }
 
 if MELODYCHASER.notechange = false &amp;&amp; global.songscript = c_reset_set {
