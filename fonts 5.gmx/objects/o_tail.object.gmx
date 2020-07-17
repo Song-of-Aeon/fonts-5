@@ -36,6 +36,30 @@ head = 0;
 colour = c_white;
 unusable = false;
 count = 0;
+alarm[0] = 1;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>sprite_index = global.freeze;
 </string>
           </argument>
         </arguments>
@@ -62,19 +86,23 @@ count = 0;
     instance_destroy();
 }
 
-sprite_index = global.freeze;
-image_alpha = head.image_alpha;
+
+
 count++;
 if count &gt;= 240 {
-    x += hspd*delta_time/16675;
-    y += vspd*delta_time/16675;
+    y += vspd*global.truetime;
 }
-if head.object_index = o_roll {
-    image_blend = c_purple;
-    colour = c_purple;
+
+if y &lt; 720 + sprite_height/2 {
+    x += hspd*global.truetime;
+    if head.object_index = o_roll {
+        image_blend = c_purple;
+        colour = c_purple;
+    }
 }
 
 if unusable = false {
+    image_alpha = head.image_alpha;
     if y &lt;= MELODYCHASER.bar-64 || y &lt;= head.y+32 {
         with head {
             instance_destroy();
@@ -82,7 +110,6 @@ if unusable = false {
         MELODYCHASER.realscore += .2*(100/MELODYCHASER.notecount);
         instance_destroy();
     }
-
 } else if y &lt;= 0 {
     instance_destroy();
 }

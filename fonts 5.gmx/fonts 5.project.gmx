@@ -454,6 +454,7 @@
     <scripts name="the easy">
       <script>scripts\sm_lancerrapseasy.gml</script>
     </scripts>
+    <script>scripts\c_timebuster.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\z_ChromaticAbberation.shader</shader>

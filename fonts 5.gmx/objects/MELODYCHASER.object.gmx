@@ -105,6 +105,7 @@ if global.songscript = c_eonbreak {
 if global.noteoverride != 0 {
     c_noteoverride();
 }
+global.truetime = 1;
 </string>
           </argument>
         </arguments>
@@ -388,6 +389,7 @@ if global.gimmickactive = false {
     MELODYCHASER.lanes = 4;
 }
 
+global.truetime = c_timebuster();
 
 </string>
           </argument>

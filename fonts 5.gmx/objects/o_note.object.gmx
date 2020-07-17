@@ -146,48 +146,52 @@ if count &gt;= 240 {
     if abs(hspd) &lt;= .2 {
         hspd = 0;
     }
+    y += vspd*global.truetime;
+}
+
+
+
+
+
+
+if y &lt; 720 + sprite_height/2 {
     x = savedx;
-    x += hspd*delta_time/16675;
-    y += vspd*delta_time/16675;
-}
-
-if MELODYCHASER.notechange = false &amp;&amp; global.songscript = c_reset_set {
-    switch dir {
-        case 0:
-            image_angle = -90;
-            break;
-        case 1:
-            image_angle = 0;
-            break;
-        case 2:
-            image_angle = 180;
-            break;
-        case 3:
-            image_angle = 90;
-            break;
-    }
-}
-
-if fading {
-    if image_alpha &gt; 0 {
-        image_alpha -= .1;
-    }
-    if y &lt; view_yview/10 || y &lt; MELODYCHASER.bar+32 {
-        fading = false;
-    }
-} else if image_alpha &lt; 1 {
-    image_alpha += .1;
-}
-
-if y &lt;= MELODYCHASER.bar {
-    if instance_exists(o_textbox) &amp;&amp; !tookdir {
-        o_textbox.durability--;
-        tookdir = true;
-    } else if tookdir &amp;&amp; y &lt;= -32 {
-        instance_destroy();
+    x += hspd*global.truetime;
+    if MELODYCHASER.notechange = false &amp;&amp; global.songscript = c_reset_set {
+        switch dir {
+            case 0:
+                image_angle = -90;
+                break;
+            case 1:
+                image_angle = 0;
+                break;
+            case 2:
+                image_angle = 180;
+                break;
+            case 3:
+                image_angle = 90;
+                break;
+        }
     }
     
-} else if y &lt; 720 + sprite_height/2 {
+    if y &lt;= MELODYCHASER.bar {
+        if instance_exists(o_textbox) &amp;&amp; !tookdir {
+            o_textbox.durability--;
+            tookdir = true;
+        } else if tookdir &amp;&amp; y &lt;= -32 {
+            instance_destroy();
+        }
+    }
+    if fading {
+        if image_alpha &gt; 0 {
+            image_alpha -= .1;
+        }
+        if y &lt; view_yview/10 || y &lt; MELODYCHASER.bar+32 {
+            fading = false;
+        }
+    } else if image_alpha &lt; 1 {
+        image_alpha += .1;
+    }
     if MELODYCHASER.noteturn = true {
         image_angle += 20;
         //bitch++;
