@@ -10,7 +10,7 @@ if inputgimmick = false {
             windowBounceSpeed += arrayy[arraypos];
             gimmickstate = 0;
         } else if arrayx[arraypos] = "D" {
-            instance_create(640, 360, o_doctor);
+            //instance_create(640, 360, o_doctor);
         } else if arrayx[arraypos] = "T"  {
             if global.storymode = true {
                 instance_create(630, bar+100, o_textbox);

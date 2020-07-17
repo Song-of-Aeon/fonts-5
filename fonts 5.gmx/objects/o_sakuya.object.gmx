@@ -3,7 +3,7 @@
   <spriteName>s_sakuya</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-2</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -26,6 +26,81 @@
           <argument>
             <kind>1</kind>
             <string>bulletcount = array_create(4);
+spellcard = "Temporal Mark [Melody Chaser]"
+shootingdir = 0;
+minus = .5;
+count = 0;
+image_xscale = .1;
+image_yscale = 3;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>image_xscale = image_xscale*1.2;
+image_xscale = clamp(image_xscale, -3, 3);
+switch spellcard {
+    case "Temporal Mark [Melody Chaser]":
+        count++;
+        if count = 20 {
+            shootingdir = random(90) - 45;
+            minus = (irandom(1)-.5)*2;
+        } else if count &gt; 20 {
+            with instance_create(x, y-(count-20)*8, o_slowknife) {
+                speed = 4;
+                direction = other.shootingdir+(other.count-20)*other.minus-90;
+            }
+        }
+        if count &gt; 40 {
+            count = 0;
+        }
+        break;
+    
+    case "Pointed Moment [Guignol's Grace]":
+        
+        break;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_sprite_ext(s_sakuyabg, 0, x, y, 2.5, 2.5, 0, c_white, .5);
+draw_self();
 </string>
           </argument>
         </arguments>

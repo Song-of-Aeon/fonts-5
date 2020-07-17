@@ -85,8 +85,49 @@ switch danmaku {
             }
         }  
         break;
+    
+    
     case 3:
+        if !instance_exists(o_sakuya) {
+            with instance_create(lanedown+lanespacing/4, bar+100, o_sakuya) {
+                spellcard = "Temporal Mark [Melody Chaser]";
+            }
+        }
+        if instance_place(laneleft, bar-64, o_note) != noone {
+            instance_destroy(instance_place(laneleft, bar, o_note));
+            with o_projectile {
+                speed = 200;
+            }
+        }
         
+        if instance_place(lanedown, bar-64, o_note) != noone {
+            instance_destroy(instance_place(lanedown, bar, o_note));
+            with o_projectile {
+                speed = 200;
+            }
+        }
+        if instance_place(laneup, bar-64, o_note) != noone {
+            instance_destroy(instance_place(laneup, bar, o_note));
+            with o_projectile {
+                speed = 200;
+            }
+        }
+        
+        if instance_place(laneright, bar-64, o_note) != noone {
+            instance_destroy(instance_place(laneright, bar, o_note));
+            with o_projectile {
+                speed = 200;
+            }
+        }
+        break;
+    
+    
+    case 4:
+        if !instance_exists(o_sakuya) {
+            with instance_create(lancedown+lanespacing/4, bar+100, o_sakuya) {
+                spellcard = "Pointed Moment [Guignol's Grace]";
+            }
+        }
         break;
 }
 

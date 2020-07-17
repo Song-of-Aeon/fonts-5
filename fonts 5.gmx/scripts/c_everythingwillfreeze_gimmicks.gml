@@ -7,7 +7,7 @@ if inputgimmick = false {
     switch arrayx[arraypos] {
         case "SOUL":
             danmaku++;
-            instance_create(550, lanedown+lanespacing/4, o_soul);
+            instance_create(550, lanedown+lanespacing/4+16, o_soul);
             state = c_receptordanmaku;
             break;
         case "UNSOUL":
