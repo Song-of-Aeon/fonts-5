@@ -237,8 +237,8 @@
       <script>scripts\st_run2.gml</script>
       <script>scripts\st_run.gml</script>
     </scripts>
-    <script>scripts\c_reset_set_gimmicks.gml</script>
     <script>scripts\c_everythingwillfreeze_gimmicks.gml</script>
+    <script>scripts\c_reset_set_gimmicks.gml</script>
     <script>scripts\c_eonbreak_gimmicks.gml</script>
     <scripts name="the obsolete">
       <script>scripts\sm_onemorenight.gml</script>
@@ -253,6 +253,7 @@
     <script>scripts\c_eveniftheworlddeceivesyou.gml</script>
     <script>scripts\sm_eveniftheworlddeceivesyou.gml</script>
     <scripts name="the easy">
+      <script>scripts\sm_reset_set_easy.gml</script>
       <script>scripts\sm_lancerrapseasy.gml</script>
     </scripts>
     <script>scripts\c_timebuster.gml</script>

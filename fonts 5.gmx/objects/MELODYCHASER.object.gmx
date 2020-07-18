@@ -486,7 +486,7 @@ if lanes = 8 {
     depth = 5;
 }
 
-draw_text(100, 100, string(delta_time));
+//draw_text(100, 100, string(delta_time));
 
 
 

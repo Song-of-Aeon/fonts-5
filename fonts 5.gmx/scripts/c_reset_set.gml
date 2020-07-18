@@ -1,5 +1,9 @@
 ///c_reset_set
-song = sm_reset_set();
+if global.difficulty = 1 {
+    song = sm_reset_set();
+} else {
+    song = sm_reset_set_easy();
+}
 bpm = 196;
 title = "Reset Set";
 audio = m_reset_set;

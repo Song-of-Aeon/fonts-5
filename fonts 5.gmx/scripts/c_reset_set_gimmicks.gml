@@ -15,7 +15,7 @@ if inputgimmick = false {
                 chokepoint = 650;
                 break;
             case "SE":
-                chokepoint -= 30;
+                chokepoint -= 20+global.difficulty*10;
                 break;
             case "RESET":
                 chokepoint = 2000;
