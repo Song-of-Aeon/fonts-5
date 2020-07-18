@@ -20,5 +20,7 @@ if right {
 }
 
 
-
+if heldleft {
+    //if range(bar) bar-bpm*global.xmod/20
+}
 

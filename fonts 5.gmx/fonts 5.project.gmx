@@ -6,206 +6,6 @@
   </Configs>
   <datafiles number="11" name="datafiles">
     <datafile>
-      <name>Jubo 6x1.png</name>
-      <exists>-1</exists>
-      <size>242919</size>
-      <exportAction>2</exportAction>
-      <exportDir></exportDir>
-      <overwrite>0</overwrite>
-      <freeData>-1</freeData>
-      <removeEnd>0</removeEnd>
-      <store>0</store>
-      <ConfigOptions>
-        <Config name="Default">
-          <CopyToMask>9223372036854775807</CopyToMask>
-        </Config>
-        <Config name="lol">
-          <CopyToMask>9223372036854775807</CopyToMask>
-        </Config>
-      </ConfigOptions>
-      <filename>Jubo 6x1.png</filename>
-    </datafile>
-    <datafile>
-      <name>More One Night.avi</name>
-      <exists>-1</exists>
-      <size>24474546</size>
-      <exportAction>2</exportAction>
-      <exportDir></exportDir>
-      <overwrite>0</overwrite>
-      <freeData>-1</freeData>
-      <removeEnd>0</removeEnd>
-      <store>0</store>
-      <ConfigOptions>
-        <Config name="Default">
-          <CopyToMask>9223372036854775807</CopyToMask>
-        </Config>
-        <Config name="lol">
-          <CopyToMask>9223372036854775807</CopyToMask>
-        </Config>
-      </ConfigOptions>
-      <filename>More One Night.avi</filename>
-    </datafile>
-    <datafile>
-      <name>More One Night.lrc</name>
-      <exists>-1</exists>
-      <size>1869</size>
-      <exportAction>2</exportAction>
-      <exportDir></exportDir>
-      <overwrite>0</overwrite>
-      <freeData>-1</freeData>
-      <removeEnd>0</removeEnd>
-      <store>0</store>
-      <ConfigOptions>
-        <Config name="Default">
-          <CopyToMask>9223372036854775807</CopyToMask>
-        </Config>
-        <Config name="lol">
-          <CopyToMask>9223372036854775807</CopyToMask>
-        </Config>
-      </ConfigOptions>
-      <filename>More One Night.lrc</filename>
-    </datafile>
-    <datafile>
-      <name>More One Night.mp3</name>
-      <exists>-1</exists>
-      <size>3928446</size>
-      <exportAction>2</exportAction>
-      <exportDir></exportDir>
-      <overwrite>0</overwrite>
-      <freeData>-1</freeData>
-      <removeEnd>0</removeEnd>
-      <store>0</store>
-      <ConfigOptions>
-        <Config name="Default">
-          <CopyToMask>9223372036854775807</CopyToMask>
-        </Config>
-        <Config name="lol">
-          <CopyToMask>9223372036854775807</CopyToMask>
-        </Config>
-      </ConfigOptions>
-      <filename>More One Night.mp3</filename>
-    </datafile>
-    <datafile>
-      <name>More One Night.ogg</name>
-      <exists>-1</exists>
-      <size>5154474</size>
-      <exportAction>2</exportAction>
-      <exportDir></exportDir>
-      <overwrite>0</overwrite>
-      <freeData>-1</freeData>
-      <removeEnd>0</removeEnd>
-      <store>0</store>
-      <ConfigOptions>
-        <Config name="Default">
-          <CopyToMask>9223372036854775807</CopyToMask>
-        </Config>
-        <Config name="lol">
-          <CopyToMask>9223372036854775807</CopyToMask>
-        </Config>
-      </ConfigOptions>
-      <filename>More One Night.ogg</filename>
-    </datafile>
-    <datafile>
-      <name>More One Night.sm</name>
-      <exists>-1</exists>
-      <size>14209</size>
-      <exportAction>2</exportAction>
-      <exportDir></exportDir>
-      <overwrite>0</overwrite>
-      <freeData>-1</freeData>
-      <removeEnd>0</removeEnd>
-      <store>0</store>
-      <ConfigOptions>
-        <Config name="Default">
-          <CopyToMask>9223372036854775807</CopyToMask>
-        </Config>
-        <Config name="lol">
-          <CopyToMask>9223372036854775807</CopyToMask>
-        </Config>
-      </ConfigOptions>
-      <filename>More One Night.sm</filename>
-    </datafile>
-    <datafile>
-      <name>More One Night-bg.png</name>
-      <exists>-1</exists>
-      <size>794586</size>
-      <exportAction>2</exportAction>
-      <exportDir></exportDir>
-      <overwrite>0</overwrite>
-      <freeData>-1</freeData>
-      <removeEnd>0</removeEnd>
-      <store>0</store>
-      <ConfigOptions>
-        <Config name="Default">
-          <CopyToMask>9223372036854775807</CopyToMask>
-        </Config>
-        <Config name="lol">
-          <CopyToMask>9223372036854775807</CopyToMask>
-        </Config>
-      </ConfigOptions>
-      <filename>More One Night-bg.png</filename>
-    </datafile>
-    <datafile>
-      <name>More One Night-bg2.png</name>
-      <exists>-1</exists>
-      <size>1171685</size>
-      <exportAction>2</exportAction>
-      <exportDir></exportDir>
-      <overwrite>0</overwrite>
-      <freeData>-1</freeData>
-      <removeEnd>0</removeEnd>
-      <store>0</store>
-      <ConfigOptions>
-        <Config name="Default">
-          <CopyToMask>9223372036854775807</CopyToMask>
-        </Config>
-        <Config name="lol">
-          <CopyToMask>9223372036854775807</CopyToMask>
-        </Config>
-      </ConfigOptions>
-      <filename>More One Night-bg2.png</filename>
-    </datafile>
-    <datafile>
-      <name>More One Night-bn.png</name>
-      <exists>-1</exists>
-      <size>167931</size>
-      <exportAction>2</exportAction>
-      <exportDir></exportDir>
-      <overwrite>0</overwrite>
-      <freeData>-1</freeData>
-      <removeEnd>0</removeEnd>
-      <store>0</store>
-      <ConfigOptions>
-        <Config name="Default">
-          <CopyToMask>9223372036854775807</CopyToMask>
-        </Config>
-        <Config name="lol">
-          <CopyToMask>9223372036854775807</CopyToMask>
-        </Config>
-      </ConfigOptions>
-      <filename>More One Night-bn.png</filename>
-    </datafile>
-    <datafile>
-      <name>More One Night-jacket.png</name>
-      <exists>-1</exists>
-      <size>155359</size>
-      <exportAction>2</exportAction>
-      <exportDir></exportDir>
-      <overwrite>0</overwrite>
-      <freeData>-1</freeData>
-      <removeEnd>0</removeEnd>
-      <store>0</store>
-      <ConfigOptions>
-        <Config name="Default">
-          <CopyToMask>9223372036854775807</CopyToMask>
-        </Config>
-        <Config name="lol">
-          <CopyToMask>9223372036854775807</CopyToMask>
-        </Config>
-      </ConfigOptions>
-      <filename>More One Night-jacket.png</filename>
-    </datafile>
-    <datafile>
       <name>Rondalo_.ttf</name>
       <exists>-1</exists>
       <size>48288</size>
@@ -341,6 +141,7 @@
     <sprite>sprites\s_difficultycursor</sprite>
     <sprite>sprites\s_sakuya</sprite>
     <sprite>sprites\s_sakuyabg</sprite>
+    <sprite>sprites\s_privatesquare</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -486,6 +287,7 @@
     <object>objects\o_soul</object>
     <object>objects\o_projectile</object>
     <object>objects\o_knife</object>
+    <object>objects\o_privatesquare</object>
     <object>objects\o_bullet</object>
     <object>objects\o_bulwave</object>
     <objects name="shaders">

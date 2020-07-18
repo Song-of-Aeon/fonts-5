@@ -52,19 +52,28 @@ ranktext = 11037;
 timecounter = 0;
 songstarting = false;
 if global.songscript = c_lancerraps {
-laneleft = 64+minibig;
-lanedown = 128+minibig*2;
-laneup = 192+minibig*3;
-laneright = 256+minibig*4;
+laneleft = 394-96-minibig*1.5;
+lanedown = 394-32-minibig*.5;
+laneup = 394+32+minibig*.5;
+laneright = 394+96+minibig*1.5;
+laneleftwo = 884-96-minibig*1.5;
+lanedowntwo = 884-32-minibig*.5;
+laneuptwo = 884+32+minibig*.5;
+lanerightwo = 884+96+minibig*1.5;
+bluepos = 394;
 } else {
 laneleft = 544-minibig*1.5;
 lanedown = 608-minibig*.5;
 laneup = 672+minibig*.5;
 laneright = 736+minibig*1.5;
+bluepos = 640;
 }
 lanespacing = 64;
 lanes = 4;
 laneselected = lanedown+(lanespacing/2);
+
+blueposaved = bluepos;
+bluehspd = 0;
 lanespeed = 0;
 hp = 12;
 //measurescoring = array_create(48);
@@ -144,10 +153,14 @@ if !instance_exists(o_smparser) {
         mini += .1;
         minibig = (mini-1)*64;
         if global.songscript = c_lancerraps {
-            laneleft = 64+minibig;
-            lanedown = 128+minibig*2;
-            laneup = 192+minibig*3;
-            laneright = 256+minibig*4;
+            laneleft = 394-96-minibig*1.5;
+            lanedown = 394-32-minibig*.5;
+            laneup = 394+32+minibig*.5;
+            laneright = 394+96+minibig*1.5;
+            laneleftwo = 884-96-minibig*1.5;
+            lanedowntwo = 884-32-minibig*.5;
+            laneuptwo = 884+32+minibig*.5;
+            lanerightwo = 884+96+minibig*1.5;
         } else {
             laneleft = 534-minibig*1.5;
             lanedown = 598-minibig*.5;
@@ -160,10 +173,14 @@ if !instance_exists(o_smparser) {
         mini -= .1;
         minibig = (mini-1)*64;
         if global.songscript = c_lancerraps {
-            laneleft = 64+minibig;
-            lanedown = 128+minibig*2;
-            laneup = 192+minibig*3;
-            laneright = 256+minibig*4;
+            laneleft = 394-96-minibig*1.5;
+            lanedown = 394-32-minibig*.5;
+            laneup = 394+32+minibig*.5;
+            laneright = 394+96+minibig*1.5;
+            laneleftwo = 884-96-minibig*1.5;
+            lanedowntwo = 884-32-minibig*.5;
+            laneuptwo = 884+32+minibig*.5;
+            lanerightwo = 884+96+minibig*1.5;
         } else {
             laneleft = 534-minibig*1.5;
             lanedown = 598-minibig*.5;
@@ -255,7 +272,7 @@ lanespacing = laneup - laneleft;
     }
 }*/
 
-if lanes = 8 {
+/*if lanes = 8 {
     switch state {
         case c_receptorinput:
             if swap {
@@ -278,7 +295,7 @@ if lanes = 8 {
             }
             break;
     }
-}
+}*/
 
 
 
@@ -385,6 +402,26 @@ switch global.songscript {
     }
 }*/
 
+if lanes &gt; 4 {
+    if swap {
+        switch state {
+            case c_receptorinput:
+                    state = c_receptorinputwo;
+                    blueposaved = 884;
+                    bluehspd = 490;
+                break;
+            case c_receptorinputwo:
+                    state = c_receptorinput;
+                    blueposaved = 394;
+                    bluehspd = -490;
+                break;
+        }
+    }
+    bluepos = blueposaved;
+    bluehspd = bluehspd/2;
+    bluepos -= bluehspd;
+}
+
 if global.gimmickactive = false {
     MELODYCHASER.lanes = 4;
 }
@@ -415,7 +452,8 @@ global.truetime = c_timebuster();
             <kind>1</kind>
             <string>depth = 5;
 draw_sprite(songbg, 0, 0, 0);
-draw_sprite_ext(s_blueselected, 0, laneselected+12.8, 0, mini, 1, 0, c_white, 1);
+//draw_sprite_ext(s_blueselected, 0, laneselected+12.8, 0, mini, 1, 0, c_white, 1);
+draw_sprite_ext(s_blueselected, 0, bluepos, 0, mini, 1, 0, c_white, 1);
 draw_set_font(f_scoreronaldo);
 
 draw_sprite_ext(global.receptor, 0, laneleft, bar, mini*bop[0], mini*bop[0], -90, c_white, 1);
@@ -423,10 +461,29 @@ draw_sprite_ext(global.receptor, 0, lanedown, bar, mini*bop[1], mini*bop[1], 0, 
 draw_sprite_ext(global.receptor, 0, laneup, bar, mini*bop[2], mini*bop[2], 180, c_white, 1);
 draw_sprite_ext(global.receptor, 0, laneright, bar, mini*bop[3], mini*bop[3], 90, c_white, 1);
 if lanes = 8 {
-    draw_sprite_ext(global.receptor, 0, laneleft+lanespacing*3, bar, mini*bop[4], mini*bop[4], -90, c_white, 1);
-    draw_sprite_ext(global.receptor, 0, lanedown+lanespacing*3, bar, mini*bop[5], mini*bop[5], 0, c_white, 1);
-    draw_sprite_ext(global.receptor, 0, laneup+lanespacing*3, bar, mini*bop[6], mini*bop[6], 180, c_white, 1);
-    draw_sprite_ext(global.receptor, 0, laneright+lanespacing*3, bar, mini*bop[7], mini*bop[7], 90, c_white, 1);
+    draw_sprite_ext(global.receptor, 0, laneleftwo, bar, mini*bop[4], mini*bop[4], -90, c_white, 1);
+    draw_sprite_ext(global.receptor, 0, lanedowntwo, bar, mini*bop[5], mini*bop[5], 0, c_white, 1);
+    draw_sprite_ext(global.receptor, 0, laneuptwo, bar, mini*bop[6], mini*bop[6], 180, c_white, 1);
+    draw_sprite_ext(global.receptor, 0, lanerightwo, bar, mini*bop[7], mini*bop[7], 90, c_white, 1);
+    var l;
+    for (l=0; l&lt;floor(hp); l++) {
+        draw_sprite(s_heart, 0, 640, bar+l*16);
+    }
+    depth = -3;
+    draw_text(blueposaved, bar+200, string(combo));
+    draw_sprite_ext(s_judgement, noterank+3, blueposaved, bar+150, bop[8], bop[8], noterank, c_white, 1);
+    depth = 5;
+} else {
+    var l;
+    for (l=0; l&lt;floor(hp); l++) {
+        draw_sprite(s_heart, 0, laneright+80*mini, bar+l*16);
+    }
+    depth = -3;
+    draw_text(lanedown+lanespacing/4, bar+200, string(combo));
+    //draw_text(lanedown+lanespacing/4, bar+400, string(comborank));
+    //draw_text(lanedown+lanespacing/4, bar+200, string(ranktext));
+    draw_sprite_ext(s_judgement, noterank+3, lanedown+lanespacing/4, bar+150, bop[8], bop[8], noterank, c_white, 1);
+    depth = 5;
 }
 
 draw_text(100, 100, string(delta_time));
@@ -439,20 +496,12 @@ draw_text(100, 100, string(delta_time));
 draw_set_halign(fa_center);
 draw_set_colour(c_white);
 draw_set_font(f_combo);
-depth = -3;
-draw_text(lanedown+lanespacing/4, bar+200, string(combo));
-//draw_text(lanedown+lanespacing/4, bar+400, string(comborank));
-//draw_text(lanedown+lanespacing/4, bar+200, string(ranktext));
-draw_sprite_ext(s_judgement, noterank+3, lanedown+lanespacing/4, bar+150, bop[8], bop[8], noterank, c_white, 1);
-depth = 5;
+
 draw_set_font(f_scoreronaldo);
 draw_set_colour(c_black);
 draw_set_halign(fa_left);
 
-var l;
-for (l=0; l&lt;floor(hp); l++) {
-    draw_sprite(s_heart, 0, laneright+80*mini, bar+l*16);
-}
+
 draw_line_width(0, chokepoint, window_get_width(), chokepoint, 5);
 /*var m;
 for (m=0;)

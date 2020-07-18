@@ -86,6 +86,7 @@ global.notecover = s_kaguya;
 global.streamstring = false;
 audio_play_sound(m_night, 0, false);
 
+image_speed = 0;
 </string>
           </argument>
         </arguments>
