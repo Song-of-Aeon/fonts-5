@@ -299,7 +299,6 @@
     <object>objects\o_soul</object>
     <object>objects\o_projectile</object>
     <object>objects\o_knife</object>
-    <object>objects\o_privatesquare</object>
     <object>objects\o_bullet</object>
     <object>objects\o_bulwave</object>
     <objects name="shaders">
@@ -325,6 +324,8 @@
     <object>objects\o_blender</object>
     <object>objects\o_sakuya</object>
     <object>objects\o_slowknife</object>
+    <object>objects\o_bounceknife</object>
+    <object>objects\o_privatesquare</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\fontstitle</room>

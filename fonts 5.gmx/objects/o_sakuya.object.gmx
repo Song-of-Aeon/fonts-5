@@ -29,9 +29,32 @@
 spellcard = "Temporal Mark [Melody Chaser]"
 shootingdir = 0;
 minus = .5;
-count = 0;
+count = -144;
 image_xscale = .1;
 image_yscale = 3;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="1" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>instance_destroy(o_projectile);
 </string>
           </argument>
         </arguments>
@@ -64,8 +87,9 @@ switch spellcard {
             minus = (irandom(1)-.5)*2;
         } else if count &gt; 20 {
             with instance_create(x, y-(count-20)*8, o_slowknife) {
-                speed = 4;
+                //speed = 4;
                 direction = other.shootingdir+(other.count-20)*other.minus-90;
+                //direction = point_direction(x, y, o_soul.x, o_soul.y);
             }
         }
         if count &gt; 40 {
@@ -74,7 +98,23 @@ switch spellcard {
         break;
     
     case "Pointed Moment [Guignol's Grace]":
-        
+        count++;
+        if count &gt;= 96 {
+            with instance_create(x+random(MELODYCHASER.lanespacing*2)-MELODYCHASER.lanespacing, y, o_privatesquare) {
+                direction = -90;
+                speed = 2;
+            }
+            count = 0;
+        }
+        if count % 48 = 0 {
+            var i;
+            for (i=random(.7)-1.35; i&lt;2; i++) {
+                with instance_create(x, y, o_bounceknife) {
+                    hspd = i*3;
+                    vspd = 6;
+                }
+            }
+        }
         break;
 }
 </string>

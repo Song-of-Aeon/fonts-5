@@ -563,9 +563,6 @@ draw_sprite
 if count &lt; 230 {
     draw_sprite(s_prep, floor(count/60), 675, 360);
 }
-if state = c_receptordanmaku {
-    draw_sprite_ext(s_bigdark, 0, 0, 0, 1, 1, 0, c_white, .7);
-}
 
 </string>
           </argument>

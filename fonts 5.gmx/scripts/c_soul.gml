@@ -66,7 +66,8 @@ if collision_line(x, y, xprevious, yprevious, o_projectile, false, false) && inv
     inv = true;
     image_alpha = .5;
     alarm[1] = 60;
-    MELODYCHASER.hp -= 1;
+    MELODYCHASER.hp -= 2;
+    MELODYCHASER.realscore -= (100/MELODYCHASER.notecount)*2;
 }
 
 

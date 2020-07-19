@@ -112,8 +112,35 @@ switch danmaku {
     
     case 4:
         if !instance_exists(o_sakuya) {
-            with instance_create(lancedown+lanespacing/4, bar+100, o_sakuya) {
+            with instance_create(lanedown+lanespacing/4, bar+100, o_sakuya) {
                 spellcard = "Pointed Moment [Guignol's Grace]";
+            }
+        }
+        
+        if f_danmakudetection(laneleft) {
+            with instance_create(laneleft, bar, o_bounceknife) {
+                hspd = -random(4);
+                vspd = 4;
+            }
+        }
+        
+        if f_danmakudetection(lanedown) {
+            with instance_create(lanedown, bar, o_bounceknife) {
+                hspd = -random(2);
+                vspd = 6;
+            }
+        }
+        if f_danmakudetection(laneup) {
+            with instance_create(laneup, bar, o_bounceknife) {
+                hspd = random(2);
+                vspd = 6;
+            }
+        }
+        
+        if f_danmakudetection(laneright) {
+            with instance_create(laneright, bar, o_bounceknife) {
+                hspd = random(4);
+                vspd = 4;
             }
         }
         break;

@@ -379,6 +379,7 @@ if room = rhythm_limbo {
     if MELODYCHASER.comborank &lt;= truecombo {
         truecombo = MELODYCHASER.comborank;
     }
+    depth = -1;
 }
 
 
@@ -410,6 +411,7 @@ if room = rhythm_limbo {
           <argument>
             <kind>1</kind>
             <string>if room = stagemenu {
+    depth = 0;
     draw_self();
     draw_set_colour(c_white);
     //draw_text(100, 100, string(menuposition));
@@ -505,8 +507,11 @@ if room = rhythm_limbo {
         draw_sprite_ext(s_cursor, 0, selectorposx, selectorposy, menuxscale, menuyscale, 0, c_blue, 1);
     }
     draw_sprite(s_difficultycursor, 0, 0, difcursy);
+} else if room = rhythm_limbo {
+    if MELODYCHASER.state = c_receptordanmaku {
+        draw_sprite_ext(s_bigdark, 0, 0, 0, 1, 1, 0, c_white, .7);
+    }
 }
-
 </string>
           </argument>
         </arguments>

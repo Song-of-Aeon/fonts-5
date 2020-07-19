@@ -13,6 +13,7 @@ if collision_point(argument0, bar, o_note, false, false) != noone {
         }
     }
     instance_destroy(thenote);
+    realscore += 100/notecount;
     return true;
 } else {
     return false;
