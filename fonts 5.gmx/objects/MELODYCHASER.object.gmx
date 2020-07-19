@@ -174,10 +174,10 @@ if !instance_exists(o_smparser) {
             laneuptwo = 884+32+minibig*.5;
             lanerightwo = 884+96+minibig*1.5;
         } else {
-            laneleft = 534-minibig*1.5;
-            lanedown = 598-minibig*.5;
-            laneup = 662+minibig*.5;
-            laneright = 726+minibig*1.5;
+            laneleft = 544-minibig*1.5;
+            lanedown = 608-minibig*.5;
+            laneup = 672+minibig*.5;
+            laneright = 736+minibig*1.5;
         }
 
     }
@@ -194,10 +194,10 @@ if !instance_exists(o_smparser) {
             laneuptwo = 884+32+minibig*.5;
             lanerightwo = 884+96+minibig*1.5;
         } else {
-            laneleft = 534-minibig*1.5;
-            lanedown = 598-minibig*.5;
-            laneup = 662+minibig*.5;
-            laneright = 726+minibig*1.5;
+            laneleft = 544-minibig*1.5;
+            lanedown = 608-minibig*.5;
+            laneup = 672+minibig*.5;
+            laneright = 736+minibig*1.5;
         }
 
     }
@@ -326,7 +326,7 @@ if !instance_exists(o_note) &amp;&amp; instance_exists(o_smparser) {
 }
 
 if (back &amp;&amp; !instance_exists(o_fao)) || (hp &lt;= 0 &amp;&amp; global.songscript != c_everythingwillfreeze) || countwo = 300 {
-    if global.storymode = true &amp;&amp; hp &gt; 0 &amp;&amp; !back { //&amp;&amp; !audio_is_playing(song)
+    if global.storymode = true &amp;&amp; hp &gt; 0  { //&amp;&amp; !audio_is_playing(song) || !back
         with instance_create(0, 0, o_fao) {
             leaving = cutscene;
             depth = -3;
