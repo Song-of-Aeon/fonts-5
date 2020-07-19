@@ -31,7 +31,7 @@ dir = 0;
 image_speed = 0;
 //instance_destroy();
 tail = 0;
-image_blend = c_purple;
+//image_blend = c_purple;
 count = 0;
 alarm[0] = 5-irandom(4);
 fading = false;
@@ -59,7 +59,7 @@ alarm[1] = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>sprite_index = global.freeze;
+            <string>sprite_index = global.roll;
 </string>
           </argument>
         </arguments>

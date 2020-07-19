@@ -1,8 +1,7 @@
 ///c_receptordanmaku
 switch danmaku {
     case 1:
-        if instance_place(laneleft, bar-64, o_note) != noone {
-            instance_destroy(instance_place(laneleft, bar, o_note));
+        if f_danmakudetection(laneleft) {
             with instance_create(laneleft, bar, o_knife) {
                 direction = point_direction(x, y, o_soul.x, o_soul.y);
                 speed = 10;
@@ -10,8 +9,7 @@ switch danmaku {
             }
         }
         
-        if instance_place(lanedown, bar-64, o_note) != noone {
-            instance_destroy(instance_place(lanedown, bar, o_note));
+        if f_danmakudetection(lanedown) {
             var i;
             for (i=0; i<=3; i++) {
                 var newbullet = instance_create(lanedown, bar, o_bullet);
@@ -19,8 +17,7 @@ switch danmaku {
                 newbullet.speed = 6+i/3;
             }
         }
-        if instance_place(laneup, bar-64, o_note) != noone {
-            instance_destroy(instance_place(laneup, bar, o_note));
+        if f_danmakudetection(laneup) {
             var j;
             for (j=0; j<=3; j++) {
                 var newbullet = instance_create(laneup, bar, o_bullet);
@@ -30,8 +27,7 @@ switch danmaku {
             }
         }
         
-        if instance_place(laneright, bar-64, o_note) != noone {
-            instance_destroy(instance_place(laneright, bar, o_note));
+        if f_danmakudetection(laneright) {
             with instance_create(laneright, bar, o_knife) {
                 direction = point_direction(x, y, o_soul.x, o_soul.y);
                 speed = 10;
@@ -40,8 +36,7 @@ switch danmaku {
         }
         break;
     case 2:
-        if instance_place(laneleft, bar-64, o_note) != noone {
-            instance_destroy(instance_place(laneleft, bar, o_note));
+        if f_danmakudetection(laneleft) {
             var i;
             for (i=0; i<=4; i++) {
                 var newbullet = instance_create(laneleft, bar, o_bullet);
@@ -50,14 +45,19 @@ switch danmaku {
             }
         }    
     
-    
-        if instance_place(laneup, bar-64, o_note) != noone {
-            instance_destroy(instance_place(laneup, bar, o_note));
+        if f_danmakudetection(lanedown) {
+            downwave = -(irandom(1) + 1);
+        }
+        if f_danmakudetection(laneup) {
             upwave = irandom(1) + 1;
         }
-        if instance_place(lanedown, bar-64, o_note) != noone {
-            instance_destroy(instance_place(lanedown, bar, o_note));
-            downwave = irandom(1) + 1;
+        
+        if downwave < 0 {
+            with instance_create(lanedown, bar, o_bulwave) {
+                direction = other.downwave*35-50 +(random(60)-30);
+                speed = 5;
+            }
+            downwave++;        
         }
         if upwave > 0 {
             with instance_create(laneup, bar, o_bulwave) {
@@ -67,16 +67,8 @@ switch danmaku {
             upwave--;
     
         }
-        if downwave < 0 {
-            with instance_create(lanedown, bar, o_bulwave) {
-                direction = other.downwave*35-50 +(random(60)-30);
-                speed = 5;
-            }
-            downwave++;        
-        }
         
-        if instance_place(laneright, bar-64, o_note) != noone {
-            instance_destroy(instance_place(laneright, bar, o_note));
+        if f_danmakudetection(laneright) {
             var i;
             for (i=0; i<=4; i++) {
                 var newbullet = instance_create(laneright, bar, o_bullet);
@@ -93,28 +85,24 @@ switch danmaku {
                 spellcard = "Temporal Mark [Melody Chaser]";
             }
         }
-        if instance_place(laneleft, bar-64, o_note) != noone {
-            instance_destroy(instance_place(laneleft, bar, o_note));
+        if f_danmakudetection(laneleft) {
             with o_projectile {
                 speed = 200;
             }
         }
         
-        if instance_place(lanedown, bar-64, o_note) != noone {
-            instance_destroy(instance_place(lanedown, bar, o_note));
+        if f_danmakudetection(lanedown) {
             with o_projectile {
                 speed = 200;
             }
         }
-        if instance_place(laneup, bar-64, o_note) != noone {
-            instance_destroy(instance_place(laneup, bar, o_note));
+        if f_danmakudetection(laneup) {
             with o_projectile {
                 speed = 200;
             }
         }
         
-        if instance_place(laneright, bar-64, o_note) != noone {
-            instance_destroy(instance_place(laneright, bar, o_note));
+        if f_danmakudetection(laneright) {
             with o_projectile {
                 speed = 200;
             }

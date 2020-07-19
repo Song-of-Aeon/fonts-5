@@ -56,8 +56,8 @@ if global.gimmickactive = false {instance_destroy()}; //what awful ways there ar
 count++;
 
 if count &gt;= 240 {
-    x += hspd;
-    y += vspd;
+    x += hspd*global.truetime;
+    y += vspd*global.truetime;
 }
 
 

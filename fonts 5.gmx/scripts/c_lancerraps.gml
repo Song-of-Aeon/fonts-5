@@ -12,6 +12,7 @@ if global.noteoverride = 0 {
     global.blue = s_ao;
     global.purple = s_murasaki;
     global.freeze = s_midori;
+    global.roll = s_roru;
     global.effect = s_efekuto;
     global.mine = s_bakudan;
     global.receptor = s_reseputaa;

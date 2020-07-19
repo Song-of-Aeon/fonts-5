@@ -34,7 +34,6 @@ image_yscale = MELODYCHASER.mini;
 holder = true;
 hspd = 0;
 vspd = 0;
-sprite_index = global.freeze;
 </string>
           </argument>
         </arguments>

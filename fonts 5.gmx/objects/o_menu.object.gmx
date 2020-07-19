@@ -41,12 +41,12 @@ menuyscale = 1;
 lockon = 0;
 
 global.scoring[0] = 0;
-global.scoring[1] = "00.00";
-global.scoring[2] = "00.00";
-global.scoring[3] = "00.00";
-global.scoring[4] = "00.00";
-global.scoring[5] = "00.00";
-global.scoring[6] = "00.00";
+global.scoring[1] = "00.00L";
+global.scoring[2] = "00.00L";
+global.scoring[3] = "00.00L";
+global.scoring[4] = "00.00L";
+global.scoring[5] = "00.00L";
+global.scoring[6] = "00.00L";
 global.currentstage = 6;
 scoreshow = array_create(6);
 scoreshowcolour = array(c_white, c_white, c_white, c_white, c_white, c_white);
@@ -55,6 +55,7 @@ global.songscript = c_jumptest;
 global.storymode = false;
 global.cutscenecount = 0;
 global.megastream = false;
+truecombo = 0;
 
 global.red = s_red;
 global.blue = s_blue;
@@ -73,13 +74,17 @@ global.difficulty = 1;
 if file_exists("profile.ini") {
     //game_load("profile.dat");
     ini_open("profile.ini");
-    global.scoring[0] = ini_read_string("scores"+string(global.difficulty), "stage 0", "00.00");
-    global.scoring[1] = ini_read_string("scores"+string(global.difficulty), "stage 1", "00.00");
-    global.scoring[2] = ini_read_string("scores"+string(global.difficulty), "stage 2", "00.00");
-    global.scoring[3] = ini_read_string("scores"+string(global.difficulty), "stage 3", "00.00");
-    global.scoring[4] = ini_read_string("scores"+string(global.difficulty), "stage 4", "00.00");
-    global.scoring[5] = ini_read_string("scores"+string(global.difficulty), "stage 5", "00.00");
+    global.scoring[0] = ini_read_string("scores"+string(global.difficulty), "stage 0", "00.00L");
+    global.scoring[1] = ini_read_string("scores"+string(global.difficulty), "stage 1", "00.00L");
+    global.scoring[2] = ini_read_string("scores"+string(global.difficulty), "stage 2", "00.00L");
+    global.scoring[3] = ini_read_string("scores"+string(global.difficulty), "stage 3", "00.00L");
+    global.scoring[4] = ini_read_string("scores"+string(global.difficulty), "stage 4", "00.00L");
+    global.scoring[5] = ini_read_string("scores"+string(global.difficulty), "stage 5", "00.00L");
+    global.scoring[6] = ini_read_string("scores"+string(global.difficulty), "stage 6", "00.00L");
     ini_close();
+} else {
+    o_controls.x = room_height/2;
+    o_controls.going = true;
 }
 global.kaguya = false;
 global.notecover = s_kaguya;
@@ -110,7 +115,19 @@ image_speed = 0;
           <argument>
             <kind>1</kind>
             <string>if room = stagemenu {
-    c_input();
+    truecombo = 3;
+    if o_controls.going = true {
+        c_input();
+        if alt &amp;&amp; select {
+            if window_get_fullscreen() {
+                window_set_fullscreen(false);
+                window_set_position(global.ogx, global.ogy);
+            } else {
+                window_set_fullscreen(true);
+            }
+            select = false;
+        }
+    }
     global.megastream = false;
     
     if selectoronsong {
@@ -180,6 +197,9 @@ image_speed = 0;
                 case "G":
                     scoreshowcolour[i] = c_green;
                     break;
+                case "L":
+                    scoreshowcolour[i] = c_red;
+                    break;
                 case "":
                     scoreshowcolour[i] = c_white;
                     break;
@@ -217,7 +237,11 @@ image_speed = 0;
                     break;
             }
             audio_play_sound(se_select, 0, false);
-            global.currentstage = menuposition;
+            if menuposition &gt; 0 {
+                global.currentstage = menuposition;
+            } else {
+                global.currentstage = 1;
+            }
             audio_stop_sound(m_night);
             if menuposition != 0 {
                 instance_create(0, 0, o_fao);
@@ -326,12 +350,13 @@ image_speed = 0;
         if file_exists("profile.ini") {
             //game_load("profile.dat");
             ini_open("profile.ini");
-            global.scoring[0] = ini_read_string("scores"+string(global.difficulty), "stage 0", "00.00");
-            global.scoring[1] = ini_read_string("scores"+string(global.difficulty), "stage 1", "00.00");
-            global.scoring[2] = ini_read_string("scores"+string(global.difficulty), "stage 2", "00.00");
-            global.scoring[3] = ini_read_string("scores"+string(global.difficulty), "stage 3", "00.00");
-            global.scoring[4] = ini_read_string("scores"+string(global.difficulty), "stage 4", "00.00");
-            global.scoring[5] = ini_read_string("scores"+string(global.difficulty), "stage 5", "00.00");
+            global.scoring[0] = ini_read_string("scores"+string(global.difficulty), "stage 0", "00.00L");
+            global.scoring[1] = ini_read_string("scores"+string(global.difficulty), "stage 1", "00.00L");
+            global.scoring[2] = ini_read_string("scores"+string(global.difficulty), "stage 2", "00.00L");
+            global.scoring[3] = ini_read_string("scores"+string(global.difficulty), "stage 3", "00.00L");
+            global.scoring[4] = ini_read_string("scores"+string(global.difficulty), "stage 4", "00.00L");
+            global.scoring[5] = ini_read_string("scores"+string(global.difficulty), "stage 5", "00.00L");
+            global.scoring[6] = ini_read_string("scores"+string(global.difficulty), "stage 6", "00.00L");
             ini_close();
         }
         difcursavedy = 49+abs(global.difficulty-1)*76;
@@ -343,11 +368,19 @@ image_speed = 0;
     difcursy = difcursavedy;
     difcurvspd = difcurvspd/2;
     difcursy -= difcurvspd;
+    
 }
 
 if keyboard_check_pressed(ord('H')) {
     global.hidden = !global.hidden;
 }
+
+if room = rhythm_limbo {
+    if MELODYCHASER.comborank &lt;= truecombo {
+        truecombo = MELODYCHASER.comborank;
+    }
+}
+
 
 /*if left {
     switch global.red {

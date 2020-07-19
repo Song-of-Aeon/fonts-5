@@ -8,6 +8,7 @@ if global.noteoverride = 0 {
     global.blue = s_crystal;
     global.purple = s_crystal;
     global.freeze = s_midori;
+    global.roll = s_roll;
     global.effect = s_ripple;
     global.mine = s_negative;
     global.receptor = s_gem;

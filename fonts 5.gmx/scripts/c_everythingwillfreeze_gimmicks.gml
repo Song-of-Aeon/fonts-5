@@ -13,6 +13,7 @@ if inputgimmick = false {
         case "UNSOUL":
             o_soul.fading = true;
             state = c_receptorinput;
+            instance_destroy(o_sakuya);
             break;
     }
     console_log(arraypos);

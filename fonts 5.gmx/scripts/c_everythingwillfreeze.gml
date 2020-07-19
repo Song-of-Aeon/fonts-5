@@ -8,6 +8,7 @@ if global.noteoverride = 0 {
     global.blue = s_darker;
     global.purple = s_yetdarker;
     global.freeze = s_umbra;
+    global.roll = s_nacht;
     global.effect = s_blacklight;
     global.mine = s_negative;
     global.receptor = s_shadow;
@@ -15,7 +16,7 @@ if global.noteoverride = 0 {
 songbg = bk_everythingwillfreeze;
 lanes = 4;
 arrayx = array(//"T",
-"SOUL", "UNSOUL", "SOUL", "UNSOUL", "SOUL", "UNSOUL");
+"SOUL", "UNSOUL", "SOUL", "UNSOUL", "SOUL", "UNSOUL", "SOUL", "UNSOUL");
 arrayy[0] = 0;
 //bg = bk_;
 //music = m_;

@@ -60,6 +60,7 @@
     <instance objName="o_blender" x="232" y="110" name="inst_0488E165" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_blender" x="-10" y="110" name="inst_70073DDB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_privatesquare" x="352" y="416" name="inst_3E4272A5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="o_controls" x="640" y="1088" name="inst_EDA47C9A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

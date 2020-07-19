@@ -31,6 +31,7 @@ if thenote != noone {
                 tail = other.thenote.tail;
                 image_blend = other.thenote.image_blend;
                 image_angle = other.thenote.image_angle;
+                sprite_index = other.thenote.sprite_index;
                 with tail {
                     head = other.id;
                 }

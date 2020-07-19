@@ -8,6 +8,7 @@ if global.noteoverride = 0 {
     global.blue = s_ultramarine;
     global.purple = s_azure;
     global.freeze = s_defrag;
+    global.roll = s_string;
     global.effect = s_ripple;
     global.mine = s_frag;
     global.receptor = s_acceptor;

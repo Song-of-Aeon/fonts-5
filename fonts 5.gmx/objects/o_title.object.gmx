@@ -50,6 +50,10 @@ title = array("Evanecence,", "it", "is", "personified!",
 countwo = 0;
 audio_play_sound(m_title, 0, false);
 
+global.ogx = window_get_x();
+global.ogy = window_get_y();
+console_log(global.ogx, global.ogy);
+
 //window_set_fullscreen(true);
 </string>
           </argument>
@@ -74,6 +78,15 @@ audio_play_sound(m_title, 0, false);
           <argument>
             <kind>1</kind>
             <string>c_input();
+if alt &amp;&amp; select {
+    if window_get_fullscreen() {
+        window_set_fullscreen(false);
+        window_set_position(global.ogx, global.ogy);
+    } else {
+        window_set_fullscreen(true);
+    }
+    select = false;
+}
 if fontsmoving &lt;= y-50 {
     fontsmoving += fontspd;
 } else {
@@ -137,6 +150,8 @@ if select &amp;&amp; going = false {
         instance_destroy();
     }
 }
+
+
 
 </string>
           </argument>

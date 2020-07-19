@@ -12,7 +12,8 @@ if global.noteoverride = 0 {
     global.blue = s_sea;
     global.purple = s_stars;
     global.freeze = s_asteroid;
-    global.effect = s_ripple;
+    global.roll = s_nebula;
+    global.effect = s_gamma;
     global.mine = s_flare;
     global.receptor = s_galaxy;
 }

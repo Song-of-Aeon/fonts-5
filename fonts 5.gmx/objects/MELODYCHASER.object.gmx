@@ -88,17 +88,17 @@ danmaku = 0;
 windowBouncex = 1;
 windowBouncey = 1;
 windowBounceSpeed = 0;
-windowx = window_get_x();
-windowy = window_get_y();
-windowxsaved = window_get_x();
-windowysaved = window_get_y();
+windowx = global.ogx;
+windowy = global.ogy;
+windowxsaved = global.ogx;
+windowysaved = global.ogy;
 whspd = 0;
 wvspd = 0;
 inputgimmick = true;
 arraypos = 0;
 gimmickstate = 0;
-breadx = window_get_x();
-bready = window_get_y();
+breadx = global.ogx;
+bready = global.ogy;
 comborank = 3;
 allideal = false;
 noteturn = false;
@@ -108,8 +108,11 @@ chokepoint = 2000;
 notechange = false;
 
 count = 0;
-if global.songscript = c_eonbreak {
+countwo = 0;
+if global.songscript = c_eonbreak &amp;&amp; window_get_fullscreen() {
     window_set_fullscreen(false);
+    window_set_position(global.ogx, global.ogy);
+    console_log(window_get_x());
 }
 if global.noteoverride != 0 {
     c_noteoverride();
@@ -138,6 +141,15 @@ global.truetime = 1;
           <argument>
             <kind>1</kind>
             <string>c_input();
+if alt &amp;&amp; select &amp;&amp; global.songscript != c_eonbreak {
+    if window_get_fullscreen() {
+        window_set_fullscreen(false);
+        window_set_position(global.ogx, global.ogy);
+    } else {
+        window_set_fullscreen(true);
+    }
+    select = false;
+}
 
 /*if keyboard_check_pressed(ord('R')) {
     instance_destroy(o_smparser);
@@ -309,14 +321,20 @@ if hp &gt; 12 {
     hp = 12;
 }
 
-if (back &amp;&amp; !instance_exists(o_fao)) || (hp &lt;= 0 &amp;&amp; global.songscript != c_everythingwillfreeze) {
-    if global.storymode = true &amp;&amp; hp &gt; 0 { //&amp;&amp; !audio_is_playing(song)
+if !instance_exists(o_note) &amp;&amp; instance_exists(o_smparser) {
+    countwo++;
+}
+
+if (back &amp;&amp; !instance_exists(o_fao)) || (hp &lt;= 0 &amp;&amp; global.songscript != c_everythingwillfreeze) || countwo = 300 {
+    if global.storymode = true &amp;&amp; hp &gt; 0 &amp;&amp; !back { //&amp;&amp; !audio_is_playing(song)
         with instance_create(0, 0, o_fao) {
             leaving = cutscene;
             depth = -3;
         }
         var scoring6 = real(global.scoring[6]);
-        scoring6 += MELODYCHASER.realscore/5;
+        if global.songscript != c_nocturne {
+            scoring6 += MELODYCHASER.realscore/5;
+        }
         if real(global.scoring[global.currentstage]) &lt; MELODYCHASER.realscore {
             global.scoring[global.currentstage] = string(MELODYCHASER.realscore);
             if string_length(global.scoring[global.currentstage] &lt; 4) {
@@ -339,8 +357,33 @@ if (back &amp;&amp; !instance_exists(o_fao)) || (hp &lt;= 0 &amp;&amp; global.so
                 
             }
         }
+        if real(global.scoring[0]) &lt; scoring6 {
+            global.scoring[0] = string(scoring6);
+            if string_length(global.scoring[0] &lt; 4) {
+                if string_char_at(global.scoring[0], 2) = "." {
+                    global.scoring[0] = "0" + global.scoring[0];
+                } else {
+                    global.scoring[0] = global.scoring[0] + "0";
+                }
+            }
+            switch o_menu.truecombo {
+                case 1:
+                    global.scoring[0] = string(global.scoring[0] + "G");
+                    break;
+                case 2:
+                    global.scoring[0] = string(global.scoring[0] + "P");
+                    break;
+                case 3:
+                    global.scoring[0] = string(global.scoring[0] + "M");
+                    break;
+                
+            }
+        }
         global.cutscenecount++;
     } else {
+        if hp &lt;= 0 {
+            comborank = 99;
+        }
         with instance_create(0, 0, o_fao) {
             leaving = stagemenu;
         }
@@ -363,7 +406,10 @@ if (back &amp;&amp; !instance_exists(o_fao)) || (hp &lt;= 0 &amp;&amp; global.so
                 case 3:
                     global.scoring[global.currentstage] = "100.0M";
                     break;
-                
+                    
+                case 99:
+                    global.scoring[global.currentstage] = string(global.scoring[global.currentstage] + "L");
+                    break;
             }
         }
     }
@@ -428,6 +474,8 @@ if global.gimmickactive = false {
 
 global.truetime = c_timebuster();
 
+//console_log(window_get_x());
+
 </string>
           </argument>
         </arguments>
@@ -460,6 +508,11 @@ draw_sprite_ext(global.receptor, 0, laneleft, bar, mini*bop[0], mini*bop[0], -90
 draw_sprite_ext(global.receptor, 0, lanedown, bar, mini*bop[1], mini*bop[1], 0, c_white, 1);
 draw_sprite_ext(global.receptor, 0, laneup, bar, mini*bop[2], mini*bop[2], 180, c_white, 1);
 draw_sprite_ext(global.receptor, 0, laneright, bar, mini*bop[3], mini*bop[3], 90, c_white, 1);
+
+draw_set_halign(fa_center);
+draw_set_colour(c_white);
+draw_set_font(f_combo);
+
 if lanes = 8 {
     draw_sprite_ext(global.receptor, 0, laneleftwo, bar, mini*bop[4], mini*bop[4], -90, c_white, 1);
     draw_sprite_ext(global.receptor, 0, lanedowntwo, bar, mini*bop[5], mini*bop[5], 0, c_white, 1);
@@ -493,9 +546,7 @@ if lanes = 8 {
 
 //draw_text(laneright+250, bar+100, string(realscore));
 //draw_text(laneright+250, bar+300, string(combo));
-draw_set_halign(fa_center);
-draw_set_colour(c_white);
-draw_set_font(f_combo);
+
 
 draw_set_font(f_scoreronaldo);
 draw_set_colour(c_black);

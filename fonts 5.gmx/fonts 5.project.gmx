@@ -51,6 +51,7 @@
       <sprite>sprites\s_blue</sprite>
       <sprite>sprites\s_purple</sprite>
       <sprite>sprites\s_green</sprite>
+      <sprite>sprites\s_roll</sprite>
       <sprite>sprites\s_effect</sprite>
       <sprite>sprites\s_mine</sprite>
       <sprite>sprites\s_receptor</sprite>
@@ -60,6 +61,7 @@
       <sprite>sprites\s_ao</sprite>
       <sprite>sprites\s_murasaki</sprite>
       <sprite>sprites\s_midori</sprite>
+      <sprite>sprites\s_roru</sprite>
       <sprite>sprites\s_efekuto</sprite>
       <sprite>sprites\s_bakudan</sprite>
       <sprite>sprites\s_reseputaa</sprite>
@@ -69,6 +71,7 @@
       <sprite>sprites\s_darker</sprite>
       <sprite>sprites\s_yetdarker</sprite>
       <sprite>sprites\s_umbra</sprite>
+      <sprite>sprites\s_nacht</sprite>
       <sprite>sprites\s_blacklight</sprite>
       <sprite>sprites\s_negative</sprite>
       <sprite>sprites\s_shadow</sprite>
@@ -80,7 +83,9 @@
       <sprite>sprites\s_sea</sprite>
       <sprite>sprites\s_stars</sprite>
       <sprite>sprites\s_asteroid</sprite>
+      <sprite>sprites\s_nebula</sprite>
       <sprite>sprites\s_flare</sprite>
+      <sprite>sprites\s_gamma</sprite>
       <sprite>sprites\s_galaxy</sprite>
     </sprites>
     <sprites name="midi-gold">
@@ -96,6 +101,7 @@
       <sprite>sprites\s_ultramarine</sprite>
       <sprite>sprites\s_azure</sprite>
       <sprite>sprites\s_defrag</sprite>
+      <sprite>sprites\s_string</sprite>
       <sprite>sprites\s_ripple</sprite>
       <sprite>sprites\s_frag</sprite>
       <sprite>sprites\s_acceptor</sprite>
@@ -142,6 +148,8 @@
     <sprite>sprites\s_sakuya</sprite>
     <sprite>sprites\s_sakuyabg</sprite>
     <sprite>sprites\s_privatesquare</sprite>
+    <sprite>sprites\s_minehitbox</sprite>
+    <sprite>sprites\s_controls</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -206,8 +214,10 @@
       <script>scripts\c_bpmbuster.gml</script>
       <script>scripts\c_noteskins.gml</script>
       <script>scripts\f_hitdetection.gml</script>
+      <script>scripts\f_danmakudetection.gml</script>
     </scripts>
     <script>scripts\c_input.gml</script>
+    <script>scripts\c_inputzero.gml</script>
     <scripts name="the test maps">
       <script>scripts\sm_jumptest.gml</script>
       <script>scripts\sm_freezetest.gml</script>
@@ -257,6 +267,7 @@
       <script>scripts\sm_lancerrapseasy.gml</script>
     </scripts>
     <script>scripts\c_timebuster.gml</script>
+    <script>scripts\c_inputwo.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\z_ChromaticAbberation.shader</shader>
@@ -310,6 +321,7 @@
     <object>objects\o_vignette</object>
     <object>objects\o_noteburst</object>
     <object>objects\o_help</object>
+    <object>objects\o_controls</object>
     <object>objects\o_blender</object>
     <object>objects\o_sakuya</object>
     <object>objects\o_slowknife</object>
