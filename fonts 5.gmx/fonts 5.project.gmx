@@ -43,6 +43,8 @@
     <sound>sound\m_reset_set</sound>
     <sound>sound\m_nocturne</sound>
     <sound>sound\m_eveniftheworlddeceivesyou</sound>
+    <sound>sound\m_itsrainingsomewhereelse</sound>
+    <sound>sound\m_hurt</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\s_kaguya</sprite>
@@ -196,6 +198,8 @@
     <script>scripts\c_reset_set.gml</script>
     <script>scripts\sm_eonbreak.gml</script>
     <script>scripts\c_eonbreak.gml</script>
+    <script>scripts\sm_itsrainingsomewhereelse.gml</script>
+    <script>scripts\c_itsrainingsomewhereelse.gml</script>
     <scripts name="the common">
       <script>scripts\script0.gml</script>
       <script>scripts\script25.gml</script>
@@ -218,6 +222,7 @@
       <script>scripts\f_danmakudetection.gml</script>
     </scripts>
     <script>scripts\c_input.gml</script>
+    <script>scripts\c_inputwo.gml</script>
     <script>scripts\c_inputzero.gml</script>
     <scripts name="the test maps">
       <script>scripts\sm_jumptest.gml</script>
@@ -245,12 +250,15 @@
     <scripts name="the subtitles">
       <script>scripts\st_reset_set.gml</script>
       <script>scripts\st_reset_set_jp.gml</script>
+      <script>scripts\st_ending.gml</script>
       <script>scripts\st_run2.gml</script>
       <script>scripts\st_run.gml</script>
     </scripts>
-    <script>scripts\c_everythingwillfreeze_gimmicks.gml</script>
-    <script>scripts\c_reset_set_gimmicks.gml</script>
-    <script>scripts\c_eonbreak_gimmicks.gml</script>
+    <scripts name="the gimmicks">
+      <script>scripts\c_everythingwillfreeze_gimmicks.gml</script>
+      <script>scripts\c_reset_set_gimmicks.gml</script>
+      <script>scripts\c_eonbreak_gimmicks.gml</script>
+    </scripts>
     <scripts name="the obsolete">
       <script>scripts\sm_onemorenight.gml</script>
       <script>scripts\c_onemorenight.gml</script>
@@ -260,15 +268,14 @@
       <script>scripts\sm_reset_roulette.gml</script>
       <script>scripts\x_the_explanation.gml</script>
       <script>scripts\x_sm_parser_create_old.gml</script>
+      <script>scripts\c_eveniftheworlddeceivesyou.gml</script>
+      <script>scripts\sm_eveniftheworlddeceivesyou.gml</script>
     </scripts>
-    <script>scripts\c_eveniftheworlddeceivesyou.gml</script>
-    <script>scripts\sm_eveniftheworlddeceivesyou.gml</script>
     <scripts name="the easy">
       <script>scripts\sm_reset_set_easy.gml</script>
       <script>scripts\sm_lancerrapseasy.gml</script>
     </scripts>
     <script>scripts\c_timebuster.gml</script>
-    <script>scripts\c_inputwo.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\z_ChromaticAbberation.shader</shader>
