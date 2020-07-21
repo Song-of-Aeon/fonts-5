@@ -4,7 +4,7 @@
     <Config>Configs\Default</Config>
     <Config>Configs\lol</Config>
   </Configs>
-  <datafiles number="11" name="datafiles">
+  <datafiles number="12" name="datafiles">
     <datafile>
       <name>Rondalo_.ttf</name>
       <exists>-1</exists>
@@ -24,6 +24,26 @@
         </Config>
       </ConfigOptions>
       <filename>Rondalo_.ttf</filename>
+    </datafile>
+    <datafile>
+      <name>Alien-Encounters-Regular.ttf</name>
+      <exists>-1</exists>
+      <size>20108</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+        <Config name="lol">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>Alien-Encounters-Regular.ttf</filename>
     </datafile>
   </datafiles>
   <NewExtensions/>
@@ -114,6 +134,7 @@
     <sprite>sprites\s_bullet</sprite>
     <sprite>sprites\s_laneselected</sprite>
     <sprite>sprites\s_blueselected</sprite>
+    <sprite>sprites\s_futureselected</sprite>
     <sprite>sprites\s_stagetext</sprite>
     <sprite>sprites\s_menu</sprite>
     <sprite>sprites\s_cursor</sprite>

@@ -132,6 +132,7 @@ script_execute(subsetwo);
           <argument>
             <kind>1</kind>
             <string>//draw_self();
+draw_set_valign(fa_middle);
 draw_sprite_ext(s_textbg, 0, x, y+16, clamp((string_length(txt)/2)/12, 0, 1.2), 1, 0, c_white, txtalpha/2);
 draw_sprite_ext(s_textbg, 0, MELODYCHASER.laneleft-120, MELODYCHASER.bar+string_length(txtwo)*8, (string_length(txtwo)/1.5)/12, 1, 90, c_white, txtalpha/1.3);
 

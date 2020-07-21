@@ -63,12 +63,13 @@ if (up) {
 }
 
 if collision_line(x, y, xprevious, yprevious, o_projectile, false, false) && inv = false {
+    audio_play_sound(m_hurt, 0, false);
+    audio_play_sound(m_hurt, 1, false);
     inv = true;
     image_alpha = .5;
     alarm[1] = 60;
     MELODYCHASER.hp -= 2;
     MELODYCHASER.realscore -= (100/MELODYCHASER.notecount)*2;
-    audio_play_sound(m_hurt, 0, false);
 }
 
 

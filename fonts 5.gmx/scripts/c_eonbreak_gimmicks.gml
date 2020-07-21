@@ -13,7 +13,7 @@ if inputgimmick = false {
         //instance_create(640, 360, o_doctor);
     } else if arrayx[arraypos] = "T"  {
         if global.storymode = true {
-            instance_create(630, bar+100, o_textbox);
+            instance_create(640, bar+100, o_textbox);
         }
     } else {
         switch gimmickstate {

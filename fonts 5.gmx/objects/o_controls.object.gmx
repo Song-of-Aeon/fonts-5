@@ -76,6 +76,7 @@ if room = stagemenu {
     y += vspd;
     vspd = vspd/1.05;
 //}
+x = 640;
 </string>
           </argument>
         </arguments>

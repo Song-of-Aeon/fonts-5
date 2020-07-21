@@ -133,22 +133,6 @@ if !fading {
     }
 }
 
-if y &gt;= 700 {
-    path_end();
-}
-
-if path_index != -1 {
-    inv = true;
-}
-
-if path_index = -1 &amp;&amp; bam = false {
-    with instance_create(x, y, o_hitfx) {
-        image_alpha = 2;
-    }
-    bam = true;
-    inv = false;
-    
-}
 if inv {
     countwo++;
     if countwo &gt;= 62 {

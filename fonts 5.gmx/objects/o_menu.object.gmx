@@ -147,7 +147,7 @@ image_speed = 0;
                 selectorsavey++;
             }
         }
-        if down &amp;&amp; menuposition &lt; 6 {
+        if down &amp;&amp; menuposition &lt; 5 { //6 for super test
             
             selectorvspd = 87;
             selectorsavevspd = 87;

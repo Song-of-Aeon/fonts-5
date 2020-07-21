@@ -63,15 +63,7 @@ switch global.songscript {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>c_input();
-if select {
-    savedy = room_height + sprite_height/2 + 5;
-    vspd = y-savedy;
-    console_log(savedy);
-    console_log(vspd);
-    going = true;
-}
-if going {
+            <string>if going {
     y = savedy;
     y += vspd;
     vspd = vspd/1.05;

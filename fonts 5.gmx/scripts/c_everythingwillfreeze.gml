@@ -15,7 +15,7 @@ if global.noteoverride = 0 {
 }
 songbg = bk_everythingwillfreeze;
 lanes = 4;
-arrayx = array(//"T",
+arrayx = array("T",
 "SOUL", "UNSOUL", "SOUL", "UNSOUL", "SOUL", "UNSOUL", "SOUL", "UNSOUL");
 arrayy[0] = 0;
 //bg = bk_;

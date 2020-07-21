@@ -29,7 +29,7 @@
 mmod = 0;
 cmod = 0;
 bar = 64;
-mini = 1.4;
+mini = 1; //1.4
 minibig = (mini-1)*64;
 bop[0] = 1;
 bop[1] = 1;
@@ -161,6 +161,13 @@ if alt &amp;&amp; select &amp;&amp; global.songscript != c_eonbreak {
 if !instance_exists(o_smparser) {
     if select {
         songstarting = true;
+        with o_help {
+            savedy = room_height + sprite_height/2 + 5;
+            vspd = y-savedy;
+            console_log(savedy);
+            console_log(vspd);
+            going = true;
+        }
         instance_create(0, 0, o_smparser);
     }
     if up &amp;&amp; mini &lt; 3 {
@@ -222,7 +229,7 @@ if songstarting {
         //if (count &gt;= 235 &amp;&amp; global.songscript = c_eonbreak) || (count &gt;= 230 &amp;&amp; global.songscript != c_eonbreak){
             audio_play_sound(audio, 0, false);
             songstarting = false;
-            instance_create(630, bar+100, o_subbox);
+            instance_create(640, bar+100, o_subbox);
         }
     }
     
@@ -335,7 +342,7 @@ if hp &gt; 12 {
     hp = 12;
 }
 
-infoalpha -= .05;
+infoalpha -= .03;
 infoalpha = clamp(infoalpha, 0, 4);
 
 if !instance_exists(o_note) &amp;&amp; instance_exists(o_smparser) {
@@ -396,7 +403,9 @@ if (back &amp;&amp; !instance_exists(o_fao)) || (hp &lt;= 0 &amp;&amp; global.so
                 
             }
         }
-        global.cutscenecount++;
+        //if global.songscript != c_nocturne {
+            global.cutscenecount++;
+        //}
     } else {
         if hp &lt;= 0 {
             comborank = 99;
@@ -430,7 +439,12 @@ if (back &amp;&amp; !instance_exists(o_fao)) || (hp &lt;= 0 &amp;&amp; global.so
             }
         }
     }
-    
+    if instance_exists(o_ChromaticAbberation) { //get rid of this for chance to mega glitch
+        with o_ChromaticAbberation {
+            intensity = 0;
+        }
+        application_surface_draw_enable(true);
+    }
     audio_stop_sound(audio);
 }
 
@@ -449,7 +463,7 @@ switch global.songscript {
         if inputgimmick = false {
             if arrayx[arraypos] = "T"  {
                 if global.storymode = true {
-                    instance_create(630, bar+100, o_textbox);
+                    instance_create(640, bar+100, o_textbox);
                 }
             }
             inputgimmick = true;
@@ -517,7 +531,7 @@ global.truetime = c_timebuster();
             <string>depth = 5;
 draw_sprite(songbg, 0, 0, 0);
 //draw_sprite_ext(s_blueselected, 0, laneselected+12.8, 0, mini, 1, 0, c_white, 1);
-draw_sprite_ext(s_blueselected, 0, bluepos, 0, mini, 1, 0, c_white, 1);
+draw_sprite_ext(s_futureselected, 0, bluepos, 0, mini, 1, 0, c_white, 1);
 draw_set_font(f_scoreronaldo);
 
 draw_sprite_ext(global.receptor, 0, laneleft, bar, mini*bop[0], mini*bop[0], -90, c_white, 1);

@@ -1,7 +1,7 @@
 if inputgimmick = false {
     if arrayx[arraypos] = "T"  {
         if global.storymode = true {
-            instance_create(630, bar+100, o_textbox);
+            instance_create(640, bar+100, o_textbox);
         }
     }
     switch arrayx[arraypos] {

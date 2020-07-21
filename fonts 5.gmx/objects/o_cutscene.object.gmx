@@ -53,6 +53,16 @@ active = false;
           <argument>
             <kind>1</kind>
             <string>if active = true {
+    c_input();
+    if alt &amp;&amp; select {
+        if window_get_fullscreen() {
+            window_set_fullscreen(false);
+            window_set_position(global.ogx, global.ogy);
+        } else {
+            window_set_fullscreen(true);
+        }
+        select = false;
+    }
     switch global.cutscenecount {
         case 0:
             if words &lt; 48 {
@@ -96,12 +106,12 @@ active = false;
         
         case 1:
             if count = 10 {
-                with instance_create(630, 360, o_worldbreak) {
+                with instance_create(640, 360, o_worldbreak) {
                     sprite_index = s_world1;
                     image_xscale = 4;
                     image_yscale = 4;
                 }
-                with instance_create(630, 360, o_worldbreak) {
+                with instance_create(640, 360, o_worldbreak) {
                     sprite_index = s_world2;
                     image_xscale = 4;
                     image_yscale = 4;
@@ -116,12 +126,12 @@ active = false;
             break;
         case 2:
             if count = 10 {
-                with instance_create(630, 360, o_worldbreak) {
+                with instance_create(640, 360, o_worldbreak) {
                     sprite_index = s_world1;
                     image_xscale = 4;
                     image_yscale = 4;
                 }
-                with instance_create(630, 360, o_worldbreak) {
+                with instance_create(640, 360, o_worldbreak) {
                     sprite_index = s_world2;
                     image_xscale = 4;
                     image_yscale = 4;
@@ -136,7 +146,7 @@ active = false;
             break;
         case 3:
             if count = 10 {
-                with instance_create(630, 360, o_world) {
+                with instance_create(640, 360, o_world) {
                     image_xscale = 4;
                     image_yscale = 4;
                 }
@@ -160,7 +170,7 @@ active = false;
             break;
         case 5:
             if count = 10 {
-                with instance_create(630, 360, o_world) {
+                with instance_create(640, 360, o_world) {
                     image_xscale = 4;
                     image_yscale = 4;
                     rotation = true;
@@ -175,7 +185,7 @@ active = false;
             break;
         case 6:
             if count = 10 {
-                with instance_create(630, 500, o_world) {
+                with instance_create(640, 500, o_world) {
                     image_xscale = 4;
                     image_yscale = 4;
                     rotation = true;
@@ -183,14 +193,17 @@ active = false;
                 }
             }
             if count &gt; 180 {
-                with instance_create(0, 0, o_fao) {
-                    leaving = stagemenu;
-                }
+                global.songscript = c_itsrainingsomewhereelse;
                 o_cutscene.active = false;
+                instance_create(0, 0, o_fao);
             }
             count++;
             break;
-        
+        case 7:
+            with instance_create(0, 0, o_fao) {
+                leaving = stagemenu;
+            }
+            break;
     }
 } else {
     count = 0;
