@@ -6,7 +6,7 @@
   <depth>-1</depth>
   <persistent>0</persistent>
   <parentName>o_note</parentName>
-  <maskName>&lt;undefined&gt;</maskName>
+  <maskName>s_minehitbox</maskName>
   <events>
     <event eventtype="0" enumb="0">
       <action>

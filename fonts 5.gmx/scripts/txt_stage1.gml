@@ -10,8 +10,8 @@ choice[0] = "";
 choiceat[1] = 99;
 choiceoutcome[0] = "";
 
-durability = 20;
-durabilityset = 20;
+durability = 50;
+durabilityset = 50;
 
 
 c_txtcommon();

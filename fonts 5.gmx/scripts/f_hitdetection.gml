@@ -132,6 +132,9 @@ if thenote != noone {
             image_blend = c_fuchsia;
         }
     }
+    if instance_exists(o_textbox) {
+        o_textbox.durability--;
+    }
     if noteburst {
         repeat(10) {
             with instance_create(argument0, bar, o_noteburst) {

@@ -5,6 +5,7 @@ if global.difficulty = 1 {
     song = sm_reset_set_easy();
 }
 bpm = 196;
+xmod = 12;
 title = "Reset Set";
 audio = m_reset_set;
 if global.noteoverride = 0 {
