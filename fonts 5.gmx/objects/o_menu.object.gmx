@@ -235,7 +235,8 @@ image_speed = 0;
                     break;
                 case 6:
                     //global.songscript = c_eveniftheworlddeceivesyou;
-                    global.songscript = c_nocturne;
+                    //global.songscript = c_nocturne;
+                    global.songscript = c_itsrainingsomewhereelse;
                     break;
             }
             audio_play_sound(se_select, 0, false);
@@ -412,7 +413,8 @@ if room = rhythm_limbo {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if room = stagemenu {
+            <string>draw_set_valign(fa_top);
+if room = stagemenu {
     draw_self();
     draw_set_colour(c_white);
     //draw_text(100, 100, string(menuposition));

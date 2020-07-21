@@ -17,7 +17,8 @@ if thenoteup != noone && thenotedown != noone {
     thenote = noone;
 }
 if thenote != noone {
-    
+    infoalpha += .2;
+    infoalpha = clamp(infoalpha, 1.6, 4);
     var distance = abs(thenote.y - bar);
 
     if thenote.object_index = o_mine {
@@ -39,6 +40,9 @@ if thenote != noone {
         }
     }
     instance_destroy(thenote);
+    combocolour[3] = combocolour[2];
+    combocolour[2] = combocolour[1];
+    combocolour[1] = combocolour[0];
     if !allideal {
         if noterank < 3 {
             combo++;
@@ -54,6 +58,7 @@ if thenote != noone {
                 if comborank > 2
                     comborank = 2;
                 hp += .16;
+                combocolour[0] = c_yellow;
                 break;
             case -2:
                 with instance_create(x, y, o_hit) {
@@ -63,19 +68,22 @@ if thenote != noone {
                 if comborank > 1
                     comborank = 1;
                 hp += .12;
+                combocolour[0] = c_green;
                 break;
             case -3:
                 with instance_create(x, y, o_hit) {
                     image_blend = c_blue;
                 }
                 comborank = 0;
+                combocolour[0] = c_blue;
                 break;
             case 0:
                 with instance_create(x, y, o_hit) {
-                    image_blend = c_teal;
+                    image_blend = c_aqua;
                 }
                 realscore += 100/notecount;
                 hp += .2;
+                combocolour[0] = c_aqua;
                 break;
             case 1:
                 with instance_create(x, y, o_hit) {
@@ -85,6 +93,7 @@ if thenote != noone {
                 if comborank > 2
                     comborank = 2;
                 hp += .16;
+                combocolour[0] = c_yellow;
                 break;
             case 2:
                 with instance_create(x, y, o_hit) {
@@ -94,12 +103,14 @@ if thenote != noone {
                 if comborank > 1
                     comborank = 1;
                 hp += .12;
+                combocolour[0] = c_green;
                 break;
             case 3:
                 with instance_create(x, y, o_hit) {
                     image_blend = c_blue;
                 }
                 comborank = 0;
+                combocolour[0] = c_blue;
                 break;
             case 4:
                 with instance_create(x, y, o_hit) {
@@ -108,6 +119,7 @@ if thenote != noone {
                 realscore -= 100/notecount;
                 comborank = 0;
                 hp -= 1;
+                combocolour[0] = c_red;
                 break;
         }
     } else {
@@ -115,6 +127,7 @@ if thenote != noone {
         combo++;
         realscore += 100/notecount;
         hp += 1;
+        combocolour[0] = c_fuchsia;
         with instance_create(x, y, o_hit) {
             image_blend = c_fuchsia;
         }
