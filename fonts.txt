@@ -1,0 +1,9 @@
+fonts five fonts, in order of prevailence:
+
+alien encounters (title, menu, combo)
+rondalo (descriptions, info, dialogue)
+andes (story mode intro cutscene)
+chromatic (judgement)
+courier new ("<Start();" and difficulty selector cursor)
+
+calibri (prologue rtf) //replace
