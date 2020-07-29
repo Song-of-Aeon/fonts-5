@@ -47,6 +47,8 @@ global.scoring[3] = "00.00L";
 global.scoring[4] = "00.00L";
 global.scoring[5] = "00.00L";
 global.scoring[6] = "00.00L";
+global.completion = 0;
+global.gimmickcompletion = 0;
 global.currentstage = 6;
 scoreshow = array_create(6);
 scoreshowcolour = array(c_white, c_white, c_white, c_white, c_white, c_white);
@@ -81,6 +83,8 @@ if file_exists("profile.ini") {
     global.scoring[4] = ini_read_string("scores"+string(global.difficulty), "stage 4", "00.00L");
     global.scoring[5] = ini_read_string("scores"+string(global.difficulty), "stage 5", "00.00L");
     global.scoring[6] = ini_read_string("scores"+string(global.difficulty), "stage 6", "00.00L");
+    global.completion = ini_read_string("story", "completion", "0");
+    global.gimmickcompletion = ini_read_string("story", "gimmick", "0");
     ini_close();
 } else {
     o_controls.x = room_height/2;
@@ -92,6 +96,7 @@ global.streamstring = false;
 audio_play_sound(m_night, 0, false);
 
 image_speed = 0;
+
 </string>
           </argument>
         </arguments>
@@ -360,6 +365,8 @@ image_speed = 0;
             global.scoring[4] = ini_read_string("scores"+string(global.difficulty), "stage 4", "00.00L");
             global.scoring[5] = ini_read_string("scores"+string(global.difficulty), "stage 5", "00.00L");
             global.scoring[6] = ini_read_string("scores"+string(global.difficulty), "stage 6", "00.00L");
+            global.completion = ini_read_string("story", "completion", "0");
+            global.gimmickcompletion = ini_read_string("story", "gimmick", "0");
             ini_close();
         }
         difcursavedy = 49+abs(global.difficulty-1)*76;
@@ -390,7 +397,7 @@ if room = rhythm_limbo {
     switch global.red {
     }
 }*/
-
+//console_log(global.completion);
 </string>
           </argument>
         </arguments>
@@ -503,6 +510,29 @@ if room = stagemenu {
         draw_text(1120, 440, "Inactive");
     }
     draw_text(1120, 610, string(global.xmod));
+    
+    switch real(global.completion) {
+        case 1:
+            draw_sprite(s_completion, 1, 561, 113);
+            break;
+        case 2:
+            draw_sprite(s_completion, 0, 561, 113);
+            draw_sprite(s_completion, 1, 561, 113);
+            break;
+        default:
+            //console_log(global.completion);
+            break;
+    }
+    switch real(global.gimmickcompletion) {
+        case 1:
+            draw_sprite(s_completion, 3, 561, 113);
+            break;
+        case 2:
+            draw_sprite(s_completion, 2, 561, 113);
+            draw_sprite(s_completion, 3, 561, 113);
+            break;
+    }
+    
     draw_sprite(s_menucover, 0, 207, 591);
     if !lockon {
         draw_sprite_ext(s_cursor, 0, selectorposx, selectorposy, menuxscale, menuyscale, 0, c_white, 1);

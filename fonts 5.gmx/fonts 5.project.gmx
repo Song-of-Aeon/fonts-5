@@ -46,7 +46,9 @@
       <filename>Alien-Encounters-Regular.ttf</filename>
     </datafile>
   </datafiles>
-  <NewExtensions/>
+  <NewExtensions>
+    <extension index="0">extensions\window_set_cursor</extension>
+  </NewExtensions>
   <sounds name="sound">
     <sound>sound\m_onemorenight</sound>
     <sound>sound\m_combattheme</sound>
@@ -175,6 +177,9 @@
     <sprite>sprites\s_minehitbox</sprite>
     <sprite>sprites\s_controls</sprite>
     <sprite>sprites\sprite93</sprite>
+    <sprite>sprites\sprite94</sprite>
+    <sprite>sprites\cr_defrag</sprite>
+    <sprite>sprites\s_completion</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>

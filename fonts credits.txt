@@ -1,0 +1,46 @@
+Fonts 5:
+Code: Aeon
+Gimmicks: Aeon, Anumania
+UI, modified noteskins, misc. graphics: Aeon
+Maps: Aeon
+Concept: Aeon, Anumania, Yunevii
+Testing: Aeon, Anumania, Yunevii
+
+Software:
+GameMaker Studio 1.4 - Game engine
+StepMania - Mapping tool, original concept
+YellowAfterLife - Custom cursor GameMaker extension
+misc. software:
+Paint.NET - All visual edits
+Aseprite - Original sprites
+FireAlpaca - When I needed cool brush effects
+GitKraken - Git client
+GitHub - Git host
+Windows 10 - OS
+getsongbpm.com - Getting song bpm
+Notepad - This text document
+Audacity - Cutting nocturne
+Notepad++ - Copying .sm files
+Newgrounds, itch.io, X10 Hosting, Game Jolt - Hosting, unless one of them says I can't because it contains "copyrighted material"
+
+visuals:
+StepMania - midi-solo noteskin
+Toby Fox - SOUL sprite
+Artyom Samoilov - ZERO sprites
+world of warcraft - Combat Theme bg
+Tech N9ne - lancer raps bg
+DELTARUNE - lancer raps bg
+Touru Amamiya - Reset Set bg
+Porter Robinson - Eon Break bg
+I don't know who made the - chromatic judgement font
+
+music:
+Combat Theme: reach, SiIvagunner, Gerard Butler, keatonkeaton999, O-Zone, Kohmi Hirose, kors k, Jonathan Wolff, Eino Kettunen, Loituma, Hatsune Miku, beatMARIO, Nitori Kawashiro, Unregistered HyperCam 2
+lancer raps: Galactic Hole, Toby Fox (DELTARUNE), Tech N9ne, Spongebob Squarepants
+everything will freeze: UNDEAD CORPORATION (BOUKUN)
+Nocturne: Bill Kiley (Katana ZERO)
+Reset Set: Nanawo Akari
+Eon Break: Porter Robinson (Virtual Self)
+
+special thanks:
+PeanutButterGamer - Videos kept me alive while mapping flow difficulty and fixing bugs

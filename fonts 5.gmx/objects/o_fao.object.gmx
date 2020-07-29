@@ -54,11 +54,35 @@ drawdark = 0;
 if drawdark &gt;= 1.2 {
     room_goto(leaving);
     if leaving = stagemenu {
-        if global.storymode = true &amp;&amp; global.scoring[0] &lt; global.scoring[6] {
+        ini_open("profile.ini");
+        if global.storymode = true &amp;&amp; real(global.scoring[0]) &lt;= real(global.scoring[6]) { //this is from melodychaser
+            if string_length(global.scoring[6] &lt; 4) {
+                if string_char_at(global.scoring[6], 2) = "." {
+                    global.scoring[6] = "0" + global.scoring[6];
+                } else {
+                    global.scoring[6] = global.scoring[6] + "0";
+                }
+            }
+            switch o_menu.truecombo {
+                case 1:
+                    global.scoring[6] = string(global.scoring[6] + "G");
+                    break;
+                case 2:
+                    global.scoring[6] = string(global.scoring[6] + "P");
+                    break;
+                case 3:
+                    global.scoring[6] = string(global.scoring[6] + "M");
+                    break;
+                
+            }
+            console_log(script_get_name(global.songscript));
             global.scoring[0] = global.scoring[6];
+            global.completion = ini_write_string("story", "completion", string(global.difficulty+1));
+            if global.gimmickactive {
+                global.gimmickcompletion = ini_write_string("story", "gimmick", string(global.difficulty+1));
+            }
         }
         //game_save("profile.dat");
-        ini_open("profile.ini");
         var i;
         for (i=0; i&lt;6; i++) {
             ini_write_string("scores"+string(global.difficulty), "stage " + string(i), global.scoring[i]);

@@ -55,6 +55,9 @@ image_yscale = 3;
           <argument>
             <kind>1</kind>
             <string>instance_destroy(o_projectile);
+if instance_exists(o_privatesquare) {
+    instance_destroy(o_privatesquare);
+}
 </string>
           </argument>
         </arguments>

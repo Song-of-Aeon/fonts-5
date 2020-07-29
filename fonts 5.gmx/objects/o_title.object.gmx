@@ -39,6 +39,7 @@ going = false;
 swapper = 0;
 enteralpha = 1;
 draw_set_font(f_ronaldo);
+window_set_cursor_sprite(cr_defrag, 0);
 
 title = array("Evanecence,", "it", "is", "personified!",
 "As", "that", "inferno", "fluxuates,", "so", "does", "the", "penultimate", "of", "the", "heptads,", "the", "one", "commanding", "the", "iconoclastic", "apparitions!",

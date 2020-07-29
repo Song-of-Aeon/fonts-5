@@ -63,6 +63,9 @@ active = false;
         }
         select = false;
     }
+    if select || back {
+        count = 999;
+    }
     switch global.cutscenecount {
         case 0:
             if words &lt; 48 {
@@ -96,7 +99,12 @@ active = false;
                         sidealpha = -500;
                     }
                 }
+                
             }
+            if count &gt;= 900 {
+                    instance_create(0, 0, o_fao);
+                    o_cutscene.active = false;
+                }
             count++;
             break;
         
@@ -202,6 +210,8 @@ active = false;
         case 7:
             with instance_create(0, 0, o_fao) {
                 leaving = stagemenu;
+                count = 0;
+                words = 0;
             }
             break;
     }

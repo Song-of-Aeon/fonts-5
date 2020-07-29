@@ -356,7 +356,7 @@ if (back &amp;&amp; !instance_exists(o_fao)) || (hp &lt;= 0 &amp;&amp; global.so
             depth = -3;
         }
         var scoring6 = real(global.scoring[6]);
-        if global.songscript != c_nocturne {
+        if global.songscript != c_nocturne &amp;&amp; global.songscript != c_itsrainingsomewhereelse {
             scoring6 += MELODYCHASER.realscore/5;
         }
         if real(global.scoring[global.currentstage]) &lt; MELODYCHASER.realscore {
@@ -381,9 +381,9 @@ if (back &amp;&amp; !instance_exists(o_fao)) || (hp &lt;= 0 &amp;&amp; global.so
                 
             }
         }
-        if real(global.scoring[0]) &lt; scoring6 {
-            global.scoring[0] = string(scoring6);
-            if string_length(global.scoring[0] &lt; 4) {
+        //if real(global.scoring[0]) &lt; scoring6 {
+            global.scoring[6] = string(scoring6);
+            /*if string_length(global.scoring[0] &lt; 4) {
                 if string_char_at(global.scoring[0], 2) = "." {
                     global.scoring[0] = "0" + global.scoring[0];
                 } else {
@@ -401,8 +401,8 @@ if (back &amp;&amp; !instance_exists(o_fao)) || (hp &lt;= 0 &amp;&amp; global.so
                     global.scoring[0] = string(global.scoring[0] + "M");
                     break;
                 
-            }
-        }
+            }*/
+        //}
         //if global.songscript != c_nocturne {
             global.cutscenecount++;
         //}

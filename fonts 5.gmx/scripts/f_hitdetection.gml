@@ -16,26 +16,22 @@ if thenoteup != noone && thenotedown != noone {
 } else {
     thenote = noone;
 }
-if thenote != noone {
+if thenote != noone && thenote.object_index != o_mine {
     infoalpha += .2;
     infoalpha = clamp(infoalpha, 1.6, 4);
     var distance = abs(thenote.y - bar);
 
-    if thenote.object_index = o_mine {
-        noterank = 4;
-        instance_destroy(instance_place(argument0, bar, o_mine));
-    } else {
-        noterank = floor(distance/((bpm*global.xmod)/50));
-        ranktext = noterank;
-        if thenote.object_index = o_freeze || thenote.object_index = o_roll {
-            with instance_create(argument0, bar, o_stay) {
-                tail = other.thenote.tail;
-                image_blend = other.thenote.image_blend;
-                image_angle = other.thenote.image_angle;
-                sprite_index = other.thenote.sprite_index;
-                with tail {
-                    head = other.id;
-                }
+    
+    noterank = floor(distance/((bpm*global.xmod)/50));
+    ranktext = noterank;
+    if thenote.object_index = o_freeze || thenote.object_index = o_roll {
+        with instance_create(argument0, bar, o_stay) {
+            tail = other.thenote.tail;
+            image_blend = other.thenote.image_blend;
+            image_angle = other.thenote.image_angle;
+            sprite_index = other.thenote.sprite_index;
+            with tail {
+                head = other.id;
             }
         }
     }
