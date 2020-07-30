@@ -19,8 +19,24 @@ if right {
     
 }
 
-
 if heldleft {
-    //if range(bar) bar-bpm*global.xmod/20
+    f_minedetection(laneleft, 0, -90);
+    
+}
+if helddown {
+    f_minedetection(lanedown, 1, 0);
+    
+}
+if heldup {
+    f_minedetection(laneup, 2, 180);
+    
+}
+if right {
+    f_minedetection(laneright, 3, 90);
+    
 }
 
+
+/*if heldleft {
+    if range(bar) bar-bpm*global.xmod/20
+}*/

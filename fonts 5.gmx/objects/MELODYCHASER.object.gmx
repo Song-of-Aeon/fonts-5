@@ -161,6 +161,7 @@ if alt &amp;&amp; select &amp;&amp; global.songscript != c_eonbreak {
 if !instance_exists(o_smparser) {
     if select {
         songstarting = true;
+        window_set_cursor_sprite(s_null, 0);
         with o_help {
             savedy = room_height + sprite_height/2 + 5;
             vspd = y-savedy;

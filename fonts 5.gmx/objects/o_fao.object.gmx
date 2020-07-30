@@ -52,6 +52,13 @@ drawdark = 0;
             <string>drawdark += .02;
 
 if drawdark &gt;= 1.2 {
+    window_set_cursor_sprite(cr_defrag, 0);
+    if !window_get_fullscreen() &amp;&amp; global.songscript = c_eonbreak {
+        windowx = global.ogx;
+        windowy = global.ogy;
+    }
+    shader_reset();
+    application_surface_draw_enable(true);
     room_goto(leaving);
     if leaving = stagemenu {
         ini_open("profile.ini");

@@ -19,10 +19,19 @@ if right {
     
 }
 
-
-if instance_place(laneleft, bar, o_switch) != noone {
-    danmaku++;
-    instance_create(160, 0, o_soul);
-    state = c_receptordanmaku;
+if heldleft {
+    f_minedetection(laneleft, 0, -90);
+    
 }
-
+if helddown {
+    f_minedetection(lanedown, 1, 0);
+    
+}
+if heldup {
+    f_minedetection(laneup, 2, 180);
+    
+}
+if right {
+    f_minedetection(laneright, 3, 90);
+    
+}

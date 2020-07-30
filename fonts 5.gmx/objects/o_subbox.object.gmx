@@ -48,6 +48,9 @@ switch global.songscript {
     case c_reset_set:
         subset = st_reset_set;
         subsetwo = st_reset_set_jp;
+        if !global.gimmickactive {
+            instance_destroy();
+        }
         break;
     case c_itsrainingsomewhereelse:
         subset = st_ending;
