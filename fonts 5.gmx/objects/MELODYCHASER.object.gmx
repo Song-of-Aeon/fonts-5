@@ -350,8 +350,8 @@ if !instance_exists(o_note) &amp;&amp; instance_exists(o_smparser) {
     countwo++;
 }
 
-if (back &amp;&amp; !instance_exists(o_fao)) || (hp &lt;= 0 &amp;&amp; global.songscript != c_yumegaaru) || countwo = 300 {
-    if global.storymode = true &amp;&amp; hp &gt; 0  { //&amp;&amp; !audio_is_playing(song) || !back
+if (back &amp;&amp; !instance_exists(o_fao)) || (hp &lt;= 0) || countwo = 300 {
+    if global.storymode = true &amp;&amp; hp &gt; 0 &amp;&amp; !back { //&amp;&amp; !audio_is_playing(song) || !back
         with instance_create(0, 0, o_fao) {
             leaving = cutscene;
             depth = -3;
@@ -380,6 +380,9 @@ if (back &amp;&amp; !instance_exists(o_fao)) || (hp &lt;= 0 &amp;&amp; global.so
                     global.scoring[global.currentstage] = "100.0M";
                     break;
                 
+                case 99:
+                    global.scoring[global.currentstage] = string(global.scoring[global.currentstage] + "L");
+                    break;
             }
         }
         //if real(global.scoring[0]) &lt; scoring6 {
@@ -414,6 +417,7 @@ if (back &amp;&amp; !instance_exists(o_fao)) || (hp &lt;= 0 &amp;&amp; global.so
         with instance_create(0, 0, o_fao) {
             leaving = stagemenu;
         }
+        global.storemode = false;
         if real(global.scoring[global.currentstage]) &lt; MELODYCHASER.realscore {
             global.scoring[global.currentstage] = string(MELODYCHASER.realscore);
             if string_length(global.scoring[global.currentstage] &lt; 4) {
