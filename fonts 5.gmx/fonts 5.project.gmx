@@ -67,6 +67,7 @@
     <sound>sound\m_eveniftheworlddeceivesyou</sound>
     <sound>sound\m_itsrainingsomewhereelse</sound>
     <sound>sound\m_hurt</sound>
+    <sound>sound\m_yumegaaru</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\s_kaguya</sprite>
@@ -227,6 +228,8 @@
     <script>scripts\c_eonbreak.gml</script>
     <script>scripts\sm_itsrainingsomewhereelse.gml</script>
     <script>scripts\c_itsrainingsomewhereelse.gml</script>
+    <script>scripts\sm_yumegaaru.gml</script>
+    <script>scripts\c_yumegaaru.gml</script>
     <scripts name="the common">
       <script>scripts\script0.gml</script>
       <script>scripts\script25.gml</script>
@@ -276,9 +279,12 @@
       <script>scripts\c_txtcommon.gml</script>
     </scripts>
     <scripts name="the subtitles">
+      <script>scripts\st_.gml</script>
       <script>scripts\st_reset_set.gml</script>
       <script>scripts\st_reset_set_jp.gml</script>
       <script>scripts\st_ending.gml</script>
+      <script>scripts\st_golden.gml</script>
+      <script>scripts\st_golden_jp.gml</script>
       <script>scripts\st_run2.gml</script>
       <script>scripts\st_run.gml</script>
     </scripts>
@@ -286,6 +292,7 @@
       <script>scripts\c_everythingwillfreeze_gimmicks.gml</script>
       <script>scripts\c_reset_set_gimmicks.gml</script>
       <script>scripts\c_eonbreak_gimmicks.gml</script>
+      <script>scripts\c_yumegaarugimmicks.gml</script>
     </scripts>
     <scripts name="the obsolete">
       <script>scripts\sm_onemorenight.gml</script>

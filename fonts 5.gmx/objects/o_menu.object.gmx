@@ -152,7 +152,7 @@ image_speed = 0;
                 selectorsavey++;
             }
         }
-        if down &amp;&amp; menuposition &lt; 5 { //6 for super test
+        if down &amp;&amp; menuposition &lt; 5+ceil(real(global.completion)/2) { //6 for super test
             
             selectorvspd = 87;
             selectorsavevspd = 87;
@@ -241,7 +241,8 @@ image_speed = 0;
                 case 6:
                     //global.songscript = c_eveniftheworlddeceivesyou;
                     //global.songscript = c_nocturne;
-                    global.songscript = c_itsrainingsomewhereelse;
+                    //global.songscript = c_itsrainingsomewhereelse;
+                    global.songscript = c_yumegaaru;
                     break;
             }
             audio_play_sound(se_select, 0, false);
@@ -447,7 +448,7 @@ if room = stagemenu {
                 draw_text(652, menuposition*87+162, "Eon Break");
                 break;
             case 6:
-                draw_text(652, menuposition*87+162, "super test");
+                draw_text(652, menuposition*87+162, "Yume ga aru");
                 break;
         }
     }

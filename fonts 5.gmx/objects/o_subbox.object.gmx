@@ -55,7 +55,11 @@ switch global.songscript {
     case c_itsrainingsomewhereelse:
         subset = st_ending;
         subsetwo = c_null;
-            break;
+        break;
+    case c_yumegaaru:
+        subset = st_golden;
+        subsetwo = c_null;
+        break;
     default:
         subset = c_null;
         subsetwo = c_null;

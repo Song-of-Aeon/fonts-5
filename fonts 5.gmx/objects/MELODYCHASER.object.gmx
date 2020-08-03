@@ -350,7 +350,7 @@ if !instance_exists(o_note) &amp;&amp; instance_exists(o_smparser) {
     countwo++;
 }
 
-if (back &amp;&amp; !instance_exists(o_fao)) || (hp &lt;= 0 &amp;&amp; global.songscript != c_everythingwillfreeze) || countwo = 300 {
+if (back &amp;&amp; !instance_exists(o_fao)) || (hp &lt;= 0 &amp;&amp; global.songscript != c_yumegaaru) || countwo = 300 {
     if global.storymode = true &amp;&amp; hp &gt; 0  { //&amp;&amp; !audio_is_playing(song) || !back
         with instance_create(0, 0, o_fao) {
             leaving = cutscene;
@@ -458,6 +458,9 @@ switch global.songscript {
         break;
     case c_eonbreak:
         c_eonbreak_gimmicks();
+        break;
+    case c_yumegaaru:
+        c_yumegaarugimmicks();
         break;
     
     default:
