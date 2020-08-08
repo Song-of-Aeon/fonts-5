@@ -263,7 +263,7 @@ var j;
 lanespacing = laneup - laneleft;
 //for (j=laneleft; j&lt;=laneup; j+=lanespacing/2) {
     //var note = instance_place(j, bar-bpm*global.xmod/20-128, o_note); CUCK MODE NOTE CHECKING LOL
-    var note = collision_line(laneleft, bar-bpm*global.xmod/20-128, laneright, bar-bpm*global.xmod/20-128, o_note, false, false);
+    var note = collision_line(0, bar-bpm*global.xmod/20-128, room_width, bar-bpm*global.xmod/20-128, o_note, false, false);
     if note != noone {
         if note.object_index = o_freeze || note.object_index = o_roll {
             with note.tail {
@@ -380,8 +380,11 @@ if (back &amp;&amp; !instance_exists(o_fao)) || (select &amp;&amp; global.contro
                     global.scoring[global.currentstage] = string(global.scoring[global.currentstage] + "P");
                     break;
                 case 3:
-                    global.scoring[global.currentstage] = "100.0M";
-                    break;
+                    if realscore &gt; 0 {
+                        //global.scoring[global.currentstage] = "100.0M";
+                        global.scoring[global.currentstage] = string(global.scoring[global.currentstage] + "M");
+                        break;
+                    }
                 
                 case 99:
                     global.scoring[global.currentstage] = string(global.scoring[global.currentstage] + "L");
@@ -438,8 +441,11 @@ if (back &amp;&amp; !instance_exists(o_fao)) || (select &amp;&amp; global.contro
                     global.scoring[global.currentstage] = string(global.scoring[global.currentstage] + "P");
                     break;
                 case 3:
-                    global.scoring[global.currentstage] = "100.0M";
-                    break;
+                    if realscore &gt; 0 {
+                        //global.scoring[global.currentstage] = "100.0M";
+                        global.scoring[global.currentstage] = string(global.scoring[global.currentstage] + "M")
+                        break;
+                    }
                     
                 case 99:
                     global.scoring[global.currentstage] = string(global.scoring[global.currentstage] + "L");
