@@ -1,44 +1,73 @@
-/*
-left = keyboard_check_pressed(vk_left) + keyboard_check_pressed(ord('A')) + keyboard_check_pressed(ord('M')) + keyboard_check_pressed(vk_numpad4);
-down = keyboard_check_pressed(vk_down) + keyboard_check_pressed(ord('S')) + keyboard_check_pressed(188) + keyboard_check_pressed(vk_numpad5);
-up = keyboard_check_pressed(vk_up) + keyboard_check_pressed(ord('K')) + keyboard_check_pressed(ord('W')) + keyboard_check_pressed(vk_numpad8);
-right = keyboard_check_pressed(vk_right) + keyboard_check_pressed(ord('L')) + keyboard_check_pressed(ord('D')) + keyboard_check_pressed(190) + keyboard_check_pressed(vk_numpad6);
+global.controller = true;
 
-//Arrows/ASKL/WASD/KM,./8456
+gamepad_set_button_threshold(0, 0.1);
+gamepad_set_axis_deadzone(0, 0.3);
 
-heldleft = keyboard_check(vk_left) + keyboard_check(ord('A')) + keyboard_check(ord('M')) + keyboard_check(vk_numpad4);
-helddown = keyboard_check(vk_down) + keyboard_check(ord('S')) + keyboard_check(188) + keyboard_check(vk_numpad5);
-heldup = keyboard_check(vk_up) + keyboard_check(ord('K')) + keyboard_check(ord('W')) + keyboard_check(vk_numpad8);
-heldright = keyboard_check(vk_right) + keyboard_check(ord('L')) + keyboard_check(ord('D')) + keyboard_check(190) + keyboard_check(vk_numpad6);
+var mainleft = -gamepad_axis_value(0, gp_axislh);
+var maindown = gamepad_axis_value(0, gp_axislv);
+var mainup = -gamepad_axis_value(0, gp_axislv);
+var mainright = gamepad_axis_value(0, gp_axislh);
 
-var lhaxis = gamepad_axis_value(0, gp_axislh);
-var lvaxis = gamepad_axis_value(0, gp_axislv);
-var rhaxis = gamepad_axis_value(0, gp_axisrh);
-var rvaxis = gamepad_axis_value(0, gp_axisrv);
-abs(floor(lhaxis))
-left += gamepad_button_check_pressed(0, gp_padl);
-down += gamepad_button_check_pressed(0, gp_padd);
-up += gamepad_button_check_pressed(0, gp_padu);
-right += gamepad_button_check_pressed(0, gp_padr);
+mainstick[0] = mainleft;
+mainstick[1] = maindown;
+mainstick[2] = mainup;
+mainstick[3] = mainright;
 
-heldleft += gamepad_button_check(0, gp_padl);
-helddown += gamepad_button_check(0, gp_padd);
-heldup += gamepad_button_check(0, gp_padu);
-heldright += gamepad_button_check(0, gp_padr);
+var i;
+for (i=0; i<array_length_1d(mainstick); i++) {
+    if mainstick[i] > 0 {
+        mainstickstate[i]++;
+    } else {
+        mainstickstate[i] = 0;
+    }
+    mainstickstate[i] = clamp(mainstickstate[i], 0, 2);
+}
 
+var cleft = -gamepad_axis_value(0, gp_axislh);
+var cdown = gamepad_axis_value(0, gp_axislv);
+var cup = -gamepad_axis_value(0, gp_axislv);
+var cright = gamepad_axis_value(0, gp_axislh);
 
-select = keyboard_check_pressed(ord('Z')) + keyboard_check_pressed(vk_enter);
-back = keyboard_check_pressed(ord('X')) + keyboard_check_pressed(vk_escape);
-swap = keyboard_check_pressed(vk_space) + keyboard_check_pressed(ord('E'));
-control = keyboard_check_pressed(vk_control) + keyboard_check_pressed(ord('H')) + keyboard_check_pressed(vk_rcontrol);
-alt = keyboard_check(vk_alt) + keyboard_check(vk_ralt);
+cstick[0] = cleft;
+cstick[1] = cdown;
+cstick[2] = cup;
+cstick[3] = cright;
 
-select += gamepad_button_check_pressed();
-back += gamepad_button_check_pressed();
-swap += gamepad_button_check_pressed();
-control += gamepad_button_check_pressed();
-alt += gamepad_button_check();
-if !instance_exists(o_smparser) {
-    select += gamepad_button_check_pressed();
-    back += gamepad_button_check_pressed();
-}*/
+var i;
+for (i=0; i<array_length_1d(cstick); i++) {
+    if cstick[i] > 0 {
+        cstickstate[i]++;
+    } else {
+        cstickstate[i] = 0;
+    }
+    cstickstate[i] = clamp(cstickstate[i], 0, 2);
+}
+
+/*var cleft = floor(gamepad_axis_value(0, gp_axisrh)+.05);
+var cdown = floor(gamepad_axis_value(0, gp_axisrv)+.05);
+var cup = ceil(gamepad_axis_value(0, gp_axisrv)-.05);
+var cright = ceil(gamepad_axis_value(0, gp_axisrh)-.05);
+
+var mainleft = 0;
+var maindown = 0;
+var mainup = 0;
+var mainright = 0;
+
+var cleft = 0;
+var cdown = 0;
+var cup = 0;
+var cright = 0;*/
+
+left += gamepad_button_check_pressed(0, gp_padl) + gamepad_button_check_pressed(0, gp_face3) + gamepad_button_check_pressed(0, gp_shoulderlb) + (mainstickstate[0])%2 + (cstickstate[0])%2;
+down += gamepad_button_check_pressed(0, gp_padd) + gamepad_button_check_pressed(0, gp_face1) + gamepad_button_check_pressed(0, gp_shoulderl) + (mainstickstate[1])%2 + (cstickstate[1])%2;
+up += gamepad_button_check_pressed(0, gp_padu) + gamepad_button_check_pressed(0, gp_face4) + gamepad_button_check_pressed(0, gp_shoulderr) + (mainstickstate[2])%2 + (cstickstate[2])%2;
+right += gamepad_button_check_pressed(0, gp_padr) + gamepad_button_check_pressed(0, gp_face2) + gamepad_button_check_pressed(0, gp_shoulderrb) + (mainstickstate[3])%2 + (cstickstate[3])%2;
+
+heldleft += gamepad_button_check(0, gp_padl) + gamepad_button_check(0, gp_face3) + gamepad_button_check(0, gp_shoulderlb) + floor(mainstickstate[0]/2) + floor(cstickstate[0]/2);
+helddown += gamepad_button_check(0, gp_padd) + gamepad_button_check(0, gp_face1) + gamepad_button_check(0, gp_shoulderl) + floor(mainstickstate[1]/2) + floor(cstickstate[1]/2);
+heldup += gamepad_button_check(0, gp_padu) + gamepad_button_check(0, gp_face4) + gamepad_button_check(0, gp_shoulderr) + floor(mainstickstate[2]/2) + floor(cstickstate[2]/2);
+heldright += gamepad_button_check(0, gp_padr) + gamepad_button_check(0, gp_face2) + gamepad_button_check(0, gp_shoulderrb) + floor(mainstickstate[3]/2) + floor(cstickstate[3]/2);
+
+select += gamepad_button_check_pressed(0, gp_start);
+//back += gamepad_button_check_pressed();
+swap += gamepad_button_check_pressed(0, gp_select);

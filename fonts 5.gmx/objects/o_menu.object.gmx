@@ -93,10 +93,11 @@ if file_exists("profile.ini") {
 global.kaguya = false;
 global.notecover = s_kaguya;
 global.streamstring = false;
+global.controller = false;
 audio_play_sound(m_night, 0, false);
 
 image_speed = 0;
-
+c_inputwocreate();
 </string>
           </argument>
         </arguments>
@@ -445,7 +446,11 @@ if room = stagemenu {
                 draw_text(652, menuposition*87+162, "Reset Set");
                 break;
             case 5:
-                draw_text(652, menuposition*87+162, "Eon Break");
+                if global.difficulty = 1 {
+                    draw_text(652, menuposition*87+162, "Eon Break");
+                } else {
+                    draw_text(652, menuposition*87+162, "fifth easy");
+                }
                 break;
             case 6:
                 draw_sprite(s_menu, 2, 0, 0);

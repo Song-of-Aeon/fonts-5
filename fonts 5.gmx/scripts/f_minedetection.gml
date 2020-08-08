@@ -2,7 +2,7 @@
 var nonsense = argument1;
 //if instance_place(argument0, bar, o_note) != noone && instance_place(argument0, bar, o_note).dir = argument1 {
 var thenote = collision_point(argument0, bar, o_mine, false, true);
-if thenote != noone  {
+if thenote != noone {
     infoalpha += .2;
     infoalpha = clamp(infoalpha, 1.6, 4);
     var distance = abs(thenote.y - bar);

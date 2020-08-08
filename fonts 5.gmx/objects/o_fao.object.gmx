@@ -49,7 +49,7 @@ drawdark = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>drawdark += .02;
+            <string>drawdark += .05;
 
 if drawdark &gt;= 1.2 {
     window_set_cursor_sprite(cr_defrag, 0);

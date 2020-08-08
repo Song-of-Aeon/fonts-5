@@ -55,6 +55,8 @@ global.ogx = window_get_x();
 global.ogy = window_get_y();
 console_log(global.ogx, global.ogy);
 
+c_inputwocreate();
+
 //window_set_fullscreen(true);
 </string>
           </argument>

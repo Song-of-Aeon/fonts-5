@@ -35,13 +35,16 @@ if thenote != noone && thenote.object_index != o_mine {
             }
         }
     }
-    instance_destroy(thenote);
     combocolour[3] = combocolour[2];
     combocolour[2] = combocolour[1];
     combocolour[1] = combocolour[0];
     if !allideal {
         if noterank < 3 {
             combo++;
+            if global.controller && global.gimmickactive {
+                //rumble[thenote.dir] += abs((abs(noterank)-2)/3);
+                rumble[thenote.dir] = .6;
+            }
         } else {
             combo = 0;
         }
@@ -141,6 +144,7 @@ if thenote != noone && thenote.object_index != o_mine {
             }
         }
     }
+    instance_destroy(thenote);
     bop[8] = 1.3;
     var fx = instance_create(argument0, bar, o_hitfx);
     fx.image_angle = argument2;

@@ -30,6 +30,7 @@ row = 0;
 column = 0;
 count = 0;
 active = false;
+c_inputwocreate();
 </string>
           </argument>
         </arguments>

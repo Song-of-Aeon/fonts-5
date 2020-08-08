@@ -32,3 +32,7 @@ control = keyboard_check_pressed(vk_control) + keyboard_check_pressed(ord('H')) 
 
 alt = keyboard_check(vk_alt) + keyboard_check(vk_ralt);
 //if keyboard_check_pressed(vk_anykey) show_message(keyboard_lastkey);
+
+if gamepad_is_connected(0) {
+    c_inputwo();
+}

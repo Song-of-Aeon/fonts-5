@@ -120,6 +120,9 @@ if global.noteoverride != 0 {
     c_noteoverride();
 }
 global.truetime = 1;
+
+c_inputwocreate();
+rumble = array_create(4);
 </string>
           </argument>
         </arguments>
@@ -350,8 +353,8 @@ if !instance_exists(o_note) &amp;&amp; instance_exists(o_smparser) {
     countwo++;
 }
 
-if (back &amp;&amp; !instance_exists(o_fao)) || (hp &lt;= 0) || countwo = 300 {
-    if global.storymode = true &amp;&amp; hp &gt; 0 &amp;&amp; !back { //&amp;&amp; !audio_is_playing(song) || !back
+if (back &amp;&amp; !instance_exists(o_fao)) || (select &amp;&amp; global.controller = true &amp;&amp; count &gt; 1) || (hp &lt;= 0) || countwo = 300 {
+    if global.storymode = true &amp;&amp; hp &gt; 0 &amp;&amp; !back &amp;&amp; !select { //&amp;&amp; !audio_is_playing(song) || !back
         with instance_create(0, 0, o_fao) {
             leaving = cutscene;
             depth = -3;
@@ -509,6 +512,16 @@ if lanes &gt; 4 {
 
 if global.gimmickactive = false {
     MELODYCHASER.lanes = 4;
+}
+if global.controller {
+    gamepad_set_vibration(0, rumble[0]+rumble[1]/1.5+rumble[2]/2.5, rumble[3]+rumble[2]/1.5+rumble[1]/2.5);
+    //gamepad_set_vibration(0, 1, 0);
+    
+    var k;
+    for (k=0; k&lt;array_length_1d(rumble); k++) {
+        rumble[k] -= .1;
+        rumble[k] = clamp(rumble[k], 0, 1);
+    }
 }
 
 global.truetime = c_timebuster();
