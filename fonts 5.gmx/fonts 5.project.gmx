@@ -328,6 +328,7 @@
     <object>objects\o_smparser</object>
     <object>objects\object0</object>
     <object>objects\o_note</object>
+    <object>objects\o_naturalend</object>
     <object>objects\o_switch</object>
     <object>objects\o_gimmickactivator</object>
     <object>objects\o_switchback</object>

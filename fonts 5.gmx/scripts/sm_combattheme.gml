@@ -3289,5 +3289,5 @@ return "#TITLE:Combat Theme;
 0000
 0000
 3003
-0000
+0006
 ;"

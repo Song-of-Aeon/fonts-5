@@ -351,6 +351,7 @@ infoalpha = clamp(infoalpha, 0, 4);
 
 if !instance_exists(o_note) &amp;&amp; instance_exists(o_smparser) {
     countwo++;
+    console_log("it's rude to talk about someone who's listening.");
 }
 
 if (back &amp;&amp; !instance_exists(o_fao)) || (select &amp;&amp; global.controller = true &amp;&amp; count &gt; 1) || (hp &lt;= 0) || countwo = 300 {
