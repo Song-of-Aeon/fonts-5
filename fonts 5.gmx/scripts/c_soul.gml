@@ -62,9 +62,8 @@ if (up) {
     dir = 1;
 }
 
-if collision_line(x, y, xprevious, yprevious, o_projectile, false, false) && inv = false {
+if collision_line(x, y, xprevious, yprevious, o_projectile, false, false) && !inv {
     audio_play_sound(m_hurt, 0, false);
-    audio_play_sound(m_hurt, 1, false);
     inv = true;
     image_alpha = .5;
     alarm[1] = 60;

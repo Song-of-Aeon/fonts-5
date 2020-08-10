@@ -134,6 +134,7 @@ if count &gt;= 10 {
 
 if select &amp;&amp; going = false {
     audio_play_sound(se_select, 0, false);
+    //audio_play_sound(m_hurt, 0, false);
     fadealpha = 0;
     fadespd = -.01;
     going = true;
