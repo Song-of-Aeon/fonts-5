@@ -144,6 +144,21 @@ switch danmaku {
             }
         }
         break;
+    
+    default:
+        if f_danmakudetection(laneleft) {
+            
+        }
+        if f_danmakudetection(lanedown) {
+            
+        }
+        if f_danmakudetection(laneup) {
+            
+        }
+        if f_danmakudetection(laneright) {
+            
+        }
+        break;
 }
 
 
