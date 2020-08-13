@@ -464,6 +464,9 @@ if (back &amp;&amp; !instance_exists(o_fao)) || (select &amp;&amp; global.contro
 }
 
 switch global.songscript {
+    case c_lancerraps:
+        c_flashfall_gimmicks();
+        break;
     case c_everythingwillfreeze:
         c_everythingwillfreeze_gimmicks();
         break;

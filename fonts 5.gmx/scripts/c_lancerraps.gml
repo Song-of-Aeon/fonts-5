@@ -20,7 +20,8 @@ if global.noteoverride = 0 {
 lanes = 8;
 songbg = bk_lancerraps;
 xmod = 13; //
-arrayx[0] = "T";
+arrayx = array("T",
+"FALL");
 arrayy[0] = 0;
 //bg = bk_;
 //music = m_;

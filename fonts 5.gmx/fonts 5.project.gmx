@@ -267,6 +267,7 @@
     </scripts>
     <script>scripts\c_redinput.gml</script>
     <script>scripts\c_soul.gml</script>
+    <script>scripts\c_flashfall.gml</script>
     <script>scripts\c_noteoverride.gml</script>
     <scripts name="the dialogue">
       <script>scripts\txt_.gml</script>
@@ -290,6 +291,7 @@
     </scripts>
     <scripts name="the gimmicks">
       <script>scripts\c_everythingwillfreeze_gimmicks.gml</script>
+      <script>scripts\c_flashfall_gimmicks.gml</script>
       <script>scripts\c_reset_set_gimmicks.gml</script>
       <script>scripts\c_eonbreak_gimmicks.gml</script>
       <script>scripts\c_yumegaarugimmicks.gml</script>
@@ -342,6 +344,7 @@
     <object>objects\o_stay</object>
     <object>objects\o_mine</object>
     <object>objects\o_soul</object>
+    <object>objects\o_flashfall</object>
     <object>objects\o_projectile</object>
     <object>objects\o_knife</object>
     <object>objects\o_bullet</object>

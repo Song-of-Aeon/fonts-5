@@ -19,16 +19,21 @@ if hput != 0 {
 }
 
 
+if !place_meeting(x, y+vspd, o_note) {
+    vspd += .8;
+} else {
+    vspd = instance_nearest(x, y, o_note).vspd;
+}
 
 var vput = (down) - (up);
 
-if vput != 0 {
+/*if vput != 0 {
     vspd += vput*acc;
     vspd = clamp(vspd, -maxvspd, maxvspd);
 } else {
     vspd = lerp(vspd, 0, frict);
     vspd = 0;
-}
+}*/
 y += vspd;
 x += hspd;
 
@@ -45,7 +50,8 @@ if y < MELODYCHASER.bar-32 {
 if y > room_height {
     y -= vspd;
 }
-    
+
+
 if (right) {
     dir = 0;
 }
