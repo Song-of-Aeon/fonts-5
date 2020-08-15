@@ -93,7 +93,7 @@ if image_blend = c_purple {
 }
 if holder = false {
     countwo++;
-    if countwo &gt;= 35 {
+    if countwo &gt;= 20 {
         hspd = tail.hspd;
         vspd = tail.vspd;
     }
