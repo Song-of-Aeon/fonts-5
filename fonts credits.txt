@@ -21,19 +21,18 @@ Windows 10 - OS
 getsongbpm.com - Getting song bpm
 Notepad - This text document
 Audacity - Cutting nocturne
-Notepad++ - Copying .sm files
-Newgrounds, itch.io, X10 Hosting, Game Jolt - Hosting, unless one of them says I can't because it contains "copyrighted material"
+Notepad++ - Copying .sm files and making StepMania versions of noteskins work
+Newgrounds, itch.io, X10 Hosting - Hosting, unless one of them says I can't because it contains "copyrighted material"
 Steven Dall - GameMaker StepMania library that I didn't use
 GMLscripts.com - collision_line_first
 Peter "tehwave" Jørgensen - draw_circle_width
 
 Visuals:
-StepMania - midi-solo noteskin
-Toby Fox - SOUL sprite
+Jousway - midi-solo noteskin
+Toby Fox - SOUL sprite, lancer raps bg
 Artyom Samoilov - ZERO sprites
 World of Warcraft - Combat Theme bg
 Tech N9ne - lancer raps bg
-DELTARUNE - lancer raps bg
 Touru Amamiya - Reset Set bg
 Porter Robinson - Eon Break bg
 I don't know who made the - chromatic judgement font
@@ -41,7 +40,7 @@ I don't know who made the - chromatic judgement font
 Music:
 Combat Theme: reach, SiIvagunner, Gerard Butler, keatonkeaton999, O-Zone, Kohmi Hirose, kors k, Jonathan Wolff, Eino Kettunen, Loituma, Hatsune Miku, beatMARIO, Nitori Kawashiro, Unregistered HyperCam 2
 lancer raps: Galactic Hole, Toby Fox (DELTARUNE), Tech N9ne, Spongebob Squarepants
-everything will freeze: UNDEAD CORPORATION (BOUKUN)
+Everything will freeze: UNDEAD CORPORATION (BOUKUN)
 Nocturne: Bill Kiley (Katana ZERO)
 Reset Set: Nanawo Akari
 Eon Break: Porter Robinson (Virtual Self)

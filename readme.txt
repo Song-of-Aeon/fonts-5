@@ -27,7 +27,7 @@ Q: "Fonts 6 when?"
 A: I dunno. Before Yandere Simulator lol.
 
 Q: "Will you map a song for me?"
-A: Aight. 10 USD per difficulty for a reasonable length song and +10 more for cool mods and a noteskin. Four bucks off both if it's a song I really like.
+A: Aight. 10 USD per difficulty for a reasonable length song and +10 more for cool mods and a noteskin. Four bucks off both if it's a song I really like. aeon#2682
 
 Q: "Why is it so hard? The easy mode isn't easy at all!"
 A: Made for dancegame veterans. It is tough though. I can't even clear Eon Break or Everything Will Freeze on Flux very well. From the start, I was trying to map above my level.

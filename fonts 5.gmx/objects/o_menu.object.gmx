@@ -441,7 +441,7 @@ if room = stagemenu {
                 draw_text(652, menuposition*87+162, "Lancer Raps");
                 break;
             case 3:
-                draw_text(652, menuposition*87+162, "Everything Will Freeze");
+                draw_text(652, menuposition*87+162, "Everything will freeze");
                 break;
             case 4:
                 draw_text(652, menuposition*87+162, "Reset Set");
