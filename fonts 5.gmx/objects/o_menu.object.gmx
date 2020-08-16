@@ -381,11 +381,14 @@ c_inputwocreate();
     difcurvspd = difcurvspd/2;
     difcursy -= difcurvspd;
     
+    if keyboard_check_pressed(ord('Y')) {
+        global.streamstring = !global.streamstring;
+    }
 }
 
-if keyboard_check_pressed(ord('H')) {
+/*if keyboard_check_pressed(ord('H')) {
     global.hidden = !global.hidden;
-}
+}*/
 
 if room = rhythm_limbo {
     if MELODYCHASER.comborank &lt;= truecombo {

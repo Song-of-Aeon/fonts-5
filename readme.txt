@@ -41,6 +41,9 @@ A: Ah, that's a very well-hidden secret. When you reach the Last Corridor for th
 Q: "What happened to Fonts 1-4?"
 A: "Why did the chicken cross the road", "Why couldn't they beat Air Man", these are all impossible questions to answer.
 
+Q: "How do I enable the secret 'streamstring' that you can only learn about in the readme file?"
+A: This one is easy! Just look at the readme file. (press Y in the song select menu to enable/disable)
+
 
 There are five fonts featured in Fonts 5.
 

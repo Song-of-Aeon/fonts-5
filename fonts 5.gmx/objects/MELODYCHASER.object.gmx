@@ -111,7 +111,7 @@ notechange = false;
 
 count = 0;
 countwo = 0;
-if global.songscript = c_eonbreak &amp;&amp; window_get_fullscreen() {
+if global.songscript = c_eonbreak &amp;&amp; window_get_fullscreen() &amp;&amp; global.gimmickactive {
     window_set_fullscreen(false);
     window_set_position(global.ogx, global.ogy);
     console_log(window_get_x());
@@ -146,7 +146,7 @@ rumble = array_create(4);
           <argument>
             <kind>1</kind>
             <string>c_input();
-if alt &amp;&amp; select &amp;&amp; global.songscript != c_eonbreak {
+if alt &amp;&amp; select &amp;&amp; global.songscript != c_eonbreak &amp;&amp; global.gimmickactive {
     if window_get_fullscreen() {
         window_set_fullscreen(false);
         window_set_position(global.ogx, global.ogy);

@@ -53,7 +53,7 @@ drawdark = 0;
 
 if drawdark &gt;= 1.2 {
     window_set_cursor_sprite(cr_defrag, 0);
-    if !window_get_fullscreen() &amp;&amp; global.songscript = c_eonbreak {
+    if !window_get_fullscreen() &amp;&amp; global.songscript = c_eonbreak &amp;&amp; global.gimmickactive {
         windowx = global.ogx;
         windowy = global.ogy;
     }
