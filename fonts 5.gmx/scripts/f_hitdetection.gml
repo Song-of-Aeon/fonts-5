@@ -27,7 +27,7 @@ if thenote != noone && thenote.object_index != o_mine {
     if thenote.object_index = o_freeze || thenote.object_index = o_roll {
         with instance_create(argument0, bar, o_stay) {
             tail = other.thenote.tail;
-            image_blend = other.thenote.image_blend;
+            source = other.thenote.object_index;
             image_angle = other.thenote.image_angle;
             sprite_index = other.thenote.sprite_index;
             with tail {

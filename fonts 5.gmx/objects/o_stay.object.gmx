@@ -34,6 +34,7 @@ image_yscale = MELODYCHASER.mini;
 holder = true;
 hspd = 0;
 vspd = 0;
+source = o_freeze;
 </string>
           </argument>
         </arguments>
@@ -60,7 +61,7 @@ vspd = 0;
     instance_destroy();
 }
 
-if image_blend = c_purple {
+if source = o_roll {
     switch image_angle {
         case -90:
             holder = MELODYCHASER.left;
@@ -93,21 +94,25 @@ if image_blend = c_purple {
 }
 if holder = false {
     countwo++;
-    if countwo &gt;= 20 {
+    if countwo &gt;= 22 {
         hspd = tail.hspd;
         vspd = tail.vspd;
     }
 } else {
     countwo = 0;
 }
-
-if count &gt;= 10 &amp;&amp; vspd = 0 {
+if source = o_roll {
+    if holder {
+        with instance_create(x, y, o_hitfx) {
+            image_angle = other.image_angle;
+        }
+    }
+} else if count &gt;= 10 &amp;&amp; vspd = 0 &amp;&amp; holder {
     with instance_create(x, y, o_hitfx) {
         image_angle = other.image_angle;
     }
     count = 0;
 }
-
 /*if place_meeting(x, y, o_tail) {
     instance_destroy();
 }*/
