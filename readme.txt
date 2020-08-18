@@ -3,6 +3,8 @@ Fonts 5 - Evanescence, it is personified! As that inferno fluxuates, so does the
 A game by Aeon.
 Just like all free computer rhythm games, it violates copyright because of its songs. If you're one of the people in the credits and that's a problem for you you can send something about it to aeon#2682 (Discord) or @Espeon78 (Twitter) and I'll get to it, unless you're the guy that made the midi-solo noteskin. I need that shit my guy.
 
+The prologue to the story mode is "from past.rtf". Reading it is not necessary, but may give some context to
+
 POTENTIALLY ASKED QUESTIONS (PAQ):
 
 Q: "Why is the game called Fonts 5 - Evanescence, it is personified! As that inferno fluxuates, so does the penultimate of the heptads, the one commanding the iconoclastic apparitions! At world end, rock and heaven, soul and sea, fade, yet it does not matter. For that melody had long since saved all. It has already reached [AMORTALITY]?"

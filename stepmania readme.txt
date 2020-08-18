@@ -10,3 +10,5 @@ Everything was based off of midi-solo because that's the noteskin I've always us
 I promise, it's not just because I was too bad to make fully unique ones. I wanted every noteskin to have the same shape so it wouldn't be super weird going between songs.
 
 Anyway they're all here. I have no idea how to make a noteskin from the ground up so I just copied some other ones and replaced the assets. I tested it, hopefully it works for everyone else. The file setup is likely massively inefficient.
+
+By the way, I play on an outdated version of both SM5 and the Simply Love theme. The pack shows up for me, but it might not in every version because of the Japanese bracket-quote-things I used. Feel free to remove them if this is a problem.
