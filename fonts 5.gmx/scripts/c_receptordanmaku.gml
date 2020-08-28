@@ -1,4 +1,5 @@
 ///c_receptordanmaku
+if global.songscript = c_everythingwillfreeze {
 switch danmaku {
     case 1:
         if f_danmakudetection(laneleft) {
@@ -160,6 +161,63 @@ switch danmaku {
         }
         break;
 }
-
+} else {
+switch danmaku {
+    case 2:
+        if !instance_exists(o_yukari) {
+            with instance_create(lanedown+lanespacing/4, bar+100, o_yukari) {
+                spellcard = "Border of Directed and Wandering";
+            }
+        }
+        if f_danmakudetection(laneleft) {
+            o_yukari.count += 5;
+        }
+        
+        if f_danmakudetection(lanedown) {
+            with instance_create(lanedown, bar, o_bounceknife2) {
+                hspd = random(3)+2;
+                vspd = 5;
+            }
+        }
+        if f_danmakudetection(laneup) {
+            with instance_create(laneup, bar, o_bounceknife2) {
+                hspd = -(random(3)+2);
+                vspd = 5;
+            }
+        }
+        
+        if f_danmakudetection(laneright) {
+            o_yukari.count += 5;
+        }
+        break;
+    case 1:
+        if !instance_exists(o_yukari) {
+            with instance_create(lanedown+lanespacing/4, bar+100, o_yukari) {
+                spellcard = "Spellcard Founder [Dodging Rain, Light, and Cherry Blossoms]";
+            }
+        }
+        if f_danmakudetection(laneleft) {
+            with instance_create(laneleft, bar, o_kunai) {
+                direction = point_direction(x, y, o_soul.x, o_soul.y);
+                speed = 4;
+            }
+        }
+        
+        if f_danmakudetection(lanedown) {
+            o_yukari.count += 5;
+        }
+        if f_danmakudetection(laneup) {
+            o_yukari.count += 5;
+        }
+        
+        if f_danmakudetection(laneright) {
+            with instance_create(laneright, bar, o_kunai) {
+                direction = point_direction(x, y, o_soul.x, o_soul.y);
+                speed = 4;
+            }
+        }
+        break;
+}
+}
 
 

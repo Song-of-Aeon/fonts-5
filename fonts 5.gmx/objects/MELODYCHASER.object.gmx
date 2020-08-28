@@ -467,6 +467,9 @@ switch global.songscript {
     case c_lancerraps:
         c_flashfall_gimmicks();
         break;
+    case c_nightfalls:
+        c_nightfalls_gimmicks();
+        break;
     case c_everythingwillfreeze:
         c_everythingwillfreeze_gimmicks();
         break;
@@ -521,7 +524,7 @@ if lanes &gt; 4 {
 }
 
 if global.gimmickactive = false {
-    MELODYCHASER.lanes = 4;
+    lanes = 4;
 }
 if global.controller {
     gamepad_set_vibration(0, rumble[0]+rumble[1]/1.5+rumble[2]/2.5, rumble[3]+rumble[2]/1.5+rumble[1]/2.5);

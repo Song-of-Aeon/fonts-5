@@ -1,5 +1,11 @@
 ///c_onemorenight
-song = sm_everythingwillfreeze();
+if global.difficulty = 1 {
+    song = sm_everythingwillfreeze();
+} else {
+    global.songscript = c_nightfalls;
+    c_nightfalls();
+    exit;
+}
 bpm = 240;
 title = "Everything Will Freeze";
 audio = m_everythingwillfreeze;

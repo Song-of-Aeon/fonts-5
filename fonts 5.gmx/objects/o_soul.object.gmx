@@ -167,7 +167,7 @@ if image_xscale &gt; 1 {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(!inv) {
+            <string>/*if(!inv) {
     //play sound, maybe
 }
 
@@ -175,7 +175,7 @@ if  inv = false {
     inv = true;
     image_alpha = .5;
     alarm[1] = 120;
-}
+}*/
 
 </string>
           </argument>

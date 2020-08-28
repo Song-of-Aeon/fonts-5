@@ -114,7 +114,8 @@ while position &lt;= string_length(song) {
         
     }
     
-    
+    //alright so we could keep a vount of how far the notes have traveled since the start and gradually create notes with that difference
+    //somethin with a for loop in step with it checking if position*whatever-time*vspd is around the screen size
     position++;
 }
 

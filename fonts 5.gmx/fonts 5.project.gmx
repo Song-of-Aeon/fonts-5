@@ -68,6 +68,7 @@
     <sound>sound\m_itsrainingsomewhereelse</sound>
     <sound>sound\m_hurt</sound>
     <sound>sound\m_yumegaaru</sound>
+    <sound>sound\m_nightfalls</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\s_kaguya</sprite>
@@ -134,6 +135,7 @@
     </sprites>
     <sprite>sprites\s_soul</sprite>
     <sprite>sprites\s_knife</sprite>
+    <sprite>sprites\s_yukariknife</sprite>
     <sprite>sprites\s_bullet</sprite>
     <sprite>sprites\s_laneselected</sprite>
     <sprite>sprites\s_blueselected</sprite>
@@ -181,6 +183,9 @@
     <sprite>sprites\sprite94</sprite>
     <sprite>sprites\cr_defrag</sprite>
     <sprite>sprites\s_completion</sprite>
+    <sprite>sprites\bk_nightfalls</sprite>
+    <sprite>sprites\s_kunai</sprite>
+    <sprite>sprites\s_yukaribullet</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -290,8 +295,9 @@
       <script>scripts\st_run.gml</script>
     </scripts>
     <scripts name="the gimmicks">
-      <script>scripts\c_everythingwillfreeze_gimmicks.gml</script>
       <script>scripts\c_flashfall_gimmicks.gml</script>
+      <script>scripts\c_nightfalls_gimmicks.gml</script>
+      <script>scripts\c_everythingwillfreeze_gimmicks.gml</script>
       <script>scripts\c_reset_set_gimmicks.gml</script>
       <script>scripts\c_eonbreak_gimmicks.gml</script>
       <script>scripts\c_yumegaarugimmicks.gml</script>
@@ -309,14 +315,17 @@
       <script>scripts\sm_eveniftheworlddeceivesyou.gml</script>
     </scripts>
     <scripts name="the easy">
-      <script>scripts\sm_reset_set_easy.gml</script>
       <script>scripts\sm_lancerrapseasy.gml</script>
+      <script>scripts\sm_nightfalls.gml</script>
+      <script>scripts\c_nightfalls.gml</script>
+      <script>scripts\sm_reset_set_easy.gml</script>
     </scripts>
     <script>scripts\c_timebuster.gml</script>
     <script>scripts\c_inputwocreate.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\z_ChromaticAbberation.shader</shader>
+    <shader type="GLSLES">shaders\z_violetabberation.shader</shader>
   </shaders>
   <fonts name="fonts">
     <font>fonts\f_ronaldo</font>
@@ -348,9 +357,12 @@
     <object>objects\o_projectile</object>
     <object>objects\o_knife</object>
     <object>objects\o_bullet</object>
+    <object>objects\o_kunai</object>
+    <object>objects\o_bulfall</object>
     <object>objects\o_bulwave</object>
     <objects name="shaders">
       <object>objects\o_ChromaticAbberation</object>
+      <object>objects\o_violetabberation</object>
     </objects>
     <object>objects\o_menu</object>
     <object>objects\o_fao</object>
@@ -371,9 +383,12 @@
     <object>objects\o_controls</object>
     <object>objects\o_blender</object>
     <object>objects\o_sakuya</object>
+    <object>objects\o_yukari</object>
     <object>objects\o_slowknife</object>
     <object>objects\o_bounceknife</object>
+    <object>objects\o_bounceknife2</object>
     <object>objects\o_privatesquare</object>
+    <object>objects\o_bulbomb</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\fontstitle</room>

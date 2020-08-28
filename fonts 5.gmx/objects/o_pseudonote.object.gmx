@@ -82,8 +82,13 @@ sprite_index2 = s_null;
                 sprite_index = s_dark;
                 sprite_index2 = s_darker;
             }
-            vspd = -(240/c_bpmbuster());
-            image_speed = 240/1125;
+            if global.difficulty = 1 {
+                vspd = -(240/c_bpmbuster());
+                image_speed = 240/1125;
+            } else {
+                vspd = -(182/c_bpmbuster());
+                image_speed = 182/1125;
+            }
             break;
         case 4:
             if global.noteoverride = 0 {
@@ -100,6 +105,14 @@ sprite_index2 = s_null;
             }
             vspd = -(180/c_bpmbuster());
             image_speed = 180/1125;
+            break;
+        case 6:
+            if global.noteoverride = 0 {
+                sprite_index = s_rojo;
+                sprite_index2 = s_azul;
+            }
+            vspd = -(270/c_bpmbuster());
+            image_speed = 270/1125;
             break;
         
     }
