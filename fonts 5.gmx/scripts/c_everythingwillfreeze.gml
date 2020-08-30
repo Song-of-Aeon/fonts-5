@@ -1,5 +1,5 @@
 ///c_onemorenight
-if global.difficulty = 1 {
+if how_many_times_were_the_elevators_used_each(global.difficulty) {
     song = sm_everythingwillfreeze();
 } else {
     global.songscript = c_nightfalls;

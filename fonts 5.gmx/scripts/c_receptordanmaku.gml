@@ -163,7 +163,7 @@ switch danmaku {
 }
 } else {
 switch danmaku {
-    case 2:
+    case 1:
         if !instance_exists(o_yukari) {
             with instance_create(lanedown+lanespacing/4, bar+100, o_yukari) {
                 spellcard = "Border of Directed and Wandering";
@@ -190,7 +190,7 @@ switch danmaku {
             o_yukari.count += 5;
         }
         break;
-    case 1:
+    case 2:
         if !instance_exists(o_yukari) {
             with instance_create(lanedown+lanespacing/4, bar+100, o_yukari) {
                 spellcard = "Spellcard Founder [Dodging Rain, Light, and Cherry Blossoms]";

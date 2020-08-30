@@ -186,6 +186,8 @@
     <sprite>sprites\bk_nightfalls</sprite>
     <sprite>sprites\s_kunai</sprite>
     <sprite>sprites\s_yukaribullet</sprite>
+    <sprite>sprites\s_yukaribg</sprite>
+    <sprite>sprites\s_yukari</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -245,6 +247,9 @@
       <script>scripts\draw_circle_width.gml</script>
       <script>scripts\array.gml</script>
       <script>scripts\range.gml</script>
+      <script>scripts\if_.gml</script>
+      <script>scripts\how_many_times_were_the_elevators_used_each.gml</script>
+      <script>scripts\is_over_9000.gml</script>
     </scripts>
     <scripts name="the note management">
       <script>scripts\c_receptorinput.gml</script>

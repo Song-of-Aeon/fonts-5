@@ -1,6 +1,6 @@
 Welcome to the StepMania version of Fonts 5 - Evanescence, it is personified! As that inferno fluxuates, so does the penultimate of the heptads, the one commanding the iconoclastic apparitions! At world end, rock and heaven, soul and sea, fade, yet it does not matter. For that melody had long since saved all. It has already reached [AMORTALITY]!
 
-Although you could say that this is the "original" version because I made all the maps in here. After doing that, I would just open the .sm in Notepad++, ctrl+a, ctrl+c, ctrl+v into a script in GameMaker.
+Although you could say that this is the "original" version because I made all the maps in here. After doing that, I would just open the .sm in Notepad++, ctrl+a, ctrl+c, ctrl+v into a script in GameMaker. I also made Combat Theme flux, lancer raps flux, and half of Night Falls ~ Evening Star before starting Fonts 5.
 
 Anyway, no mods here. Hopefully the maps should work the same without it.
 Fonts 5 stage 2, Lancer Raps, features a double lane mechanic. You can probably guess how it works in StepMania.

@@ -3290,4 +3290,9 @@ return "#TITLE:Combat Theme;
 0000
 3003
 0006
+,  // measure 124
+0000
+0000
+0000
+6000
 ;"
