@@ -17,7 +17,9 @@ if inputgimmick = false {
             break;
         case "SPEED":
             o_note.vspd = o_note.vspd*arrayy[arraypos];
+            o_tail.vspd = o_tail.vspd*arrayy[arraypos];
             o_gimmickactivator.vspd = o_gimmickactivator.vspd*arrayy[arraypos];
+            o_naturalend.vspd = o_naturalend.vspd*arrayy[arraypos];
             break;
         case "DIVIDE":
             with instance_create(0, 0, o_violetabberation) {
