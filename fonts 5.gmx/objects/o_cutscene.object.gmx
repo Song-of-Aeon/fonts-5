@@ -93,10 +93,11 @@ c_inputwocreate();
                 }
                 if count = 120 {
                     with instance_create(1000, 565, o_worldbreak) {
+                        sprite_index = s_worldright;
                         sidealpha = -500;
                     }
                     with instance_create(1000, 565, o_worldbreak) {
-                        sprite_index = s_world2;
+                        sprite_index = s_worldleft;
                         sidealpha = -500;
                     }
                 }
@@ -116,12 +117,12 @@ c_inputwocreate();
         case 1:
             if count = 10 {
                 with instance_create(640, 360, o_worldbreak) {
-                    sprite_index = s_world1;
+                    sprite_index = s_worldleft;
                     image_xscale = 4;
                     image_yscale = 4;
                 }
                 with instance_create(640, 360, o_worldbreak) {
-                    sprite_index = s_world2;
+                    sprite_index = s_worldright;
                     image_xscale = 4;
                     image_yscale = 4;
                 }
@@ -136,12 +137,12 @@ c_inputwocreate();
         case 2:
             if count = 10 {
                 with instance_create(640, 360, o_worldbreak) {
-                    sprite_index = s_world1;
+                    sprite_index = s_worldright;
                     image_xscale = 4;
                     image_yscale = 4;
                 }
                 with instance_create(640, 360, o_worldbreak) {
-                    sprite_index = s_world2;
+                    sprite_index = s_worldleft;
                     image_xscale = 4;
                     image_yscale = 4;
                 }
@@ -220,6 +221,11 @@ c_inputwocreate();
     row = 0;
     column = 0;
 }
+if keyboard_check_pressed(vk_control) {
+        console_log(instance_number(o_fao));
+        console_log(instance_count);
+        console_log(active);
+    }
 </string>
           </argument>
         </arguments>

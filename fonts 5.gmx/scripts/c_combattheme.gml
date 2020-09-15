@@ -1,5 +1,9 @@
 ///c_onemorenight
-song = sm_combattheme();
+if global.difficulty = 1 {
+    song = sm_combattheme();
+} else {
+    song = sm_combattheme_easy();
+}
 bpm = 180;
 title = "Combat Theme";
 audio = m_combattheme;

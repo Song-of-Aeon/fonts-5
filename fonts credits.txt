@@ -2,8 +2,8 @@ Fonts 5:
 Code: Aeon
 Gimmicks: Aeon, Anumania
 UI, modified noteskins, misc. graphics: Aeon
-Maps (Flux, story, Flow 2-5, misc): Aeon
-Flow 1 map: Anumania
+Maps (Flux, story, Flow 1-4, misc): Aeon
+Map support: Anumania
 Concept: Aeon, Anumania, Yunevii
 Testing: Aeon, Anumania, Yunevii
 
@@ -22,7 +22,7 @@ getsongbpm.com - Getting song bpm
 Notepad - This text document
 Audacity - Cutting nocturne
 Notepad++ - Copying .sm files and making StepMania versions of noteskins work
-Newgrounds, itch.io, X10 Hosting - Hosting, unless one of them says I can't because it contains "copyrighted material"
+Newgrounds, itch.io, X10 Hosting, Mega.nz - Hosting, unless one of them says I can't because it contains "copyrighted material"
 Steven Dall - GameMaker StepMania library that I didn't use
 GMLscripts.com - collision_line_first
 Peter "tehwave" Jørgensen - draw_circle_width
@@ -31,15 +31,15 @@ Visuals:
 Jousway - midi-solo noteskin
 Toby Fox - SOUL sprite, lancer raps bg
 Artyom Samoilov - ZERO sprites
-World of Warcraft - Combat Theme bg
+World of Warcraft - Night of Past bg
 Tech N9ne - lancer raps bg
 Touru Amamiya - Reset Set bg
 Porter Robinson - Eon Break bg
 I don't know who made the - chromatic judgement font
 
 Music:
-Combat Theme: reach, SiIvagunner, Gerard Butler, keatonkeaton999, O-Zone, Kohmi Hirose, kors k, Jonathan Wolff, Eino Kettunen, Loituma, Hatsune Miku, beatMARIO, Nitori Kawashiro, Unregistered HyperCam 2
-lancer raps: Galactic Hole, Toby Fox (DELTARUNE), Tech N9ne, Spongebob Squarepants
+Night of Past: reach (using edits involving:) SiIvagunner, Gerard Butler, keatonkeaton999, O-Zone, Kohmi Hirose, kors k, Jonathan Wolff, Eino Kettunen, Loituma, Hatsune Miku, beatMARIO, Nitori Kawashiro, Unregistered HyperCam 2
+lancer raps: Galactic Hole (using edits involving:) Toby Fox (DELTARUNE), Tech N9ne, Spongebob Squarepants
 Night Falls ~ Evening Star (15.5): ELEMENTAS
 Everything will freeze: UNDEAD CORPORATION (BOUKUN)
 Nocturne: Bill Kiley (Katana ZERO)

@@ -99,10 +99,15 @@ if drawdark &gt;= 1.2 {
         global.storymode = false;
         global.cutscenecount = 0;
         audio_play_sound(m_night, 0, false);
-    } if leaving = cutscene {
+    } else if leaving = cutscene {
         o_cutscene.active = true;
-    } if leaving = rhythm_limbo {
+    } else if leaving = rhythm_limbo {
         o_cutscene.active = false;
+    }
+    if keyboard_check_pressed(vk_control) {
+        console_log(instance_number(o_fao));
+        console_log(instance_count);
+        console_log(drawdark);
     }
 }
 </string>

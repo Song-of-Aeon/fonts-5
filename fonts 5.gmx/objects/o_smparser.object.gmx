@@ -312,7 +312,7 @@ for (i=0; i&lt;array_length_1d(noteset); i++) {
             }
         }
         //four extra
-        if lanes = 8 &amp;&amp; !global.gimmickactive {
+        if lanes = 8 {
             with instance_create(MELODYCHASER.laneleftwo, placer*32*xmod+MELODYCHASER.bar, notemaker[4]) {
                 dir = 0;
                 vspd = -(other.bpm/c_bpmbuster())*other.xmod;

@@ -1,4 +1,11 @@
 ///c_onemorenight
+if how_many_times_were_the_elevators_used_each(global.difficulty) {
+   sm_eonbreak();
+} else {
+    global.songscript = c_flicker;
+    c_flicker();
+    exit;
+}
 song = sm_eonbreak();
 bpm = 180;
 title = "Eon Break";

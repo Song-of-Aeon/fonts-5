@@ -240,10 +240,10 @@ c_inputwocreate();
                     global.songscript = c_eonbreak;
                     break;
                 case 6:
-                    //global.songscript = c_eveniftheworlddeceivesyou;
+                    global.songscript = c_eveniftheworlddeceivesyou;
                     //global.songscript = c_nocturne;
                     //global.songscript = c_itsrainingsomewhereelse;
-                    global.songscript = c_yumegaaru;
+                    //global.songscript = c_yumegaaru;
                     break;
             }
             audio_play_sound(se_select, 0, false);
@@ -442,7 +442,7 @@ if room = stagemenu {
                 draw_text(652, menuposition*87+162, "");
                 break;
             case 1:
-                draw_text(652, menuposition*87+162, "Combat Theme");
+                draw_text(652, menuposition*87+162, "Night of Past");
                 break;
             case 2:
                 draw_text(652, menuposition*87+162, "Lancer Raps");
