@@ -3,7 +3,7 @@ Fonts 5 - Evanescence, it is personified! As that inferno fluxuates, so does the
 A game by Aeon.
 Just like all free computer rhythm games, it violates copyright because of its songs. If you're one of the people in the credits and that's a problem for you you can send something about it to aeon#2682 (Discord) or @Espeon78 (Twitter) and I'll get to it, unless you're the guy that made the midi-solo noteskin. I need that shit my guy.
 
-The prologue to the story mode is "from past.rtf". Reading it is not necessary, but may give some context to
+The prologue to the story mode is "from past.rtf". Reading it is not necessary, but may give some context to what's going on.
 
 POTENTIALLY ASKED QUESTIONS (PAQ):
 
@@ -47,7 +47,7 @@ Q: "How do I enable the secret 'streamstring' that you can only learn about in t
 A: This one is easy! Just look at the readme file. (press Y in the song select menu to enable/disable)
 
 
-There are five fonts featured in Fonts 5.
+There are five fonts featured in Fonts 5. This is not why it is called Fonts 5, just a coincidence.
 
 Alien Encounters (title, menu, combo),
 Rondalo (descriptions, info, dialogue),

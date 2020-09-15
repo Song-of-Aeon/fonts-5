@@ -188,6 +188,9 @@
     <sprite>sprites\s_yukaribullet</sprite>
     <sprite>sprites\s_yukaribg</sprite>
     <sprite>sprites\s_yukari</sprite>
+    <sprite>sprites\s_worldleft</sprite>
+    <sprite>sprites\s_worldright</sprite>
+    <sprite>sprites\s_worldturn</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -233,6 +236,7 @@
     <script>scripts\c_reset_set.gml</script>
     <script>scripts\sm_eonbreak.gml</script>
     <script>scripts\c_eonbreak.gml</script>
+    <script>scripts\c_flicker.gml</script>
     <script>scripts\sm_itsrainingsomewhereelse.gml</script>
     <script>scripts\c_itsrainingsomewhereelse.gml</script>
     <script>scripts\sm_yumegaaru.gml</script>
@@ -281,12 +285,12 @@
     <script>scripts\c_noteoverride.gml</script>
     <scripts name="the dialogue">
       <script>scripts\txt_.gml</script>
-      <script>scripts\txt_stream.gml</script>
       <script>scripts\txt_stage1.gml</script>
       <script>scripts\txt_stage2.gml</script>
       <script>scripts\txt_stage3.gml</script>
       <script>scripts\txt_stage4.gml</script>
       <script>scripts\txt_stage5.gml</script>
+      <script>scripts\txt_stream.gml</script>
       <script>scripts\c_txtcommon.gml</script>
     </scripts>
     <scripts name="the subtitles">
@@ -304,6 +308,7 @@
       <script>scripts\c_nightfalls_gimmicks.gml</script>
       <script>scripts\c_everythingwillfreeze_gimmicks.gml</script>
       <script>scripts\c_reset_set_gimmicks.gml</script>
+      <script>scripts\c_flicker_gimmicks.gml</script>
       <script>scripts\c_eonbreak_gimmicks.gml</script>
       <script>scripts\c_yumegaarugimmicks.gml</script>
     </scripts>
@@ -320,13 +325,15 @@
       <script>scripts\sm_eveniftheworlddeceivesyou.gml</script>
     </scripts>
     <scripts name="the easy">
-      <script>scripts\sm_lancerrapseasy.gml</script>
+      <script>scripts\sm_combattheme_easy.gml</script>
+      <script>scripts\sm_lancerraps_easy.gml</script>
       <script>scripts\sm_nightfalls.gml</script>
       <script>scripts\c_nightfalls.gml</script>
       <script>scripts\sm_reset_set_easy.gml</script>
     </scripts>
     <script>scripts\c_timebuster.gml</script>
     <script>scripts\c_inputwocreate.gml</script>
+    <script>scripts\e.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\z_ChromaticAbberation.shader</shader>
@@ -377,6 +384,7 @@
     <object>objects\o_fai</object>
     <object>objects\o_zero</object>
     <object>objects\o_world</object>
+    <object>objects\o_ldworld</object>
     <object>objects\o_flash</object>
     <object>objects\o_pseudonote</object>
     <object>objects\o_pseudohitfx</object>

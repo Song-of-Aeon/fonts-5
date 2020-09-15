@@ -355,10 +355,11 @@ if !instance_exists(o_note) &amp;&amp; instance_exists(o_smparser) {
 }
 
 if (back &amp;&amp; !instance_exists(o_fao)) || (select &amp;&amp; global.controller = true &amp;&amp; count &gt; 1) || (hp &lt;= 0) || countwo &gt;= 300 {
-    if global.storymode = true &amp;&amp; hp &gt; 0 &amp;&amp; !back /*&amp;&amp; !select*/ { //&amp;&amp; !audio_is_playing(song) || !back
+    countwo = 0;
+    if global.storymode = true &amp;&amp; hp &gt; 0 /*&amp;&amp; !back &amp;&amp; !select*/ { //&amp;&amp; !audio_is_playing(song) || !back
         with instance_create(0, 0, o_fao) {
             leaving = cutscene;
-            depth = -3;
+            //depth = -3;
         }
         var scoring6 = real(global.scoring[6]);
         if global.songscript != c_nocturne &amp;&amp; global.songscript != c_itsrainingsomewhereelse {
@@ -587,7 +588,7 @@ if lanes = 8 {
         draw_sprite(s_heart, floor(hp/12), 640, bar+l*16);
     }
     depth = -3;
-    draw_text_transformed_colour(blueposaved, bar+230, string(combo), floor(combo/100)/4+.5, floor(combo/100)/4+.5, 0, combocolour[0], combocolour[1], combocolour[2], combocolour[3], infoalpha);
+    draw_text_transformed_colour(blueposaved, bar+230, string(combo), floor(combo/100)/6+.5, floor(combo/100)/6+.5, 0, combocolour[0], combocolour[1], combocolour[2], combocolour[3], infoalpha);
     draw_sprite_ext(s_judgement, noterank+3, blueposaved, bar+150, bop[8], bop[8], noterank, c_white, infoalpha);
     depth = 5;
 } else {
@@ -596,7 +597,7 @@ if lanes = 8 {
         draw_sprite(s_heart, floor(hp/12), laneright+80*mini, bar+l*16);
     }
     depth = -3;
-    draw_text_transformed_colour(blueposaved, bar+230, string(combo), floor(combo/100)/4+.5, floor(combo/100)/4+.5, 0, combocolour[0], combocolour[1], combocolour[2], combocolour[3], infoalpha);
+    draw_text_transformed_colour(blueposaved, bar+230, string(combo), floor(combo/100)/10+.5, floor(combo/100)/10+.5, 0, combocolour[0], combocolour[1], combocolour[2], combocolour[3], infoalpha);
     //draw_text(lanedown+lanespacing/4, bar+400, string(comborank));
     //draw_text(lanedown+lanespacing/4, bar+200, string(ranktext));
     draw_sprite_ext(s_judgement, noterank+3, blueposaved, bar+150, bop[8], bop[8], noterank, c_white, infoalpha);
