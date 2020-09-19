@@ -29,8 +29,8 @@
 mmod = 0;
 cmod = 0;
 bar = 64;
-mini = 1; //1.4
-minibig = (mini-1)*64;
+//mini = 1; //1.4
+minibig = (global.mini-1)*64;
 bop[0] = 1;
 bop[1] = 1;
 bop[2] = 1;
@@ -174,9 +174,9 @@ if !instance_exists(o_smparser) {
         }
         instance_create(0, 0, o_smparser);
     }
-    if up &amp;&amp; mini &lt; 3 {
-        mini += .1;
-        minibig = (mini-1)*64;
+    if up &amp;&amp; global.mini &lt; 3 {
+        global.mini += .1;
+        minibig = (global.mini-1)*64;
         if global.songscript = c_lancerraps {
             laneleft = 394-96-minibig*1.5;
             lanedown = 394-32-minibig*.5;
@@ -194,9 +194,9 @@ if !instance_exists(o_smparser) {
         }
 
     }
-    if down &amp;&amp; mini &gt; .5 {
-        mini -= .1;
-        minibig = (mini-1)*64;
+    if down &amp;&amp; global.mini &gt; .5 {
+        global.mini -= .1;
+        minibig = (global.mini-1)*64;
         if global.songscript = c_lancerraps {
             laneleft = 394-96-minibig*1.5;
             lanedown = 394-32-minibig*.5;
@@ -355,6 +355,11 @@ if !instance_exists(o_note) &amp;&amp; instance_exists(o_smparser) {
 }
 
 if (back &amp;&amp; !instance_exists(o_fao)) || (select &amp;&amp; global.controller = true &amp;&amp; count &gt; 1) || (hp &lt;= 0) || countwo &gt;= 300 {
+    if global.scuffer {
+        global.scuffer = false;
+        global.gimmickactive = true;
+        console_log("works");
+    }
     countwo = 0;
     if global.storymode = true &amp;&amp; hp &gt; 0 /*&amp;&amp; !back &amp;&amp; !select*/ { //&amp;&amp; !audio_is_playing(song) || !back
         with instance_create(0, 0, o_fao) {
@@ -382,7 +387,7 @@ if (back &amp;&amp; !instance_exists(o_fao)) || (select &amp;&amp; global.contro
                     global.scoring[global.currentstage] = string(global.scoring[global.currentstage] + "P");
                     break;
                 case 3:
-                    if realscore &gt; 0 {
+                    if realscore &gt; 95 {
                         //global.scoring[global.currentstage] = "100.0M";
                         global.scoring[global.currentstage] = string(global.scoring[global.currentstage] + "M");
                         break;
@@ -461,7 +466,7 @@ if (back &amp;&amp; !instance_exists(o_fao)) || (select &amp;&amp; global.contro
         }
         application_surface_draw_enable(true);
     }
-    audio_stop_sound(audio);
+    audio_stop_all();
 }
 
 switch global.songscript {
@@ -565,24 +570,24 @@ global.truetime = c_timebuster();
             <kind>1</kind>
             <string>depth = 5;
 draw_sprite(songbg, 0, 0, 0);
-//draw_sprite_ext(s_blueselected, 0, laneselected+12.8, 0, mini, 1, 0, c_white, 1);
-draw_sprite_ext(s_futureselected, 0, bluepos, 0, mini, 1, 0, c_white, 1);
+//draw_sprite_ext(s_blueselected, 0, laneselected+12.8, 0, global.mini, 1, 0, c_white, 1);
+draw_sprite_ext(s_futureselected, 0, bluepos, 0, global.mini, 1, 0, c_white, 1);
 draw_set_font(f_scoreronaldo);
 
-draw_sprite_ext(global.receptor, 0, laneleft, bar, mini*bop[0], mini*bop[0], -90, c_white, 1);
-draw_sprite_ext(global.receptor, 0, lanedown, bar, mini*bop[1], mini*bop[1], 0, c_white, 1);
-draw_sprite_ext(global.receptor, 0, laneup, bar, mini*bop[2], mini*bop[2], 180, c_white, 1);
-draw_sprite_ext(global.receptor, 0, laneright, bar, mini*bop[3], mini*bop[3], 90, c_white, 1);
+draw_sprite_ext(global.receptor, 0, laneleft, bar, global.mini*bop[0], global.mini*bop[0], -90, c_white, 1);
+draw_sprite_ext(global.receptor, 0, lanedown, bar, global.mini*bop[1], global.mini*bop[1], 0, c_white, 1);
+draw_sprite_ext(global.receptor, 0, laneup, bar, global.mini*bop[2], global.mini*bop[2], 180, c_white, 1);
+draw_sprite_ext(global.receptor, 0, laneright, bar, global.mini*bop[3], global.mini*bop[3], 90, c_white, 1);
 
 draw_set_halign(fa_center);
 draw_set_colour(c_white);
 draw_set_font(f_combo);
 
 if lanes = 8 {
-    draw_sprite_ext(global.receptor, 0, laneleftwo, bar, mini*bop[4], mini*bop[4], -90, c_white, 1);
-    draw_sprite_ext(global.receptor, 0, lanedowntwo, bar, mini*bop[5], mini*bop[5], 0, c_white, 1);
-    draw_sprite_ext(global.receptor, 0, laneuptwo, bar, mini*bop[6], mini*bop[6], 180, c_white, 1);
-    draw_sprite_ext(global.receptor, 0, lanerightwo, bar, mini*bop[7], mini*bop[7], 90, c_white, 1);
+    draw_sprite_ext(global.receptor, 0, laneleftwo, bar, global.mini*bop[4], global.mini*bop[4], -90, c_white, 1);
+    draw_sprite_ext(global.receptor, 0, lanedowntwo, bar, global.mini*bop[5], global.mini*bop[5], 0, c_white, 1);
+    draw_sprite_ext(global.receptor, 0, laneuptwo, bar, global.mini*bop[6], global.mini*bop[6], 180, c_white, 1);
+    draw_sprite_ext(global.receptor, 0, lanerightwo, bar, global.mini*bop[7], global.mini*bop[7], 90, c_white, 1);
     var l;
     for (l=0; l&lt;floor(hp); l++) {
         draw_sprite(s_heart, floor(hp/12), 640, bar+l*16);
@@ -594,7 +599,7 @@ if lanes = 8 {
 } else {
     var l;
     for (l=0; l&lt;floor(hp); l++) {
-        draw_sprite(s_heart, floor(hp/12), laneright+80*mini, bar+l*16);
+        draw_sprite(s_heart, floor(hp/12), laneright+80*global.mini, bar+l*16);
     }
     depth = -3;
     draw_text_transformed_colour(blueposaved, bar+230, string(combo), floor(combo/100)/10+.5, floor(combo/100)/10+.5, 0, combocolour[0], combocolour[1], combocolour[2], combocolour[3], infoalpha);

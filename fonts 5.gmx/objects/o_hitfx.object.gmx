@@ -53,8 +53,8 @@ if image_alpha &lt;= 0 {
     instance_destroy();
 }
 sprite_index = global.effect;
-image_xscale = MELODYCHASER.mini;
-image_yscale = MELODYCHASER.mini;
+image_xscale = global.mini;
+image_yscale = global.mini;
 </string>
           </argument>
         </arguments>

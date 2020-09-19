@@ -3,7 +3,7 @@
   <spriteName>s_red</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>1</depth>
+  <depth>-1</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -58,24 +58,21 @@ sprite_index2 = s_null;
                 sprite_index = s_nullnote;
                 sprite_index2 = s_nullnote;
             }
-            vspd = -(180/c_bpmbuster())
-            image_speed = .2;
+            bpm = 180;
             break;
         case 1:
             if global.noteoverride = 0 {
                 sprite_index = s_red;
                 sprite_index2 = s_blue;
             }
-            vspd = -(180/c_bpmbuster());
-            image_speed = 180/1125;
+            bpm = 180;
             break;
         case 2:
             if global.noteoverride = 0 {
                 sprite_index = s_aka;
                 sprite_index2 = s_ao;
             }
-            vspd = -(170/c_bpmbuster());
-            image_speed = 170/1125;
+            bpm = 170;
             break;
         case 3:
             if global.noteoverride = 0 {
@@ -83,11 +80,9 @@ sprite_index2 = s_null;
                 sprite_index2 = s_darker;
             }
             if global.difficulty = 1 {
-                vspd = -(240/c_bpmbuster());
-                image_speed = 240/1125;
+                bpm = 240;
             } else {
-                vspd = -(182/c_bpmbuster());
-                image_speed = 182/1125;
+                bpm = 182;
             }
             break;
         case 4:
@@ -95,28 +90,36 @@ sprite_index2 = s_null;
                 sprite_index = s_sun;
                 sprite_index2 = s_sea;
             }
-            vspd = -(196/c_bpmbuster()); //155.005 for drivin
-            image_speed = 196/1125;
+            bpm = 196;
+            //vspd = -(196/c_bpmbuster()); //155.005 for drivin
             break;
         case 5:
             if global.noteoverride = 0 {
                 sprite_index = s_trueblue;
                 sprite_index2 = s_ultramarine;
             }
-            vspd = -(180/c_bpmbuster());
-            image_speed = 180/1125;
+            bpm = 180;
             break;
         case 6:
             if global.noteoverride = 0 {
                 sprite_index = s_rojo;
                 sprite_index2 = s_azul;
             }
-            vspd = -(270/c_bpmbuster());
-            image_speed = 270/1125;
+            bpm = 270;
             break;
         
     }
+    
 }
+if global.mmod != 0 {
+    c_mmod(bpm);
+} else {
+    xmod = global.xmod;
+}
+vspd = -(bpm/c_bpmbuster());
+
+
+image_speed = bpm/1125;
 switch global.noteoverride {
     case 1:
         sprite_index = s_red;
@@ -161,7 +164,7 @@ if y &lt;= 252 {
     y += 468;
 }
 
-y += (vspd*global.xmod)/1.5;
+y += (vspd*xmod)/1.5;
 </string>
           </argument>
         </arguments>

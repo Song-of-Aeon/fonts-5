@@ -48,6 +48,7 @@
   </datafiles>
   <NewExtensions>
     <extension index="0">extensions\window_set_cursor</extension>
+    <extension index="1">extensions\shdStereo3D</extension>
   </NewExtensions>
   <sounds name="sound">
     <sound>sound\m_onemorenight</sound>
@@ -191,9 +192,15 @@
     <sprite>sprites\s_worldleft</sprite>
     <sprite>sprites\s_worldright</sprite>
     <sprite>sprites\s_worldturn</sprite>
+    <sprite>sprites\s_sample_stereo3d</sprite>
+    <sprite>sprites\s_glow</sprite>
+    <sprite>sprites\s_hip</sprite>
+    <sprite>sprites\s_heaven</sprite>
+    <sprite>sprites\s_tars</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
+    <background>background\bk_nebula</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\p_soul</path>
@@ -323,6 +330,7 @@
       <script>scripts\x_sm_parser_create_old.gml</script>
       <script>scripts\c_eveniftheworlddeceivesyou.gml</script>
       <script>scripts\sm_eveniftheworlddeceivesyou.gml</script>
+      <script>scripts\sm_zetsubou.gml</script>
     </scripts>
     <scripts name="the easy">
       <script>scripts\sm_combattheme_easy.gml</script>
@@ -334,10 +342,12 @@
     <script>scripts\c_timebuster.gml</script>
     <script>scripts\c_inputwocreate.gml</script>
     <script>scripts\e.gml</script>
+    <script>scripts\c_mmod.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\z_ChromaticAbberation.shader</shader>
     <shader type="GLSLES">shaders\z_violetabberation.shader</shader>
+    <shader type="GLSLES">shaders\z_stereo3d.shader</shader>
   </shaders>
   <fonts name="fonts">
     <font>fonts\f_ronaldo</font>
@@ -402,6 +412,8 @@
     <object>objects\o_bounceknife2</object>
     <object>objects\o_privatesquare</object>
     <object>objects\o_bulbomb</object>
+    <object>objects\o_sample_stereo3d</object>
+    <object>objects\o_cover</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\fontstitle</room>

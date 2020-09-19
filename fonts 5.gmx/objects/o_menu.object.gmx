@@ -98,6 +98,9 @@ audio_play_sound(m_night, 0, false);
 
 image_speed = 0;
 c_inputwocreate();
+global.mmod = 600;
+global.mini = 1;
+global.scuffer = false;
 </string>
           </argument>
         </arguments>
@@ -289,14 +292,28 @@ c_inputwocreate();
             global.gimmickactive = !global.gimmickactive;
             lockon = 0;
         } else if lockon = 3 {
-            if left &amp;&amp; global.xmod &gt; .5
-                global.xmod -= .5;
-            if right &amp;&amp; global.xmod &lt; 20
-                global.xmod += .5;
+            if global.mmod = 0 {
+                if left &amp;&amp; global.xmod &gt; .5
+                    global.xmod -= .5;
+                if right &amp;&amp; global.xmod &lt; 20
+                    global.xmod += .5;
+                if down
+                    global.mmod = 500;
+                image_index = 1;
+            } else {
+                if left &amp;&amp; global.mmod &gt; 100
+                    global.mmod -= 25;
+                if right &amp;&amp; global.mmod &lt; 1000
+                    global.mmod += 25;
+                if down
+                    global.mmod = 0;
+                image_index = 0;
+            }
             if back || select
                 lockon = 0;
-        }
+            
         if selectorposy &lt; menuposition*174+215 {
+        }
             selectorposy += 6;
         } else if selectorposy &gt; menuposition*174+215 {
             selectorposy -= 6;
@@ -319,10 +336,10 @@ c_inputwocreate();
                 }
                 break;
             case 2:
-                if menuxscale &gt; 0.75 {
+                if menuxscale &gt; 0.8 {
                     menuxscale -= .05;
                 }
-                if menuxscale &lt; 0.75 {
+                if menuxscale &lt; 0.8 {
                     menuxscale += .05;
                 }
                 break;
@@ -336,8 +353,8 @@ c_inputwocreate();
         if !selectoronsong {
             menuposition = floor(menuposition/2.5);
             selectorposx = 1037;
-            selectorposy = 215+menuposition*174;
-            selectorsavey = 215+menuposition*174;
+            selectorposy = 214+menuposition*174;
+            selectorsavey = 214+menuposition*174;
             selectorvspd = 0;
             menuxscale = 1;
             menuyscale = 1;
@@ -465,7 +482,7 @@ if room = stagemenu {
                 }
                 break;
             case 6:
-                draw_sprite(s_menu, 2, 0, 0);
+                draw_sprite(s_menu, 3, 0, 0);
                 draw_text(652, menuposition*87+162, "Yume ga aru");
                 break;
         }
@@ -528,7 +545,11 @@ if room = stagemenu {
     } else {
         draw_text(1120, 440, "Inactive");
     }
-    draw_text(1120, 610, string(global.xmod));
+    if global.mmod = 0 {
+        draw_text(1120, 610, string(global.xmod));
+    } else {
+        draw_text(1120, 610, string(global.mmod));
+    }
     
     switch real(global.completion) {
         case 1:
@@ -552,7 +573,7 @@ if room = stagemenu {
             break;
     }
     
-    draw_sprite(s_menucover, 0, 207, 591);
+    //draw_sprite(s_menucover, 0, 207, 591);
     if !lockon {
         draw_sprite_ext(s_cursor, 0, selectorposx, selectorposy, menuxscale, menuyscale, 0, c_white, 1);
     } else {

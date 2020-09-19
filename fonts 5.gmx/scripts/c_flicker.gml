@@ -4,7 +4,7 @@
 //song = sm_flicker();
 //bpm = ;
 title = "flicker something";
-audio = m_flicker;
+//audio = m_flicker;
 if global.noteoverride = 0 {
     global.red = s_trueblue;
     global.blue = s_ultramarine;
@@ -15,7 +15,7 @@ if global.noteoverride = 0 {
     global.mine = s_frag;
     global.receptor = s_acceptor;
 }
-songbg = bk_flicker;
+//songbg = bk_flicker;
 lanes = 4;
 arrayx = array("T",
 );

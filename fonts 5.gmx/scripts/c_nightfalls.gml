@@ -14,6 +14,10 @@ if global.noteoverride = 0 {
     global.mine = s_negative;
     global.receptor = s_shadow;
 }
+if !global.gimmickactive {
+    global.scuffer = true;
+    global.gimmickactive = true;
+}
 songbg = bk_nightfalls;
 lanes = 4;
 xmod = 8;
