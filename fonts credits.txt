@@ -26,6 +26,7 @@ Newgrounds, itch.io, X10 Hosting, Mega.nz - Hosting, unless one of them says I c
 Steven Dall - GameMaker StepMania library that I didn't use
 GMLscripts.com - collision_line_first
 Peter "tehwave" Jørgensen - draw_circle_width
+alexandervrs - Stereo3D Shader (If you input "3d" in the menu you can enable 3d glasses mode)
 
 Visuals:
 Jousway - midi-solo noteskin
@@ -38,9 +39,9 @@ Porter Robinson - Eon Break bg
 I don't know who made the - chromatic judgement font
 
 Music:
-Night of Past: reach (using edits involving:) SiIvagunner, Gerard Butler, keatonkeaton999, O-Zone, Kohmi Hirose, kors k, Jonathan Wolff, Eino Kettunen, Loituma, Hatsune Miku, beatMARIO, Nitori Kawashiro, Unregistered HyperCam 2
-lancer raps: Galactic Hole (using edits involving:) Toby Fox (DELTARUNE), Tech N9ne, Spongebob Squarepants
-Night Falls ~ Evening Star (15.5): ELEMENTAS
+Night of Past: reach (involving:) SiIvagunner, Gerard Butler, keatonkeaton999, O-Zone, Kohmi Hirose, kors k, Jonathan Wolff, Eino Kettunen, Loituma, Hatsune Miku, beatMARIO, Nitori Kawashiro, Unregistered HyperCam 2
+lancer raps: Galactic Hole (involving:) Toby Fox (DELTARUNE), Tech N9ne, Spongebob Squarepants
+Night Falls ~ Evening Star: ELEMENTAS (Touhou Hyouibana ~ Antinomy of Common Flowers)
 Everything will freeze: UNDEAD CORPORATION (BOUKUN)
 Nocturne: Bill Kiley (Katana ZERO)
 Reset Set: Nanawo Akari

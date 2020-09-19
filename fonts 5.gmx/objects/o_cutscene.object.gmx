@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-3</depth>
+  <depth>1</depth>
   <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -30,7 +30,9 @@ row = 0;
 column = 0;
 count = 0;
 active = false;
+mycount = 0;
 c_inputwocreate();
+backgroundpos = 0;
 </string>
           </argument>
         </arguments>
@@ -66,6 +68,13 @@ c_inputwocreate();
     }
     if select || back {
         count = 999;
+    }
+    mycount += .2;
+    if global.cutscenecount &gt;= 1 {
+        background_index[0] = bk_nebula;
+        backgroundpos--;
+        background_x[0] = backgroundpos;
+        background_htiled[0] = true;
     }
     switch global.cutscenecount {
         case 0:
@@ -254,6 +263,20 @@ draw_text(50, 70, string(global.cutscenecount));
 draw_text(50, 90, string(global.storymode));
 draw_text(50, 110, string(active));
 draw_set_colour(c_black);*/
+if room = cutscene {
+    switch global.cutscenecount {
+        case 0:
+            break;
+        case 6:
+            draw_sprite_ext(s_tars, 1, 0, 0, 4, 4, 0, c_white, 1);
+            draw_sprite_ext(s_hip, mycount%4, 64, 428, 4, 4, 0, c_white, 1);
+            break;
+        default:
+            draw_sprite_ext(s_tars, 0, 0, 0, 4, 4, 0, c_white, 1);
+            draw_sprite_ext(s_hip, mycount%4, 64, 128, 4, 4, 0, c_white, 1);
+            break;
+    }
+}
 </string>
           </argument>
         </arguments>
