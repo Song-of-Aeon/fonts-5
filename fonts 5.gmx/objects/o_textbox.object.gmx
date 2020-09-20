@@ -46,11 +46,17 @@ switch global.songscript {
     case c_lancerraps:
         txt_stage2();
         break;
+    case c_nightfalls:
+        txt_stage3();
+        break;
     case c_everythingwillfreeze:
         txt_stage3();
         break;
     case c_nocturne:
         txt_stage4();
+        break;
+    case c_flicker:
+        txt_stage5();
         break;
     case c_eonbreak:
         if global.megastream = false {
