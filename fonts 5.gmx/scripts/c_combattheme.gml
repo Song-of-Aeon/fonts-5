@@ -21,5 +21,6 @@ songbg = bk_combattheme;
 lanes = 4;
 arrayx[0] = "T";
 arrayy[0] = 0;
+global.currentstage = 1;
 //bg = bk_;
 //music = m_;

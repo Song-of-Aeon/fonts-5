@@ -142,7 +142,11 @@ alarm[0] = 3; //let him inside
             <string>count++;
 
 if count &gt;= 240 {
-    hspd = hspd/(1.1*(global.xmod/8));
+    if global.mmod = 0 {
+        hspd = hspd/(1.1*(global.xmod/8));
+    } else {
+        hspd = hspd/(1.1*(global.mmod/450));
+    }
     if abs(hspd) &lt;= .2 {
         hspd = 0;
     }

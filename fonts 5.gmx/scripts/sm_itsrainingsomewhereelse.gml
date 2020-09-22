@@ -553,8 +553,8 @@ return "#TITLE:It's Raining Somewhere Else;
 0000
 0000
 ,  // measure 30
-0000
 1001
+0000
 0000
 0000
 , // measure 31

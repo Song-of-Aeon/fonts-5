@@ -14,6 +14,7 @@ YellowAfterLife - Custom cursor GameMaker extension
 misc. software:
 Paint.NET - All visual edits
 Aseprite - Original sprites
+SpriteStack - Spinning world
 FireAlpaca - When I needed cool brush effects
 GitKraken - Git client
 GitHub - Git host
@@ -22,6 +23,7 @@ getsongbpm.com - Getting song bpm
 Notepad - This text document
 Audacity - Cutting nocturne
 Notepad++ - Copying .sm files and making StepMania versions of noteskins work
+Pixel FX Designer - The yellow effect on the world in story mode
 Newgrounds, itch.io, X10 Hosting, Mega.nz - Hosting, unless one of them says I can't because it contains "copyrighted material"
 Steven Dall - GameMaker StepMania library that I didn't use
 GMLscripts.com - collision_line_first

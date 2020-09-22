@@ -21,5 +21,6 @@ arrayx = array("T",
 );
 arrayy = array(0,
 );
+global.currentstage = 5;
 //bg = bk_;
 //music = m_;

@@ -23,5 +23,6 @@ xmod = 13; //
 arrayx = array("T",
 "FALL");
 arrayy[0] = 0;
+global.currentstage = 2;
 //bg = bk_;
 //music = m_;

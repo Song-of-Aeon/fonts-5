@@ -25,5 +25,6 @@ xmod = 8;
 arrayx = array("T",
 "SOUL", "UNSOUL", "SOUL", "UNSOUL", "SOUL", "UNSOUL", "SOUL", "UNSOUL");
 arrayy[0] = 0;
+global.currentstage = 3;
 //bg = bk_;
 //music = m_;
