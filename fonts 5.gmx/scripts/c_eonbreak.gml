@@ -40,6 +40,5 @@ arrayy = array(10,
 5, 5, 5,
 1, -1, 1, 1, -2, 0,
 0);
-global.currentstage = 5;
 //bg = bk_;
 //music = m_;

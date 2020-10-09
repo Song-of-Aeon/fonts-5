@@ -39,7 +39,7 @@ hspd = 0;
 menuxscale = 1;
 menuyscale = 1;
 lockon = 0;
-global.scoring = array_create(10);
+
 global.scoring[0] = 0;
 global.scoring[1] = "00.00L";
 global.scoring[2] = "00.00L";

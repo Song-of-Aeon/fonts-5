@@ -29,7 +29,6 @@ arrayx = array("darken", "darken", "darken", "darken", "not darken",
 "SET", "IDEAL", "NOT IDEAL", "CHANGE", "KAWARU", "NOT CHANGE", "KAWARANAI", "ACKNOWLEDGED", "KAWARU", "NOT ACKNOWLEDGED", "KAWARANAI", "LIKED", "KAWARU", "NOT LIKED", "KAWARANAI",
 "SE", "SE", "SE", "SE", "SE", "SE", "SE", "SE", "SE", "SE", "SET",
 "SE", "SE", "SE", "SE", "SE", "SE", "SE", "SE", "SE", "SE", "SET", "RESET",);
-global.currentstage = 4;
 /*arrayy = array(0, 0, 0, 0, 0,
 0, 0, 0, 0, 0, 0, 0, 0, 0,
 

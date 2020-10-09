@@ -22,11 +22,10 @@ songbg = bk_nightfalls;
 lanes = 4;
 xmod = 8;
 arrayx = array("T",
-/*"SPEED", "SPEED", "SPEED", "SPEED",*/
+"SPEED", "SPEED", "SPEED", "SPEED",
 "DIVIDE", "SOUL", "UNSOUL", "SOUL", "UNSOUL");
 arrayy = array(0,
 2, .5, 2, .5,
 10);
-global.currentstage = 3;
 //bg = bk_;
 //music = m_;

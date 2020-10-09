@@ -22,7 +22,6 @@ laneright = 736+minibig*1.5;
 songbg = s_null;
 lanes = 4;
 arrayx[0] = "T";
-global.currentstage = 8;
 //duplicate to the left and right
 //var center = lanedown + lanespacing/4;
 //bg = bk_;

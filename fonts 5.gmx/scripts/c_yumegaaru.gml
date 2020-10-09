@@ -19,6 +19,5 @@ lanes = 4;
 xmod = 8;
 arrayx = array("STOP");
 arrayy[0] = 0;
-global.currentstage = 7;
 //bg = bk_;
 //music = m_;
