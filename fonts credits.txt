@@ -3,6 +3,7 @@ Code: Aeon
 Gimmicks: Aeon, Anumania
 UI, modified noteskins, misc. graphics: Aeon
 Maps (Flux, story, Flow 1-4, misc): Aeon
+
 Map support: Anumania
 Concept: Aeon, Anumania, Yunevii
 Testing: Aeon, Anumania, Yunevii
@@ -21,14 +22,14 @@ GitHub - Git host
 Windows 10 - OS
 getsongbpm.com - Getting song bpm
 Notepad - This text document
-Audacity - Cutting nocturne
+Wordpad - The prologue text document
+Audacity - Cutting Nocturne
 Notepad++ - Copying .sm files and making StepMania versions of noteskins work
 Pixel FX Designer - The yellow effect on the world in story mode
 Newgrounds, itch.io, X10 Hosting, Mega.nz - Hosting, unless one of them says I can't because it contains "copyrighted material"
 Steven Dall - GameMaker StepMania library that I didn't use
 GMLscripts.com - collision_line_first
 Peter "tehwave" Jørgensen - draw_circle_width
-alexandervrs - Stereo3D Shader (If you input "3d" in the menu you can enable 3d glasses mode)
 
 Visuals:
 Jousway - midi-solo noteskin
@@ -37,6 +38,7 @@ Artyom Samoilov - ZERO sprites
 World of Warcraft - Night of Past bg
 Tech N9ne - lancer raps bg
 Touru Amamiya - Reset Set bg
+
 Porter Robinson - Eon Break bg
 I don't know who made the - chromatic judgement font
 
@@ -47,6 +49,7 @@ Night Falls ~ Evening Star: ELEMENTAS (Touhou Hyouibana ~ Antinomy of Common Flo
 Everything will freeze: UNDEAD CORPORATION (BOUKUN)
 Nocturne: Bill Kiley (Katana ZERO)
 Reset Set: Nanawo Akari
+
 Eon Break: Porter Robinson (Virtual Self)
 夢がある: Yugo Kanno, Kensho Ono, Atsushi Miyauchi, Giorno Giovanna
 

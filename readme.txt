@@ -11,7 +11,7 @@ Q: "Why is the game called Fonts 5 - Evanescence, it is personified! As that inf
 A: Ha ha, I get this one a lot.
 
 Q: "I hate your engine. Let me play StepMania properly."
-A: Yes yes you can download the StepMania version from the same page. It doesn't have any mods or gimmicks but features pure note action.
+A: Yes yes you can download the StepMania version from the same page. It doesn't have any mods or gimmicks (except for minor ones in Night Falls as that was its original rendition) but features pure note action.
 
 Q: "Your engine is great! How did you make it?"
 A: GameMaker 1.4. They don't sell it anymore so if you want it you'll need a Steam key reseller or to just pirate it. Source code for Fonts 5 is linked on the download page. Should be importable into GMS2 without too many problems? I don't know, I don't have it.
@@ -21,6 +21,9 @@ A: Originally I made Fonts 5 in ten days. It sucked back then and it's a lot bet
 
 Q: "It says I got a 100 on this song! I didn't at all!"
 A: Shouldn't happen but I'm working on it.
+
+Q: "Why are there no descriptions of or names for the protagonists?"
+A: Doxxing is a serious crime.
 
 Q: "Did you really steal a joke from the Hello Penguin magazine volume 1 for the first answer in this PAQ?"
 A: I prefer to call it a derivative work.

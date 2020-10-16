@@ -1,0 +1,40 @@
+#TITLE:Cirno's Perfect Math Class ⑨th Anniversary;
+#SUBTITLE:;
+#ARTIST:;
+#TITLETRANSLIT:;
+#SUBTITLETRANSLIT:;
+#ARTISTTRANSLIT:;
+#GENRE:;
+#CREDIT:;
+#BANNER:;
+#BACKGROUND:;
+#LYRICSPATH:;
+#CDTITLE:;
+#MUSIC:bg.ogg;
+#OFFSET:0.000000;
+#SAMPLESTART:100.000000;
+#SAMPLELENGTH:12.000000;
+#SELECTABLE:YES;
+#BPMS:0.000000=60.000000
+;
+#STOPS:
+;
+#BGCHANGES:1.500=bg.mp4=1.000=0=0=0=StretchNoLoop====,
+99999=-nosongbg-=1.000=0=0=0 // don't automatically add -songbackground-
+;
+#KEYSOUNDS:;
+#ATTACKS:;
+
+//---------------dance-single - ----------------
+#NOTES:
+     dance-single:
+     :
+     Challenge:
+     1:
+     0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000:
+  // measure 0
+0000
+0000
+0000
+0000
+;

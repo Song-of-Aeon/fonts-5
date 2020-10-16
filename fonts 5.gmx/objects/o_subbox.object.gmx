@@ -66,6 +66,7 @@ switch global.songscript {
         break;
     
 }
+whatevertime = delta_time;
 speaker = c_maroon;
 draw_set_valign(fa_middle);
 
@@ -112,7 +113,8 @@ if fading {
     }
 }
 txtalpha = clamp(txtalpha, 0, 1);
-time++;
+time += delta_time*(whatevertime - delta_time);
+whatevertime = delta_time;
 tim = time/60; //gaming gaming gamigng agimgnga gmgingamga gagimgagmagmkgagmamgmmamggimgiangngiagiamgingiangaingaingignaigm
 script_execute(subset);
 script_execute(subsetwo);
