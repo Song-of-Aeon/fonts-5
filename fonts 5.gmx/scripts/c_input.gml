@@ -31,6 +31,9 @@ swap = keyboard_check_pressed(vk_space) + keyboard_check_pressed(ord('E'));
 control = keyboard_check_pressed(vk_control) + keyboard_check_pressed(ord('H')) + keyboard_check_pressed(vk_rcontrol);
 
 alt = keyboard_check(vk_alt) + keyboard_check(vk_ralt);
+
+jumprel = keyboard_check_released(vk_up) + keyboard_check_released(ord('K')) + keyboard_check_released(ord('W')) + keyboard_check_released(vk_numpad8);
+warprel = keyboard_check_released(vk_space) + keyboard_check_released(ord('E'));
 //if keyboard_check_pressed(vk_anykey) show_message(keyboard_lastkey);
 
 if gamepad_is_connected(0) {

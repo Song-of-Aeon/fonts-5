@@ -43,6 +43,17 @@ for (i=0; i<array_length_1d(cstick); i++) {
     cstickstate[i] = clamp(cstickstate[i], 0, 2);
 }
 
+if mainstickstate[2] = 0 {
+    mainstickrel = true;
+} else {
+    mainstickrel = false;
+}
+if cstickstate[2] = 0 {
+    cstickrel = true;
+} else {
+    cstickrel = false;
+}
+
 /*var cleft = floor(gamepad_axis_value(0, gp_axisrh)+.05);
 var cdown = floor(gamepad_axis_value(0, gp_axisrv)+.05);
 var cup = ceil(gamepad_axis_value(0, gp_axisrv)-.05);
@@ -67,6 +78,10 @@ heldleft += gamepad_button_check(0, gp_padl) + gamepad_button_check(0, gp_face3)
 helddown += gamepad_button_check(0, gp_padd) + gamepad_button_check(0, gp_face1) + gamepad_button_check(0, gp_shoulderl) + floor(mainstickstate[1]/2) + floor(cstickstate[1]/2);
 heldup += gamepad_button_check(0, gp_padu) + gamepad_button_check(0, gp_face4) + gamepad_button_check(0, gp_shoulderr) + floor(mainstickstate[2]/2) + floor(cstickstate[2]/2);
 heldright += gamepad_button_check(0, gp_padr) + gamepad_button_check(0, gp_face2) + gamepad_button_check(0, gp_shoulderrb) + floor(mainstickstate[3]/2) + floor(cstickstate[3]/2);
+
+jumprel += gamepad_button_check_released(0, gp_padu) + gamepad_button_check_released(0, gp_face4) + gamepad_button_check_released(0, gp_shoulderr) + mainstickrel + cstickrel;
+warprel += gamepad_button_check_released(0, gp_select);
+
 
 select += gamepad_button_check_pressed(0, gp_start);
 //back += gamepad_button_check_pressed();
