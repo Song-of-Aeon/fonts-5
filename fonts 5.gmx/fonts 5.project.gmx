@@ -417,6 +417,7 @@
     <object>objects\o_cover</object>
     <object>objects\o_dancer</object>
     <object>objects\o_solid</object>
+    <object>objects\o_lock</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\tovirtualsky</room>
