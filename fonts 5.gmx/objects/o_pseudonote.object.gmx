@@ -99,7 +99,11 @@ bpm = 180;
                 sprite_index = s_trueblue;
                 sprite_index2 = s_ultramarine;
             }
-            bpm = 180;
+            if global.difficulty = 1 {
+                bpm = 180;
+            } else {
+                bpm = 118;
+            }
             break;
         case 6:
             if global.noteoverride = 0 {

@@ -478,7 +478,7 @@ if room = stagemenu {
                 if global.difficulty = 1 {
                     draw_text(652, menuposition*87+162, "Eon Break");
                 } else {
-                    draw_text(652, menuposition*87+162, "fifth easy");
+                    draw_text(652, menuposition*87+162, "Key");
                 }
                 break;
             case 6:

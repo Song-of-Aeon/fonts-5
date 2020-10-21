@@ -70,6 +70,7 @@
     <sound>sound\m_hurt</sound>
     <sound>sound\m_yumegaaru</sound>
     <sound>sound\m_nightfalls</sound>
+    <sound>sound\m_key</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\s_kaguya</sprite>
@@ -152,8 +153,10 @@
     <sprites name="backgrounds">
       <sprite>sprites\bk_combattheme</sprite>
       <sprite>sprites\bk_lancerraps</sprite>
+      <sprite>sprites\bk_nightfalls</sprite>
       <sprite>sprites\bk_everythingwillfreeze</sprite>
       <sprite>sprites\bk_reset_set</sprite>
+      <sprite>sprites\bk_key</sprite>
       <sprite>sprites\bk_eonbreak</sprite>
     </sprites>
     <sprite>sprites\s_world</sprite>
@@ -169,9 +172,7 @@
     <sprite>sprites\s_nullnote</sprite>
     <sprite>sprites\s_textbg</sprite>
     <sprite>sprites\s_vignette</sprite>
-    <sprite>sprites\bk_spiderdance</sprite>
     <sprite>sprites\s_help</sprite>
-    <sprite>sprites\bk_helblinde</sprite>
     <sprite>sprites\s_blendtest</sprite>
     <sprite>sprites\s_difficultyblend</sprite>
     <sprite>sprites\s_difficultycursor</sprite>
@@ -180,11 +181,8 @@
     <sprite>sprites\s_privatesquare</sprite>
     <sprite>sprites\s_minehitbox</sprite>
     <sprite>sprites\s_controls</sprite>
-    <sprite>sprites\sprite93</sprite>
-    <sprite>sprites\sprite94</sprite>
     <sprite>sprites\cr_defrag</sprite>
     <sprite>sprites\s_completion</sprite>
-    <sprite>sprites\bk_nightfalls</sprite>
     <sprite>sprites\s_kunai</sprite>
     <sprite>sprites\s_yukaribullet</sprite>
     <sprite>sprites\s_yukaribg</sprite>
@@ -197,6 +195,13 @@
     <sprite>sprites\s_hip</sprite>
     <sprite>sprites\s_heaven</sprite>
     <sprite>sprites\s_tars</sprite>
+    <sprites name="past">
+      <sprite>sprites\bk_spiderdance</sprite>
+      <sprite>sprites\bk_helblinde</sprite>
+      <sprite>sprites\sprite93</sprite>
+      <sprite>sprites\sprite94</sprite>
+    </sprites>
+    <sprite>sprites\s_hurt</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -243,7 +248,6 @@
     <script>scripts\c_reset_set.gml</script>
     <script>scripts\sm_eonbreak.gml</script>
     <script>scripts\c_eonbreak.gml</script>
-    <script>scripts\c_flicker.gml</script>
     <script>scripts\sm_itsrainingsomewhereelse.gml</script>
     <script>scripts\c_itsrainingsomewhereelse.gml</script>
     <script>scripts\sm_yumegaaru.gml</script>
@@ -261,6 +265,7 @@
       <script>scripts\if_.gml</script>
       <script>scripts\how_many_times_were_the_elevators_used_each.gml</script>
       <script>scripts\is_over_9000.gml</script>
+      <script>scripts\e.gml</script>
     </scripts>
     <scripts name="the note management">
       <script>scripts\c_receptorinput.gml</script>
@@ -272,6 +277,7 @@
       <script>scripts\f_hitdetection.gml</script>
       <script>scripts\f_minedetection.gml</script>
       <script>scripts\f_danmakudetection.gml</script>
+      <script>scripts\f_notecolouring.gml</script>
     </scripts>
     <script>scripts\c_input.gml</script>
     <script>scripts\c_inputwo.gml</script>
@@ -330,6 +336,7 @@
       <script>scripts\x_sm_parser_create_old.gml</script>
       <script>scripts\c_eveniftheworlddeceivesyou.gml</script>
       <script>scripts\sm_eveniftheworlddeceivesyou.gml</script>
+      <script>scripts\c_flicker.gml</script>
       <script>scripts\sm_zetsubou.gml</script>
     </scripts>
     <scripts name="the easy">
@@ -338,12 +345,21 @@
       <script>scripts\sm_nightfalls.gml</script>
       <script>scripts\c_nightfalls.gml</script>
       <script>scripts\sm_reset_set_easy.gml</script>
+      <script>scripts\sm_key.gml</script>
+      <script>scripts\c_key.gml</script>
     </scripts>
+    <scripts name="the key">
+      <script>scripts\c_dancer.gml</script>
+      <script>scripts\c_midsky.gml</script>
+      <script>scripts\c_iyozane.gml</script>
+      <script>scripts\c_sweepingsky.gml</script>
+      <script>scripts\c_cuttingsky.gml</script>
+      <script>scripts\c_heartbeat.gml</script>
+      <script>scripts\c_makefall.gml</script>
+    </scripts>
+    <script>scripts\c_mmod.gml</script>
     <script>scripts\c_timebuster.gml</script>
     <script>scripts\c_inputwocreate.gml</script>
-    <script>scripts\e.gml</script>
-    <script>scripts\c_mmod.gml</script>
-    <script>scripts\c_dancer.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\z_ChromaticAbberation.shader</shader>
@@ -361,31 +377,46 @@
     <object>objects\MELODYCHASER</object>
     <object>objects\o_smparser</object>
     <object>objects\object0</object>
-    <object>objects\o_note</object>
-    <object>objects\o_naturalend</object>
-    <object>objects\o_switch</object>
-    <object>objects\o_gimmickactivator</object>
-    <object>objects\o_switchback</object>
-    <object>objects\o_freeze</object>
-    <object>objects\o_roll</object>
+    <objects name="notes">
+      <object>objects\o_note</object>
+      <object>objects\o_naturalend</object>
+      <object>objects\o_gimmickactivator</object>
+      <object>objects\o_freeze</object>
+      <object>objects\o_roll</object>
+      <object>objects\o_tail</object>
+      <object>objects\o_stay</object>
+      <object>objects\o_mine</object>
+    </objects>
     <object>objects\o_hit</object>
     <object>objects\o_title</object>
-    <object>objects\o_start</object>
     <object>objects\o_hitfx</object>
-    <object>objects\o_tail</object>
-    <object>objects\o_stay</object>
-    <object>objects\o_mine</object>
-    <object>objects\o_soul</object>
-    <object>objects\o_flashfall</object>
-    <object>objects\o_projectile</object>
-    <object>objects\o_knife</object>
-    <object>objects\o_bullet</object>
-    <object>objects\o_kunai</object>
-    <object>objects\o_bulfall</object>
-    <object>objects\o_bulwave</object>
+    <object>objects\o_start</object>
     <objects name="shaders">
       <object>objects\o_ChromaticAbberation</object>
       <object>objects\o_violetabberation</object>
+    </objects>
+    <objects name="danmaku">
+      <object>objects\o_soul</object>
+      <object>objects\o_projectile</object>
+      <object>objects\o_knife</object>
+      <object>objects\o_bullet</object>
+      <object>objects\o_kunai</object>
+      <object>objects\o_bulfall</object>
+      <object>objects\o_bulwave</object>
+      <object>objects\o_sakuya</object>
+      <object>objects\o_yukari</object>
+      <object>objects\o_slowknife</object>
+      <object>objects\o_bounceknife2</object>
+      <object>objects\o_bounceknife</object>
+      <object>objects\o_privatesquare</object>
+      <object>objects\o_bulbomb</object>
+    </objects>
+    <objects name="key">
+      <object>objects\o_solid</object>
+      <object>objects\o_lock</object>
+      <object>objects\o_dancer</object>
+      <object>objects\o_hurt</object>
+      <object>objects\o_damage</object>
     </objects>
     <object>objects\o_menu</object>
     <object>objects\o_fao</object>
@@ -406,20 +437,16 @@
     <object>objects\o_help</object>
     <object>objects\o_controls</object>
     <object>objects\o_blender</object>
-    <object>objects\o_sakuya</object>
-    <object>objects\o_yukari</object>
-    <object>objects\o_slowknife</object>
-    <object>objects\o_bounceknife</object>
-    <object>objects\o_bounceknife2</object>
-    <object>objects\o_privatesquare</object>
-    <object>objects\o_bulbomb</object>
-    <object>objects\o_sample_stereo3d</object>
     <object>objects\o_cover</object>
-    <object>objects\o_dancer</object>
-    <object>objects\o_solid</object>
-    <object>objects\o_lock</object>
+    <objects name="throw">
+      <object>objects\o_sample_stereo3d</object>
+      <object>objects\o_flashfall</object>
+      <object>objects\o_switch</object>
+      <object>objects\o_switchback</object>
+    </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\virtualsky</room>
     <room>rooms\tovirtualsky</room>
     <room>rooms\fontstitle</room>
     <room>rooms\stagemenu</room>

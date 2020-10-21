@@ -55,7 +55,7 @@ switch global.songscript {
     case c_nocturne:
         txt_stage4();
         break;
-    case c_flicker:
+    case c_key:
         txt_stage5();
         break;
     case c_eonbreak:

@@ -22,7 +22,9 @@ if thenote != noone && thenote.object_index != o_mine {
     var distance = abs(thenote.y - bar);
 
     
-    noterank = floor(distance/((bpm*global.xmod)/40));
+    noterank = floor(distance/((bpm*global.xmod)/50
+    
+    ));
     ranktext = noterank;
     if thenote.object_index = o_freeze || thenote.object_index = o_roll {
         with instance_create(argument0, bar, o_stay) {

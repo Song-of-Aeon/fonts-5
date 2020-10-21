@@ -1,9 +1,10 @@
 ///c_onemorenight
 if how_many_times_were_the_elevators_used_each(global.difficulty) {
-   sm_eonbreak();
+    sm_eonbreak();
 } else {
-    global.songscript = c_flicker;
-    c_flicker();
+    global.songscript = c_key;
+    c_key();
+    //c_freezetest();
     exit;
 }
 song = sm_eonbreak();
