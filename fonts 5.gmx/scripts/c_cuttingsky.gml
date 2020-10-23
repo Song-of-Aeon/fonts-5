@@ -6,6 +6,8 @@ if pulse {
                 hspd = 4*other.dir;
                 vspd = -2+(other.pulse-4)*.2;;
             }
+            break;
+        
         case 1:
             with instance_create(x, y, o_hurt) {
                 speed = 12;

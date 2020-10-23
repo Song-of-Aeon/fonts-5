@@ -351,11 +351,14 @@
     <scripts name="the key">
       <script>scripts\c_dancer.gml</script>
       <script>scripts\c_midsky.gml</script>
-      <script>scripts\c_iyozane.gml</script>
       <script>scripts\c_sweepingsky.gml</script>
       <script>scripts\c_cuttingsky.gml</script>
       <script>scripts\c_heartbeat.gml</script>
       <script>scripts\c_makefall.gml</script>
+      <script>scripts\c_iyozane.gml</script>
+      <script>scripts\c_weakeningsweeps.gml</script>
+      <script>scripts\c_borderofseaandsky.gml</script>
+      <script>scripts\c_tokey.gml</script>
     </scripts>
     <script>scripts\c_mmod.gml</script>
     <script>scripts\c_timebuster.gml</script>
@@ -447,11 +450,11 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\virtualsky</room>
-    <room>rooms\tovirtualsky</room>
     <room>rooms\fontstitle</room>
     <room>rooms\stagemenu</room>
     <room>rooms\cutscene</room>
     <room>rooms\rhythm_limbo</room>
+    <room>rooms\tovirtualsky</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

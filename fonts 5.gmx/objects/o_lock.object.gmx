@@ -32,8 +32,8 @@ pulse = false;
 pulsetwo = false;
 sky = true;
 fall = false;
-attacks = array(c_midsky, c_sweepingsky, c_cuttingsky, c_heartbeat, c_iyozane);
-attack = 4;
+attacks = array(c_midsky, c_sweepingsky, c_cuttingsky, c_heartbeat, c_iyozane, c_borderofseaandsky, c_tokey);
+attack = 6;
 dir = 1;
 </string>
           </argument>
@@ -65,7 +65,7 @@ countwo++;
 if countwo % 36 = 0 {
     pointx = o_dancer.x;
     pointy = o_dancer.y;
-    pulse = 4;
+    pulse = attack+1;
 }
 </string>
           </argument>

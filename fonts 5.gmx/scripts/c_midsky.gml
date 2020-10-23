@@ -6,6 +6,8 @@ if pulse {
                 hspd = -3+random(6);
                 vspd = -4;
             }
+            break;
+        
         case 1:
             with instance_create(x, y, o_hurt) {
                 speed = 12;
