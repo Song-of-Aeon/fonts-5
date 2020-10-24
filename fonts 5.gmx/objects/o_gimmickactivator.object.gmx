@@ -30,6 +30,31 @@ vspd = 0;
 dir = 0;
 count = 0;
 if global.gimmickactive = false {instance_destroy()}; //what awful ways there are to do if statements
+//console_log(script_get_name(global.songscript));
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="1" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///unforseen consequences
+console_log(instance_number(o_gimmickactivator));
 </string>
           </argument>
         </arguments>
@@ -52,16 +77,18 @@ if global.gimmickactive = false {instance_destroy()}; //what awful ways there ar
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>sprite_index = s_null;
+            <string>sprite_index = s_kaguya;
 count++;
 
 if count &gt;= 240 {
-    x += hspd*global.truetime;
+   // x += hspd*global.truetime;
     y += vspd*global.truetime;
+    //console_log(vspd);
 }
 
 
 if y &lt;= MELODYCHASER.bar {
+    console_log(script_get_name(global.songscript));
     MELODYCHASER.inputgimmick = false;
     instance_destroy();
 }

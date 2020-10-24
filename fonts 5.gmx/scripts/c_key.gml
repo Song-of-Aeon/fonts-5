@@ -16,7 +16,10 @@ if global.noteoverride = 0 {
 songbg = bk_key;
 lanes = 4;
 arrayx = array("T",
-);
+"UNLOCK", "TURN", "TURN", "LOCK",
+"UNLOCK", "TURN", "TURN", "LOCK",
+"T",
+"UNLOCK", "LOCK");
 arrayy = array(0,
 );
 //bg = bk_;

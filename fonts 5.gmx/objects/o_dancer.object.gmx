@@ -3,7 +3,7 @@
   <spriteName>s_sakuya</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-2</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -44,6 +44,8 @@ inv = false;
 warping = false;
 warpx = x;
 warpy = y;
+locked = true;
+image_alpha = 0;
 </string>
           </argument>
         </arguments>
@@ -72,7 +74,14 @@ warp = swap;
 left = heldleft;
 right = heldright;
 hput = right - left;
-script_execute(state);
+if locked {
+    if image_alpha &gt; 0
+    image_alpha -= .05;
+} else {
+    script_execute(state);
+    if image_alpha &lt; 1
+    image_alpha += .05;
+}
 </string>
           </argument>
         </arguments>

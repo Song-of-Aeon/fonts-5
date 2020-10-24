@@ -482,11 +482,14 @@ switch global.songscript {
     case c_reset_set:
         c_reset_set_gimmicks();
         break;
+    case c_key:
+        c_key_gimmicks();
+        break;
     case c_eonbreak:
         c_eonbreak_gimmicks();
         break;
     case c_yumegaaru:
-        c_yumegaarugimmicks();
+        c_yumegaaru_gimmicks();
         break;
     
     default:

@@ -56,7 +56,12 @@ switch global.songscript {
         txt_stage4();
         break;
     case c_key:
-        txt_stage5();
+        if global.megastream = false {
+            txt_stage5b();
+            global.megastream = true;
+        } else {
+            txt_stream();
+        }
         break;
     case c_eonbreak:
         if global.megastream = false {

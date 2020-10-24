@@ -271,6 +271,7 @@
       <script>scripts\c_receptorinput.gml</script>
       <script>scripts\c_receptorinputwo.gml</script>
       <script>scripts\c_receptordanmaku.gml</script>
+      <script>scripts\c_receptorkey.gml</script>
       <script>scripts\c_beforeweird.gml</script>
       <script>scripts\c_bpmbuster.gml</script>
       <script>scripts\c_noteskins.gml</script>
@@ -302,6 +303,7 @@
       <script>scripts\txt_stage2.gml</script>
       <script>scripts\txt_stage3.gml</script>
       <script>scripts\txt_stage4.gml</script>
+      <script>scripts\txt_stage5b.gml</script>
       <script>scripts\txt_stage5.gml</script>
       <script>scripts\txt_stream.gml</script>
       <script>scripts\c_txtcommon.gml</script>
@@ -321,9 +323,9 @@
       <script>scripts\c_nightfalls_gimmicks.gml</script>
       <script>scripts\c_everythingwillfreeze_gimmicks.gml</script>
       <script>scripts\c_reset_set_gimmicks.gml</script>
-      <script>scripts\c_flicker_gimmicks.gml</script>
+      <script>scripts\c_key_gimmicks.gml</script>
       <script>scripts\c_eonbreak_gimmicks.gml</script>
-      <script>scripts\c_yumegaarugimmicks.gml</script>
+      <script>scripts\c_yumegaaru_gimmicks.gml</script>
     </scripts>
     <scripts name="the obsolete">
       <script>scripts\sm_onemorenight.gml</script>
@@ -337,6 +339,7 @@
       <script>scripts\c_eveniftheworlddeceivesyou.gml</script>
       <script>scripts\sm_eveniftheworlddeceivesyou.gml</script>
       <script>scripts\c_flicker.gml</script>
+      <script>scripts\c_flicker_gimmicks.gml</script>
       <script>scripts\sm_zetsubou.gml</script>
     </scripts>
     <scripts name="the easy">
@@ -359,6 +362,7 @@
       <script>scripts\c_weakeningsweeps.gml</script>
       <script>scripts\c_borderofseaandsky.gml</script>
       <script>scripts\c_tokey.gml</script>
+      <script>scripts\c_tosoul.gml</script>
     </scripts>
     <script>scripts\c_mmod.gml</script>
     <script>scripts\c_timebuster.gml</script>
@@ -419,6 +423,7 @@
       <object>objects\o_lock</object>
       <object>objects\o_dancer</object>
       <object>objects\o_hurt</object>
+      <object>objects\o_hurturn</object>
       <object>objects\o_damage</object>
     </objects>
     <object>objects\o_menu</object>
@@ -449,12 +454,12 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\virtualsky</room>
     <room>rooms\fontstitle</room>
     <room>rooms\stagemenu</room>
     <room>rooms\cutscene</room>
     <room>rooms\rhythm_limbo</room>
     <room>rooms\tovirtualsky</room>
+    <room>rooms\virtualsky</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

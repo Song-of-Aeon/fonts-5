@@ -1,10 +1,10 @@
-if pulse {
+/*if pulse {
     with instance_create(room_width/2, 100, o_hurt) {
         speed = 12;
         direction = point_direction(x, y, o_dancer.x, o_dancer.y);
     }
     pulse = false;
-}
+}*/
 
 with instance_create(sin(count/50)*225+320, 100, o_hurt) {
     grav = .2;
