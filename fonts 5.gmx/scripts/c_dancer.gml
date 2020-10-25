@@ -34,21 +34,19 @@ if !place_meeting(x, y + 1, o_solid) {
     vspd += grav;
     leniance -= .5;
     //aerial = true;
-    if vspd > 3 { //this so there can be different sprites for falling speeds its from firegame we probably dont want it here but leaving it in case
-        image_index = 2;
-    } else if vspd > 0 {
+    sprite_index = s_air;
+    if vspd > 0 {
         image_index = 1;
-        acc = .5;
     } else {
         image_index = 0;
         acc = .5;
     }
+    
 } else {
     leniance = 5;
     acc = 1.2;
     aerial = false; 
     dashed = false;
-    //y = floor(y);
     vspd = 0;
     if down {
         hspd = 0;
@@ -89,9 +87,9 @@ if aerial = true {
 }
 
 if (((!left and !right)or hspd == 0 ) and !aerial) {
-    //sprite_index = s_neutral;
+    sprite_index = s_neutral;
 } else if !aerial {
-    //sprite_index = s_walk;
+    sprite_index = s_ground;
 }
 
 if warp {

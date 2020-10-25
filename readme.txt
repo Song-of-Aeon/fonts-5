@@ -1,7 +1,7 @@
 Fonts 5 - Evanescence, it is personified! As that inferno fluxuates, so does the penultimate of the heptads, the one commanding the iconoclastic apparitions! At world end, rock and heaven, soul and sea, fade, yet it does not matter. For that melody had long since saved all. It has already reached [AMORTALITY]
 
 A game by Aeon.
-Just like all free computer rhythm games, it violates copyright because of its songs. If you're one of the people in the credits and that's a problem for you you can send something about it to aeon#2682 (Discord) or @Espeon78 (Twitter) and I'll get to it, unless you're the guy that made the midi-solo noteskin. I need that shit my guy.
+Just like all free computer rhythm games, it violates copyright because of its songs. If you're one of the people in the credits and that's a problem for you you can send something about it to aeon#2682 (Discord) or @Espeon78 (Twitter) and I'll get to it, unless you're the guy that made the midi-solo noteskin. I need that shit buddy.
 
 The prologue to the story mode is "from past.rtf". Reading it is not necessary, but may give some context to what's going on.
 
@@ -35,7 +35,7 @@ Q: "Will you map a song for me?"
 A: Aight. 10 USD per difficulty for a reasonable length song and +10 more for cool mods and a noteskin. Four bucks off both if it's a song I really like. aeon#2682
 
 Q: "Why is it so hard? The easy mode isn't easy at all!"
-A: Made for dancegame veterans. It is tough though. I can't even clear Eon Break or Everything Will Freeze on Flux very well. From the start, I was trying to map above my level.
+A: Made for dancegame veterans. It is tough though. I can't even clear Eon Break or Everything Will Freeze very well. From the start, I was trying to map above my level.
 
 Q: "Five keyboard ways of control aren't enough!"
 A: Yeah well it supports controller, which also has five ways of control. Everything except start and select works as a direction. I recommend the Ls and Rs or joystick + ABXY.

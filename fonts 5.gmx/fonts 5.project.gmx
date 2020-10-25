@@ -202,6 +202,9 @@
       <sprite>sprites\sprite94</sprite>
     </sprites>
     <sprite>sprites\s_hurt</sprite>
+    <sprite>sprites\s_neutral</sprite>
+    <sprite>sprites\s_ground</sprite>
+    <sprite>sprites\s_air</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>

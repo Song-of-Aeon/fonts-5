@@ -2,8 +2,7 @@ Fonts 5:
 Code: Aeon
 Gimmicks: Aeon, Anumania
 UI, modified noteskins, misc. graphics: Aeon
-Maps (Flux, story, Flow 1-4, misc): Aeon
-
+Maps: Aeon
 Map support: Anumania
 Concept: Aeon, Anumania, Yunevii
 Testing: Aeon, Anumania, Yunevii
@@ -38,7 +37,7 @@ Artyom Samoilov - ZERO sprites
 World of Warcraft - Night of Past bg
 Tech N9ne - lancer raps bg
 Touru Amamiya - Reset Set bg
-
+Porter Robinson - Key bg
 Porter Robinson - Eon Break bg
 I don't know who made the - chromatic judgement font
 
@@ -49,7 +48,7 @@ Night Falls ~ Evening Star: ELEMENTAS (Touhou Hyouibana ~ Antinomy of Common Flo
 Everything will freeze: UNDEAD CORPORATION (BOUKUN)
 Nocturne: Bill Kiley (Katana ZERO)
 Reset Set: Nanawo Akari
-
+Key: Porter Robinson (Virtual Self)
 Eon Break: Porter Robinson (Virtual Self)
 夢がある: Yugo Kanno, Kensho Ono, Atsushi Miyauchi, Giorno Giovanna
 
