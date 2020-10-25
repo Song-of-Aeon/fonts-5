@@ -3,7 +3,7 @@
 //and five lines to work with
 message[0] = "Hey!";
 message[1] = "Can you hear me?";
-message[2] = "We can still save the world!";
+message[2] = "We can still save this world!";
 message[3] = "I'm working to stabilize the flux. Just stay with the rhythm!";
 
 choice[0] = "";

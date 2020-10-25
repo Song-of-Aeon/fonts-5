@@ -104,11 +104,13 @@ if locked {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if warping {
+            <string>draw_set_alpha(image_alpha);
+if warping {
     draw_line_width(x, y, warpx, warpy, 5);
     draw_sprite(s_trueblue, 0, warpx, warpy);
 }
 draw_self();
+draw_set_alpha(1);
 </string>
           </argument>
         </arguments>
