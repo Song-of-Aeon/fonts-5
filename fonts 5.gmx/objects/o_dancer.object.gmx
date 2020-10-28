@@ -37,7 +37,7 @@ vput = 0;
 state = c_dancer;
 grav = .34;
 leniance = 5;
-maxhspd = 5;
+maxhspd = 7.5;
 maxvspd = 5;
 time = 0;
 inv = false;
@@ -45,6 +45,7 @@ warping = false;
 warpx = x;
 warpy = y;
 locked = true;
+warply = 0;
 image_alpha = 0;
 </string>
           </argument>
@@ -69,6 +70,7 @@ image_alpha = 0;
           <argument>
             <kind>1</kind>
             <string>c_input();
+c_redinput();
 jump = select + up;
 warp = swap;
 left = heldleft;
@@ -106,8 +108,8 @@ if locked {
             <kind>1</kind>
             <string>draw_set_alpha(image_alpha);
 if warping {
-    draw_line_width(x, y, warpx, warpy, 5);
-    draw_sprite(s_trueblue, 0, warpx, warpy);
+    //(x, y, warpx, warpy, 5);
+    draw_sprite(s_warp, warply, warpx, warpy);
 }
 draw_self();
 draw_set_alpha(1);

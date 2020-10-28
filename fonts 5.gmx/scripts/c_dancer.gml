@@ -97,10 +97,14 @@ if warp {
     warpy = y;
     warping = true;
 }
+if warping {
+    warply++;
+}
 if warprel {
     x = warpx;
     y = warpy;
     warping = false;
+    warply = 0;
 }
 
 x += hspd;

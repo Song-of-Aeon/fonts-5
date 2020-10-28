@@ -205,6 +205,11 @@
     <sprite>sprites\s_neutral</sprite>
     <sprite>sprites\s_ground</sprite>
     <sprite>sprites\s_air</sprite>
+    <sprite>sprites\s_lock</sprite>
+    <sprite>sprites\s_aura</sprite>
+    <sprite>sprites\s_sky</sprite>
+    <sprite>sprites\s_warp</sprite>
+    <sprite>sprites\s_cloud</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -423,6 +428,7 @@
     </objects>
     <objects name="key">
       <object>objects\o_solid</object>
+      <object>objects\o_cloud</object>
       <object>objects\o_lock</object>
       <object>objects\o_dancer</object>
       <object>objects\o_hurt</object>
