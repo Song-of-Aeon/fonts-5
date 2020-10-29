@@ -3,7 +3,7 @@
   <spriteName>s_lock</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-2</depth>
   <persistent>0</persistent>
   <parentName>o_damage</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -57,10 +57,18 @@ vspd += grav;
 x += hspd;
 y += vspd;
 
-if y &gt; room_height+sprite_height || x &lt; -sprite_width {
+if y &gt; room_height+sprite_height || x &lt; -sprite_width || y &lt; -1000 || x &gt; room_height*2 {
     instance_destroy();
 }
-image_alpha += .1;
+
+if o_lock.attack = 6 {
+    image_alpha -= .05;
+    if image_alpha &lt;= 0 {
+        instance_destroy();
+    }
+} else {
+    image_alpha += .1;
+}
 </string>
           </argument>
         </arguments>

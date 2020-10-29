@@ -1,5 +1,12 @@
 ///c_receptorkey
 switch o_lock.attack {
+    case 3:
+        f_danmakudetection(laneleft);
+        f_danmakudetection(lanedown);
+        f_danmakudetection(laneup);
+        f_danmakudetection(laneright);
+        break;
+        
     case 4:
         if f_danmakudetection(laneleft) {
             with instance_create(laneleft, bar, o_hurt) {
@@ -33,10 +40,10 @@ switch o_lock.attack {
             o_lock.pointx = o_dancer.x;
             o_lock.pointy = o_dancer.y;
         }
-        f_danmakudetection(laneleft);
+        /*f_danmakudetection(laneleft);
         f_danmakudetection(lanedown);
         f_danmakudetection(laneup);
-        f_danmakudetection(laneright);
+        f_danmakudetection(laneright);*/
         break;
     
     /*case 0:

@@ -1,6 +1,6 @@
 if pulse {
     if fall {
-        count += 3;
+        count += 5;
     }
     c_makefall();
     fall = !fall;

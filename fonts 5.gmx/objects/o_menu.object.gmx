@@ -243,10 +243,10 @@ global.scuffer = false;
                     global.songscript = c_eonbreak;
                     break;
                 case 6:
-                    global.songscript = c_eveniftheworlddeceivesyou;
+                    //global.songscript = c_eveniftheworlddeceivesyou;
                     //global.songscript = c_nocturne;
                     //global.songscript = c_itsrainingsomewhereelse;
-                    //global.songscript = c_yumegaaru;
+                    global.songscript = c_yumegaaru;
                     break;
             }
             audio_play_sound(se_select, 0, false);
@@ -583,6 +583,8 @@ if room = stagemenu {
 } else if room = rhythm_limbo {
     if MELODYCHASER.state = c_receptordanmaku {
         draw_sprite_ext(s_bigdark, 0, 0, 0, 1, 1, 0, c_white, .7);
+    } else if MELODYCHASER.state = c_receptorkey {
+        draw_sprite_ext(bk_key, 0, 0, 0, 1, 1, 0, c_white, .3);
     }
 }
 </string>

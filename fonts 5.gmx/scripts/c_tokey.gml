@@ -1,4 +1,4 @@
-if pulse {
+//if pulse {
     with instance_create(room_width/2, 96, o_hurt) {
         direction = sin(other.count/100)*360+45;
         speed = 12;
@@ -25,7 +25,7 @@ if pulse {
          direction = point_direction(x, y, other.pointx+(other.pulse*10)*other.dir, other.pointy+(other.pulse*10)*other.dir); //30
     }
     //pulse--;
-}
+//}
 count++;
 /*while count != 0 {
     

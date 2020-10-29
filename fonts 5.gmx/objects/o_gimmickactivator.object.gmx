@@ -77,7 +77,8 @@ console_log(instance_number(o_gimmickactivator));
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>sprite_index = s_kaguya;
+            <string>//sprite_index = s_kaguya;
+sprite_index = s_null;
 count++;
 
 if count &gt;= 240 {

@@ -1,5 +1,20 @@
 //lifted straight from firegame if this has major problems i die boy i die
 
+if warp {
+    warpx = x;
+    warpy = y;
+    warping = true;
+}
+if warping {
+    warply++;
+}
+if warprel {
+    x = warpx;
+    y = warpy;
+    warping = false;
+    warply = 0;
+}
+
 if hput != 0 {
     hspd += hput * acc;
     hspd = clamp(hspd, -maxhspd, maxhspd);
@@ -92,29 +107,19 @@ if (((!left and !right)or hspd == 0 ) and !aerial) {
     sprite_index = s_ground;
 }
 
-if warp {
-    warpx = x;
-    warpy = y;
-    warping = true;
-}
-if warping {
-    warply++;
-}
-if warprel {
-    x = warpx;
-    y = warpy;
-    warping = false;
-    warply = 0;
-}
+
 
 x += hspd;
 y += vspd;
 
 
-/*if instance_place(x, y, o_damage) && !inv {
-    alarm[0] = 30;
+if instance_place(x, y, o_hurt) && !inv {
+    alarm[0] = 60;
     inv = true;
     image_alpha = .5;
-    MELODYCHASER.hp--;
+    MELODYCHASER.hp -= .75;
+    vspd -= 2;
     MELODYCHASER.realscore--;
-}*/
+    audio_play_sound(m_hurt, 0, false);
+    //console_log(realscore);
+}
