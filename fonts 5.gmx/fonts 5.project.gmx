@@ -210,6 +210,7 @@
     <sprite>sprites\s_sky</sprite>
     <sprite>sprites\s_warp</sprite>
     <sprite>sprites\s_cloud</sprite>
+    <sprite>sprites\s_scoreshow</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -385,8 +386,8 @@
     <font>fonts\f_ronaldo</font>
     <font>fonts\f_scoreronaldo</font>
     <font>fonts\f_textronaldo</font>
+    <font>fonts\f_alien</font>
     <font>fonts\f_combo</font>
-    <font>fonts\f_udgothic</font>
   </fonts>
   <objects name="objects">
     <object>objects\MELODYCHASER</object>

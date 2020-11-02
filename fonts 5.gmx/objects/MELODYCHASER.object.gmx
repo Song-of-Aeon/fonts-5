@@ -572,19 +572,27 @@ global.truetime = c_timebuster();
           <argument>
             <kind>1</kind>
             <string>depth = 5;
+
+draw_set_colour(c_black);
+draw_sprite(s_scoreshow, 0, 0, 0);
+draw_set_font(f_alien);
+draw_set_halign(fa_left);
+draw_set_valign(fa_middle);
+draw_text(24, 23, string_copy(string(realscore), 0, 4));
+
 draw_sprite(songbg, 0, 0, 0);
 //draw_sprite_ext(s_blueselected, 0, laneselected+12.8, 0, global.mini, 1, 0, c_white, 1);
 draw_sprite_ext(s_futureselected, 0, bluepos, 0, global.mini, 1, 0, c_white, 1);
-draw_set_font(f_scoreronaldo);
+
 
 draw_sprite_ext(global.receptor, 0, laneleft, bar, global.mini*bop[0], global.mini*bop[0], -90, c_white, 1);
 draw_sprite_ext(global.receptor, 0, lanedown, bar, global.mini*bop[1], global.mini*bop[1], 0, c_white, 1);
 draw_sprite_ext(global.receptor, 0, laneup, bar, global.mini*bop[2], global.mini*bop[2], 180, c_white, 1);
 draw_sprite_ext(global.receptor, 0, laneright, bar, global.mini*bop[3], global.mini*bop[3], 90, c_white, 1);
 
+draw_set_font(f_combo);
 draw_set_halign(fa_center);
 draw_set_colour(c_white);
-draw_set_font(f_combo);
 
 if lanes = 8 {
     draw_sprite_ext(global.receptor, 0, laneleftwo, bar, global.mini*bop[4], global.mini*bop[4], -90, c_white, 1);
@@ -621,11 +629,6 @@ if lanes = 8 {
 //draw_text(laneright+250, bar+300, string(combo));
 
 
-draw_set_font(f_scoreronaldo);
-draw_set_colour(c_black);
-draw_set_halign(fa_left);
-
-
 draw_line_width(0, chokepoint, window_get_width(), chokepoint, 5);
 /*var m;
 for (m=0;)
@@ -636,6 +639,8 @@ draw_sprite
 if count &lt; 230 {
     draw_sprite(s_prep, floor(count/60), 675, 360);
 }
+
+
 
 </string>
           </argument>
