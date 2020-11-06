@@ -13,7 +13,7 @@ if global.noteoverride = 0 {
     global.mine = s_negative;
     global.receptor = s_gem;
 }
-global.mini = 1;
+//global.mini = 1;
 minibig = (global.mini-1)*64;
 laneleft = 544-minibig*1.5;
 lanedown = 608-minibig*.5;

@@ -224,11 +224,11 @@ if !instance_exists(o_smparser) {
 if songstarting {
     timecounter += delta_time;
     if timecounter/1000 &gt;= offset {
-        count++;
+        count += global.truetime;
         if count = 10 {
             instance_create(800, 500, o_zero);
         }
-        if (count &gt;= 295 &amp;&amp; global.songscript = c_eonbreak) || (count &gt;= 290 &amp;&amp; global.songscript != c_eonbreak){
+        if (count &gt;= 295 &amp;&amp; global.songscript = c_eonbreak) || (count &gt;= 290 &amp;&amp; global.songscript != c_eonbreak) {
         
         //if (count &gt;= 235 &amp;&amp; global.songscript = c_eonbreak) || (count &gt;= 230 &amp;&amp; global.songscript != c_eonbreak){
             audio_play_sound(audio, 0, false);
@@ -572,15 +572,16 @@ global.truetime = c_timebuster();
           <argument>
             <kind>1</kind>
             <string>depth = 5;
+draw_sprite(songbg, 0, 0, 0);
 
 draw_set_colour(c_black);
 draw_sprite(s_scoreshow, 0, 0, 0);
 draw_set_font(f_alien);
 draw_set_halign(fa_left);
-draw_set_valign(fa_middle);
-draw_text(24, 23, string_copy(string(realscore), 0, 4));
+draw_set_valign(fa_top);
+draw_text(24, 24, string_copy(string(realscore), 0, 4));
 
-draw_sprite(songbg, 0, 0, 0);
+
 //draw_sprite_ext(s_blueselected, 0, laneselected+12.8, 0, global.mini, 1, 0, c_white, 1);
 draw_sprite_ext(s_futureselected, 0, bluepos, 0, global.mini, 1, 0, c_white, 1);
 

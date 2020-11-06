@@ -139,7 +139,7 @@ alarm[0] = 3; //let him inside
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>count++;
+            <string>count += global.truetime;
 
 if count &gt;= 240 {
     hspd = hspd/(1.1*(global.xmod/8));

@@ -99,7 +99,7 @@ audio_play_sound(m_night, 0, false);
 image_speed = 0;
 c_inputwocreate();
 global.mmod = 600;
-global.mini = 1;
+global.mini = 1.4;
 global.scuffer = false;
 </string>
           </argument>

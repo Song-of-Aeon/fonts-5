@@ -98,7 +98,7 @@ sprite_index = head.sprite_index;
 
 
 
-count++;
+count += global.truetime;
 if count &gt;= 240 {
     y += vspd*global.truetime;
 }

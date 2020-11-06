@@ -3,7 +3,7 @@
   <spriteName>s_zero</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-2</depth>
+  <depth>-4</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -63,12 +63,16 @@ switch global.songscript {
     default:
         subset = c_null;
         subsetwo = c_null;
+        instance_destroy();
+        console_log("heh");
         break;
     
 }
 whatevertime = delta_time;
 speaker = c_maroon;
 draw_set_valign(fa_middle);
+console_log(script_get_name(subset));
+console_log(script_get_name(subsetwo));
 
 </string>
           </argument>
@@ -104,6 +108,7 @@ if txturn != 0 {
     if txturn &lt; 1 {
         txturn = 0;
     }
+    console_log("zetsubou", global.gimmickactive);
 }
 if fading {
     durability = 0;
@@ -111,13 +116,15 @@ if fading {
     if txtalpha &lt;= 0 {
         instance_destroy();
     }
+    console_log("kibou", global.gimmickactive);
 }
 txtalpha = clamp(txtalpha, 0, 1);
-time += delta_time*(whatevertime - delta_time);
-whatevertime = delta_time;
-tim = time/60; //gaming gaming gamigng agimgnga gmgingamga gagimgagmagmkgagmamgmmamggimgiangngiagiamgingiangaingaingignaigm
+time += 1*global.truetime;
+console_log(tim);
+tim = floor(time/60); //gaming gaming gamigng agimgnga gmgingamga gagimgagmagmkgagmamgmmamggimgiangngiagiamgingiangaingaingignaigm
 script_execute(subset);
 script_execute(subsetwo);
+//console_log("yeahhh");
 </string>
           </argument>
         </arguments>
@@ -150,8 +157,8 @@ draw_set_colour(c_white);
 if durability &gt; 0 {
     draw_set_font(f_textronaldo);
     draw_set_halign(fa_center);
-    draw_text_ext_transformed_colour(x+5, y+5+8, txt, 20, 1280, 1, 1, txturn, speaker, speaker, speaker, speaker, txtalpha/1.3);
-    draw_text_ext_transformed_colour(x, y+8, txt, 20, 1280, 1, 1, txturn, c_white, c_white, c_white, c_white, txtalpha);
+    draw_text_ext_transformed_colour(x+5, y+5+8, txt, 20, 300*global.mini, 1, 1, txturn, speaker, speaker, speaker, speaker, txtalpha/1.3);
+    draw_text_ext_transformed_colour(x, y+8, txt, 20, 300*global.mini, 1, 1, txturn, c_white, c_white, c_white, c_white, txtalpha);
     
     draw_set_font(f_udgothic);
     draw_set_halign(fa_left);
@@ -159,6 +166,7 @@ if durability &gt; 0 {
     draw_text_ext_transformed_colour(x, 600, txtwo, 20, 1260, 1, 1, txturn, c_white, c_white, c_white, c_white, txtalpha);*/
     draw_text_ext_transformed_colour(MELODYCHASER.laneleft-120+8+5, MELODYCHASER.bar+5, txtwo, 20, 1280, 1, 1, -90, speaker, speaker, speaker, speaker, txtalpha/1.3);
     draw_text_ext_transformed_colour(MELODYCHASER.laneleft-120+8, MELODYCHASER.bar, txtwo, 20, 1280, 1, 1, -90, c_white, c_white, c_white, c_white, txtalpha);
+    //draw_sprite(s_black, 0, 0, 0);
 }
 draw_set_colour(whatever);
 

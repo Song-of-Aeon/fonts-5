@@ -388,6 +388,7 @@
     <font>fonts\f_textronaldo</font>
     <font>fonts\f_alien</font>
     <font>fonts\f_combo</font>
+    <font>fonts\f_udgothic</font>
   </fonts>
   <objects name="objects">
     <object>objects\MELODYCHASER</object>

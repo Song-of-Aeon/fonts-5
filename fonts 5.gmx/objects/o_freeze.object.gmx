@@ -117,7 +117,7 @@ alarm[0] = 5; //let him inside
 
 
 
-count++;
+count += global.truetime;
 if count &gt;= 240 {
     y += vspd*global.truetime;
 }

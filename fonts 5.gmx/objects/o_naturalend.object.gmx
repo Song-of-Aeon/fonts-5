@@ -90,7 +90,7 @@ alarm[0] = 3; //let him inside
           <argument>
             <kind>1</kind>
             <string>sprite_index = s_null;
-count++;
+count += global.truetime;
 
 if count &gt;= 240 {
     x += hspd*global.truetime;
