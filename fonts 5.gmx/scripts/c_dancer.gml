@@ -119,7 +119,7 @@ if instance_place(x, y, o_hurt) && !inv {
     image_alpha = .5;
     MELODYCHASER.hp -= .75;
     vspd -= 2;
-    MELODYCHASER.realscore--;
+    hit++;
     audio_play_sound(m_hurt, 0, false);
     //console_log(realscore);
 }

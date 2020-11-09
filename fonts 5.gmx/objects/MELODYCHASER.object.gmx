@@ -574,12 +574,14 @@ global.truetime = c_timebuster();
             <string>depth = 5;
 draw_sprite(songbg, 0, 0, 0);
 
-draw_set_colour(c_black);
-draw_sprite(s_scoreshow, 0, 0, 0);
-draw_set_font(f_alien);
-draw_set_halign(fa_left);
-draw_set_valign(fa_top);
-draw_text(24, 24, string_copy(string(realscore), 0, 4));
+if global.songscript != c_nocturne || global.songscript != c_itsrainingsomewhereelse {
+    draw_set_colour(c_black);
+    draw_sprite(s_scoreshow, 0, 0, 0);
+    draw_set_font(f_alien);
+    draw_set_halign(fa_left);
+    draw_set_valign(fa_top);
+    draw_text(24, 24, string_copy(string(realscore), 0, 4));
+}
 
 
 //draw_sprite_ext(s_blueselected, 0, laneselected+12.8, 0, global.mini, 1, 0, c_white, 1);

@@ -20,6 +20,7 @@ if inputgimmick = false {
             o_dancer.locked = true;
             o_lock.locked = true;
             o_cloud.locked = true;
+            o_dancer.hit = 0;
             break;
         case "TURN":
             o_lock.attack++;

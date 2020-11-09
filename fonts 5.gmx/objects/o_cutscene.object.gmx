@@ -171,12 +171,12 @@ backgroundpos = 0;
                 }
             }
             if count &gt; 180 {
-                if global.difficulty = 1 {
+                //if global.difficulty = 1 {
                     global.songscript = c_nocturne;
-                } else {
+                /*} else {
                     global.songscript = c_reset_set;
                     global.cutscenecount++;
-                }
+                }*/
                 instance_create(0, 0, o_fao);
                 o_cutscene.active = false;
             }

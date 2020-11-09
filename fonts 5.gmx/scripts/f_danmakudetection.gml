@@ -13,7 +13,13 @@ if collision_point(argument0, bar, o_note, false, false) != noone {
         }
     }
     instance_destroy(thenote);
-    realscore += 100/notecount;
+    if instance_exists (o_soul) {
+        realscore += (100/notecount)/(o_soul.hit/4+1);
+    } else if instance_exists(o_dancer) {
+        realscore += (100/notecount)/(o_dancer.hit/4+1);
+    } else {
+        realscore += 100/notecount;
+    }
     return true;
 } else {
     return false;

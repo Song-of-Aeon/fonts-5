@@ -49,6 +49,7 @@ alarm[5] = 5;
 
 //instance_create(x,y,o_graze);
 script_execute(state);
+hit = 0;
 </string>
           </argument>
         </arguments>
