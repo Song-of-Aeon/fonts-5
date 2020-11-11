@@ -39,6 +39,9 @@ switch global.songscript {
     case c_everythingwillfreeze:
         image_index = 1;
         break;
+    case c_key:
+        image_index = 3;
+        break;
     
     default:
         instance_destroy();

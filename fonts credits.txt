@@ -7,11 +7,10 @@ Map support: Anumania
 Concept: Aeon, Anumania, Yunevii
 Testing: Aeon, Anumania, Yunevii
 
-Software:
+Software/code:
 GameMaker Studio 1.4 - Game engine
 StepMania - Mapping tool, original concept
 YellowAfterLife - Custom cursor GameMaker extension
-misc. software:
 Paint.NET - All visual edits
 Aseprite - Original sprites
 SpriteStack - Spinning world
