@@ -180,7 +180,7 @@
     <sprite>sprites\s_sakuyabg</sprite>
     <sprite>sprites\s_privatesquare</sprite>
     <sprite>sprites\s_minehitbox</sprite>
-    <sprite>sprites\s_controls</sprite>
+    <sprite>sprites\s_controlsold</sprite>
     <sprite>sprites\cr_defrag</sprite>
     <sprite>sprites\s_completion</sprite>
     <sprite>sprites\s_kunai</sprite>
@@ -211,6 +211,7 @@
     <sprite>sprites\s_warp</sprite>
     <sprite>sprites\s_cloud</sprite>
     <sprite>sprites\s_scoreshow</sprite>
+    <sprite>sprites\s_controls</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
