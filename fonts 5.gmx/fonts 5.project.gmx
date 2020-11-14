@@ -377,6 +377,7 @@
     <script>scripts\c_timebuster.gml</script>
     <script>scripts\c_inputwocreate.gml</script>
     <script>scripts\c_save.gml</script>
+    <script>scripts\c_savetwo.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\z_ChromaticAbberation.shader</shader>
