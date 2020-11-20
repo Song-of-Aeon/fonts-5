@@ -184,7 +184,9 @@ backgroundpos = 0;
             break;
         case 4:
             global.songscript = c_reset_set;
-            instance_create(0, 0, o_fao);
+            with instance_create(0, 0, o_fao) {
+                drawdark = 1;
+            }
             o_cutscene.active = false;
             break;
         case 5:

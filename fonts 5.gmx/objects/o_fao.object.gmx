@@ -84,9 +84,11 @@ if drawdark &gt;= 1.2 {
             }
             console_log(script_get_name(global.songscript));
             global.scoring[0] = global.scoring[6];
-            global.completion = ini_write_string("story", "completion", string(global.difficulty+1));
-            if global.gimmickactive {
-                global.gimmickcompletion = ini_write_string("story", "gimmick", string(global.difficulty+1));
+            if global.songscript = c_eonbreak &amp;&amp; global.songscript = c_key {
+                global.completion = ini_write_string("story", "completion", string(global.difficulty+1));
+                if global.gimmickactive {
+                    global.gimmickcompletion = ini_write_string("story", "gimmick", string(global.difficulty+1));
+                }
             }
         }
         //game_save("profile.dat");

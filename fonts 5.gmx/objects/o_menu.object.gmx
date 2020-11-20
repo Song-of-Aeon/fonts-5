@@ -47,6 +47,7 @@ global.scoring[3] = "00.00L";
 global.scoring[4] = "00.00L";
 global.scoring[5] = "00.00L";
 global.scoring[6] = "00.00L";
+global.scoring[7] = 0;
 global.completion = 0;
 global.gimmickcompletion = 0;
 global.currentstage = 6;
@@ -197,7 +198,7 @@ global.scuffer = false;
         var i;
         for (i=0; i&lt;6; i++) {
             scoreshowcolour[i] = c_white;
-            switch string_copy(global.scoring[i], 6, 1) {
+            switch string_copy(global.scoring[i], string_length(global.scoring[i]), 1) {
                 case "M":
                     scoreshowcolour[i] = c_teal;
                     break;
@@ -497,12 +498,12 @@ if room = stagemenu {
     draw_sprite_ext(s_scorecloud, 0, 800, 348+160, 1, 1, 0, scoreshowcolour[4], 1);
     draw_sprite_ext(s_scorecloud, 0, 800, 435+160, 1, 1, 0, scoreshowcolour[5], 1);
     
-    draw_text(1088, 140, scoreshow[0]);
-    draw_text(858, 87+145, scoreshow[1]);
-    draw_text(858, 174+145, scoreshow[2]);
-    draw_text(858, 261+145, scoreshow[3]);
-    draw_text(858, 348+145, scoreshow[4]);
-    draw_text(858, 435+145, scoreshow[5]);
+    draw_text(1088, 140, string_copy(scoreshow[0], 0, string_length(scoreshow[0])));
+    draw_text(858, 87+145, string_copy(scoreshow[1], 0, string_length(scoreshow[1])));
+    draw_text(858, 174+145, string_copy(scoreshow[2], 0, string_length(scoreshow[1])));
+    draw_text(858, 261+145, string_copy(scoreshow[3], 0, string_length(scoreshow[1])));
+    draw_text(858, 348+145, string_copy(scoreshow[4], 0, string_length(scoreshow[1])));
+    draw_text(858, 435+145, string_copy(scoreshow[5], 0, string_length(scoreshow[1])));
     
     draw_sprite_ext(global.receptor, 0, 221+64-24, 250, 1, 1, -90, c_white, 1);
     draw_sprite_ext(global.receptor, 0, 221+128-24, 250, 1, 1, 0, c_white, 1);

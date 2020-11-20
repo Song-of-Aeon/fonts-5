@@ -212,6 +212,7 @@
     <sprite>sprites\s_cloud</sprite>
     <sprite>sprites\s_scoreshow</sprite>
     <sprite>sprites\s_controls</sprite>
+    <sprite>sprites\s_bar</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>

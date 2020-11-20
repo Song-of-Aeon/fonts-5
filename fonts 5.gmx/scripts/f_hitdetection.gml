@@ -117,7 +117,7 @@ if thenote != noone && thenote.object_index != o_mine {
                 with instance_create(x, y, o_hit) {
                     image_blend = c_red;
                 }
-                realscore -= 100/notecount;
+                realscore -= 100/notecount*5;
                 comborank = 0;
                 hp -= 1;
                 combocolour[0] = c_red;

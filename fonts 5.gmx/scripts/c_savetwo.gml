@@ -20,7 +20,7 @@ if global.storymode && hp > 0 && !back && !select {
     if global.songscript != c_nocturne && global.songscript != c_itsrainingsomewhereelse {
         global.scoring[7] += realscore/5;
     }
-    
+    global.cutscenecount++;
     with instance_create(0, 0, o_fao) { //we leave
         leaving = cutscene;
     }
@@ -62,6 +62,8 @@ if real(global.scoring[global.currentstage]) < MELODYCHASER.realscore {
         case 99:
             global.scoring[global.currentstage] = string(global.scoring[global.currentstage] + "L");
             break;
+        default:
+            global.scoring[global.currentstage] = string(global.scoring[global.currentstage] + ".");
     }
     
 }
