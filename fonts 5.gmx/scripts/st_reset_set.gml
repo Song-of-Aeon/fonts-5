@@ -46,12 +46,12 @@ durability = 1;
 break;
 
 case 44:
-txt = "Reset myself Start from scratch I wanna be the ideal!";
+txt = "Reset myself start from scratch I wanna be the ideal!";
 durability = 5;
 break;
 
 case 49:
-txt = "Reset myself Break it down I actually wanna change!";
+txt = "Reset myself break it down I actually wanna change!";
 durability = 5;
 break;
 
@@ -61,12 +61,12 @@ durability = 1;
 break;
 
 case 54:
-txt = "Reset myself Start from scratch I wanna be acknowledged!";
+txt = "Reset myself start from scratch I wanna be acknowledged!";
 durability = 5;
 break;
 
 case 59:
-txt = "Reset myself Ball it up I wanna to be liked!";
+txt = "Reset myself ball it up I wanna to be liked!";
 durability = 4;
 break;
 
@@ -76,7 +76,7 @@ durability = 1;
 break;
 
 case 64:
-txt = "Definitely Natural stunned stunned reset";
+txt = "Definitely natural stunned stunned reset";
 durability = 3;
 break;
 
@@ -86,7 +86,7 @@ durability = 2;
 break;
 
 case 69:
-txt = "Perfect Natural Stunned Stunned reset";
+txt = "Perfect Natural Stunned Stunned RESET";
 durability = 2;
 break;
 
@@ -141,12 +141,12 @@ durability = 2;
 break;
 
 case 110:
-txt = "Reset myself Go back to the start I wanna be good!";
+txt = "Reset myself go back to the start I wanna be good!";
 durability = 5;
 break;
 
 case 115:
-txt = "Reset myself Break it down This once I wanna change!";
+txt = "Reset myself break it down This once I wanna change!";
 durability = 5;
 break;
 
@@ -156,12 +156,12 @@ durability = 1;
 break;
 
 case 121:
-txt = "Reset myself Become the origin I wanna be praised!";
+txt = "Reset myself become the origin I wanna be praised!";
 durability = 5;
 break;
 
 case 125:
-txt = "Reset myself Bundle it up I wanna to be loved!";
+txt = "Reset myself bundle it up I wanna to be loved!";
 durability = 5;
 break;
 
@@ -211,7 +211,7 @@ durability = 5;
 break;
 
 case 167:
-txt = "Reset myself Break it down";
+txt = "Reset myself break it down";
 durability = 3;
 break;
 
@@ -241,7 +241,7 @@ durability = 1;
 break;
 
 case 182:
-txt = "Definitely Natural stunned stunned reset";
+txt = "Definitely natural stunned stunned reset";
 durability = 2;
 break;
 
@@ -251,7 +251,7 @@ durability = 3;
 break;
 
 case 186:
-txt = "Perfect Natural Stunned Stunned reset";
+txt = "Perfect Natural Stunned Stunned RESET";
 durability = 3;
 break;
 

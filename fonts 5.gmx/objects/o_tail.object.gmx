@@ -112,7 +112,7 @@ if y &lt; 720 + sprite_height/2 {
 }
 
 if unusable = false {
-    image_alpha = head.image_alpha;
+    //image_alpha = head.image_alpha;
     if y &lt;= MELODYCHASER.bar-64 || y &lt;= head.y+32 {
         with head {
             instance_destroy();
@@ -154,7 +154,7 @@ image_index = 2;
     
     
 } else {
-    draw_sprite_ext(sprite_index, 1, x, y-distance_to_point(x, 0)/2-32, global.mini, distance_to_point(x, 0)/64, 0, colour, 1);
+    draw_sprite_ext(sprite_index, 1, x, y-distance_to_point(x, 0)/2-32, global.mini, distance_to_point(x, 0)/64, 0, colour, image_alpha);
 }
 draw_self();
 </string>

@@ -38,11 +38,11 @@ Like that…!
 
 10
 00:00:44,000 --> 00:00:48,000
-Reset myself Start from scratch I wanna be the ideal!
+Reset myself start from scratch I wanna be the ideal!
 
 11
 00:00:49,000 --> 00:00:53,000
-Reset myself Break it down I actually wanna change!
+Reset myself break it down I actually wanna change!
 
 12
 00:00:53,000 --> 00:00:53,000
@@ -50,11 +50,11 @@ Ah ah!
 
 13
 00:00:54,000 --> 00:00:58,000
-Reset myself Start from scratch I wanna be acknowledged!
+Reset myself start from scratch I wanna be acknowledged!
 
 14
 00:00:59,000 --> 00:01:02,000
-Reset myself Ball it up I wanna to be liked!
+Reset myself ball it up I wanna to be liked!
 
 15
 00:01:03,000 --> 00:01:03,000
@@ -62,7 +62,7 @@ Ah ah!
 
 16
 00:01:04,000 --> 00:01:06,000
-Definitely Natural stunned stunned reset
+Definitely natural stunned stunned reset
 
 17
 00:01:07,000 --> 00:01:08,000
@@ -70,7 +70,7 @@ Coincidence? Planned? SET beforehand!
 
 18
 00:01:09,000 --> 00:01:10,000
-Perfect Natural Stunned Stunned reset
+Perfect Natural Stunned Stunned RESET
 
 19
 00:01:11,000 --> 00:01:13,000
@@ -118,7 +118,7 @@ Reset myself Go back to the start I wanna be good!
 
 30
 00:01:55,000 --> 00:01:59,000
-Reset myself Break it down This once I wanna change!
+Reset myself break it down This once I wanna change!
 
 31
 00:02:00,000 --> 00:02:00,000
@@ -126,11 +126,11 @@ Ah ah!
 
 32
 00:02:00,000 --> 00:02:04,000
-Reset myself Become the origin I wanna be praised!
+Reset myself become the origin I wanna be praised!
 
 33
 00:02:05,000 --> 00:02:10,000
-Reset myself Bundle it up I wanna to be loved!
+Reset myself bundle it up I wanna to be loved!
 
 34
 00:02:20,000 --> 00:02:22,000
@@ -166,11 +166,11 @@ I wanna go easy this time like I’m resetting
 
 42
 00:02:42,000 --> 00:02:46,000
-Reset myself Start from scratch I wanna be the ideal!
+Reset myself start from scratch I wanna be the ideal!
 
 43
 00:02:47,000 --> 00:02:49,000
-Reset myself Break it down 
+Reset myself break it down 
 
 44
 00:02:49,000 --> 00:02:50,000
@@ -182,11 +182,11 @@ Ah ah!
 
 46
 00:02:52,000 --> 00:02:56,000
-Reset myself Start from scratch I wanna be acknowledged!
+Reset myself start from scratch I wanna be acknowledged!
 
 47
 00:02:57,000 --> 00:03:00,000
-Reset myself Ball it up I wanna to be liked!
+Reset myself ball it up I wanna to be liked!
 
 48
 00:03:01,000 --> 00:03:01,000
@@ -194,7 +194,7 @@ Ah ah!
 
 49
 00:03:02,000 --> 00:03:03,000
-Definitely Natural stunned stunned reset
+Definitely natural stunned stunned reset
 
 50
 00:03:04,000 --> 00:03:06,000
@@ -202,7 +202,7 @@ Coincidence? Planned? SET beforehand!
 
 51
 00:03:06,000 --> 00:03:08,000
-Perfect Natural Stunned Stunned reset
+Perfect natural stunned stunned RESET
 
 52
 00:03:09,000 --> 00:03:11,000

@@ -2,8 +2,7 @@
 switch tim {
 
 case 62:
-txt = "B-But you said... th-that if I stayed
-still... y-you wouldn't do anything...";
+txt = "B-But you said... th-that if I stayed still... y-you wouldn't do anything...";
 speaker = c_green;
 durability = 4;
 break;

@@ -14,17 +14,13 @@ durability = 4;
 break;
 
 case 15:
-txt = "Well, I had my wonders as to if that was
-really the way this world looked beforehand,
-but the others say it's normal.";
+txt = "Well, I had my wonders as to if that was really the way this world looked beforehand, but the others say it's normal.";
 speaker = c_teal;
 durability = 9;
 break;
 
 case 25:
-txt = "How about we get a tour of the place
-before we get out of here? It shouldn't take too long
-to make the machine if I break down the flux parser.";
+txt = "How about we get a tour of the place before we get out of here? It shouldn't take too long to make the usual machine if I break down the flux parser.";
 speaker = c_teal;
 durability = 4;
 break;
@@ -48,14 +44,13 @@ durability = 4;
 break;
 
 case 45:
-txt = "As long as we can hit that weird blue place first.";
+txt = "As long as we can hit that blue place in the clouds first.";
 speaker = c_maroon;
 durability = 4;
 break;
 
 case 50:
-txt = "Did you really think I was just going
-to look at it from a distance?";
+txt = "Did you really think I was just going to look at it from a distance?";
 speaker = c_teal;
 durability = 4;
 break;
@@ -67,8 +62,7 @@ durability = 4;
 break;
 
 case 60:
-txt = "No question. It might have been tense,
-but I like the whimsical way this flow thing works.";
+txt = "No question. It wasn't easy, but I like the whimsical way this flow thing works.";
 speaker = c_maroon;
 durability = 3;
 break;
@@ -91,7 +85,7 @@ speaker = c_maroon;
 durability = 2;
 break;
 
-case 75:
+case 76:
 txt = "There!";
 speaker = c_maroon;
 durability = 4;

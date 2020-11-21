@@ -498,12 +498,26 @@ if room = stagemenu {
     draw_sprite_ext(s_scorecloud, 0, 800, 348+160, 1, 1, 0, scoreshowcolour[4], 1);
     draw_sprite_ext(s_scorecloud, 0, 800, 435+160, 1, 1, 0, scoreshowcolour[5], 1);
     
-    draw_text(1088, 140, string_copy(scoreshow[0], 0, string_length(scoreshow[0])));
+    /*draw_text(1088, 140, string_copy(scoreshow[0], 0, string_length(scoreshow[0])));
     draw_text(858, 87+145, string_copy(scoreshow[1], 0, string_length(scoreshow[1])));
     draw_text(858, 174+145, string_copy(scoreshow[2], 0, string_length(scoreshow[1])));
     draw_text(858, 261+145, string_copy(scoreshow[3], 0, string_length(scoreshow[1])));
     draw_text(858, 348+145, string_copy(scoreshow[4], 0, string_length(scoreshow[1])));
     draw_text(858, 435+145, string_copy(scoreshow[5], 0, string_length(scoreshow[1])));
+    
+    draw_text(1088, 140, string_digits(scoreshow[0]));
+    draw_text(858, 87+145, string_digits(scoreshow[1]));
+    draw_text(858, 174+145, string_digits(scoreshow[2]));
+    draw_text(858, 261+145, string_digits(scoreshow[3]));
+    draw_text(858, 348+145, string_digits(scoreshow[4]));
+    draw_text(858, 435+145, string_digits(scoreshow[5]));*/
+    
+    draw_text(1088, 140, string(scoreshow[0]));
+    draw_text(858, 87+145, string(scoreshow[1]));
+    draw_text(858, 174+145, string(scoreshow[2]));
+    draw_text(858, 261+145, string(scoreshow[3]));
+    draw_text(858, 348+145, string(scoreshow[4]));
+    draw_text(858, 435+145, string(scoreshow[5]));
     
     draw_sprite_ext(global.receptor, 0, 221+64-24, 250, 1, 1, -90, c_white, 1);
     draw_sprite_ext(global.receptor, 0, 221+128-24, 250, 1, 1, 0, c_white, 1);

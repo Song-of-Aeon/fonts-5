@@ -19,6 +19,7 @@ if global.storymode && hp > 0 && !back && !select {
     
     if global.songscript != c_nocturne && global.songscript != c_itsrainingsomewhereelse {
         global.scoring[7] += realscore/5;
+        global.currentstage++;
     }
     global.cutscenecount++;
     with instance_create(0, 0, o_fao) { //we leave
@@ -36,7 +37,7 @@ if hp <= 0 {
     comborank = 99;
 }
 if real(global.scoring[global.currentstage]) < MELODYCHASER.realscore {
-    global.scoring[global.currentstage] = string(MELODYCHASER.realscore);
+    global.scoring[global.currentstage] = string_format(MELODYCHASER.realscore, 2, 3);
     
     if string_length(global.scoring[global.currentstage] < 4) {
         if global.scoring[global.currentstage] >= 1 {
@@ -48,10 +49,10 @@ if real(global.scoring[global.currentstage]) < MELODYCHASER.realscore {
     
     switch comborank {
         case 1:
-            global.scoring[global.currentstage] = string(global.scoring[global.currentstage] + "G");
+            global.scoring[global.currentstage] = string_format(global.scoring[global.currentstage], 2, 3)+ "G";
             break;
         case 2:
-            global.scoring[global.currentstage] = string(global.scoring[global.currentstage] + "P");
+            global.scoring[global.currentstage] = string_format(global.scoring[global.currentstage], 2, 3)+ "P";
             break;
         case 3:
             if realscore > 95 { //listen man i know that the way this is set up is actually degenerate but i literally Want To Release The Game.
@@ -60,10 +61,10 @@ if real(global.scoring[global.currentstage]) < MELODYCHASER.realscore {
             }
             
         case 99:
-            global.scoring[global.currentstage] = string(global.scoring[global.currentstage] + "L");
+            global.scoring[global.currentstage] = string_format(global.scoring[global.currentstage], 2, 3)+ "L";
             break;
         default:
-            global.scoring[global.currentstage] = string(global.scoring[global.currentstage] + ".");
+            global.scoring[global.currentstage] = string_format(global.scoring[global.currentstage], 2, 3)+ ".";
     }
     
 }

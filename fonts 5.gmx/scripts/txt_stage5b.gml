@@ -7,6 +7,7 @@ message[2] = "Only one more set of flux to counter!";
 message[3] = "But this time, it's more than just energy.";
 message[4] = "It's going to try to attack you directly!";
 message[5] = "Don't worry. It's nothing you can't handle.";
+message[6] = "If you can use your warp, it would be useful here.";
 message[6] = "Survive this, and everything will come back.";
 
 choice[0] = "";

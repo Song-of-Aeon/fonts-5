@@ -94,12 +94,14 @@ if source = o_roll {
 }
 if holder = false {
     countwo++;
+    tail.image_alpha -= 1/22;
     if countwo &gt;= 22 {
         hspd = tail.hspd;
         vspd = tail.vspd;
     }
 } else {
     countwo = 0;
+    tail.image_alpha = 1;
 }
 if source = o_roll {
     if holder {

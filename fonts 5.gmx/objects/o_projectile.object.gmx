@@ -78,7 +78,8 @@ alarm[1] = 180;
           <argument>
             <kind>1</kind>
             <string>
-image_alpha = 1;
+image_alpha += .1;
+alarm[0] = 1;
 </string>
           </argument>
         </arguments>

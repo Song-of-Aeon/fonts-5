@@ -471,7 +471,7 @@ if global.songscript != c_nocturne || global.songscript != c_itsrainingsomewhere
     draw_set_font(f_alien);
     draw_set_halign(fa_left);
     draw_set_valign(fa_top);
-    draw_text(24, 24, string_copy(string(realscore), 0, 4));
+    draw_text(24, 24, string_copy(string(realscore), 0, 5));
 }
 
 
