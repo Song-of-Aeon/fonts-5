@@ -50,7 +50,7 @@ global.scoring[6] = "00.00L";
 global.scoring[7] = 0;
 global.completion = 0;
 global.gimmickcompletion = 0;
-global.currentstage = 6;
+global.currentstage = 0;
 scoreshow = array_create(6);
 scoreshowcolour = array(c_white, c_white, c_white, c_white, c_white, c_white);
 
@@ -77,7 +77,7 @@ global.difficulty = 1;
 if file_exists("profile.ini") {
     //game_load("profile.dat");
     ini_open("profile.ini");
-    global.scoring[0] = ini_read_string("scores"+string(global.difficulty), "stage 0", "00.00L");
+    global.scoring[0] = ini_read_string("scores"+string(global.difficulty), "stage 0", "0");
     global.scoring[1] = ini_read_string("scores"+string(global.difficulty), "stage 1", "00.00L");
     global.scoring[2] = ini_read_string("scores"+string(global.difficulty), "stage 2", "00.00L");
     global.scoring[3] = ini_read_string("scores"+string(global.difficulty), "stage 3", "00.00L");
@@ -251,11 +251,11 @@ global.scuffer = false;
                     break;
             }
             audio_play_sound(se_select, 0, false);
-            if menuposition &gt; 0 {
+            //if menuposition &gt; 0 {
                 global.currentstage = menuposition;
-            } else {
-                global.currentstage = 1;
-            }
+            /*} else {
+                global.currentstage = 0;
+            }*/
             audio_stop_sound(m_night);
             if menuposition != 0 {
                 instance_create(0, 0, o_fao);
@@ -423,9 +423,9 @@ if room = rhythm_limbo {
 }*/
 //console_log(global.completion);
 
-/*if keyboard_check_pressed(ord('K')) {
-    instance_create(0, 0, o_violetabberation);
-}*/
+if keyboard_check_pressed(ord('M')) {
+    console_log(script_get_name(global.songscript), global.currentstage, menuposition);
+}
 </string>
           </argument>
         </arguments>

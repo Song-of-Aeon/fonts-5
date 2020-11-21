@@ -15,9 +15,10 @@ if global.scuffer {
 }
 countwo = 0;
 
-if global.storymode && hp > 0 && !back && !select {
+if global.storymode && hp >= 1 && !back && !select {
     
     if global.songscript != c_nocturne && global.songscript != c_itsrainingsomewhereelse {
+        console_log(global.scoring[7], realscore);
         global.scoring[7] += realscore/5;
         global.currentstage++;
     }
@@ -36,37 +37,40 @@ if global.storymode && hp > 0 && !back && !select {
 if hp <= 0 {
     comborank = 99;
 }
-if real(global.scoring[global.currentstage]) < MELODYCHASER.realscore {
-    global.scoring[global.currentstage] = string_format(MELODYCHASER.realscore, 2, 3);
-    
-    if string_length(global.scoring[global.currentstage] < 4) {
-        if global.scoring[global.currentstage] >= 1 {
-            global.scoring[global.currentstage] = "00.00";
-        } else {
-            global.scoring[global.currentstage] = string_copy(global.scoring[global.currentstage] + "00.00", 0, 4);
-        }
-    }
-    
-    switch comborank {
-        case 1:
-            global.scoring[global.currentstage] = string_format(global.scoring[global.currentstage], 2, 3)+ "G";
-            break;
-        case 2:
-            global.scoring[global.currentstage] = string_format(global.scoring[global.currentstage], 2, 3)+ "P";
-            break;
-        case 3:
-            if realscore > 95 { //listen man i know that the way this is set up is actually degenerate but i literally Want To Release The Game.
-                global.scoring[global.currentstage] = "100.0M";
-                break;
+if global.songscript != c_nocturne && global.songscript != c_itsrainingsomewhereelse {
+    if real(global.scoring[global.currentstage]) < realscore {
+        global.scoring[global.currentstage] = string_format(realscore, 2, 6);
+        
+        //if string_length(global.scoring[global.currentstage] < 4) {
+            if real(global.scoring[global.currentstage]) >= 1 {
+                //global.scoring[global.currentstage] = "00.00";
+            } else {
+                global.scoring[global.currentstage] = string_copy(global.scoring[global.currentstage] + "00.00", 0, 4);
+                //global.scoring[global.currentstage] = 0;
             }
-            
-        case 99:
-            global.scoring[global.currentstage] = string_format(global.scoring[global.currentstage], 2, 3)+ "L";
-            break;
-        default:
-            global.scoring[global.currentstage] = string_format(global.scoring[global.currentstage], 2, 3)+ ".";
+        //}
+        
+        switch comborank {
+            case 1:
+                global.scoring[global.currentstage] = global.scoring[global.currentstage] + "G";
+                break;
+            case 2:
+                global.scoring[global.currentstage] = global.scoring[global.currentstage] + "P";
+                break;
+            case 3:
+                if realscore > 95 { //listen man i know that the way this is set up is actually degenerate but i literally Want To Release The Game.
+                    global.scoring[global.currentstage] = "100.0M";
+                    break;
+                }
+                
+            case 99:
+                global.scoring[global.currentstage] = global.scoring[global.currentstage] + "L";
+                break;
+            default:
+                global.scoring[global.currentstage] = global.scoring[global.currentstage] + ".";
+        }
+        
     }
-    
 }
 if real(global.scoring[6]) < global.scoring[7] {
     global.scoring[6] = string_copy(global.scoring[7], 0, 5);

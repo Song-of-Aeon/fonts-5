@@ -356,7 +356,7 @@ if !instance_exists(o_note) &amp;&amp; instance_exists(o_smparser) {
     console_log("it's rude to talk about someone who's listening.");
 }
 
-if (back &amp;&amp; !instance_exists(o_fao)) || (select &amp;&amp; global.controller = true &amp;&amp; count &gt; 1) || (hp &lt;= 0) || countwo &gt;= 300 { //ha
+if (back &amp;&amp; !instance_exists(o_fao)) || (select &amp;&amp; global.controller = true &amp;&amp; count &gt; 1) || (hp &lt; 1) || countwo &gt;= 300 { //ha
     c_savetwo();
 }
 
@@ -465,7 +465,7 @@ global.truetime = c_timebuster();
             <string>depth = 5;
 draw_sprite(songbg, 0, 0, 0);
 
-if global.songscript != c_nocturne || global.songscript != c_itsrainingsomewhereelse {
+if global.songscript != c_nocturne &amp;&amp; global.songscript != c_itsrainingsomewhereelse {
     draw_set_colour(c_black);
     draw_sprite(s_scoreshow, 0, 0, 0);
     draw_set_font(f_alien);
