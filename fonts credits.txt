@@ -4,6 +4,7 @@ Gimmicks: Aeon, Anumania
 UI, modified noteskins, misc. graphics: Aeon
 Maps: Aeon
 Map support: Anumania
+Title theme: jaerockets
 Concept: Aeon, Anumania, Yunevii
 Testing: Aeon, Anumania, Yunevii
 
@@ -52,8 +53,7 @@ Key: Porter Robinson (Virtual Self)
 Eon Break: Porter Robinson (Virtual Self)
 It's Raining Somewhere Else: Toby Fox (UNDERTALE)
 Yume ga aru: Yugo Kanno, Kensho Ono, Atsushi Miyauchi, Giorno Giovanna (Vento Aureo)
-Title: Aeon
-Menu: A user from freesound.org that I am unable to locate again.
+Menu: A user from freesound.org that I am unable to locate again
 
 Special Thanks:
 PeanutButterGamer

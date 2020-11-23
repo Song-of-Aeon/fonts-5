@@ -37,7 +37,7 @@ if global.storymode && hp >= 1 && !back && !select {
 if hp <= 0 {
     comborank = 99;
 }
-if global.songscript != c_nocturne && global.songscript != c_itsrainingsomewhereelse {
+if global.songscript != c_nocturne && global.songscript != c_itsrainingsomewhereelse && global.songscript != c_yumegaaru {
     if real(global.scoring[global.currentstage]) < realscore {
         global.scoring[global.currentstage] = string_format(realscore, 2, 6);
         
