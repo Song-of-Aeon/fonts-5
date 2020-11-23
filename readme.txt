@@ -3,7 +3,7 @@ Fonts 5 - Evanescence, it is personified! As that inferno fluxuates, so does the
 A game by Aeon.
 Just like all free computer rhythm games, it violates copyright because of its songs. If you're one of the people in the credits and that's a problem for you you can send something about it to aeon#2682 (Discord) or @Espeon78 (Twitter) and I'll get to it, unless you're the guy that made the midi-solo noteskin. I need that shit buddy.
 
-The prologue to the story mode is "from past.rtf". Reading it is not necessary, but may give some context to what's going on.
+The prologue to the story mode is "From past.rtf". Reading it is not necessary, but may give some context to what's going on.
 
 POTENTIALLY ASKED QUESTIONS (PAQ):
 
@@ -18,6 +18,9 @@ A: GameMaker 1.4. They don't sell it anymore so if you want it you'll need a Ste
 
 Q: "Damn! Why is everything so weirdly organized in the code?"
 A: Originally I made Fonts 5 in ten days. It sucked back then and it's a lot better now but some of that organization is still there so you get things like the code that saves your scores is in the screen fade transition object.
+
+Q: "Why are the first two songs memes?"
+A: Since the scope was originally super small for the game I just picked whatever I liked. Maybe I would pick something different now, but they're still pretty good.
 
 Q: "It says I got a 100 on this song! I didn't at all!"
 A: Shouldn't happen but I'm working on it.

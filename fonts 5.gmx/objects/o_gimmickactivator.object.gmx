@@ -31,6 +31,10 @@ dir = 0;
 count = 0;
 if global.gimmickactive = false {instance_destroy()}; //what awful ways there are to do if statements
 //console_log(script_get_name(global.songscript));
+funky = false;
+if instance_number(o_gimmickactivator) = 1 {
+    funky = true;
+}
 </string>
           </argument>
         </arguments>
@@ -78,7 +82,7 @@ console_log(instance_number(o_gimmickactivator));
           <argument>
             <kind>1</kind>
             <string>//sprite_index = s_kaguya;
-if global.songscript = c_key &amp;&amp; global.gimmickactive {
+if global.songscript = c_key &amp;&amp; global.gimmickactive &amp;&amp; !funky {
     sprite_index = s_bar;
     x = room_width/2;
 } else {

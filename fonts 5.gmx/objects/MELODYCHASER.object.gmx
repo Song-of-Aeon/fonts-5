@@ -224,10 +224,10 @@ if !instance_exists(o_smparser) {
 if songstarting {
     timecounter += delta_time;
     if timecounter/1000 &gt;= offset {
-        count += global.truetime;
-        if count = 10 {
+        if count = 0 {
             instance_create(800, 500, o_zero);
         }
+        count += global.truetime;
         if (count &gt;= 295 &amp;&amp; global.songscript = c_eonbreak) || (count &gt;= 290 &amp;&amp; global.songscript != c_eonbreak) {
         
         //if (count &gt;= 235 &amp;&amp; global.songscript = c_eonbreak) || (count &gt;= 230 &amp;&amp; global.songscript != c_eonbreak){
@@ -354,6 +354,11 @@ infoalpha = clamp(infoalpha, 0, 4);
 if !instance_exists(o_note) &amp;&amp; instance_exists(o_smparser) {
     countwo++;
     console_log("it's rude to talk about someone who's listening.");
+}
+
+if back &amp;&amp; !instance_exists(o_leaving) {
+    back = false;
+    instance_create(room_width/2, room_height/2, o_leaving);
 }
 
 if (back &amp;&amp; !instance_exists(o_fao)) || (select &amp;&amp; global.controller = true &amp;&amp; count &gt; 1) || (hp &lt; 1) || countwo &gt;= 300 { //ha

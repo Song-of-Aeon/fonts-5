@@ -213,6 +213,7 @@
     <sprite>sprites\s_scoreshow</sprite>
     <sprite>sprites\s_controls</sprite>
     <sprite>sprites\s_bar</sprite>
+    <sprite>sprites\sprite124</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -467,6 +468,7 @@
       <object>objects\o_switch</object>
       <object>objects\o_switchback</object>
     </objects>
+    <object>objects\o_leaving</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\fontstitle</room>

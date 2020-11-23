@@ -13,7 +13,7 @@ choiceat[1] = 99;
 choiceoutcome[0] = "";
 
 durability = 22;
-durabilityset = 22;
+durabilityset = 25;
 
 c_txtcommon();
 /*parameters to add for choices:

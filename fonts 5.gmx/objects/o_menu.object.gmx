@@ -244,10 +244,10 @@ global.scuffer = false;
                     global.songscript = c_eonbreak;
                     break;
                 case 6:
-                    //global.songscript = c_eveniftheworlddeceivesyou;
+                    global.songscript = c_eveniftheworlddeceivesyou;
                     //global.songscript = c_nocturne;
                     //global.songscript = c_itsrainingsomewhereelse;
-                    global.songscript = c_yumegaaru;
+                    //global.songscript = c_yumegaaru;
                     break;
             }
             audio_play_sound(se_select, 0, false);

@@ -157,15 +157,15 @@ draw_set_colour(c_white);
 if durability &gt; 0 {
     draw_set_font(f_textronaldo);
     draw_set_halign(fa_center);
-    draw_text_ext_transformed_colour(x+5, y+5+8, txt, 20, 300*global.mini, 1, 1, txturn, speaker, speaker, speaker, speaker, txtalpha/1.3);
-    draw_text_ext_transformed_colour(x, y+8, txt, 20, 300*global.mini, 1, 1, txturn, c_white, c_white, c_white, c_white, txtalpha);
+    draw_text_ext_transformed_colour(x+5, y+5+8, txt, 30, 300*global.mini, 1, 1, txturn, speaker, speaker, speaker, speaker, txtalpha/1.3);
+    draw_text_ext_transformed_colour(x, y+8, txt, 30, 300*global.mini, 1, 1, txturn, c_white, c_white, c_white, c_white, txtalpha);
     
     draw_set_font(f_udgothic);
     draw_set_halign(fa_left);
     /*draw_text_ext_transformed_colour(x+durability*4, 600+durability*4, txtwo, 20, 1260, 1, 1, txturn, speaker, speaker, speaker, speaker, txtalpha);
     draw_text_ext_transformed_colour(x, 600, txtwo, 20, 1260, 1, 1, txturn, c_white, c_white, c_white, c_white, txtalpha);*/
-    draw_text_ext_transformed_colour(MELODYCHASER.laneleft-120+8+5, MELODYCHASER.bar+5, txtwo, 20, 1280, 1, 1, -90, speaker, speaker, speaker, speaker, txtalpha/1.3);
-    draw_text_ext_transformed_colour(MELODYCHASER.laneleft-120+8, MELODYCHASER.bar, txtwo, 20, 1280, 1, 1, -90, c_white, c_white, c_white, c_white, txtalpha);
+    draw_text_ext_transformed_colour(MELODYCHASER.laneleft-120+8+5, MELODYCHASER.bar+5, txtwo, 30, 1280, 1, 1, -90, speaker, speaker, speaker, speaker, txtalpha/1.3);
+    draw_text_ext_transformed_colour(MELODYCHASER.laneleft-120+8, MELODYCHASER.bar, txtwo, 30, 1280, 1, 1, -90, c_white, c_white, c_white, c_white, txtalpha);
     //draw_sprite(s_black, 0, 0, 0);
 }
 draw_set_colour(whatever);

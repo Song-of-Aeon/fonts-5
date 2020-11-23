@@ -19,6 +19,7 @@ GitKraken - Git client
 GitHub - Git host
 Windows 10 - OS
 getsongbpm.com - Getting song bpm
+anything2mp3.cc - Downloading the songs I didn't already have
 Notepad - This text document
 Wordpad - The prologue text document
 Audacity - Cutting Nocturne
@@ -31,13 +32,13 @@ Peter "tehwave" Jørgensen - draw_circle_width
 
 Visuals:
 Jousway - midi-solo noteskin
-Toby Fox - SOUL sprite, lancer raps bg
+Toby Fox - SOUL sprite, lancer raps BG
 Artyom Samoilov - ZERO sprites
-World of Warcraft - Night of Past bg
-Tech N9ne - lancer raps bg
-Touru Amamiya - Reset Set bg
-Porter Robinson - Key bg
-Porter Robinson - Eon Break bg
+World of Warcraft - Night of Past BG
+Tech N9ne - lancer raps BG
+Touru Amamiya - Reset Set BG
+Porter Robinson - Key BG
+Porter Robinson - Eon Break BG
 I don't know who made the - chromatic judgement font
 
 Music:
@@ -46,14 +47,18 @@ lancer raps: Galactic Hole (involving:) Toby Fox (DELTARUNE), Tech N9ne, Spongeb
 Night Falls ~ Evening Star: ELEMENTAS (Touhou Hyouibana ~ Antinomy of Common Flowers)
 Everything will freeze: UNDEAD CORPORATION (BOUKUN)
 Nocturne: Bill Kiley (Katana ZERO)
-Reset Set: Nanawo Akari
+Reset Set: Nanawo Akari (Shichiten Nanaki)
 Key: Porter Robinson (Virtual Self)
 Eon Break: Porter Robinson (Virtual Self)
-夢がある: Yugo Kanno, Kensho Ono, Atsushi Miyauchi, Giorno Giovanna
-
-Title and menu: Users from freesound.org that I am unable to locate again.
+It's Raining Somewhere Else: Toby Fox (UNDERTALE)
+Yume ga aru: Yugo Kanno, Kensho Ono, Atsushi Miyauchi, Giorno Giovanna (Vento Aureo)
+Title: Aeon
+Menu: A user from freesound.org that I am unable to locate again.
 
 Special Thanks:
 PeanutButterGamer
 Lunatic Red Touhou forums
 Shoujo Shuumatsu Ryokou
+The guy who translated Reset Set
+Heats Flamesman
+The travelers
