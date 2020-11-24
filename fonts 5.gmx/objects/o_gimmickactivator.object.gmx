@@ -58,7 +58,6 @@ if instance_number(o_gimmickactivator) = 1 {
           <argument>
             <kind>1</kind>
             <string>///unforseen consequences
-console_log(instance_number(o_gimmickactivator));
 </string>
           </argument>
         </arguments>
@@ -98,7 +97,6 @@ if count &gt;= 240 {
 
 
 if y &lt;= MELODYCHASER.bar {
-    console_log(script_get_name(global.songscript));
     MELODYCHASER.inputgimmick = false;
     instance_destroy();
 }

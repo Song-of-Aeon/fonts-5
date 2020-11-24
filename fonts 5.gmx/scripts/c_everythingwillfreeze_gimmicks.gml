@@ -16,7 +16,6 @@ if inputgimmick = false {
             instance_destroy(o_sakuya);
             break;
     }
-    console_log(arraypos);
     inputgimmick = true;
     arraypos++;
     

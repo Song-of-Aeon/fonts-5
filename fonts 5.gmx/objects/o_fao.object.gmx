@@ -82,7 +82,6 @@ if drawdark &gt;= 1.2 {
                     break;
                 
             }
-            console_log(script_get_name(global.songscript));
             global.scoring[0] = global.scoring[6];
             if global.songscript = c_eonbreak || global.songscript = c_key {
                 global.completion = ini_write_string("story", "completion", string(global.difficulty+1));
@@ -105,11 +104,6 @@ if drawdark &gt;= 1.2 {
         o_cutscene.active = true;
     } else if leaving = rhythm_limbo {
         o_cutscene.active = false;
-    }
-    if keyboard_check_pressed(vk_control) {
-        console_log(instance_number(o_fao));
-        console_log(instance_count);
-        console_log(drawdark);
     }
 }
 </string>

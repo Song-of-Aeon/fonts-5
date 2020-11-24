@@ -51,9 +51,7 @@
     <extension index="1">extensions\shdStereo3D</extension>
   </NewExtensions>
   <sounds name="sound">
-    <sound>sound\m_onemorenight</sound>
     <sound>sound\m_combattheme</sound>
-    <sound>sound\m_drivin</sound>
     <sound>sound\m_everythingwillfreeze</sound>
     <sound>sound\m_lancerraps</sound>
     <sound>sound\se_bang</sound>
@@ -65,12 +63,13 @@
     <sound>sound\m_eonbreak</sound>
     <sound>sound\m_reset_set</sound>
     <sound>sound\m_nocturne</sound>
-    <sound>sound\m_eveniftheworlddeceivesyou</sound>
     <sound>sound\m_itsrainingsomewhereelse</sound>
     <sound>sound\m_hurt</sound>
     <sound>sound\m_yumegaaru</sound>
     <sound>sound\m_nightfalls</sound>
     <sound>sound\m_key</sound>
+    <sound>sound\m_title2</sound>
+    <sound>sound\m_title3</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\s_kaguya</sprite>
@@ -195,12 +194,6 @@
     <sprite>sprites\s_hip</sprite>
     <sprite>sprites\s_heaven</sprite>
     <sprite>sprites\s_tars</sprite>
-    <sprites name="past">
-      <sprite>sprites\bk_spiderdance</sprite>
-      <sprite>sprites\bk_helblinde</sprite>
-      <sprite>sprites\sprite93</sprite>
-      <sprite>sprites\sprite94</sprite>
-    </sprites>
     <sprite>sprites\s_hurt</sprite>
     <sprite>sprites\s_neutral</sprite>
     <sprite>sprites\s_ground</sprite>
@@ -219,35 +212,9 @@
     <background>background\background0</background>
     <background>background\bk_nebula</background>
   </backgrounds>
-  <paths name="paths">
-    <path>paths\p_soul</path>
-  </paths>
+  <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\c_null.gml</script>
-    <scripts name="the not mine">
-      <script>scripts\libsm__getBackground.gml</script>
-      <script>scripts\libsm__getBanner.gml</script>
-      <script>scripts\libsm__getArtist.gml</script>
-      <script>scripts\libsm__getBPMs.gml</script>
-      <script>scripts\libsm__getCDTitle.gml</script>
-      <script>scripts\libsm__getCredit.gml</script>
-      <script>scripts\libsm__getDisplayBPM.gml</script>
-      <script>scripts\libsm__getFootRating.gml</script>
-      <script>scripts\libsm__getLyrics.gml</script>
-      <script>scripts\libsm__getGenre.gml</script>
-      <script>scripts\libsm__getMusic.gml</script>
-      <script>scripts\libsm__getNoteData.gml</script>
-      <script>scripts\libsm__getOffset.gml</script>
-      <script>scripts\libsm__getSampleLength.gml</script>
-      <script>scripts\libsm__getSampleStart.gml</script>
-      <script>scripts\libsm__getSubtitle.gml</script>
-      <script>scripts\libsm__getStops.gml</script>
-      <script>scripts\libsm__getTitle.gml</script>
-      <script>scripts\libsm__open.gml</script>
-      <script>scripts\libsm__readMetadata.gml</script>
-      <script>scripts\libsm_getNoteData.gml</script>
-      <script>scripts\libsm_getnotes.gml</script>
-    </scripts>
     <script>scripts\sm_combattheme.gml</script>
     <script>scripts\c_combattheme.gml</script>
     <script>scripts\sm_lancerraps.gml</script>
@@ -338,21 +305,6 @@
       <script>scripts\c_key_gimmicks.gml</script>
       <script>scripts\c_eonbreak_gimmicks.gml</script>
       <script>scripts\c_yumegaaru_gimmicks.gml</script>
-    </scripts>
-    <scripts name="the obsolete">
-      <script>scripts\sm_onemorenight.gml</script>
-      <script>scripts\c_onemorenight.gml</script>
-      <script>scripts\sm_drivin.gml</script>
-      <script>scripts\c_drivin.gml</script>
-      <script>scripts\sm_reset_regret.gml</script>
-      <script>scripts\sm_reset_roulette.gml</script>
-      <script>scripts\x_the_explanation.gml</script>
-      <script>scripts\x_sm_parser_create_old.gml</script>
-      <script>scripts\c_eveniftheworlddeceivesyou.gml</script>
-      <script>scripts\sm_eveniftheworlddeceivesyou.gml</script>
-      <script>scripts\c_flicker.gml</script>
-      <script>scripts\c_flicker_gimmicks.gml</script>
-      <script>scripts\sm_zetsubou.gml</script>
     </scripts>
     <scripts name="the easy">
       <script>scripts\sm_combattheme_easy.gml</script>
@@ -475,8 +427,6 @@
     <room>rooms\stagemenu</room>
     <room>rooms\cutscene</room>
     <room>rooms\rhythm_limbo</room>
-    <room>rooms\tovirtualsky</room>
-    <room>rooms\virtualsky</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
