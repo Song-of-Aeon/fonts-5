@@ -4,6 +4,7 @@ Gimmicks: Aeon, Anumania
 UI, modified noteskins, misc. graphics: Aeon
 Maps: Aeon
 Map support: Anumania
+Title theme: jaerockets
 Concept: Aeon, Anumania, Yunevii
 Testing: Aeon, Anumania, Yunevii
 
