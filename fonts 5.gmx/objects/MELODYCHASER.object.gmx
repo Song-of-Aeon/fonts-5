@@ -123,6 +123,8 @@ global.truetime = 1;
 
 c_inputwocreate();
 rumble = array_create(4);
+
+autoplay = false;
 </string>
           </argument>
         </arguments>
@@ -146,6 +148,9 @@ rumble = array_create(4);
           <argument>
             <kind>1</kind>
             <string>c_input();
+if autoplay {
+    c_autoplay();
+}
 if alt &amp;&amp; select &amp;&amp; global.songscript != c_eonbreak &amp;&amp; global.gimmickactive {
     if window_get_fullscreen() {
         window_set_fullscreen(false);
