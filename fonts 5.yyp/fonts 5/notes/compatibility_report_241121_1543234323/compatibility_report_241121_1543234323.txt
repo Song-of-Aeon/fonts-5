@@ -1,0 +1,462 @@
+Converting GML script: ${project_dir}\scripts\c_null\c_null.gml
+Converted description /// @description c_null
+
+Converting GML script: ${project_dir}\scripts\libsm__getBackground\libsm__getBackground.gml
+Converted description /// @description string libsm__getBackground(string song)/// @param string song
+
+Converting GML script: ${project_dir}\scripts\libsm__getBanner\libsm__getBanner.gml
+Converted description /// @description string libsm__getBanner(string song)/// @param string song
+
+Converting GML script: ${project_dir}\scripts\libsm__getArtist\libsm__getArtist.gml
+Converted description /// @description string libsm__getArtist(string song, bool translit)/// @param string song
+/// @param  bool translit
+
+Converting GML script: ${project_dir}\scripts\libsm__getBPMs\libsm__getBPMs.gml
+Converted description /// @description array libsm__getBPMs(string song)/// @param string song
+
+Converting GML script: ${project_dir}\scripts\libsm__getCDTitle\libsm__getCDTitle.gml
+Converted description /// @description string libsm__getCDTitle(string song)/// @param string song
+
+Converting GML script: ${project_dir}\scripts\libsm__getCredit\libsm__getCredit.gml
+Converted description /// @description string libsm__getCredit(string song)/// @param string song
+
+Converting GML script: ${project_dir}\scripts\libsm__getDisplayBPM\libsm__getDisplayBPM.gml
+Converted description /// @description string libsm__getDisplayBPM(string song)/// @param string song
+
+Converting GML script: ${project_dir}\scripts\libsm__getFootRating\libsm__getFootRating.gml
+Converted description /// @description int libsm__getFootRating(string song, string chartType, string difficulty)/// @param string song
+/// @param  string chartType
+/// @param  string difficulty
+
+Converting GML script: ${project_dir}\scripts\libsm__getLyrics\libsm__getLyrics.gml
+Converted description /// @description string libsm__getLyrics(string song)/// @param string song
+
+Converting GML script: ${project_dir}\scripts\libsm__getGenre\libsm__getGenre.gml
+Converted description /// @description string libsm__getGenre(string song)/// @param string song
+
+Converting GML script: ${project_dir}\scripts\libsm__getMusic\libsm__getMusic.gml
+Converted description /// @description string libsm__getMusic(string song)/// @param string song
+
+Converting GML script: ${project_dir}\scripts\libsm__getNoteData\libsm__getNoteData.gml
+Converted description /// @description string libsm__getNoteData(string song, string chartType, string difficulty)/// @param string song
+/// @param  string chartType
+/// @param  string difficulty
+
+Converting GML script: ${project_dir}\scripts\libsm__getOffset\libsm__getOffset.gml
+Converted description /// @description float libsm__getOffset(string song)/// @param string song
+
+Converting GML script: ${project_dir}\scripts\libsm__getSampleLength\libsm__getSampleLength.gml
+Converted description /// @description float libsm__getSampleLength(string song)/// @param string song
+
+Converting GML script: ${project_dir}\scripts\libsm__getSampleStart\libsm__getSampleStart.gml
+Converted description /// @description int libsm__getSampleStart(string song)/// @param string song
+
+Converting GML script: ${project_dir}\scripts\libsm__getSubtitle\libsm__getSubtitle.gml
+Converted description /// @description string libsm__getSubtitle(string song, bool translit)/// @param string song
+/// @param  bool translit
+
+Converting GML script: ${project_dir}\scripts\libsm__getStops\libsm__getStops.gml
+Converted description /// @description array libsm__getStops(string song)/// @param string song
+
+Converting GML script: ${project_dir}\scripts\libsm__getTitle\libsm__getTitle.gml
+Converted description /// @description string libsm__getTitle(string song, bool translit)/// @param string song
+/// @param  bool translit
+
+Converting GML script: ${project_dir}\scripts\libsm__open\libsm__open.gml
+Converted description /// @description string libsm__open(string path)/// @param string path
+
+Converting GML script: ${project_dir}\scripts\libsm__readMetadata\libsm__readMetadata.gml
+Converted description /// @description string libsm__readMetadata(string song, string keyword)/// @param string song
+/// @param  string keyword
+
+Converting GML script: ${project_dir}\scripts\libsm_getNoteData\libsm_getNoteData.gml
+Converted description /// @description string libsm_getNoteData(song script, string chartType, string difficulty)/// @param song script
+/// @param  string chartType
+/// @param  string difficulty
+
+Converting GML script: ${project_dir}\scripts\libsm_getnotes\libsm_getnotes.gml
+Converted description /// @description string libsm_getNoteData(song script, string chartType, string difficulty)/// @param song script
+/// @param  string chartType
+/// @param  string difficulty
+
+Converting GML script: ${project_dir}\scripts\c_combattheme\c_combattheme.gml
+Converted description /// @description c_onemorenight
+
+Converting GML script: ${project_dir}\scripts\c_lancerraps\c_lancerraps.gml
+Converted description /// @description c_onemorenight
+
+Converting GML script: ${project_dir}\scripts\c_everythingwillfreeze\c_everythingwillfreeze.gml
+Converted description /// @description c_onemorenight
+
+Converting GML script: ${project_dir}\scripts\c_nocturne\c_nocturne.gml
+Converted description /// @description c_onemorenight
+
+Converting GML script: ${project_dir}\scripts\c_reset_set\c_reset_set.gml
+Converted description /// @description c_reset_set
+
+Converting GML script: ${project_dir}\scripts\c_eonbreak\c_eonbreak.gml
+Converted description /// @description c_onemorenight
+
+Converting GML script: ${project_dir}\scripts\c_itsrainingsomewhereelse\c_itsrainingsomewhereelse.gml
+Converted description /// @description c_onemorenight
+
+Converting GML script: ${project_dir}\scripts\c_yumegaaru\c_yumegaaru.gml
+Converted description /// @description c_onemorenight
+
+Converting GML script: ${project_dir}\scripts\console_log\console_log.gml
+Converted description /// @description console_log(expression1, expression2, ...)/// @param expression1
+/// @param  expression2
+/// @param  ...
+
+Converting GML script: ${project_dir}\scripts\collision_line_first\collision_line_first.gml
+Converted description /// @description  collision_line_first(x1,y1,x2,y2,object,prec,notme)/// @param x1
+/// @param y1
+/// @param x2
+/// @param y2
+/// @param object
+/// @param prec
+/// @param notme
+
+Converting GML script: ${project_dir}\scripts\range_finder\range_finder.gml
+Converted description /// @description  range_finder(x,y,dir,range,object,prec,notme)/// @param x
+/// @param y
+/// @param dir
+/// @param range
+/// @param object
+/// @param prec
+/// @param notme
+
+Converting GML script: ${project_dir}\scripts\instance_nth_nearest\instance_nth_nearest.gml
+Converted description /// @description  instance_nth_nearest(x,y,obj,n)/// @param x
+/// @param y
+/// @param obj
+/// @param n
+
+Converting GML script: ${project_dir}\scripts\array\array.gml
+Converted description /// @description array(*args);/// @param *args
+
+Converting GML script: ${project_dir}\scripts\range\range.gml
+Converted description /// @description range(val, min, max);/// @param val
+/// @param  min
+/// @param  max
+
+Converting GML script: ${project_dir}\scripts\e\e.gml
+Converted string - line 2: 'e' -> "e"
+
+Converting GML script: ${project_dir}\scripts\c_receptordanmaku\c_receptordanmaku.gml
+Converted description /// @description c_receptordanmaku
+
+Converting GML script: ${project_dir}\scripts\c_receptorkey\c_receptorkey.gml
+Converted description /// @description c_receptorkey
+
+Converting GML script: ${project_dir}\scripts\f_hitdetection\f_hitdetection.gml
+Converted description /// @description f_hitdetection(lane x, note direction, fx angle);/// @param lane x
+/// @param  note direction
+/// @param  fx angle
+
+Converting GML script: ${project_dir}\scripts\f_minedetection\f_minedetection.gml
+Converted description /// @description f_hitdetection(lane x, note direction, fx angle);/// @param lane x
+/// @param  note direction
+/// @param  fx angle
+
+Converting GML script: ${project_dir}\scripts\f_danmakudetection\f_danmakudetection.gml
+Converted description /// @description f_danmakudetection(lane x);/// @param lane x
+
+Converting GML script: ${project_dir}\scripts\c_input\c_input.gml
+Converted string - line 2: 'A' -> "A"
+Converted string - line 2: 'M' -> "M"
+Converted string - line 3: 'S' -> "S"
+Converted string - line 4: 'K' -> "K"
+Converted string - line 4: 'W' -> "W"
+Converted string - line 5: 'L' -> "L"
+Converted string - line 5: 'D' -> "D"
+Converted string - line 9: 'A' -> "A"
+Converted string - line 9: 'M' -> "M"
+Converted string - line 10: 'S' -> "S"
+Converted string - line 11: 'K' -> "K"
+Converted string - line 11: 'W' -> "W"
+Converted string - line 12: 'L' -> "L"
+Converted string - line 12: 'D' -> "D"
+Converted string - line 28: 'Z' -> "Z"
+Converted string - line 29: 'X' -> "X"
+Converted string - line 30: 'E' -> "E"
+Converted string - line 31: 'H' -> "H"
+Converted string - line 35: 'K' -> "K"
+Converted string - line 35: 'W' -> "W"
+Converted string - line 36: 'E' -> "E"
+
+Converting GML script: ${project_dir}\scripts\c_jumptest\c_jumptest.gml
+Converted description /// @description c_onemorenight
+
+Converting GML script: ${project_dir}\scripts\c_freezetest\c_freezetest.gml
+Converted description /// @description c_onemorenight
+
+Converting GML script: ${project_dir}\scripts\c_minetest\c_minetest.gml
+Converted description /// @description c_onemorenight
+
+Converting GML script: ${project_dir}\scripts\c_danmakutest\c_danmakutest.gml
+Converted description /// @description c_onemorenight
+
+Converting GML script: ${project_dir}\scripts\c_redinput\c_redinput.gml
+Converted string - line 1: 'A' -> "A"
+Converted string - line 1: 'J' -> "J"
+Converted string - line 2: 'S' -> "S"
+Converted string - line 2: 'K' -> "K"
+Converted string - line 3: 'W' -> "W"
+Converted string - line 3: 'I' -> "I"
+Converted string - line 4: 'D' -> "D"
+Converted string - line 4: 'L' -> "L"
+
+Converting GML script: ${project_dir}\scripts\c_soul\c_soul.gml
+Converted description /// @description c_soul
+
+Converting GML script: ${project_dir}\scripts\c_flashfall\c_flashfall.gml
+Converted description /// @description c_soul
+
+Converting GML script: ${project_dir}\scripts\c_noteoverride\c_noteoverride.gml
+Converted description /// @description c_noteoverride
+
+Converting GML script: ${project_dir}\scripts\txt_\txt_.gml
+Error: variable 'message' has same name as a built-in (function, constant or variable), it must be renamed to function correctly
+Converted description /// @description txt_
+
+Converting GML script: ${project_dir}\scripts\txt_stage1\txt_stage1.gml
+Error: variable 'message' has same name as a built-in (function, constant or variable), it must be renamed to function correctly
+Converted description /// @description txt_
+
+Converting GML script: ${project_dir}\scripts\txt_stage2\txt_stage2.gml
+Error: variable 'message' has same name as a built-in (function, constant or variable), it must be renamed to function correctly
+Converted description /// @description txt_
+
+Converting GML script: ${project_dir}\scripts\txt_stage3\txt_stage3.gml
+Error: variable 'message' has same name as a built-in (function, constant or variable), it must be renamed to function correctly
+Converted description /// @description txt_
+
+Converting GML script: ${project_dir}\scripts\txt_stage4\txt_stage4.gml
+Error: variable 'message' has same name as a built-in (function, constant or variable), it must be renamed to function correctly
+Converted description /// @description txt_
+
+Converting GML script: ${project_dir}\scripts\txt_stage5b\txt_stage5b.gml
+Error: variable 'message' has same name as a built-in (function, constant or variable), it must be renamed to function correctly
+Converted description /// @description txt_
+
+Converting GML script: ${project_dir}\scripts\txt_stage5\txt_stage5.gml
+Error: variable 'message' has same name as a built-in (function, constant or variable), it must be renamed to function correctly
+Converted description /// @description txt_
+
+Converting GML script: ${project_dir}\scripts\txt_stream\txt_stream.gml
+Error: variable 'message' has same name as a built-in (function, constant or variable), it must be renamed to function correctly
+Converted description /// @description txt_
+
+Converting GML script: ${project_dir}\scripts\c_txtcommon\c_txtcommon.gml
+Error: variable 'message' has same name as a built-in (function, constant or variable), it must be renamed to function correctly
+Converted description /// @description c_txtcommon
+
+Converting GML script: ${project_dir}\scripts\st_\st_.gml
+Converted description /// @description st_
+
+Converting GML script: ${project_dir}\scripts\st_reset_set\st_reset_set.gml
+Converted description /// @description st_reset_set
+
+Converting GML script: ${project_dir}\scripts\st_reset_set_jp\st_reset_set_jp.gml
+Converted description /// @description st_reset_set_jp
+
+Converting GML script: ${project_dir}\scripts\st_ending\st_ending.gml
+Converted description /// @description st_reset_set
+
+Converting GML script: ${project_dir}\scripts\st_golden\st_golden.gml
+Converted description /// @description st_golden
+
+Converting GML script: ${project_dir}\scripts\st_golden_jp\st_golden_jp.gml
+Converted description /// @description st_golden
+
+Converting GML script: ${project_dir}\scripts\st_run2\st_run2.gml
+Converted description /// @description st_reset_set_jp
+
+Converting GML script: ${project_dir}\scripts\st_run\st_run.gml
+Converted description /// @description st_reset_set
+
+Converting GML script: ${project_dir}\scripts\c_onemorenight\c_onemorenight.gml
+Converted description /// @description c_onemorenight
+
+Converting GML script: ${project_dir}\scripts\c_drivin\c_drivin.gml
+Converted description /// @description c_onemorenight
+
+Converting GML script: ${project_dir}\scripts\x_the_explanation\x_the_explanation.gml
+Converted description /// @description x_the_explanation
+
+Converting GML script: ${project_dir}\scripts\x_sm_parser_create_old\x_sm_parser_create_old.gml
+Converted description /// @description x_sm_parser_create_old
+
+Converting GML script: ${project_dir}\scripts\c_flicker\c_flicker.gml
+Converted description /// @description c_onemorenight
+
+Converting GML script: ${project_dir}\scripts\c_nightfalls\c_nightfalls.gml
+Converted description /// @description c_onemorenight
+
+Converting GML script: ${project_dir}\scripts\c_key\c_key.gml
+Converted description /// @description c_onemorenight
+
+Converting GML script: ${project_dir}\scripts\c_makefall\c_makefall.gml
+Converted description /// @description c_makefall();
+
+Converting GML script: ${project_dir}\scripts\c_mmod\c_mmod.gml
+Converted description /// @description c_mmod(bpm);/// @param bpm
+
+Converting GML script: ${project_dir}\scripts\c_timebuster\c_timebuster.gml
+Converted description /// @description c_timebuster();
+
+Converting GML script: ${project_dir}\scripts\c_save\c_save.gml
+Converted description /// @description c_save();
+
+Converting GML script: ${project_dir}\scripts\c_savetwo\c_savetwo.gml
+Converted description /// @description c_savetwo();
+
+Font f_ronaldo has been converted to font family Rondalo (Regular)
+GameMaker Studio 1 font texture has been backed up at ${project_dir}\fonts\f_ronaldo\f_ronaldo.gms1.png
+Font f_scoreronaldo has been converted to font family Rondalo (Regular)
+GameMaker Studio 1 font texture has been backed up at ${project_dir}\fonts\f_scoreronaldo\f_scoreronaldo.gms1.png
+Font f_textronaldo has been converted to font family Rondalo (Regular)
+GameMaker Studio 1 font texture has been backed up at ${project_dir}\fonts\f_textronaldo\f_textronaldo.gms1.png
+Font f_alien has been converted to font family Alien Encounters (Regular)
+GameMaker Studio 1 font texture has been backed up at ${project_dir}\fonts\f_alien\f_alien.gms1.png
+Font f_combo has been converted to font family Alien Encounters (Regular)
+GameMaker Studio 1 font texture has been backed up at ${project_dir}\fonts\f_combo\f_combo.gms1.png
+!!! Font f_udgothic uses a font (@ＭＳ Ｐゴシック) not installed on this system - Font has NOT been regenerated
+GameMaker Studio 1 font texture has been backed up at ${project_dir}\fonts\f_udgothic\f_udgothic.gms1.png
+Converting GML script: ${project_dir}\objects\o_note\Alarm_0.gml
+Converted builtin - line 2: view_hview -> __view_get( e__VW.HView, 0 )
+
+Converting GML script: ${project_dir}\objects\o_note\Step_0.gml
+Converted builtin - line 48: view_yview -> __view_get( e__VW.YView, 0 )
+
+Converting GML script: ${project_dir}\objects\o_naturalend\Alarm_0.gml
+Converted builtin - line 2: view_hview -> __view_get( e__VW.HView, 0 )
+
+Converting GML script: ${project_dir}\objects\o_gimmickactivator\Destroy_0.gml
+Converted description /// @description unforseen consequences
+
+Converting GML script: ${project_dir}\objects\o_freeze\Alarm_0.gml
+Converted builtin - line 2: view_hview -> __view_get( e__VW.HView, 0 )
+
+Converting GML script: ${project_dir}\objects\o_freeze\Step_0.gml
+Converted builtin - line 42: view_yview -> __view_get( e__VW.YView, 0 )
+
+Converting GML script: ${project_dir}\objects\o_roll\Alarm_0.gml
+Converted builtin - line 2: view_hview -> __view_get( e__VW.HView, 0 )
+
+Converting GML script: ${project_dir}\objects\o_roll\Step_0.gml
+Converted builtin - line 43: view_yview -> __view_get( e__VW.YView, 0 )
+
+Converting GML script: ${project_dir}\objects\o_mine\Alarm_0.gml
+Converted builtin - line 2: view_hview -> __view_get( e__VW.HView, 0 )
+
+Converting GML script: ${project_dir}\objects\o_menu\Step_0.gml
+Converted string - line 276: 'Y' -> "Y"
+Converted string - line 300: 'M' -> "M"
+
+Converting GML script: ${project_dir}\objects\o_cutscene\Step_0.gml
+Converted builtin - line 17: background_index[0] = bk_nebula -> __background_set( e__BG.Index, 0, bk_nebula )
+Converted builtin - line 19: background_x[0] = backgroundpos -> __background_set( e__BG.X, 0, backgroundpos )
+Converted builtin - line 20: background_htiled[0] = true -> __background_set( e__BG.HTiled, 0, true )
+
+Converting GML script: ${project_dir}\objects\o_textbox\Step_0.gml
+Error: variable 'message' has same name as a built-in (function, constant or variable), it must be renamed to function correctly
+
+macOS icon ${options_dir}\mac\icons\icon512.png written out as 32-bit
+Windows NSIS Installer Script has been set to default due to changes in GameMaker Studio 2
+macOS icon ${options_dir}\mac\icons\icon512.png written out as 32-bit
+Windows NSIS Installer Script has been set to default due to changes in GameMaker Studio 2
+Converting GML script: ${project_dir}\objects\o_sample_stereo3d\Create_0.gml
+Converted description /// @description Initialize
+
+Converting GML script: ${project_dir}\objects\o_sample_stereo3d\Draw_0.gml
+Converted description /// @description Apply the shader effect and draw self
+
+Converting GML script: ${project_dir}\objects\o_sample_stereo3d\KeyPress_27.gml
+Converted description /// @description  End the Game
+
+Converting GML script: window_set_cursor.gml
+Converted description /// @description  (): Reverts the cursor to whatever set via built-in window_set_cursor.
+
+Converting GML script: window_set_cursor.gml
+Converted description /// @description  (surface, left, top, width, height, x, y):/// @param surface
+/// @param  left
+/// @param  top
+/// @param  width
+/// @param  height
+/// @param  x
+/// @param  y
+
+Converting GML script: window_set_cursor.gml
+Converted description /// @description  (surface, x, y):/// @param surface
+/// @param  x
+/// @param  y
+
+Converting GML script: window_set_cursor.gml
+Converted description /// @description  (sprite, subimg):/// @param sprite
+/// @param  subimg
+
+Converting GML script: window_set_cursor.gml
+Converted description /// @description  (sprite, subimg, image_xscale, image_yscale, image_blend, image_alpha):/// @param sprite
+/// @param  subimg
+/// @param  image_xscale
+/// @param  image_yscale
+/// @param  image_blend
+/// @param  image_alpha
+
+Converting GML script: window_set_cursor_dll.gml
+Converted description /// @description  window_set_cursor_impl_1(src:Any, ctx:Any, l:int, t:int, w:int, h:int)->PixelData/// @param src:Any
+/// @param  ctx:Any
+/// @param  l:int
+/// @param  t:int
+/// @param  w:int
+/// @param  h:int
+
+Converting GML script: window_set_cursor_dll.gml
+Converted description /// @description  window_set_cursor_impl(hwnd:Any, d:PixelData, dw:int, l:int, t:int, w:int, h:int, cx:int, cy:int)/// @param hwnd:Any
+/// @param  d:PixelData
+/// @param  dw:int
+/// @param  l:int
+/// @param  t:int
+/// @param  w:int
+/// @param  h:int
+/// @param  cx:int
+/// @param  cy:int
+
+Missing audiogroup for sound: 'm_onemorenight' - setting to default audio group
+Missing audiogroup for sound: 'm_combattheme' - setting to default audio group
+Missing audiogroup for sound: 'm_drivin' - setting to default audio group
+Missing audiogroup for sound: 'm_everythingwillfreeze' - setting to default audio group
+Missing audiogroup for sound: 'm_lancerraps' - setting to default audio group
+Missing audiogroup for sound: 'se_bang' - setting to default audio group
+Missing audiogroup for sound: 'se_bam' - setting to default audio group
+Missing audiogroup for sound: 'se_shatter' - setting to default audio group
+Missing audiogroup for sound: 'm_night' - setting to default audio group
+Missing audiogroup for sound: 'm_title' - setting to default audio group
+Missing audiogroup for sound: 'se_select' - setting to default audio group
+Missing audiogroup for sound: 'm_eonbreak' - setting to default audio group
+Missing audiogroup for sound: 'm_reset_set' - setting to default audio group
+Missing audiogroup for sound: 'm_nocturne' - setting to default audio group
+Missing audiogroup for sound: 'm_eveniftheworlddeceivesyou' - setting to default audio group
+Missing audiogroup for sound: 'm_itsrainingsomewhereelse' - setting to default audio group
+Missing audiogroup for sound: 'm_hurt' - setting to default audio group
+Missing audiogroup for sound: 'm_yumegaaru' - setting to default audio group
+Missing audiogroup for sound: 'm_nightfalls' - setting to default audio group
+Missing audiogroup for sound: 'm_key' - setting to default audio group
+Game speed set to 60
+Added compatibility script 'background/draw_background_tiled.gml'
+Added compatibility script 'background/__background_set.gml'
+Added compatibility script 'background/__background_set_internal.gml'
+Added compatibility script 'draw/draw_set_blend_mode.gml'
+Added compatibility script 'draw/draw_set_blend_mode_ext.gml'
+Added compatibility script 'instance/instance_create.gml'
+Added compatibility script 'object/object_get_depth.gml'
+Added compatibility script 'view/__view_get.gml'
+Added compatibility script 'background/__init_background.gml'
+Added compatibility script 'view/__init_view.gml'
+Added compatibility script '__init_global.gml'
+Added compatibility script 'background/__background_get_element.gml'
+Added compatibility script 'background/__background_get_internal.gml'
+Added compatibility script 'background/__background_set_element.gml'
+Added compatibility script '__global_object_depths.gml'
