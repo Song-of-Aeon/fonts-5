@@ -11,7 +11,7 @@
   "type": 0,
   "bitDepth": 1,
   "soundFile": "m_onemorenight",
-  "duration": 0.0,
+  "duration": 90.00277,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",

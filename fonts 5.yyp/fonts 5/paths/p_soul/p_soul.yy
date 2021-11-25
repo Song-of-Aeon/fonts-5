@@ -7,8 +7,8 @@
     {"speed":100.0,"x":64.0,"y":800.0,},
   ],
   "parent": {
-    "name": "Misc",
-    "path": "folders/Misc.yy",
+    "name": "fonts 5",
+    "path": "fonts 5.yyp",
   },
   "resourceVersion": "1.0",
   "name": "p_soul",

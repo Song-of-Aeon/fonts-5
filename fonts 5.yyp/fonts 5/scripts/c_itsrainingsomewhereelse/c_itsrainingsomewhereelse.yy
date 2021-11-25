@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "maprules",
-    "path": "folders/Maps/maprules.yy",
+    "name": "Maps",
+    "path": "folders/Maps.yy",
   },
   "resourceVersion": "1.0",
   "name": "c_itsrainingsomewhereelse",

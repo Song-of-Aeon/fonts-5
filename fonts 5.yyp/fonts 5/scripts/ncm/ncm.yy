@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Maps",
-    "path": "folders/Maps.yy",
+    "name": "fonts 5",
+    "path": "fonts 5.yyp",
   },
   "resourceVersion": "1.0",
-  "name": "c_yumegaaru",
+  "name": "ncm",
   "tags": [],
   "resourceType": "GMScript",
 }

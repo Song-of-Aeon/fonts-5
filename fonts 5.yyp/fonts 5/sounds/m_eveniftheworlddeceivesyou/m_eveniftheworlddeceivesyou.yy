@@ -11,7 +11,7 @@
   "type": 1,
   "bitDepth": 1,
   "soundFile": "m_eveniftheworlddeceivesyou",
-  "duration": 0.0,
+  "duration": 206.40625,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",

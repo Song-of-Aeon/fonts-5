@@ -16,7 +16,7 @@ return r;
 /// @param  height
 /// @param  x
 /// @param  y
-var sf = argument0;
+/*var sf = argument0;
 var l = argument1;
 var t = argument2;
 var w = argument3;
@@ -38,7 +38,7 @@ if (os_browser != browser_not_a_browser) {
 	r = window_set_cursor_impl(hwnd, b, sw, 0, 0, w, h, cx - l, cy - l);
 	buffer_delete(b);
 }
-return r;
+return r;*/
 
 #define window_set_cursor_surface
 /// @description  (surface, x, y):

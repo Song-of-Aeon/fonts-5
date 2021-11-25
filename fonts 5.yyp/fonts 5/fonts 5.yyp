@@ -267,6 +267,7 @@
     {"id":{"name":"sm_lancerraps_easy","path":"scripts/sm_lancerraps_easy/sm_lancerraps_easy.yy",},"order":3,},
     {"id":{"name":"sm_nightfalls","path":"scripts/sm_nightfalls/sm_nightfalls.yy",},"order":5,},
     {"id":{"name":"c_nightfalls","path":"scripts/c_nightfalls/c_nightfalls.yy",},"order":7,},
+    {"id":{"name":"ncm","path":"scripts/ncm/ncm.yy",},"order":27,},
     {"id":{"name":"sm_reset_set_easy","path":"scripts/sm_reset_set_easy/sm_reset_set_easy.yy",},"order":9,},
     {"id":{"name":"sm_key","path":"scripts/sm_key/sm_key.yy",},"order":11,},
     {"id":{"name":"c_key","path":"scripts/c_key/c_key.yy",},"order":13,},

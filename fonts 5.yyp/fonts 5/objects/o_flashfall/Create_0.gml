@@ -21,5 +21,5 @@ image_speed = .1;
 alarm[5] = 5;
 
 //instance_create(x,y,o_graze);
-script_execute(state);
+state();
 

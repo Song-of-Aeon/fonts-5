@@ -1,6 +1,6 @@
 c_redinput();
 if !fading {
-    script_execute(state);
+    state();
 } else {
     image_alpha -= .1;
     if image_alpha <= 0 {

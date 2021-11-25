@@ -24,7 +24,7 @@ txtalpha = clamp(txtalpha, 0, 1);
 time += 1*global.truetime;
 console_log(tim);
 tim = floor(time/60); //gaming gaming gamigng agimgnga gmgingamga gagimgagmagmkgagmamgmmamggimgiangngiagiamgingiangaingaingignaigm
-script_execute(subset);
-script_execute(subsetwo);
+subset();
+subsetwo();
 //console_log("yeahhh");
 

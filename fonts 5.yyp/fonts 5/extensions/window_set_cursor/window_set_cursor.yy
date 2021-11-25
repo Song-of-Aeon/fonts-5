@@ -34,7 +34,13 @@
             1,
             2,
           ],"resourceVersion":"1.0","name":"window_set_cursor_buffer_raw","tags":[],"resourceType":"GMExtensionFunction",},
-      ],"constants":[],"ProxyFiles":[],"copyToTargets":105553658380352,"order":[],"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMExtensionFile",},
+      ],"constants":[],"ProxyFiles":[],"copyToTargets":105553658380352,"order":[
+        {"name":"window_set_cursor_init_raw","path":"extensions/window_set_cursor/window_set_cursor.yy",},
+        {"name":"window_set_cursor_normal_raw","path":"extensions/window_set_cursor/window_set_cursor.yy",},
+        {"name":"window_set_cursor_cleanup","path":"extensions/window_set_cursor/window_set_cursor.yy",},
+        {"name":"window_set_cursor_path_raw","path":"extensions/window_set_cursor/window_set_cursor.yy",},
+        {"name":"window_set_cursor_buffer_raw","path":"extensions/window_set_cursor/window_set_cursor.yy",},
+      ],"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMExtensionFile",},
     {"filename":"window_set_cursor.gml","origname":"extensions\\gml.gml","init":"","final":"","kind":2,"uncompress":false,"functions":[
         {"externalName":"window_set_cursor_init","kind":11,"help":"","hidden":false,"returnType":2,"argCount":0,"args":[],"resourceVersion":"1.0","name":"window_set_cursor_init","tags":[],"resourceType":"GMExtensionFunction",},
         {"externalName":"window_set_cursor_normal","kind":11,"help":"window_set_cursor_normal() : Reverts the cursor to whatever set via built-in window_set_cursor.","hidden":false,"returnType":2,"argCount":0,"args":[],"resourceVersion":"1.0","name":"window_set_cursor_normal","tags":[],"resourceType":"GMExtensionFunction",},
@@ -64,7 +70,14 @@
             2,
             2,
           ],"resourceVersion":"1.0","name":"window_set_cursor_sprite_ext","tags":[],"resourceType":"GMExtensionFunction",},
-      ],"constants":[],"ProxyFiles":[],"copyToTargets":113497714299118,"order":[],"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMExtensionFile",},
+      ],"constants":[],"ProxyFiles":[],"copyToTargets":113497714299118,"order":[
+        {"name":"window_set_cursor_init","path":"extensions/window_set_cursor/window_set_cursor.yy",},
+        {"name":"window_set_cursor_normal","path":"extensions/window_set_cursor/window_set_cursor.yy",},
+        {"name":"window_set_cursor_surface_part","path":"extensions/window_set_cursor/window_set_cursor.yy",},
+        {"name":"window_set_cursor_surface","path":"extensions/window_set_cursor/window_set_cursor.yy",},
+        {"name":"window_set_cursor_sprite","path":"extensions/window_set_cursor/window_set_cursor.yy",},
+        {"name":"window_set_cursor_sprite_ext","path":"extensions/window_set_cursor/window_set_cursor.yy",},
+      ],"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMExtensionFile",},
     {"filename":"window_set_cursor_dll.gml","origname":"extensions\\gml.gml","init":"","final":"","kind":2,"uncompress":false,"functions":[
         {"externalName":"window_set_cursor_init_dll","kind":11,"help":"","hidden":false,"returnType":2,"argCount":0,"args":[],"resourceVersion":"1.0","name":"window_set_cursor_init_dll","tags":[],"resourceType":"GMExtensionFunction",},
         {"externalName":"window_set_cursor_impl_1","kind":11,"help":"","hidden":false,"returnType":2,"argCount":6,"args":[

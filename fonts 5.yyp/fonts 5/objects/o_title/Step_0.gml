@@ -20,8 +20,8 @@ if glowalpha <= .4 {
     glospd = -.01;
 }
 
-glowalpha += glospd;
-fadealpha -= fadespd;
+glowalpha += glospd/2;
+fadealpha -= fadespd/2;
 
 count += 1;
 
@@ -32,22 +32,21 @@ if countwo % 10 = 0 {
     //play a sound effect
 }
 
-if count >= 10 {
+if ncm(20) {
     if shootdir % 40 = 0 {
         with instance_create(960, 900, o_start) {
             direction = other.shootdir;
-            speed = 2;
+            speed = 1;
             image_index = 1;
         }
     } else {
         with instance_create(960, 900, o_start) {
             direction = other.shootdir-180;
-            speed = 2;
+            speed = 1;
             image_index = 2;
         }
     }
     shootdir += 20;
-    count = 0;
 }
 
 if select && going = false {
@@ -58,13 +57,13 @@ if select && going = false {
     going = true;
 } else if going {
     swapper += 1;
-    if swapper % 7 = 0 {
+    if swapper % 14 = 0 {
         enteralpha = 0;
     }
-    if swapper % 14 = 0 {
+    if swapper % 24 = 0 {
         enteralpha = 1;
     }
-    if swapper >= 120 {
+    if swapper >= 240 {
         //game_load("profile.dat");
         room_goto(stagemenu);
         //console_log("uh oh");

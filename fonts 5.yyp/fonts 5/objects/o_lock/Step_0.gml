@@ -6,7 +6,7 @@ if locked {
         image_alpha += .05;
     }
     if !delay {
-        script_execute(attacks[attack]);
+        attacks[attack]();
     } else {
         delay--;
     }

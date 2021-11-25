@@ -2,80 +2,102 @@ Converting GML script: ${project_dir}\scripts\c_null\c_null.gml
 Converted description /// @description c_null
 
 Converting GML script: ${project_dir}\scripts\libsm__getBackground\libsm__getBackground.gml
-Converted description /// @description string libsm__getBackground(string song)/// @param string song
+Converted description /// @description string libsm__getBackground(string song)
+/// @param string song
 
 Converting GML script: ${project_dir}\scripts\libsm__getBanner\libsm__getBanner.gml
-Converted description /// @description string libsm__getBanner(string song)/// @param string song
+Converted description /// @description string libsm__getBanner(string song)
+/// @param string song
 
 Converting GML script: ${project_dir}\scripts\libsm__getArtist\libsm__getArtist.gml
-Converted description /// @description string libsm__getArtist(string song, bool translit)/// @param string song
+Converted description /// @description string libsm__getArtist(string song, bool translit)
+/// @param string song
 /// @param  bool translit
 
 Converting GML script: ${project_dir}\scripts\libsm__getBPMs\libsm__getBPMs.gml
-Converted description /// @description array libsm__getBPMs(string song)/// @param string song
+Converted description /// @description array libsm__getBPMs(string song)
+/// @param string song
 
 Converting GML script: ${project_dir}\scripts\libsm__getCDTitle\libsm__getCDTitle.gml
-Converted description /// @description string libsm__getCDTitle(string song)/// @param string song
+Converted description /// @description string libsm__getCDTitle(string song)
+/// @param string song
 
 Converting GML script: ${project_dir}\scripts\libsm__getCredit\libsm__getCredit.gml
-Converted description /// @description string libsm__getCredit(string song)/// @param string song
+Converted description /// @description string libsm__getCredit(string song)
+/// @param string song
 
 Converting GML script: ${project_dir}\scripts\libsm__getDisplayBPM\libsm__getDisplayBPM.gml
-Converted description /// @description string libsm__getDisplayBPM(string song)/// @param string song
+Converted description /// @description string libsm__getDisplayBPM(string song)
+/// @param string song
 
 Converting GML script: ${project_dir}\scripts\libsm__getFootRating\libsm__getFootRating.gml
-Converted description /// @description int libsm__getFootRating(string song, string chartType, string difficulty)/// @param string song
+Converted description /// @description int libsm__getFootRating(string song, string chartType, string difficulty)
+/// @param string song
 /// @param  string chartType
 /// @param  string difficulty
 
 Converting GML script: ${project_dir}\scripts\libsm__getLyrics\libsm__getLyrics.gml
-Converted description /// @description string libsm__getLyrics(string song)/// @param string song
+Converted description /// @description string libsm__getLyrics(string song)
+/// @param string song
 
 Converting GML script: ${project_dir}\scripts\libsm__getGenre\libsm__getGenre.gml
-Converted description /// @description string libsm__getGenre(string song)/// @param string song
+Converted description /// @description string libsm__getGenre(string song)
+/// @param string song
 
 Converting GML script: ${project_dir}\scripts\libsm__getMusic\libsm__getMusic.gml
-Converted description /// @description string libsm__getMusic(string song)/// @param string song
+Converted description /// @description string libsm__getMusic(string song)
+/// @param string song
 
 Converting GML script: ${project_dir}\scripts\libsm__getNoteData\libsm__getNoteData.gml
-Converted description /// @description string libsm__getNoteData(string song, string chartType, string difficulty)/// @param string song
+Converted description /// @description string libsm__getNoteData(string song, string chartType, string difficulty)
+/// @param string song
 /// @param  string chartType
 /// @param  string difficulty
 
 Converting GML script: ${project_dir}\scripts\libsm__getOffset\libsm__getOffset.gml
-Converted description /// @description float libsm__getOffset(string song)/// @param string song
+Converted description /// @description float libsm__getOffset(string song)
+/// @param string song
 
 Converting GML script: ${project_dir}\scripts\libsm__getSampleLength\libsm__getSampleLength.gml
-Converted description /// @description float libsm__getSampleLength(string song)/// @param string song
+Converted description /// @description float libsm__getSampleLength(string song)
+/// @param string song
 
 Converting GML script: ${project_dir}\scripts\libsm__getSampleStart\libsm__getSampleStart.gml
-Converted description /// @description int libsm__getSampleStart(string song)/// @param string song
+Converted description /// @description int libsm__getSampleStart(string song)
+/// @param string song
 
 Converting GML script: ${project_dir}\scripts\libsm__getSubtitle\libsm__getSubtitle.gml
-Converted description /// @description string libsm__getSubtitle(string song, bool translit)/// @param string song
+Converted description /// @description string libsm__getSubtitle(string song, bool translit)
+/// @param string song
 /// @param  bool translit
 
 Converting GML script: ${project_dir}\scripts\libsm__getStops\libsm__getStops.gml
-Converted description /// @description array libsm__getStops(string song)/// @param string song
+Converted description /// @description array libsm__getStops(string song)
+/// @param string song
 
 Converting GML script: ${project_dir}\scripts\libsm__getTitle\libsm__getTitle.gml
-Converted description /// @description string libsm__getTitle(string song, bool translit)/// @param string song
+Converted description /// @description string libsm__getTitle(string song, bool translit)
+/// @param string song
 /// @param  bool translit
 
 Converting GML script: ${project_dir}\scripts\libsm__open\libsm__open.gml
-Converted description /// @description string libsm__open(string path)/// @param string path
+Converted description /// @description string libsm__open(string path)
+/// @param string path
 
 Converting GML script: ${project_dir}\scripts\libsm__readMetadata\libsm__readMetadata.gml
-Converted description /// @description string libsm__readMetadata(string song, string keyword)/// @param string song
+Converted description /// @description string libsm__readMetadata(string song, string keyword)
+/// @param string song
 /// @param  string keyword
 
 Converting GML script: ${project_dir}\scripts\libsm_getNoteData\libsm_getNoteData.gml
-Converted description /// @description string libsm_getNoteData(song script, string chartType, string difficulty)/// @param song script
+Converted description /// @description string libsm_getNoteData(song script, string chartType, string difficulty)
+/// @param song script
 /// @param  string chartType
 /// @param  string difficulty
 
 Converting GML script: ${project_dir}\scripts\libsm_getnotes\libsm_getnotes.gml
-Converted description /// @description string libsm_getNoteData(song script, string chartType, string difficulty)/// @param song script
+Converted description /// @description string libsm_getNoteData(song script, string chartType, string difficulty)
+/// @param song script
 /// @param  string chartType
 /// @param  string difficulty
 
@@ -104,12 +126,14 @@ Converting GML script: ${project_dir}\scripts\c_yumegaaru\c_yumegaaru.gml
 Converted description /// @description c_onemorenight
 
 Converting GML script: ${project_dir}\scripts\console_log\console_log.gml
-Converted description /// @description console_log(expression1, expression2, ...)/// @param expression1
+Converted description /// @description console_log(expression1, expression2, ...)
+/// @param expression1
 /// @param  expression2
 /// @param  ...
 
 Converting GML script: ${project_dir}\scripts\collision_line_first\collision_line_first.gml
-Converted description /// @description  collision_line_first(x1,y1,x2,y2,object,prec,notme)/// @param x1
+Converted description /// @description  collision_line_first(x1,y1,x2,y2,object,prec,notme)
+/// @param x1
 /// @param y1
 /// @param x2
 /// @param y2
@@ -118,7 +142,8 @@ Converted description /// @description  collision_line_first(x1,y1,x2,y2,object,
 /// @param notme
 
 Converting GML script: ${project_dir}\scripts\range_finder\range_finder.gml
-Converted description /// @description  range_finder(x,y,dir,range,object,prec,notme)/// @param x
+Converted description /// @description  range_finder(x,y,dir,range,object,prec,notme)
+/// @param x
 /// @param y
 /// @param dir
 /// @param range
@@ -127,16 +152,19 @@ Converted description /// @description  range_finder(x,y,dir,range,object,prec,n
 /// @param notme
 
 Converting GML script: ${project_dir}\scripts\instance_nth_nearest\instance_nth_nearest.gml
-Converted description /// @description  instance_nth_nearest(x,y,obj,n)/// @param x
+Converted description /// @description  instance_nth_nearest(x,y,obj,n)
+/// @param x
 /// @param y
 /// @param obj
 /// @param n
 
 Converting GML script: ${project_dir}\scripts\array\array.gml
-Converted description /// @description array(*args);/// @param *args
+Converted description /// @description array(*args);
+/// @param *args
 
 Converting GML script: ${project_dir}\scripts\range\range.gml
-Converted description /// @description range(val, min, max);/// @param val
+Converted description /// @description range(val, min, max);
+/// @param val
 /// @param  min
 /// @param  max
 
@@ -150,17 +178,20 @@ Converting GML script: ${project_dir}\scripts\c_receptorkey\c_receptorkey.gml
 Converted description /// @description c_receptorkey
 
 Converting GML script: ${project_dir}\scripts\f_hitdetection\f_hitdetection.gml
-Converted description /// @description f_hitdetection(lane x, note direction, fx angle);/// @param lane x
+Converted description /// @description f_hitdetection(lane x, note direction, fx angle);
+/// @param lane x
 /// @param  note direction
 /// @param  fx angle
 
 Converting GML script: ${project_dir}\scripts\f_minedetection\f_minedetection.gml
-Converted description /// @description f_hitdetection(lane x, note direction, fx angle);/// @param lane x
+Converted description /// @description f_hitdetection(lane x, note direction, fx angle);
+/// @param lane x
 /// @param  note direction
 /// @param  fx angle
 
 Converting GML script: ${project_dir}\scripts\f_danmakudetection\f_danmakudetection.gml
-Converted description /// @description f_danmakudetection(lane x);/// @param lane x
+Converted description /// @description f_danmakudetection(lane x);
+/// @param lane x
 
 Converting GML script: ${project_dir}\scripts\c_input\c_input.gml
 Converted string - line 2: 'A' -> "A"
@@ -301,7 +332,8 @@ Converting GML script: ${project_dir}\scripts\c_makefall\c_makefall.gml
 Converted description /// @description c_makefall();
 
 Converting GML script: ${project_dir}\scripts\c_mmod\c_mmod.gml
-Converted description /// @description c_mmod(bpm);/// @param bpm
+Converted description /// @description c_mmod(bpm);
+/// @param bpm
 
 Converting GML script: ${project_dir}\scripts\c_timebuster\c_timebuster.gml
 Converted description /// @description c_timebuster();
@@ -380,7 +412,8 @@ Converting GML script: window_set_cursor.gml
 Converted description /// @description  (): Reverts the cursor to whatever set via built-in window_set_cursor.
 
 Converting GML script: window_set_cursor.gml
-Converted description /// @description  (surface, left, top, width, height, x, y):/// @param surface
+Converted description /// @description  (surface, left, top, width, height, x, y):
+/// @param surface
 /// @param  left
 /// @param  top
 /// @param  width
@@ -389,16 +422,19 @@ Converted description /// @description  (surface, left, top, width, height, x, y
 /// @param  y
 
 Converting GML script: window_set_cursor.gml
-Converted description /// @description  (surface, x, y):/// @param surface
+Converted description /// @description  (surface, x, y):
+/// @param surface
 /// @param  x
 /// @param  y
 
 Converting GML script: window_set_cursor.gml
-Converted description /// @description  (sprite, subimg):/// @param sprite
+Converted description /// @description  (sprite, subimg):
+/// @param sprite
 /// @param  subimg
 
 Converting GML script: window_set_cursor.gml
-Converted description /// @description  (sprite, subimg, image_xscale, image_yscale, image_blend, image_alpha):/// @param sprite
+Converted description /// @description  (sprite, subimg, image_xscale, image_yscale, image_blend, image_alpha):
+/// @param sprite
 /// @param  subimg
 /// @param  image_xscale
 /// @param  image_yscale
@@ -406,7 +442,8 @@ Converted description /// @description  (sprite, subimg, image_xscale, image_ysc
 /// @param  image_alpha
 
 Converting GML script: window_set_cursor_dll.gml
-Converted description /// @description  window_set_cursor_impl_1(src:Any, ctx:Any, l:int, t:int, w:int, h:int)->PixelData/// @param src:Any
+Converted description /// @description  window_set_cursor_impl_1(src:Any, ctx:Any, l:int, t:int, w:int, h:int)->PixelData
+/// @param src:Any
 /// @param  ctx:Any
 /// @param  l:int
 /// @param  t:int
@@ -414,7 +451,8 @@ Converted description /// @description  window_set_cursor_impl_1(src:Any, ctx:An
 /// @param  h:int
 
 Converting GML script: window_set_cursor_dll.gml
-Converted description /// @description  window_set_cursor_impl(hwnd:Any, d:PixelData, dw:int, l:int, t:int, w:int, h:int, cx:int, cy:int)/// @param hwnd:Any
+Converted description /// @description  window_set_cursor_impl(hwnd:Any, d:PixelData, dw:int, l:int, t:int, w:int, h:int, cx:int, cy:int)
+/// @param hwnd:Any
 /// @param  d:PixelData
 /// @param  dw:int
 /// @param  l:int

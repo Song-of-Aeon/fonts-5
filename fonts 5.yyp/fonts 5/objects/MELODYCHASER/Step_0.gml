@@ -84,7 +84,7 @@ if songstarting {
             instance_create(800, 500, o_zero);
         }
         count += global.truetime;
-        if (count >= 295 && global.songscript = c_eonbreak) || (count >= 290 && global.songscript != c_eonbreak) {
+        if (count >= 305 && global.songscript = c_eonbreak) || (count >= 300 && global.songscript != c_eonbreak) {
         
         //if (count >= 235 && global.songscript = c_eonbreak) || (count >= 230 && global.songscript != c_eonbreak){
             audio_play_sound(audio, 0, false);
@@ -105,7 +105,7 @@ if keyboard_check_pressed(vk_add) {
     xmod += .05;
 }*/
 
-script_execute(state);
+state();
 
 var i;
 for (i=0; i<8; i++) {
