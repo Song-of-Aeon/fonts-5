@@ -78,12 +78,15 @@ if !instance_exists(o_smparser) {
     timeat = 0;
 }*/
 if songstarting {
-    timecounter += delta_time;
+	if delta_time < 20000 {
+		timecounter += delta_time;
+	}
     if timecounter/1000 >= offset {
         if count = 0 {
             instance_create(800, 500, o_zero);
         }
-        count += global.truetime;
+		
+			count += global.truetime;
         if (count >= 305 && global.songscript = c_eonbreak) || (count >= 300 && global.songscript != c_eonbreak) {
         
         //if (count >= 235 && global.songscript = c_eonbreak) || (count >= 230 && global.songscript != c_eonbreak){
