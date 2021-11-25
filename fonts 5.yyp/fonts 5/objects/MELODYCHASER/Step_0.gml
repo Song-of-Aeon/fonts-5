@@ -24,8 +24,6 @@ if !instance_exists(o_smparser) {
         with o_help {
             savedy = room_height + sprite_height/2 + 5;
             vspd = y-savedy;
-            console_log(savedy);
-            console_log(vspd);
             going = true;
         }
         instance_create(0, 0, o_smparser);

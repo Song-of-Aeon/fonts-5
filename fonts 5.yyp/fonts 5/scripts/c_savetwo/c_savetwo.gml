@@ -12,14 +12,12 @@ function c_savetwo() {
 	if global.scuffer {
 	    global.scuffer = false;
 	    global.gimmickactive = true;
-	    console_log("works");
 	}
 	countwo = 0;
 
 	if global.storymode && hp >= 1 && !back && !select {
     
 	    if global.songscript != c_nocturne && global.songscript != c_itsrainingsomewhereelse {
-	        console_log(global.scoring[7], realscore);
 	        global.scoring[7] += realscore/5;
 	        global.currentstage++;
 	    }

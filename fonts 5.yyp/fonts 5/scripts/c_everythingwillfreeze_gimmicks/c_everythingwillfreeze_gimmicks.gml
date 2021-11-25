@@ -17,7 +17,6 @@ function c_everythingwillfreeze_gimmicks() {
 	            instance_destroy(o_sakuya);
 	            break;
 	    }
-	    console_log(arraypos);
 	    inputgimmick = true;
 	    arraypos++;
     

@@ -297,9 +297,5 @@ if room = rhythm_limbo {
 }*/
 //console_log(global.completion);
 
-if keyboard_check_pressed(ord("M")) {
-    console_log(script_get_name(global.songscript), global.currentstage, menuposition);
-}
-
 /* */
 /*  */

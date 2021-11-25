@@ -3,7 +3,6 @@ function c_save() {
 	if global.scuffer {
 	    global.scuffer = false;
 	    global.gimmickactive = true;
-	    console_log("works");
 	}
 	countwo = 0;
 

@@ -13,7 +13,6 @@ function c_yumegaaru_gimmicks() {
 	            o_naturalend.vspd = o_naturalend.vspd*2;
 	            break;
 	    }
-	    console_log(arraypos);
 	    inputgimmick = true;
 	    arraypos++;
     

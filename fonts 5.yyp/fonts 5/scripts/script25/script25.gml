@@ -279,7 +279,6 @@ function script25() {
 	tmpArray[0] = "";
 	tmpList = ds_list_create();
 
-	console_log(song);
 
 	while (string_pos(chartType + ":", song)) {
 	    song = string_delete(song, 1, string_pos(chartType + ":", song));
@@ -316,7 +315,6 @@ function script25() {
 	    }
 	}
 
-	console_log(song);
 
 
 

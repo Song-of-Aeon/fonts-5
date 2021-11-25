@@ -81,7 +81,6 @@ function c_reset_set_gimmicks() {
 	                break;
 	            */
 	        }
-	        console_log(arraypos);
 	        inputgimmick = true;
 	        arraypos++;
 	    }

@@ -87,7 +87,6 @@ countwo = 0;
 if global.songscript = c_eonbreak && window_get_fullscreen() && global.gimmickactive {
     window_set_fullscreen(false);
     window_set_position(global.ogx, global.ogy);
-    console_log(window_get_x());
 }
 if global.noteoverride != 0 {
     c_noteoverride();

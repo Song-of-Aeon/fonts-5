@@ -35,7 +35,6 @@ function c_nightfalls_gimmicks() {
 	                break;
 	        }
 	    }
-	    console_log(arraypos);
 	    inputgimmick = true;
 	    arraypos++;
     

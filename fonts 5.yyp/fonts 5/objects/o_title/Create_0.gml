@@ -22,11 +22,23 @@ title = array("Evanecence,", "it", "is", "personified!",
 //theres 49 of em
 
 countwo = 0;
-audio_play_sound(m_title, 0, false);
+if file_exists("profile.ini") { 
+    //game_load("profile.dat"); 
+    ini_open("profile.ini"); 
+    if real(ini_read_string("scores1", "stage 0", "0")) >= 95 { 
+        audio_play_sound(m_title, 0, false); 
+    } else if real(ini_read_string("scores0", "stage 0", "0")) >= 95 { 
+        audio_play_sound(m_title2, 0, false); 
+    } else { 
+        audio_play_sound(m_title3, 0, false); 
+    } 
+    ini_close(); 
+} else { 
+    audio_play_sound(m_title3, 0, false); 
+} 
 
 global.ogx = window_get_x();
 global.ogy = window_get_y();
-console_log(global.ogx, global.ogy);
 
 c_inputwocreate();
 

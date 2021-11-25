@@ -36,7 +36,6 @@ function c_midsky() {
 	        sky = 0;
 	    }
 	    pulse = false;
-	    console_log(sky);
 	}
 	/*while count != 0 {
     

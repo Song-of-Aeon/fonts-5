@@ -10,7 +10,6 @@ if txturn != 0 {
     if txturn < 1 {
         txturn = 0;
     }
-    console_log("zetsubou", global.gimmickactive);
 }
 if fading {
     durability = 0;
@@ -18,11 +17,9 @@ if fading {
     if txtalpha <= 0 {
         instance_destroy();
     }
-    console_log("kibou", global.gimmickactive);
 }
 txtalpha = clamp(txtalpha, 0, 1);
 time += 1*global.truetime;
-console_log(tim);
 tim = floor(time/60); //gaming gaming gamigng agimgnga gmgingamga gagimgagmagmkgagmamgmmamggimgiangngiagiamgingiangaingaingignaigm
 subset();
 subsetwo();

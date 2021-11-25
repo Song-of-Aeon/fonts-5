@@ -15,7 +15,6 @@ if count >= 240 {
 
 
 if y <= MELODYCHASER.bar {
-    console_log(script_get_name(global.songscript));
     MELODYCHASER.inputgimmick = false;
     instance_destroy();
 }

@@ -37,14 +37,11 @@ switch global.songscript {
         subset = c_null;
         subsetwo = c_null;
         instance_destroy();
-        console_log("heh");
         break;
     
 }
 whatevertime = delta_time;
 speaker = c_maroon;
 draw_set_valign(fa_middle);
-console_log(script_get_name(subset));
-console_log(script_get_name(subsetwo));
 
 

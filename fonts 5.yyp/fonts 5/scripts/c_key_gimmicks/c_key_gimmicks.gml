@@ -1,6 +1,5 @@
 function c_key_gimmicks() {
 	if inputgimmick = false {
-	    console_log("real");
 	    if arrayx[arraypos] = "T" {
 	        if global.storymode = true {
 	            instance_create(640, bar+100, o_textbox);
@@ -35,7 +34,6 @@ function c_key_gimmicks() {
 	            o_cloud.image_alpha = 2;
 	            break;
 	    }
-	    console_log(arraypos);
 	    inputgimmick = true;
 	    arraypos++;
 	}

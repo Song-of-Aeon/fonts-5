@@ -175,11 +175,6 @@ if active = true {
     row = 0;
     column = 0;
 }
-if keyboard_check_pressed(vk_control) {
-        console_log(instance_number(o_fao));
-        console_log(instance_count);
-        console_log(active);
-    }
 
 /* */
 /*  */

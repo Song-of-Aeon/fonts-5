@@ -67,7 +67,7 @@ if select && going = false {
         //game_load("profile.dat");
         room_goto(stagemenu);
         //console_log("uh oh");
-        audio_stop_sound(m_title);
+        audio_stop_all();
         instance_destroy();
     }
 }
