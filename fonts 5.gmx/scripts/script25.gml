@@ -278,7 +278,7 @@ difficulty = "Easy";
 tmpArray[0] = "";
 tmpList = ds_list_create();
 
-console_log(song);
+
 
 while (string_pos(chartType + ":", song)) {
     song = string_delete(song, 1, string_pos(chartType + ":", song));
@@ -314,5 +314,3 @@ while (string_pos(chartType + ":", song)) {
         }
     }
 }
-
-console_log(song);

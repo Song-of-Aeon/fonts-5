@@ -114,7 +114,6 @@ countwo = 0;
 if global.songscript = c_eonbreak &amp;&amp; window_get_fullscreen() &amp;&amp; global.gimmickactive {
     window_set_fullscreen(false);
     window_set_position(global.ogx, global.ogy);
-    console_log(window_get_x());
 }
 if global.noteoverride != 0 {
     c_noteoverride();
@@ -173,8 +172,6 @@ if !instance_exists(o_smparser) {
         with o_help {
             savedy = room_height + sprite_height/2 + 5;
             vspd = y-savedy;
-            console_log(savedy);
-            console_log(vspd);
             going = true;
         }
         instance_create(0, 0, o_smparser);

@@ -2,7 +2,7 @@
 switch tim {
 case 15:
 txtwo = "はいまた面倒にバイバイ　目逸らして";
-console_log("はいまた面倒にバイバイ　目逸らして");
+//console_log("はいまた面倒にバイバイ　目逸らして");
 // = 5;
 break;
 

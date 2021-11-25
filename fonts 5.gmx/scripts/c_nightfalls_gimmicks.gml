@@ -34,7 +34,6 @@ if inputgimmick = false {
                 break;
         }
     }
-    console_log(arraypos);
     inputgimmick = true;
     arraypos++;
     

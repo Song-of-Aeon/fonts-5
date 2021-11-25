@@ -34,7 +34,6 @@ if pulse {
         sky = 0;
         dir = -dir;
     }
-    console_log(sky);
     pulse--;
 }
 /*while count != 0 {

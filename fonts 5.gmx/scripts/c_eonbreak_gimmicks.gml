@@ -49,12 +49,6 @@ windowy += wvspd;
 whspd = whspd/1.025;
 wvspd = wvspd/1.025;
 
-if(keyboard_check(vk_subtract)){
-    windowBounceSpeed--;
-}
-if(keyboard_check(vk_add)){
-    windowBounceSpeed++;
-}
 if(display_get_width() <= breadx+window_get_width()){
     windowBouncex = -1;
 }
