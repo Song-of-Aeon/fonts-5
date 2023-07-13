@@ -52,7 +52,7 @@ bluehspd = 0;
 lanespeed = 0;
 hp = 12;
 //measurescoring = array_create(48);
-audio = m_drivin; //doesnt matter, songscript contains audio
+audio = m_reset_set; //doesnt matter, songscript contains audio
 songbg = s_kaguya;
 script_execute(global.songscript);
 
